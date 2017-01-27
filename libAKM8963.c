@@ -10,149 +10,168 @@
 //-------------------------------------------------------------------------
 // Function declarations
 
+// int __fastcall _cxa_finalize(_DWORD); weak
 // int _android_log_print(_DWORD, _DWORD, const char *, ...); weak
 // void *memset(void *s, int c, size_t n);
-// int __fastcall strlcpy(_DWORD, _DWORD, _DWORD); weak
-// int fprintf(FILE *stream, const char *format, ...);
-// int snprintf(char *s, size_t maxlen, const char *format, ...);
-// int __fastcall _stack_chk_fail(_DWORD); weak
-// FILE *fopen(const char *filename, const char *modes);
-// int _errno(void); weak
-// char *strerror(int errnum);
-// int fclose(FILE *stream);
-// int chmod(const char *file, __mode_t mode);
+// char *strncpy(char *dest, const char *src, size_t n);
 // int fscanf(FILE *stream, const char *format, ...);
 // int strncmp(const char *s1, const char *s2, size_t n);
+// int __fastcall _stack_chk_fail(_DWORD); weak
+// int snprintf(char *s, size_t maxlen, const char *format, ...);
+// FILE *fopen(const char *filename, const char *modes);
+// int fclose(FILE *stream);
+// int _errno(void); weak
+// char *strerror(int errnum);
+// int fprintf(FILE *stream, const char *format, ...);
 // void *memcpy(void *dest, const void *src, size_t n);
-// int __fastcall _cxa_finalize(_DWORD); weak
-int sub_1118();
+// int raise(int sig);
+// int __fastcall _gnu_Unwind_Find_exidx(_DWORD, _DWORD); weak
+// void abort(void);
+// int __fastcall _cxa_begin_cleanup(_DWORD); weak
+// int __fastcall _cxa_type_match(_DWORD, _DWORD, _DWORD, _DWORD); weak
+int sub_1960();
 int getFormation();
-__int16 *AKMD_Release();
-signed int __fastcall AKMD_ChangeFormation(signed int a1);
-char *AKMD_ResetDOE();
-signed int __fastcall AKMD_GetData(int a1, int a2, int a3, int a4, signed int a5, int a6, int a7, int a8, int a9, int a10, int a11, _DWORD *a12);
-signed int __fastcall AKMD_Stop(char *a1);
-signed int __fastcall AKMD_Start(const char *a1);
+void AKMD_Release();
 signed int __fastcall AKMD_Init(int a1, int a2);
-int __fastcall SaveInt32(FILE *a1, int a2, int a3);
-signed int __fastcall SaveInt32vec(FILE *a1, int a2, int a3);
-int __fastcall SaveInt16(FILE *a1, int a2, int a3);
-signed int __fastcall SaveInt16vec(FILE *a1, int a2, int a3);
-int __fastcall SaveParameters(char *filename, int a2);
-int __fastcall LoadInt(FILE *a1, const char *a2, int a3);
-int __fastcall LoadInt32(FILE *a1, const char *a2, const char **a3);
-signed int __fastcall LoadInt32vec(FILE *a1, int a2, int a3);
-int __fastcall LoadInt16(FILE *a1, const char *a2, _WORD *a3);
+int __fastcall AKMD_Start(const char *a1);
+signed int __fastcall AKMD_Stop(const char *a1);
+signed int __fastcall AKMD_GetData(signed int a1, signed int a2, signed int a3, int a4, signed int a5, int a6, int a7, int a8, int a9, int a10, int a11, _DWORD *a12);
+int AKMD_ResetDOE();
+signed int __fastcall AKMD_ChangeFormation(signed int a1);
+signed int __fastcall LoadInt(FILE *a1, const char *a2, int a3);
+signed int __fastcall LoadInt16(FILE *a1, const char *a2, _WORD *a3);
+signed int __fastcall LoadInt32(FILE *a1, const char *a2, const char **a3);
 signed int __fastcall LoadInt16vec(FILE *a1, int a2, int a3);
+signed int __fastcall LoadInt32vec(FILE *a1, int a2, int a3);
 int __fastcall LoadParameters(const char *a1, int a2);
+signed int __fastcall SaveInt16(FILE *a1, int a2, int a3);
+signed int __fastcall SaveInt16vec(FILE *a1, int a2, int a3);
+signed int __fastcall SaveInt32(FILE *a1, int a2, int a3);
+signed int __fastcall SaveInt32vec(FILE *a1, int a2, int a3);
+int __fastcall SaveParameters(const char *a1, int a2);
 int __fastcall RegisterFormClass(int result);
-int __fastcall SetDefaultPRMS(int result);
-int __fastcall InitAK8963_Measure(int a1, int a2);
-int __fastcall GetMagneticVector(int a1, int a2, int a3, __int16 a4);
 signed int __fastcall InitAK8963PRMS(_WORD *a1);
-void *__fastcall AKSC_InitDecomp8963(int a1);
+int __fastcall SetDefaultPRMS(int result);
+int __fastcall InitAK8963_Measure(int (__cdecl *a1)(_DWORD, _DWORD), int a2);
+signed int __fastcall GetMagneticVector(int a1, int a2, int a3, __int16 a4);
+int __fastcall AKSC_InitDecomp8963(int result);
+int __fastcall sub_2C24(int a1, int a2);
+signed int __fastcall sub_2D80(int a1, int *a2);
+signed int __fastcall sub_2E5C(signed int a1, int a2, int a3);
 int __fastcall AKSC_Decomp8963S3(int a1, signed int a2, int a3, int a4, int a5, int a6, _WORD *a7, int a8, signed __int16 *a9, signed __int16 *a10, _WORD *a11, _WORD *a12, _WORD *a13);
-int __fastcall AKSC_Decomp8963(int a1, signed int a2, int a3, int a4, int a5, _WORD *a6, int a7, signed __int16 *a8, signed __int16 *a9, _WORD *a10, _WORD *a11);
+signed int __fastcall AKSC_Decomp8963(int a1, signed int a2, int a3, int a4, int a5, _WORD *a6, int a7, signed __int16 *a8, signed __int16 *a9, _WORD *a10, _WORD *a11);
 int __fastcall AKSC_div16(int a1, int a2);
 int __fastcall AKSC_div32(unsigned int a1, unsigned int a2);
 int __fastcall AKSC_norm16(int a1);
 int __fastcall AKSC_norm32(signed int a1);
-signed int __fastcall AKSC_abs16(signed int result);
-int __fastcall AKSC_div16f(int a1, int a2, __int16 *a3);
-int __fastcall sub_2BBC(int result);
-int __fastcall AKSC_SetLayout(void *src, int a2);
+int __fastcall AKSC_abs16(signed int a1);
+int __fastcall AKSC_div16f(int a1, int a2, _WORD *a3);
+int __fastcall sub_348C(int a1, int a2, int a3);
+int __fastcall AKSC_SetLayout(int result, int a2);
 int __fastcall AKSC_ThetaFilter(int a1, int a2, int a3);
-int __fastcall sub_2CA0(int a1, _WORD *a2);
-int __fastcall AKSC_DirectionS3(int a1, int a2, int a3, void *a4, const void *a5, int a6, int a7, int a8, _WORD *a9, _WORD *a10, _WORD *a11, _WORD *a12, _WORD *a13, _WORD *a14, _WORD *a15, _WORD *a16, __int16 *a17, int a18, int a19);
-int __fastcall AKSC_VNorm(int a1, int a2, int a3, int a4, int a5);
-int __fastcall AKSC_cholSl(int a1, int a2, int a3, int a4, int a5, int a6);
-int __fastcall AKSC_cholDc(int a1, int a2, int a3, int a4);
-int __fastcall AKSC_fitOnPlane(int a1, int a2, int a3, int a4, _WORD *a5);
+signed int __fastcall sub_3838(int a1, int a2);
+signed int __fastcall sub_39B8(int a1, _WORD *a2);
+signed int __fastcall sub_3A74(int a1, int a2, int a3);
+int __fastcall sub_3CDC(int a1, int a2, _WORD *a3);
+int __fastcall sub_3D4C(int a1, int a2, signed __int16 *a3);
+signed int __fastcall sub_3DE0(int a1, _WORD *a2, __int16 *a3, _WORD *a4, __int16 *a5);
+int __fastcall sub_3EAC(int a1, _WORD *a2, _WORD *a3, _WORD *a4);
+signed int __fastcall sub_3F7C(int a1, _WORD *a2);
+int __fastcall AKSC_DirectionS3(int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, _WORD *a9, signed __int16 *a10, _WORD *a11, _WORD *a12, _WORD *a13, _WORD *a14, __int16 *a15, _WORD *a16, __int16 *a17, int a18, int a19);
+signed int __fastcall AKSC_VNorm(int a1, int a2, int a3, int a4, int a5);
+int __fastcall AKSC_cholSl(int a1, signed int a2, int a3, int a4, int a5, int a6);
+signed int __fastcall AKSC_cholDc(int a1, signed int a2, int a3, int a4);
+signed int __fastcall AKSC_fitOnPlane(int a1, int a2, int a3, int a4, _WORD *a5);
 signed int __fastcall AKSC_getCoeff(int a1, int a2, int a3, int a4);
-int __fastcall sub_3F60(int result, signed int a2, int a3, int a4);
-char *__fastcall AKSC_SetHDOELevel(char *result, char *a2, __int16 a3, int a4);
-char *__fastcall zzAKSC_InitHDOEProcPrmsS3(int a1, int a2, int a3, __int16 a4, char *a5, __int16 a6);
-signed int __fastcall sub_40A0(char *a1, _WORD *a2, _WORD *a3, int a4, int a5, _WORD *a6, _WORD *a7, __int16 a8);
+int __fastcall sub_4984(int a1, int a2, int a3);
+int __fastcall AKSC_SetHDOELevel(int a1, int a2, __int16 a3, int a4);
+signed int __fastcall zzAKSC_InitHDOEProcPrmsS3(int a1, int a2, int a3, __int16 a4, int a5, __int16 a6);
+int __fastcall sub_4D50(int a1, int a2, int a3, int a4, _WORD *a5, _WORD *a6);
+signed int __fastcall sub_4E64(int a1, int a2, int a3, int a4, _WORD *a5, _WORD *a6);
+signed int __fastcall sub_4F18(int a1, int a2, int a3, int a4, int a5, __int16 a6, __int16 a7);
+signed int __fastcall sub_5008(_WORD *a1, _WORD *a2, _WORD *a3, int a4, int a5, __int16 *a6, _WORD *a7, __int16 a8);
 int __fastcall zzAKSC_HDOEProcessS3(int a1, int a2, int a3, int a4, int a5, __int16 a6, __int16 a7, __int16 a8, int a9, _DWORD *a10);
-int __fastcall AKSC_InitHFlucCheck(_WORD *a1, const void *a2, int a3);
-int __fastcall AKSC_HFlucCheck(int a1, int a2);
-int __fastcall AKSC_TransByHbase(int result, int a2, int a3, int a4, _WORD *a5);
-int __fastcall AKSC_HOffsetCal(int a1, int a2);
-int __fastcall AKSC_sqrt16(int a1);
+signed int __fastcall AKSC_InitHFlucCheck(int a1, int a2, int a3);
+signed int __fastcall AKSC_HFlucCheck(int a1, int a2);
+_DWORD *__fastcall AKSC_TransByHbase(_DWORD *result, _DWORD *a2, int a3, int *a4, _WORD *a5);
+signed int __fastcall sub_5710(int a1, int a2, _WORD *a3, int a4, _WORD *a5);
+signed int __fastcall AKSC_HOffsetCal(int a1, _WORD *a2);
+unsigned int __fastcall AKSC_sqrt16(int a1);
 int __fastcall AKSC_sqrt32(unsigned int a1);
 int __fastcall AKSC_angRng(int result, int a2);
 unsigned int __fastcall AKSC_sin(int a1);
 int __fastcall AKSC_cos(signed int a1);
-unsigned int __fastcall sub_4EEC(int a1);
+int __fastcall sub_5A48(int a1);
 int __fastcall AKSC_atan2(int a1, int a2);
-int __fastcall AKSC_invSqrt(signed int a1, _WORD *a2, int a3, __int16 a4);
-char *__fastcall AKSC_buffer(char *result, int a2, int a3, int a4);
-int __fastcall AKSC_vectorCalc(int result, signed int a2, int a3, int a4, int a5, int a6);
+int __fastcall AKSC_invSqrt(signed int a1, _WORD *a2);
+int __fastcall AKSC_buffer(int result, signed int a2, signed int a3, int a4);
+int __fastcall AKSC_vectorCalc(int result, signed int a2, signed __int16 *a3, signed __int16 *a4, int a5, int a6);
 signed int AKSC_GetVersion_Major();
 int AKSC_GetVersion_Variation();
 signed int AKSC_GetVersion_DateCode();
+int __fastcall sub_5F08(int result, unsigned int a2);
+int _aeabi_ldiv0();
+int __fastcall sub_600C(char *a1);
+int __fastcall sub_6024(int a1, int a2, unsigned int a3);
+int __fastcall sub_60C8(int a1);
+_DWORD *__fastcall sub_611C(_DWORD *result);
+signed int __fastcall sub_6188(int a1, int a2, int a3);
+int __fastcall sub_6298(char *a1);
+signed int sub_62AC();
+int __fastcall nullsub_1(_DWORD, _DWORD); // weak
+signed int __fastcall sub_62B8(int a1, int a2, int a3);
+int __fastcall sub_63E0(int a1, int a2, int a3);
+int __fastcall Unwind_GetCFA(int a1);
+signed int __fastcall _gnu_Unwind_RaiseException(int a1, int a2);
+signed int __fastcall _gnu_Unwind_ForcedUnwind(int a1, int a2, int a3, int a4);
+void __fastcall _gnu_Unwind_Resume(int a1, int a2);
+signed int __fastcall _gnu_Unwind_Resume_or_Rethrow(int a1, int a2);
+int __fastcall Unwind_DeleteException(int result);
+signed int __fastcall Unwind_VRS_Get(int a1, unsigned int a2, unsigned int a3, int a4, unsigned int a5);
+int __fastcall sub_660C(int a1, unsigned int a2, int a3, int a4);
+signed int __fastcall Unwind_VRS_Set(int a1, _DWORD *a2, unsigned int a3, int a4, _DWORD *a5);
+signed int __fastcall sub_6678(int a1, unsigned int a2, int a3);
+signed int __fastcall sub_66A4(int a1, int a2, int a3, signed int a4);
+signed int __fastcall _aeabi_unwind_cpp_pr2(int a1, int a2, int a3);
+signed int __fastcall _aeabi_unwind_cpp_pr1(int a1, int a2, int a3);
+signed int __fastcall _aeabi_unwind_cpp_pr0(int a1, int a2, int a3);
+signed int __fastcall _gnu_Unwind_Backtrace(int (__fastcall *a1)(int *, int), int a2, int a3);
+int __fastcall Unwind_VRS_Pop(int a1, int a2, unsigned int a3, int a4);
+void __fastcall restore_core_regs(int a1);
+int __fastcall _gnu_Unwind_Restore_VFP(int result);
+int _gnu_Unwind_Save_VFP();
+int __fastcall _gnu_Unwind_Restore_VFP_D(int _R0);
+int __fastcall _gnu_Unwind_Save_VFP_D(int _R0);
+int __fastcall _gnu_Unwind_Restore_VFP_D_16_to_31(int _R0);
+int __fastcall _gnu_Unwind_Save_VFP_D_16_to_31(int _R0);
+int __fastcall _gnu_Unwind_Restore_WMMXD(_DWORD *a1);
+void _gnu_Unwind_Save_WMMXD();
+int __fastcall _gnu_Unwind_Restore_WMMXC(_DWORD *a1);
+void _gnu_Unwind_Save_WMMXC();
+signed int __fastcall __Unwind_RaiseException(int a1, int a2, int a3, int a4);
+void __fastcall __Unwind_Resume(int a1, int a2, int a3, int a4);
+signed int __fastcall __Unwind_Resume_or_Rethrow(int a1, int a2, int a3, int a4);
+signed int __fastcall __Unwind_ForcedUnwind(int a1, int a2, int a3, int a4);
+signed int __fastcall __Unwind_Backtrace(int (__fastcall *a1)(int *, int), int a2, int a3, int a4);
+signed int __fastcall sub_7094(int a1);
+int __fastcall sub_70F0(int a1, int a2, int a3, int a4);
+int sub_7118(void); // weak
+signed int __fastcall _gnu_unwind_execute(int a1, int a2, int a3, int a4);
+signed int __fastcall _gnu_unwind_frame(int a1, int a2, int a3, int a4);
+int Unwind_GetRegionStart();
+int Unwind_GetLanguageSpecificData();
+void Unwind_GetDataRelBase();
+void Unwind_GetTextRelBase();
 
 //-------------------------------------------------------------------------
 // Data declarations
 
-_UNKNOWN unk_5619; // weak
-_UNKNOWN unk_5624; // weak
-_UNKNOWN unk_5688; // weak
-_UNKNOWN unk_5730; // weak
-_WORD word_5784[50] =
-{
-  32767,
-  31790,
-  30894,
-  30070,
-  29309,
-  28602,
-  27945,
-  27330,
-  26755,
-  26214,
-  25705,
-  25225,
-  24770,
-  24339,
-  23930,
-  23541,
-  23170,
-  22817,
-  22479,
-  22155,
-  21845,
-  21548,
-  21263,
-  20988,
-  20724,
-  20470,
-  20225,
-  19988,
-  19760,
-  19539,
-  19326,
-  19119,
-  18919,
-  18725,
-  18536,
-  18354,
-  18176,
-  18004,
-  17837,
-  17674,
-  17515,
-  17361,
-  17211,
-  17064,
-  16921,
-  16782,
-  16646,
-  16514,
-  16384,
-  0
-}; // idb
-_WORD word_57E8[90] =
+_UNKNOWN loc_753C; // weak
+_UNKNOWN unk_7D10; // weak
+_UNKNOWN unk_7D68; // weak
+_UNKNOWN unk_7DC7; // weak
+_UNKNOWN unk_7E10; // weak
+_WORD word_7E64[64] =
 {
   286,
   858,
@@ -217,154 +236,234 @@ _WORD word_57E8[90] =
   28519,
   28796,
   29065,
-  29324,
-  29575,
-  29817,
-  30049,
-  30273,
-  30487,
-  30692,
-  30888,
-  31074,
-  31250,
-  31418,
-  31575,
-  31723,
-  31862,
-  31990,
-  32109,
-  32218,
-  32318,
-  32407,
-  32487,
-  32556,
-  32616,
-  32666,
-  32706,
-  32736,
-  32756,
-  32766
+  29324
 }; // idb
+__int16 word_7F18 = 285; // weak
+char aEgiqmQiuvy[15] = "ÐeƒiQm=qIuvyÈ}"; // weak
 _UNKNOWN I16V_INIT_VALUE; // weak
+_UNKNOWN unk_7FDA; // weak
+_UNKNOWN unk_7FDC; // weak
+int GLOBAL_OFFSET_TABLE_[] = { 0 }; // weak
+void *off_A000 = &off_A000; // weak
+__int16 word_A004; // weak
+__int16 word_A006; // weak
+__int16 word_A008; // weak
+__int16 word_A0F4; // weak
+__int16 word_A0F6; // weak
+__int16 word_A0F8; // weak
+__int16 word_A0FA; // weak
+__int16 word_A0FC; // weak
+__int16 word_A0FE; // weak
+_UNKNOWN unk_A100; // weak
+int dword_A2F4; // weak
+_UNKNOWN unk_A302; // weak
+char byte_A312; // weak
+_UNKNOWN unk_A313; // weak
+char byte_A323; // weak
+__int16 word_A324; // weak
+__int16 word_A326; // weak
+__int16 word_A328; // weak
+__int16 word_A32A; // weak
+__int16 word_A32C; // weak
+int dword_A344; // weak
+int dword_A348; // weak
+int dword_A34C; // weak
+__int16 word_A35C; // weak
+__int16 word_A360; // weak
+__int16 word_A362; // weak
+int dword_A364; // weak
 _UNKNOWN g_opmode; // weak
-_UNKNOWN _dso_handle; // weak
-__int16 word_6160; // weak
-__int16 word_6162; // weak
-__int16 word_6164; // weak
-__int16 word_6250; // weak
-__int16 word_6252; // weak
-__int16 word_6254; // weak
-__int16 word_6256; // weak
-__int16 word_6258; // weak
-__int16 word_625A; // weak
-_UNKNOWN unk_625C; // weak
-int dword_6450; // weak
-_UNKNOWN unk_645E; // weak
-char byte_646E; // weak
-_UNKNOWN unk_646F; // weak
-char byte_647F; // weak
-__int16 word_6480; // weak
-__int16 word_6482; // weak
-__int16 word_6484; // weak
-__int16 word_6486; // weak
-__int16 word_6488; // weak
-int dword_64A0; // weak
-int dword_64A4; // weak
-int dword_64A8; // weak
-__int16 word_64B8; // weak
-__int16 word_64BC; // weak
-__int16 word_64BE; // weak
-int dword_64C0; // weak
 // extern _UNKNOWN _stack_chk_guard; weak
 // extern _UNKNOWN _sF; weak
+// extern _UNKNOWN __gnu_Unwind_Find_exidx; weak
+// extern _UNKNOWN _cxa_call_unexpected; weak
 
 
-//----- (00001118) --------------------------------------------------------
-int sub_1118()
+//----- (00001960) --------------------------------------------------------
+int sub_1960()
 {
-  return _cxa_finalize(&_dso_handle);
+  return _cxa_finalize(&off_A000);
 }
-// 1108: using guessed type int __fastcall _cxa_finalize(_DWORD);
+// 1870: using guessed type int __fastcall _cxa_finalize(_DWORD);
+// A000: using guessed type void *off_A000;
 
-//----- (00001128) --------------------------------------------------------
+//----- (000019BC) --------------------------------------------------------
 int getFormation()
 {
-  return word_64BC;
+  return word_A360;
 }
-// 64BC: using guessed type __int16 word_64BC;
+// A360: using guessed type __int16 word_A360;
 
-//----- (00001138) --------------------------------------------------------
-__int16 *AKMD_Release()
+//----- (000019CC) --------------------------------------------------------
+void AKMD_Release()
 {
-  __int16 *result; // r0@2
-
-  if ( word_64BE )
+  if ( word_A362 )
   {
-    word_64BE = 0;
-    result = &word_6160;
-    word_64B8 = 0;
+    word_A362 = 0;
+    word_A35C = 0;
+    JUMPOUT(&loc_753C);
+  }
+}
+// A35C: using guessed type __int16 word_A35C;
+// A362: using guessed type __int16 word_A362;
+
+//----- (00001A04) --------------------------------------------------------
+signed int __fastcall AKMD_Init(int a1, int a2)
+{
+  int v2; // r6@1
+  int v3; // r5@1
+  const char *v4; // r1@4
+  const char *v5; // r2@4
+  __int16 v7; // r0@8
+
+  v2 = a1;
+  v3 = a2;
+  if ( word_A362 )
+    _android_log_print(3, "AKMD2", "AK8963PRMS is already initialized.");
+  if ( v2 != 1 )
+  {
+    v4 = "AKMD2";
+    v5 = "AKMD_Init: Invalid formFactorNumber.";
+LABEL_7:
+    _android_log_print(6, v4, v5);
+    return -1;
+  }
+  if ( !v3 )
+  {
+    v4 = "AKMD2";
+    v5 = "AKMD_Init: regs can't be NULL.";
+    goto LABEL_7;
+  }
+  *(_WORD *)(v3 + 2) = 128;
+  *(_WORD *)v3 = 72;
+  *(_WORD *)(v3 + 4) = 128;
+  *(_WORD *)(v3 + 6) = 128;
+  AKMD_Release();
+  memset(&word_A004, 0, 0x35Cu);
+  word_A35C = 1;
+  InitAK8963PRMS(&word_A004);
+  word_A0FA = *(_WORD *)(v3 + 2);
+  word_A0FC = *(_WORD *)(v3 + 4);
+  v7 = *(_WORD *)(v3 + 6);
+  word_A324 = 8963;
+  word_A0FE = v7;
+  word_A326 = *(_WORD *)v3;
+  word_A328 = *(_WORD *)(v3 + 2);
+  word_A32A = *(_WORD *)(v3 + 4);
+  word_A32C = *(_WORD *)(v3 + 6);
+  strncpy((char *)&unk_A302, "ASAHIKASEI", 0x10u);
+  byte_A312 = 0;
+  strncpy((char *)&unk_A313, "LGE_63_GB", 0x10u);
+  byte_A323 = 0;
+  word_A362 = 1;
+  return 0;
+}
+// 1888: using guessed type int _android_log_print(_DWORD, _DWORD, const char *, ...);
+// A004: using guessed type __int16 word_A004;
+// A0FA: using guessed type __int16 word_A0FA;
+// A0FC: using guessed type __int16 word_A0FC;
+// A0FE: using guessed type __int16 word_A0FE;
+// A312: using guessed type char byte_A312;
+// A323: using guessed type char byte_A323;
+// A324: using guessed type __int16 word_A324;
+// A326: using guessed type __int16 word_A326;
+// A328: using guessed type __int16 word_A328;
+// A32A: using guessed type __int16 word_A32A;
+// A32C: using guessed type __int16 word_A32C;
+// A35C: using guessed type __int16 word_A35C;
+// A362: using guessed type __int16 word_A362;
+
+//----- (00001B04) --------------------------------------------------------
+int __fastcall AKMD_Start(const char *a1)
+{
+  const char *v1; // r1@2
+  const char *v2; // r2@2
+  int v3; // r1@5
+  int result; // r0@7
+
+  if ( !word_A362 )
+  {
+    v1 = "AKMD2";
+    v2 = "AKMD_Start: PRMS are not initialized.";
+LABEL_9:
+    _android_log_print(6, v1, v2);
+    return -1;
+  }
+  if ( !a1 )
+  {
+    v1 = "AKMD2";
+    v2 = "AKMD_Start: path can't be NULL.";
+    goto LABEL_9;
+  }
+  if ( !LoadParameters(a1, (int)&word_A004) )
+  {
+    _android_log_print(4, "AKMD2", "AKMD_Start: Setting file cannot be read.");
+    SetDefaultPRMS((int)&word_A004);
+  }
+  result = InitAK8963_Measure((int (__cdecl *)(_DWORD, _DWORD))&word_A004, v3);
+  if ( result )
+  {
+    v1 = "AKMD2";
+    v2 = "AKMD_Start: Start error.";
+    goto LABEL_9;
   }
   return result;
 }
-// 6160: using guessed type __int16 word_6160;
-// 64B8: using guessed type __int16 word_64B8;
-// 64BE: using guessed type __int16 word_64BE;
+// 1888: using guessed type int _android_log_print(_DWORD, _DWORD, const char *, ...);
+// A004: using guessed type __int16 word_A004;
+// A362: using guessed type __int16 word_A362;
 
-//----- (0000115C) --------------------------------------------------------
-signed int __fastcall AKMD_ChangeFormation(signed int a1)
+//----- (00001B94) --------------------------------------------------------
+signed int __fastcall AKMD_Stop(const char *a1)
 {
   const char *v1; // r1@2
   const char *v2; // r2@2
 
-  if ( !word_64BE )
+  if ( !word_A362 )
   {
     v1 = "AKMD2";
-    v2 = "AKMD_ChangeFormFactor: PRMS are not initialized.";
-LABEL_6:
+    v2 = "AKMD_Start: PRMS are not initialized.";
+LABEL_7:
     _android_log_print(6, v1, v2);
     return -1;
   }
-  if ( a1 < 0 || word_64B8 <= a1 )
+  if ( !a1 )
   {
     v1 = "AKMD2";
-    v2 = "AKMD_ChangeFormFactor: Invalid formFactorNumber.";
-    goto LABEL_6;
+    v2 = "AKMD_Start: path can't be NULL.";
+    goto LABEL_7;
   }
-  word_64BC = a1;
+  if ( !SaveParameters(a1, (int)&word_A004) )
+  {
+    v1 = "AKMD2";
+    v2 = "AKMD_Stop: Setting file cannot be written.";
+    goto LABEL_7;
+  }
   return 0;
 }
-// 1054: using guessed type int _android_log_print(_DWORD, _DWORD, const char *, ...);
-// 64B8: using guessed type __int16 word_64B8;
-// 64BC: using guessed type __int16 word_64BC;
-// 64BE: using guessed type __int16 word_64BE;
+// 1888: using guessed type int _android_log_print(_DWORD, _DWORD, const char *, ...);
+// A004: using guessed type __int16 word_A004;
+// A362: using guessed type __int16 word_A362;
 
-//----- (000011C0) --------------------------------------------------------
-char *AKMD_ResetDOE()
-{
-  return AKSC_SetHDOELevel((char *)&unk_625C, (char *)&word_6160, 0, 1);
-}
-// 6160: using guessed type __int16 word_6160;
-
-//----- (000011D8) --------------------------------------------------------
-signed int __fastcall AKMD_GetData(int a1, int a2, int a3, int a4, signed int a5, int a6, int a7, int a8, int a9, int a10, int a11, _DWORD *a12)
+//----- (00001C00) --------------------------------------------------------
+signed int __fastcall AKMD_GetData(signed int a1, signed int a2, signed int a3, int a4, signed int a5, int a6, int a7, int a8, int a9, int a10, int a11, _DWORD *a12)
 {
   const char *v15; // r1@4
   const char *v16; // r2@4
-  int v24; // r5@9
-  signed int result; // r0@9
-  __int16 v32; // [sp+0h] [bp-20h]@9
-  __int16 v33; // [sp+2h] [bp-1Eh]@9
-  __int16 v34; // [sp+4h] [bp-1Ch]@9
-  __int16 v35; // [sp+6h] [bp-1Ah]@9
-  __int16 v36; // [sp+8h] [bp-18h]@9
-  __int16 v37; // [sp+Ah] [bp-16h]@9
-  __int16 v38; // [sp+Ch] [bp-14h]@9
-  __int16 v39; // [sp+Eh] [bp-12h]@9
+  signed int v24; // r0@9
+  __int16 v32; // [sp+8h] [bp-20h]@9
+  __int16 v33; // [sp+Ah] [bp-1Eh]@9
+  __int16 v34; // [sp+Ch] [bp-1Ch]@9
+  __int16 v35; // [sp+Eh] [bp-1Ah]@9
+  __int16 v36; // [sp+10h] [bp-18h]@9
+  __int16 v37; // [sp+12h] [bp-16h]@9
+  __int16 v38; // [sp+14h] [bp-14h]@9
+  __int16 v39; // [sp+16h] [bp-12h]@9
 
-  _R5 = a1;
   _R4 = a3;
+  _R5 = a1;
   _R3 = a2;
-  if ( !word_64BE )
+  if ( !word_A362 )
   {
     _android_log_print(6, "AKMD2", "AKMD_SaveMag: PRMS are not initialized.", a2);
     return -1;
@@ -375,7 +474,7 @@ signed int __fastcall AKMD_GetData(int a1, int a2, int a3, int a4, signed int a5
     v15 = "AKMD2";
     v16 = "AKMD_SaveMag: Invalid ix value (%d).";
 LABEL_18:
-    _android_log_print(6, v15, v16, _R3, *(_DWORD *)&v32, *(_DWORD *)&v34, *(_DWORD *)&v36, *(_DWORD *)&v38);
+    _android_log_print(6, v15, v16, _R3);
     return -1;
   }
   if ( (unsigned int)(a2 + 3219128) > 0x623D70 )
@@ -393,715 +492,575 @@ LABEL_18:
   }
   __asm
   {
-    VMOV            S4, R3
-    VCVT.F64.S32    D17, S4
+    VMOV            S2, R3
+    VCVT.F64.S32    D2, S2
     VLDR            D16, =0.010172526
-    VMOV            S6, R5
-    VMOV            S0, R4
+    VMOV            S15, R5
+    VMUL.F64        D3, D2, D16
+    VMOV            S5, R4
+    VCVT.F64.S32    D4, S5
+    VCVT.F64.S32    D17, S15
+    VMUL.F64        D5, D4, D16
+    VMUL.F64        D0, D17, D16
+    VCVTR.S32.F64   S3, D3
+    VCVTR.S32.F64   S7, D5
+    VMOV            R5, S3
+    VCVTR.S32.F64   S1, D0
+    VMOV            R4, S7
+    VMOV            R6, S1
   }
+  _android_log_print(3, "AKMD2", "REG DATA:%d,%d,%d", (signed __int16)_R6, (signed __int16)_R5, (signed __int16)_R4);
   v32 = 1;
-  __asm
-  {
-    VMUL.F64        D17, D17, D16
-    VCVT.F64.S32    D1, S6
-    VCVTR.S32.F64   S1, D17
-    VCVT.F64.S32    D17, S0
-    VMOV            R5, S1
-  }
-  v35 = _R5;
-  __asm
-  {
-    VMUL.F64        D1, D1, D16
-    VMUL.F64        D16, D17, D16
-    VCVTR.S32.F64   S5, D1
-    VCVTR.S32.F64   S15, D16
-    VMOV            R0, S5
-  }
+  v33 = (unsigned __int8)_R6;
   v36 = (unsigned __int16)_R5 >> 8;
-  v33 = _R0;
-  v34 = (unsigned __int16)_R0 >> 8;
-  __asm { VMOV            R3, S15 }
+  v35 = _R5;
+  v37 = (unsigned __int8)_R4;
   v39 = 16;
-  v37 = (unsigned __int8)_R3;
-  v38 = (unsigned __int16)_R3 >> 8;
-  v24 = (signed __int16)getFormation();
-  result = (unsigned __int16)GetMagneticVector((int)&v32, (int)&word_6160, v24, a5 / 10);
-  if ( !(_WORD)result )
+  v38 = (unsigned __int16)_R4 >> 8;
+  v34 = (unsigned __int16)_R6 >> 8;
+  v24 = GetMagneticVector((int)&v32, (int)&word_A004, word_A360, a5 / 10);
+  _R3 = v24;
+  if ( !v24 )
   {
-    _R2 = word_6250;
+    _R0 = word_A0F4;
     __asm
     {
-      VMOV            S4, R2
-      VCVT.F64.S32    D20, S4
-      VLDR            D16, =0.06
-      VMUL.F64        D20, D20, D16
-      VCVT.F32.F64    S2, D20
-      VSTR            S2, [R1]
+      VMOV            S9, R0
+      VCVT.F64.S32    D6, S9
+      VLDR            D18, =0.06
+      VMUL.F64        D7, D6, D18
+      VCVT.F32.F64    S11, D7
+      VSTR            S11, [R2]
     }
-    _LR = word_6252;
+    _R1 = word_A0F6;
     __asm
     {
-      VMOV            S1, LR
-      VCVT.F64.S32    D19, S1
-      VMUL.F64        D19, D19, D16
-      VCVT.F32.F64    S0, D19
-      VSTR            S0, [R3]
+      VMOV            S13, R1
+      VCVT.F64.S32    D19, S13
+      VMUL.F64        D20, D19, D18
+      VCVT.F32.F64    S15, D20
+      VSTR            S15, [R0]
     }
-    _R12 = word_6254;
+    _LR = word_A0F8;
     __asm
     {
-      VMOV            S15, R12
-      VCVT.F64.S32    D18, S15
-      VMUL.F64        D18, D18, D16
-      VCVT.F32.F64    S13, D18
-      VSTR            S13, [R2]
+      VMOV            S0, LR
+      VCVT.F64.S32    D21, S0
+      VMUL.F64        D22, D21, D18
+      VCVT.F32.F64    S1, D22
+      VSTR            S1, [R2]
     }
-    _LR = word_6160 + dword_64A0;
+    _R0 = word_A004 + dword_A344;
     __asm
     {
-      VMOV            S14, LR
-      VCVT.F64.S32    D6, S14
-      VMUL.F64        D6, D6, D16
-      VCVT.F32.F64    S9, D6
-      VSTR            S9, [R2]
+      VMOV            S2, R0
+      VCVT.F64.S32    D23, S2
+      VMUL.F64        D24, D23, D18
+      VCVT.F32.F64    S4, D24
+      VSTR            S4, [R2]
     }
-    _R3 = word_6162 + dword_64A4;
+    _R0 = word_A006 + dword_A348;
     __asm
     {
-      VMOV            S11, R3
-      VCVT.F64.S32    D4, S11
-      VMUL.F64        D4, D4, D16
-      VCVT.F32.F64    S10, D4
-      VSTR            S10, [R2]
+      VMOV            S6, R0
+      VCVT.F64.S32    D25, S6
+      VMUL.F64        D26, D25, D18
+      VCVT.F32.F64    S3, D26
+      VSTR            S3, [R2]
     }
-    _R12 = word_6164 + dword_64A8;
+    _R0 = word_A008 + dword_A34C;
     __asm
     {
-      VMOV            S7, R12
-      VCVT.F64.S32    D17, S7
-      VMUL.F64        D16, D17, D16
-      VCVT.F32.F64    S3, D16
-      VSTR            S3, [R3]
+      VMOV            S5, R0
+      VCVT.F64.S32    D27, S5
+      VMUL.F64        D28, D27, D18
+      VCVT.F32.F64    S8, D28
+      VSTR            S8, [R2]
     }
-    *a12 = dword_6450;
-    return result;
+    *a12 = dword_A2F4;
+    return _R3;
   }
-  if ( (signed __int16)result != 1
-    && (signed __int16)result != 2
-    && (signed __int16)result != 4
-    && (signed __int16)result != 8
-    && (signed __int16)result != 16 )
+  if ( v24 != 1 && v24 != 2 && v24 != 4 && v24 != 8 && v24 != 16 && v24 != 32 && v24 != 64 )
   {
-    _R3 = (signed __int16)result;
-    if ( (signed __int16)result != 32 && (signed __int16)result != 64 )
-    {
-      v15 = "AKMD2";
-      v16 = "GetMagneticVector has failed (0x%04X).\n";
-      goto LABEL_18;
-    }
+    v15 = "AKMD2";
+    v16 = "GetMagneticVector has failed (0x%04X).\n";
+    goto LABEL_18;
   }
   return -1;
 }
-// 1054: using guessed type int _android_log_print(_DWORD, _DWORD, const char *, ...);
-// 6160: using guessed type __int16 word_6160;
-// 6162: using guessed type __int16 word_6162;
-// 6164: using guessed type __int16 word_6164;
-// 6250: using guessed type __int16 word_6250;
-// 6252: using guessed type __int16 word_6252;
-// 6254: using guessed type __int16 word_6254;
-// 6450: using guessed type int dword_6450;
-// 64A0: using guessed type int dword_64A0;
-// 64A4: using guessed type int dword_64A4;
-// 64A8: using guessed type int dword_64A8;
-// 64BE: using guessed type __int16 word_64BE;
+// 1888: using guessed type int _android_log_print(_DWORD, _DWORD, const char *, ...);
+// A004: using guessed type __int16 word_A004;
+// A006: using guessed type __int16 word_A006;
+// A008: using guessed type __int16 word_A008;
+// A0F4: using guessed type __int16 word_A0F4;
+// A0F6: using guessed type __int16 word_A0F6;
+// A0F8: using guessed type __int16 word_A0F8;
+// A2F4: using guessed type int dword_A2F4;
+// A344: using guessed type int dword_A344;
+// A348: using guessed type int dword_A348;
+// A34C: using guessed type int dword_A34C;
+// A360: using guessed type __int16 word_A360;
+// A362: using guessed type __int16 word_A362;
 
-//----- (00001428) --------------------------------------------------------
-signed int __fastcall AKMD_Stop(char *a1)
+//----- (00001E70) --------------------------------------------------------
+int AKMD_ResetDOE()
+{
+  return AKSC_SetHDOELevel((int)&unk_A100, (int)&word_A004, 0, 1);
+}
+// A004: using guessed type __int16 word_A004;
+
+//----- (00001E84) --------------------------------------------------------
+signed int __fastcall AKMD_ChangeFormation(signed int a1)
 {
   const char *v1; // r1@2
   const char *v2; // r2@2
 
-  if ( word_64BE )
-  {
-    if ( a1 )
-    {
-      if ( (unsigned __int16)SaveParameters(a1, (int)&word_6160) )
-        return 0;
-      v1 = "AKMD2";
-      v2 = "AKMD_Stop: Setting file cannot be written.";
-    }
-    else
-    {
-      v1 = "AKMD2";
-      v2 = "AKMD_Start: path can't be NULL.";
-    }
-  }
-  else
+  if ( !word_A362 )
   {
     v1 = "AKMD2";
-    v2 = "AKMD_Start: PRMS are not initialized.";
-  }
-  _android_log_print(6, v1, v2);
-  return -1;
-}
-// 1054: using guessed type int _android_log_print(_DWORD, _DWORD, const char *, ...);
-// 6160: using guessed type __int16 word_6160;
-// 64BE: using guessed type __int16 word_64BE;
-
-//----- (00001490) --------------------------------------------------------
-signed int __fastcall AKMD_Start(const char *a1)
-{
-  const char *v1; // r1@2
-  const char *v2; // r2@2
-  int v3; // r1@5
-  signed int result; // r0@7
-
-  if ( !word_64BE )
-  {
-    v1 = "AKMD2";
-    v2 = "AKMD_Start: PRMS are not initialized.";
-LABEL_9:
+    v2 = "AKMD_ChangeFormFactor: PRMS are not initialized.";
+LABEL_6:
     _android_log_print(6, v1, v2);
     return -1;
   }
-  if ( !a1 )
+  if ( a1 < 0 || word_A35C <= a1 )
   {
     v1 = "AKMD2";
-    v2 = "AKMD_Start: path can't be NULL.";
-    goto LABEL_9;
+    v2 = "AKMD_ChangeFormFactor: Invalid formFactorNumber.";
+    goto LABEL_6;
   }
-  if ( !(unsigned __int16)LoadParameters(a1, (int)&word_6160) )
-    SetDefaultPRMS((int)&word_6160);
-  result = (unsigned __int16)InitAK8963_Measure((int)&word_6160, v3);
-  if ( (_WORD)result )
-  {
-    v1 = "AKMD2";
-    v2 = "AKMD_Start: Start error.";
-    goto LABEL_9;
-  }
-  return result;
+  word_A360 = a1;
+  return 0;
 }
-// 1054: using guessed type int _android_log_print(_DWORD, _DWORD, const char *, ...);
-// 6160: using guessed type __int16 word_6160;
-// 64BE: using guessed type __int16 word_64BE;
+// 1888: using guessed type int _android_log_print(_DWORD, _DWORD, const char *, ...);
+// A35C: using guessed type __int16 word_A35C;
+// A360: using guessed type __int16 word_A360;
+// A362: using guessed type __int16 word_A362;
 
-//----- (0000150C) --------------------------------------------------------
-signed int __fastcall AKMD_Init(int a1, int a2)
+//----- (00001EE8) --------------------------------------------------------
+signed int __fastcall LoadInt(FILE *a1, const char *a2, int a3)
 {
-  __int16 v2; // r6@1
-  int v3; // r5@1
-  const char *v4; // r1@2
-  const char *v5; // r2@2
+  const char *v3; // r4@1
+  FILE *v4; // r7@1
+  int v5; // r6@1
   signed int result; // r0@5
-  __int16 v7; // r1@6
-
-  v2 = a1;
-  v3 = a2;
-  if ( a1 != 1 )
-  {
-    v4 = "AKMD2";
-    v5 = "AKMD_Init: Invalid formFactorNumber.";
-LABEL_5:
-    _android_log_print(6, v4, v5);
-    return -1;
-  }
-  if ( !a2 )
-  {
-    v4 = "AKMD2";
-    v5 = "AKMD_Init: regs can't be NULL.";
-    goto LABEL_5;
-  }
-  *(_WORD *)(a2 + 2) = 128;
-  *(_WORD *)(a2 + 4) = 128;
-  *(_WORD *)(a2 + 6) = 128;
-  *(_WORD *)a2 = 72;
-  AKMD_Release();
-  memset(&word_6160, 0, 0x35Cu);
-  word_64B8 = v2;
-  InitAK8963PRMS(&word_6160);
-  word_6256 = *(_WORD *)(v3 + 2);
-  word_6258 = *(_WORD *)(v3 + 4);
-  v7 = *(_WORD *)(v3 + 6);
-  word_6480 = 8963;
-  word_625A = v7;
-  word_6482 = *(_WORD *)v3;
-  word_6484 = *(_WORD *)(v3 + 2);
-  word_6486 = *(_WORD *)(v3 + 4);
-  word_6488 = *(_WORD *)(v3 + 6);
-  strlcpy(&unk_645E, "ASAHIKASEI", 16);
-  byte_646E = 0;
-  strlcpy(&unk_646F, "OPPO_63_R601", 16);
-  result = 0;
-  byte_647F = 0;
-  word_64BE = v2;
-  return result;
-}
-// 1054: using guessed type int _android_log_print(_DWORD, _DWORD, const char *, ...);
-// 1078: using guessed type int __fastcall strlcpy(_DWORD, _DWORD, _DWORD);
-// 6160: using guessed type __int16 word_6160;
-// 6256: using guessed type __int16 word_6256;
-// 6258: using guessed type __int16 word_6258;
-// 625A: using guessed type __int16 word_625A;
-// 646E: using guessed type char byte_646E;
-// 647F: using guessed type char byte_647F;
-// 6480: using guessed type __int16 word_6480;
-// 6482: using guessed type __int16 word_6482;
-// 6484: using guessed type __int16 word_6484;
-// 6486: using guessed type __int16 word_6486;
-// 6488: using guessed type __int16 word_6488;
-// 64B8: using guessed type __int16 word_64B8;
-// 64BE: using guessed type __int16 word_64BE;
-
-//----- (000015F0) --------------------------------------------------------
-int __fastcall SaveInt32(FILE *a1, int a2, int a3)
-{
-  int result; // r0@2
-
-  if ( fprintf(a1, "%s = %ld\n", a2, a3, a1, a2) < 0 )
-  {
-    _android_log_print(6, "AKMD2", "%s: printf (%s) error.");
-    LOWORD(result) = 0;
-  }
-  else
-  {
-    LOWORD(result) = 1;
-  }
-  return (signed __int16)result;
-}
-// 1054: using guessed type int _android_log_print(_DWORD, _DWORD, const char *, ...);
-
-//----- (00001634) --------------------------------------------------------
-signed int __fastcall SaveInt32vec(FILE *a1, int a2, int a3)
-{
-  FILE *v3; // r5@1
-  int v4; // r4@1
-  int v5; // r7@1
-  int v6; // r8@1
-  signed int v7; // r6@3
-  signed int result; // r0@5
-  char s; // [sp+4h] [bp-5Ch]@1
-  int v10; // [sp+44h] [bp-1Ch]@1
-
-  v3 = a1;
-  v4 = a3;
-  v5 = a2;
-  v10 = _stack_chk_guard;
-  snprintf(&s, 0x40u, "%s.x", a2);
-  v6 = SaveInt32(v3, (int)&s, *(_DWORD *)v4);
-  snprintf(&s, 0x40u, "%s.y", v5);
-  v7 = v6 && (unsigned __int16)SaveInt32(v3, (int)&s, *(_DWORD *)(v4 + 4));
-  snprintf(&s, 0x40u, "%s.z", v5);
-  result = v7;
-  if ( v7 )
-  {
-    result = (signed __int16)SaveInt32(v3, (int)&s, *(_DWORD *)(v4 + 8));
-    if ( (_WORD)result )
-      result = 1;
-  }
-  if ( v10 != _stack_chk_guard )
-    _stack_chk_fail(result);
-  return result;
-}
-// 109C: using guessed type int __fastcall _stack_chk_fail(_DWORD);
-
-//----- (000016E4) --------------------------------------------------------
-int __fastcall SaveInt16(FILE *a1, int a2, int a3)
-{
-  int v3; // r4@1
-  int result; // r0@2
-
-  v3 = a2;
-  if ( fprintf(a1, "%s = %d\n", a2, a3, a1, a2) < 0 )
-  {
-    _android_log_print(6, "AKMD2", "%s: printf (%s) error.", "SaveInt16", v3);
-    LOWORD(result) = 0;
-  }
-  else
-  {
-    LOWORD(result) = 1;
-  }
-  return (signed __int16)result;
-}
-// 1054: using guessed type int _android_log_print(_DWORD, _DWORD, const char *, ...);
-
-//----- (00001728) --------------------------------------------------------
-signed int __fastcall SaveInt16vec(FILE *a1, int a2, int a3)
-{
-  FILE *v3; // r4@1
-  int v4; // r5@1
-  int v5; // r7@1
-  int v6; // r8@1
-  signed int v7; // r6@3
-  signed int result; // r0@5
-  char s; // [sp+4h] [bp-5Ch]@1
-  int v10; // [sp+44h] [bp-1Ch]@1
-
-  v3 = a1;
-  v4 = a3;
-  v5 = a2;
-  v10 = _stack_chk_guard;
-  snprintf(&s, 0x40u, "%s.x", a2);
-  v6 = SaveInt16(v3, (int)&s, *(_WORD *)v4);
-  snprintf(&s, 0x40u, "%s.y", v5);
-  v7 = v6 && (unsigned __int16)SaveInt16(v3, (int)&s, *(_WORD *)(v4 + 2));
-  snprintf(&s, 0x40u, "%s.z", v5);
-  result = v7;
-  if ( v7 )
-  {
-    result = (signed __int16)SaveInt16(v3, (int)&s, *(_WORD *)(v4 + 4));
-    if ( (_WORD)result )
-      result = 1;
-  }
-  if ( v10 != _stack_chk_guard )
-    _stack_chk_fail(result);
-  return result;
-}
-// 109C: using guessed type int __fastcall _stack_chk_fail(_DWORD);
-
-//----- (000017E0) --------------------------------------------------------
-int __fastcall SaveParameters(char *filename, int a2)
-{
-  int v2; // r6@1
-  char *v3; // r9@1
-  FILE *v4; // r5@1
-  int *v5; // r0@3
-  char *v6; // r0@3
-  int *v7; // r0@4
-  char *v8; // r0@4
-  int v9; // r8@5
-  int v10; // r7@7
-  int v11; // r7@11
-  unsigned __int16 v12; // r6@15
-  FILE *v13; // r0@17
-  int v14; // r5@17
-  int *v15; // r0@19
-  char *v16; // r0@19
-  int *v17; // r0@20
-  char *v18; // r0@20
-  int *v19; // r0@23
-  char *v20; // r0@23
-  int *v21; // r0@24
-  char *v22; // r0@24
-  int result; // r0@28
-  char s; // [sp+14h] [bp-64h]@5
-  int v25; // [sp+54h] [bp-24h]@1
-
-  v2 = a2;
-  v3 = filename;
-  v25 = _stack_chk_guard;
-  v4 = fopen(filename, "w");
-  if ( !v4 )
-  {
-    if ( g_opmode )
-    {
-      v7 = (int *)_errno();
-      v8 = strerror(*v7);
-      fprintf((FILE *)((char *)&_sF + 168), "%s:%d %s Error (%s).\n", "SaveParameters", 210, "fopen", v8);
-    }
-    else
-    {
-      v5 = (int *)_errno();
-      v6 = strerror(*v5);
-      LOWORD(v4) = 0;
-      _android_log_print(6, "AKMD2", "%s:%d %s Error (%s).", "SaveParameters", 210, "fopen", v6);
-    }
-    goto LABEL_28;
-  }
-  snprintf(&s, 0x40u, "HSUC_HDST_FORM%d", 0);
-  v9 = SaveInt16(v4, (int)&s, *(_WORD *)(v2 + 756));
-  snprintf(&s, 0x40u, "HSUC_HO_FORM%d", 0);
-  v10 = v9 && (unsigned __int16)SaveInt16vec(v4, (int)&s, v2 + 6);
-  snprintf(&s, 0x40u, "HFLUCV_HREF_FORM%d", 0);
-  v11 = v10 && (unsigned __int16)SaveInt16vec(v4, (int)&s, v2 + 30);
-  snprintf(&s, 0x40u, "HSUC_HBASE_FORM%d", 0);
-  v12 = v11 && (unsigned __int16)SaveInt32vec(v4, (int)&s, v2 + 844);
-  v13 = v4;
-  v14 = v12;
-  if ( fclose(v13) )
-  {
-    v14 = g_opmode;
-    if ( g_opmode )
-    {
-      v17 = (int *)_errno();
-      v18 = strerror(*v17);
-      v14 = 0;
-      fprintf((FILE *)((char *)&_sF + 168), "%s:%d %s Error (%s).\n", "SaveParameters", 229, "fclose", v18);
-    }
-    else
-    {
-      v15 = (int *)_errno();
-      v16 = strerror(*v15);
-      _android_log_print(6, "AKMD2", "%s:%d %s Error (%s).", "SaveParameters", 229, "fclose", v16);
-    }
-  }
-  if ( chmod(v3, 0x1B0u) )
-  {
-    if ( g_opmode )
-    {
-      v21 = (int *)_errno();
-      v22 = strerror(*v21);
-      fprintf((FILE *)((char *)&_sF + 168), "%s:%d %s Error (%s).\n", "SaveParameters", 234, "chmod", v22);
-    }
-    else
-    {
-      v19 = (int *)_errno();
-      v20 = strerror(*v19);
-      _android_log_print(6, "AKMD2", "%s:%d %s Error (%s).", "SaveParameters", 234, "chmod", v20);
-    }
-  }
-  else if ( v14 )
-  {
-    LOWORD(v4) = 1;
-    goto LABEL_28;
-  }
-  LOWORD(v4) = 0;
-  _android_log_print(6, "AKMD2", "%s: failed.", "SaveParameters");
-LABEL_28:
-  result = (signed __int16)v4;
-  if ( v25 != _stack_chk_guard )
-    _stack_chk_fail((signed __int16)v4);
-  return result;
-}
-// 1054: using guessed type int _android_log_print(_DWORD, _DWORD, const char *, ...);
-// 109C: using guessed type int __fastcall _stack_chk_fail(_DWORD);
-// 10B4: using guessed type int _errno(void);
-
-//----- (00001AA8) --------------------------------------------------------
-int __fastcall LoadInt(FILE *a1, const char *a2, int a3)
-{
-  FILE *v3; // r7@1
-  int v4; // r6@1
-  const char *v5; // r5@1
-  int result; // r0@4
   char s; // [sp+Ch] [bp-5Ch]@1
   int v8; // [sp+4Ch] [bp-1Ch]@1
 
-  v3 = a1;
-  v4 = a3;
-  v5 = a2;
+  v3 = a2;
+  v4 = a1;
+  v5 = a3;
   v8 = _stack_chk_guard;
   memset(&s, 0, 0x40u);
-  if ( fscanf(v3, "%63s = %11d", &s, v4) == 2 )
+  if ( fscanf(v4, "%63s = %11d", &s, v5) != 2 )
   {
-    if ( !strncmp(&s, v5, 0x40u) )
-    {
-      LOWORD(result) = 1;
-      goto LABEL_7;
-    }
-    _android_log_print(6, "AKMD2", "%s: strncmp (%s) error.", "LoadInt", v5);
+    _android_log_print(6, "AKMD2", "%s: scanf error.");
+LABEL_5:
+    result = 0;
+    goto LABEL_7;
   }
-  else
+  if ( strncmp(&s, v3, 0x40u) )
   {
-    _android_log_print(6, "AKMD2", "%s: scanf error.", "LoadInt");
+    _android_log_print(6, "AKMD2", "%s: strncmp (%s) error.", "LoadInt", v3);
+    goto LABEL_5;
   }
-  LOWORD(result) = 0;
+  result = 1;
 LABEL_7:
-  result = (signed __int16)result;
   if ( v8 != _stack_chk_guard )
     _stack_chk_fail(result);
   return result;
 }
-// 1054: using guessed type int _android_log_print(_DWORD, _DWORD, const char *, ...);
-// 109C: using guessed type int __fastcall _stack_chk_fail(_DWORD);
+// 1888: using guessed type int _android_log_print(_DWORD, _DWORD, const char *, ...);
+// 18C4: using guessed type int __fastcall _stack_chk_fail(_DWORD);
 
-//----- (00001B50) --------------------------------------------------------
-int __fastcall LoadInt32(FILE *a1, const char *a2, const char **a3)
-{
-  const char **v3; // r4@1
-  int result; // r0@1
-  const char *v5; // [sp+4h] [bp-Ch]@1
-
-  v5 = a2;
-  v3 = a3;
-  LOWORD(result) = LoadInt(a1, a2, (int)&v5);
-  if ( (signed __int16)result == 1 )
-    *v3 = v5;
-  else
-    LOWORD(result) = 0;
-  return (signed __int16)result;
-}
-
-//----- (00001B6C) --------------------------------------------------------
-signed int __fastcall LoadInt32vec(FILE *a1, int a2, int a3)
-{
-  FILE *v3; // r4@1
-  int v4; // r5@1
-  int v5; // r7@1
-  int v6; // r8@1
-  signed int v7; // r6@3
-  signed int result; // r0@5
-  char s; // [sp+4h] [bp-5Ch]@1
-  int v10; // [sp+44h] [bp-1Ch]@1
-
-  v3 = a1;
-  v4 = a3;
-  v5 = a2;
-  v10 = _stack_chk_guard;
-  snprintf(&s, 0x40u, "%s.x", a2);
-  v6 = LoadInt32(v3, &s, (const char **)v4);
-  snprintf(&s, 0x40u, "%s.y", v5);
-  v7 = v6 && (unsigned __int16)LoadInt32(v3, &s, (const char **)(v4 + 4));
-  snprintf(&s, 0x40u, "%s.z", v5);
-  result = v7;
-  if ( v7 )
-  {
-    result = (signed __int16)LoadInt32(v3, &s, (const char **)(v4 + 8));
-    if ( (_WORD)result )
-      result = 1;
-  }
-  if ( v10 != _stack_chk_guard )
-    _stack_chk_fail(result);
-  return result;
-}
-// 109C: using guessed type int __fastcall _stack_chk_fail(_DWORD);
-
-//----- (00001C20) --------------------------------------------------------
-int __fastcall LoadInt16(FILE *a1, const char *a2, _WORD *a3)
+//----- (00001F88) --------------------------------------------------------
+signed int __fastcall LoadInt16(FILE *a1, const char *a2, _WORD *a3)
 {
   _WORD *v3; // r4@1
-  int result; // r0@1
+  signed int result; // r0@1
   const char *v5; // [sp+4h] [bp-Ch]@1
 
   v5 = a2;
   v3 = a3;
-  LOWORD(result) = LoadInt(a1, a2, (int)&v5);
-  if ( (signed __int16)result == 1 )
+  result = LoadInt(a1, a2, (int)&v5);
+  if ( result == 1 )
     *v3 = (_WORD)v5;
   else
     LOWORD(result) = 0;
   return (signed __int16)result;
 }
 
-//----- (00001C3C) --------------------------------------------------------
+//----- (00001FA0) --------------------------------------------------------
+signed int __fastcall LoadInt32(FILE *a1, const char *a2, const char **a3)
+{
+  const char **v3; // r4@1
+  signed int result; // r0@1
+  const char *v5; // [sp+4h] [bp-Ch]@1
+
+  v5 = a2;
+  v3 = a3;
+  result = LoadInt(a1, a2, (int)&v5);
+  if ( result == 1 )
+    *v3 = v5;
+  else
+    LOWORD(result) = 0;
+  return (signed __int16)result;
+}
+
+//----- (00001FB8) --------------------------------------------------------
 signed int __fastcall LoadInt16vec(FILE *a1, int a2, int a3)
 {
-  FILE *v3; // r4@1
-  int v4; // r5@1
-  int v5; // r7@1
-  int v6; // r8@1
-  signed int v7; // r6@3
-  signed int result; // r0@5
+  int v3; // r4@1
+  int v4; // r6@1
+  FILE *v5; // r5@1
+  signed int v6; // r8@1
+  signed int result; // r0@3
   char s; // [sp+4h] [bp-5Ch]@1
-  int v10; // [sp+44h] [bp-1Ch]@1
+  int v9; // [sp+44h] [bp-1Ch]@1
 
-  v3 = a1;
-  v4 = a3;
-  v5 = a2;
-  v10 = _stack_chk_guard;
+  v3 = a3;
+  v4 = a2;
+  v5 = a1;
+  v9 = _stack_chk_guard;
   snprintf(&s, 0x40u, "%s.x", a2);
-  v6 = LoadInt16(v3, &s, (_WORD *)v4);
-  snprintf(&s, 0x40u, "%s.y", v5);
-  v7 = v6 && (unsigned __int16)LoadInt16(v3, &s, (_WORD *)(v4 + 2));
-  snprintf(&s, 0x40u, "%s.z", v5);
-  result = v7;
-  if ( v7 )
-  {
-    result = (signed __int16)LoadInt16(v3, &s, (_WORD *)(v4 + 4));
-    if ( (_WORD)result )
-      result = 1;
-  }
-  if ( v10 != _stack_chk_guard )
+  v6 = LoadInt16(v5, &s, (_WORD *)v3);
+  snprintf(&s, 0x40u, "%s.y", v4);
+  if ( v6 )
+    v6 = LoadInt16(v5, &s, (_WORD *)(v3 + 2)) != 0;
+  snprintf(&s, 0x40u, "%s.z", v4);
+  result = v6;
+  if ( v6 )
+    result = LoadInt16(v5, &s, (_WORD *)(v3 + 4)) != 0;
+  if ( v9 != _stack_chk_guard )
     _stack_chk_fail(result);
   return result;
 }
-// 109C: using guessed type int __fastcall _stack_chk_fail(_DWORD);
+// 18C4: using guessed type int __fastcall _stack_chk_fail(_DWORD);
 
-//----- (00001CEC) --------------------------------------------------------
+//----- (0000205C) --------------------------------------------------------
+signed int __fastcall LoadInt32vec(FILE *a1, int a2, int a3)
+{
+  int v3; // r4@1
+  int v4; // r6@1
+  FILE *v5; // r5@1
+  signed int v6; // r8@1
+  signed int result; // r0@3
+  char s; // [sp+4h] [bp-5Ch]@1
+  int v9; // [sp+44h] [bp-1Ch]@1
+
+  v3 = a3;
+  v4 = a2;
+  v5 = a1;
+  v9 = _stack_chk_guard;
+  snprintf(&s, 0x40u, "%s.x", a2);
+  v6 = LoadInt32(v5, &s, (const char **)v3);
+  snprintf(&s, 0x40u, "%s.y", v4);
+  if ( v6 )
+    v6 = LoadInt32(v5, &s, (const char **)(v3 + 4)) != 0;
+  snprintf(&s, 0x40u, "%s.z", v4);
+  result = v6;
+  if ( v6 )
+    result = LoadInt32(v5, &s, (const char **)(v3 + 8)) != 0;
+  if ( v9 != _stack_chk_guard )
+    _stack_chk_fail(result);
+  return result;
+}
+// 18C4: using guessed type int __fastcall _stack_chk_fail(_DWORD);
+
+//----- (00002104) --------------------------------------------------------
 int __fastcall LoadParameters(const char *a1, int a2)
 {
   int v2; // r6@1
-  FILE *v3; // r5@1
-  int *v4; // r0@3
-  char *v5; // r0@3
-  int *v6; // r0@4
-  char *v7; // r0@4
-  int v8; // r0@5
-  int v9; // r8@5
-  int v10; // r7@7
-  int v11; // r7@11
-  int v12; // r6@15
-  int *v13; // r0@19
-  char *v14; // r0@19
-  int *v15; // r0@20
-  char *v16; // r0@20
-  int result; // r0@24
-  __int16 v18; // [sp+12h] [bp-5Eh]@5
-  char s; // [sp+14h] [bp-5Ch]@5
-  int v20; // [sp+54h] [bp-1Ch]@1
+  FILE *v3; // r4@1
+  signed int v4; // r8@2
+  int v5; // r6@7
+  int *v6; // r0@12
+  char *v7; // r0@12
+  int *v8; // r0@13
+  char *v9; // r0@13
+  int *v10; // r0@15
+  char *v11; // r0@15
+  int *v12; // r0@16
+  char *v13; // r0@16
+  int result; // r0@17
+  __int16 v15; // [sp+12h] [bp-66h]@2
+  char s; // [sp+14h] [bp-64h]@2
+  int v17; // [sp+54h] [bp-24h]@1
 
   v2 = a2;
-  v20 = _stack_chk_guard;
+  v17 = _stack_chk_guard;
   v3 = fopen(a1, "r");
-  if ( !v3 )
+  if ( v3 )
   {
-    if ( g_opmode )
+    snprintf(&s, 0x40u, "HSUC_HDST_FORM%d", 0);
+    v15 = 0;
+    v4 = LoadInt16(v3, &s, &v15);
+    *(_DWORD *)(v2 + 756) = v15;
+    snprintf(&s, 0x40u, "HSUC_HO_FORM%d", 0);
+    if ( v4 )
+      v4 = LoadInt16vec(v3, (int)&s, v2 + 6) != 0;
+    snprintf(&s, 0x40u, "HFLUCV_HREF_FORM%d", 0);
+    if ( v4 )
+      v4 = LoadInt16vec(v3, (int)&s, v2 + 30) != 0;
+    snprintf(&s, 0x40u, "HSUC_HBASE_FORM%d", 0);
+    if ( v4 )
+      v5 = LoadInt32vec(v3, (int)&s, v2 + 844) != 0;
+    else
+      v5 = 0;
+    if ( fclose(v3) )
     {
-      v6 = (int *)_errno();
-      v7 = strerror(*v6);
-      fprintf((FILE *)((char *)&_sF + 168), "%s:%d %s Error (%s).\n", "LoadParameters", 45, "fopen", v7);
+      if ( g_opmode )
+      {
+        v12 = (int *)_errno();
+        v13 = strerror(*v12);
+        fprintf((FILE *)((char *)&_sF + 168), "%s:%d %s Error (%s).\n", "LoadParameters", 67, "fclose", v13);
+      }
+      else
+      {
+        v10 = (int *)_errno();
+        v11 = strerror(*v10);
+        _android_log_print(6, "AKMD2", "%s:%d %s Error (%s).", "LoadParameters", 67, "fclose", v11);
+      }
     }
     else
     {
-      v4 = (int *)_errno();
-      v5 = strerror(*v4);
-      LOWORD(v3) = 0;
-      _android_log_print(6, "AKMD2", "%s:%d %s Error (%s).", "LoadParameters", 45, "fopen", v5);
+      LOWORD(result) = 1;
+      if ( v5 )
+        goto LABEL_20;
     }
-    goto LABEL_24;
+    _android_log_print(6, "AKMD2", "%s: failed.", "LoadParameters");
   }
-  snprintf(&s, 0x40u, "HSUC_HDST_FORM%d", 0);
-  v18 = 0;
-  v8 = LoadInt16(v3, &s, &v18);
-  *(_DWORD *)(v2 + 756) = v18;
-  v9 = v8;
-  snprintf(&s, 0x40u, "HSUC_HO_FORM%d", 0);
-  v10 = v9 && (unsigned __int16)LoadInt16vec(v3, (int)&s, v2 + 6);
-  snprintf(&s, 0x40u, "HFLUCV_HREF_FORM%d", 0);
-  v11 = v10 && (unsigned __int16)LoadInt16vec(v3, (int)&s, v2 + 30);
-  snprintf(&s, 0x40u, "HSUC_HBASE_FORM%d", 0);
-  LOWORD(v12) = v11 && (unsigned __int16)LoadInt32vec(v3, (int)&s, v2 + 844);
-  v12 = (unsigned __int16)v12;
-  if ( fclose(v3) )
+  else if ( g_opmode )
   {
-    if ( g_opmode )
-    {
-      v15 = (int *)_errno();
-      v16 = strerror(*v15);
-      fprintf((FILE *)((char *)&_sF + 168), "%s:%d %s Error (%s).\n", "LoadParameters", 69, "fclose", v16);
-    }
-    else
-    {
-      v13 = (int *)_errno();
-      v14 = strerror(*v13);
-      _android_log_print(6, "AKMD2", "%s:%d %s Error (%s).", "LoadParameters", 69, "fclose", v14);
-    }
+    v8 = (int *)_errno();
+    v9 = strerror(*v8);
+    fprintf((FILE *)((char *)&_sF + 168), "%s:%d %s Error (%s).\n", "LoadParameters", 43, "fopen", v9);
   }
-  else if ( v12 )
+  else
   {
-    LOWORD(v3) = 1;
-    goto LABEL_24;
+    v6 = (int *)_errno();
+    v7 = strerror(*v6);
+    _android_log_print(6, "AKMD2", "%s:%d %s Error (%s).", "LoadParameters", 43, "fopen", v7);
   }
-  LOWORD(v3) = 0;
-  _android_log_print(6, "AKMD2", "%s: failed.", "LoadParameters");
-LABEL_24:
-  result = (signed __int16)v3;
-  if ( v20 != _stack_chk_guard )
-    _stack_chk_fail((signed __int16)v3);
+  LOWORD(result) = 0;
+LABEL_20:
+  result = (signed __int16)result;
+  if ( v17 != _stack_chk_guard )
+    _stack_chk_fail(result);
   return result;
 }
-// 1054: using guessed type int _android_log_print(_DWORD, _DWORD, const char *, ...);
-// 109C: using guessed type int __fastcall _stack_chk_fail(_DWORD);
-// 10B4: using guessed type int _errno(void);
+// 1888: using guessed type int _android_log_print(_DWORD, _DWORD, const char *, ...);
+// 18C4: using guessed type int __fastcall _stack_chk_fail(_DWORD);
+// 18F4: using guessed type int _errno(void);
 
-//----- (00001F2C) --------------------------------------------------------
+//----- (0000232C) --------------------------------------------------------
+signed int __fastcall SaveInt16(FILE *a1, int a2, int a3)
+{
+  int v3; // r4@1
+  signed int result; // r0@2
+
+  v3 = a2;
+  if ( fprintf(a1, "%s = %d\n", a2, a3, a1, a2) >= 0 )
+  {
+    result = 1;
+  }
+  else
+  {
+    _android_log_print(6, "AKMD2", "%s: printf (%s) error.", "SaveInt16", v3);
+    result = 0;
+  }
+  return result;
+}
+// 1888: using guessed type int _android_log_print(_DWORD, _DWORD, const char *, ...);
+
+//----- (0000236C) --------------------------------------------------------
+signed int __fastcall SaveInt16vec(FILE *a1, int a2, int a3)
+{
+  int v3; // r4@1
+  int v4; // r6@1
+  FILE *v5; // r5@1
+  signed int v6; // r8@1
+  signed int result; // r0@3
+  char s; // [sp+4h] [bp-5Ch]@1
+  int v9; // [sp+44h] [bp-1Ch]@1
+
+  v3 = a3;
+  v4 = a2;
+  v5 = a1;
+  v9 = _stack_chk_guard;
+  snprintf(&s, 0x40u, "%s.x", a2);
+  v6 = SaveInt16(v5, (int)&s, *(_WORD *)v3);
+  snprintf(&s, 0x40u, "%s.y", v4);
+  if ( v6 )
+    v6 = SaveInt16(v5, (int)&s, *(_WORD *)(v3 + 2)) != 0;
+  snprintf(&s, 0x40u, "%s.z", v4);
+  result = v6;
+  if ( v6 )
+    result = SaveInt16(v5, (int)&s, *(_WORD *)(v3 + 4)) != 0;
+  if ( v9 != _stack_chk_guard )
+    _stack_chk_fail(result);
+  return result;
+}
+// 18C4: using guessed type int __fastcall _stack_chk_fail(_DWORD);
+
+//----- (00002418) --------------------------------------------------------
+signed int __fastcall SaveInt32(FILE *a1, int a2, int a3)
+{
+  int v3; // r4@1
+  signed int result; // r0@2
+
+  v3 = a2;
+  if ( fprintf(a1, "%s = %ld\n", a2, a3, a1, a2) >= 0 )
+  {
+    result = 1;
+  }
+  else
+  {
+    _android_log_print(6, "AKMD2", "%s: printf (%s) error.", "SaveInt32", v3);
+    result = 0;
+  }
+  return result;
+}
+// 1888: using guessed type int _android_log_print(_DWORD, _DWORD, const char *, ...);
+
+//----- (00002458) --------------------------------------------------------
+signed int __fastcall SaveInt32vec(FILE *a1, int a2, int a3)
+{
+  int v3; // r4@1
+  int v4; // r6@1
+  FILE *v5; // r5@1
+  signed int v6; // r8@1
+  signed int result; // r0@3
+  char s; // [sp+4h] [bp-5Ch]@1
+  int v9; // [sp+44h] [bp-1Ch]@1
+
+  v3 = a3;
+  v4 = a2;
+  v5 = a1;
+  v9 = _stack_chk_guard;
+  snprintf(&s, 0x40u, "%s.x", a2);
+  v6 = SaveInt32(v5, (int)&s, *(_DWORD *)v3);
+  snprintf(&s, 0x40u, "%s.y", v4);
+  if ( v6 )
+    v6 = SaveInt32(v5, (int)&s, *(_DWORD *)(v3 + 4)) != 0;
+  snprintf(&s, 0x40u, "%s.z", v4);
+  result = v6;
+  if ( v6 )
+    result = SaveInt32(v5, (int)&s, *(_DWORD *)(v3 + 8)) != 0;
+  if ( v9 != _stack_chk_guard )
+    _stack_chk_fail(result);
+  return result;
+}
+// 18C4: using guessed type int __fastcall _stack_chk_fail(_DWORD);
+
+//----- (000024FC) --------------------------------------------------------
+int __fastcall SaveParameters(const char *a1, int a2)
+{
+  int v2; // r6@1
+  FILE *v3; // r4@1
+  signed int v4; // r8@2
+  int v5; // r6@7
+  int *v6; // r0@12
+  char *v7; // r0@12
+  int *v8; // r0@13
+  char *v9; // r0@13
+  int *v10; // r0@15
+  char *v11; // r0@15
+  int *v12; // r0@16
+  char *v13; // r0@16
+  int result; // r0@17
+  char s; // [sp+14h] [bp-5Ch]@2
+  int v16; // [sp+54h] [bp-1Ch]@1
+
+  v2 = a2;
+  v16 = _stack_chk_guard;
+  v3 = fopen(a1, "w");
+  if ( v3 )
+  {
+    snprintf(&s, 0x40u, "HSUC_HDST_FORM%d", 0);
+    v4 = SaveInt16(v3, (int)&s, *(_WORD *)(v2 + 756));
+    snprintf(&s, 0x40u, "HSUC_HO_FORM%d", 0);
+    if ( v4 )
+      v4 = SaveInt16vec(v3, (int)&s, v2 + 6) != 0;
+    snprintf(&s, 0x40u, "HFLUCV_HREF_FORM%d", 0);
+    if ( v4 )
+      v4 = SaveInt16vec(v3, (int)&s, v2 + 30) != 0;
+    snprintf(&s, 0x40u, "HSUC_HBASE_FORM%d", 0);
+    if ( v4 )
+      v5 = SaveInt32vec(v3, (int)&s, v2 + 844) != 0;
+    else
+      v5 = 0;
+    if ( fclose(v3) )
+    {
+      if ( g_opmode )
+      {
+        v12 = (int *)_errno();
+        v13 = strerror(*v12);
+        fprintf((FILE *)((char *)&_sF + 168), "%s:%d %s Error (%s).\n", "SaveParameters", 227, "fclose", v13);
+      }
+      else
+      {
+        v10 = (int *)_errno();
+        v11 = strerror(*v10);
+        _android_log_print(6, "AKMD2", "%s:%d %s Error (%s).", "SaveParameters", 227, "fclose", v11);
+      }
+    }
+    else
+    {
+      LOWORD(result) = 1;
+      if ( v5 )
+        goto LABEL_20;
+    }
+    _android_log_print(6, "AKMD2", "%s: failed.", "SaveParameters");
+  }
+  else if ( g_opmode )
+  {
+    v8 = (int *)_errno();
+    v9 = strerror(*v8);
+    fprintf((FILE *)((char *)&_sF + 168), "%s:%d %s Error (%s).\n", "SaveParameters", 208, "fopen", v9);
+  }
+  else
+  {
+    v6 = (int *)_errno();
+    v7 = strerror(*v6);
+    _android_log_print(6, "AKMD2", "%s:%d %s Error (%s).", "SaveParameters", 208, "fopen", v7);
+  }
+  LOWORD(result) = 0;
+LABEL_20:
+  result = (signed __int16)result;
+  if ( v16 != _stack_chk_guard )
+    _stack_chk_fail(result);
+  return result;
+}
+// 1888: using guessed type int _android_log_print(_DWORD, _DWORD, const char *, ...);
+// 18C4: using guessed type int __fastcall _stack_chk_fail(_DWORD);
+// 18F4: using guessed type int _errno(void);
+
+//----- (00002718) --------------------------------------------------------
 int __fastcall RegisterFormClass(int result)
 {
-  dword_64C0 = result;
+  dword_A364 = result;
   return result;
 }
-// 64C0: using guessed type int dword_64C0;
+// A364: using guessed type int dword_A364;
 
-//----- (00001F38) --------------------------------------------------------
+//----- (00002724) --------------------------------------------------------
+signed int __fastcall InitAK8963PRMS(_WORD *a1)
+{
+  _WORD *v1; // r4@1
+  signed int result; // r0@1
+
+  v1 = a1;
+  memset(a1, 0, 0x35Cu);
+  result = 1;
+  v1[12] = 833;
+  v1[13] = 833;
+  v1[14] = 833;
+  v1[118] = 1;
+  return result;
+}
+
+//----- (00002744) --------------------------------------------------------
 int __fastcall SetDefaultPRMS(int result)
 {
   *(_DWORD *)(result + 756) = 0;
@@ -1117,194 +1076,250 @@ int __fastcall SetDefaultPRMS(int result)
   return result;
 }
 
-//----- (00001F58) --------------------------------------------------------
-int __fastcall InitAK8963_Measure(int a1, int a2)
+//----- (00002764) --------------------------------------------------------
+int __fastcall InitAK8963_Measure(int (__cdecl *a1)(_DWORD, _DWORD), int a2)
 {
   int v2; // r4@1
-  int (__cdecl *v3)(int, int); // r3@2
-  __int16 v4; // r7@3
-  int v5; // r6@5
-  int v6; // r12@5
-  int v7; // r3@5
-  int v8; // r7@5
-  int v9; // r1@5
-  int v10; // r2@5
-  int result; // r0@5
+  int v3; // lr@4
+  int v4; // r3@4
+  int v5; // r5@4
+  int v6; // r12@4
+  int v7; // r1@4
+  int v8; // r2@4
+  int result; // r0@4
 
-  v2 = a1;
-  if ( dword_64C0 && (v3 = *(int (__cdecl **)(int, int))(dword_64C0 + 8)) != 0 )
-    v4 = v3(a1, a2);
-  else
-    v4 = 0;
-  *(_WORD *)(v2 + 760) = v4;
-  v5 = v2 + 6 * v4;
-  memcpy((void *)v2, (const void *)(v5 + 6), 6u);
-  v6 = v2 + 832;
-  *(_DWORD *)(v2 + 12) = *(_WORD *)(v5 + 6);
-  *(_DWORD *)(v2 + 16) = *(_WORD *)(v5 + 8);
-  *(_DWORD *)(v2 + 20) = *(_WORD *)(v5 + 10);
-  v7 = *(_DWORD *)(v2 + 4 * v4 + 756);
-  v8 = v2 + 12 * v4 + 844;
-  *(_DWORD *)(v2 + 752) = v7;
-  v9 = *(_DWORD *)(v8 + 4);
-  v10 = *(_DWORD *)(v8 + 8);
-  *(_DWORD *)v6 = *(_DWORD *)v8;
-  *(_DWORD *)(v6 + 4) = v9;
-  *(_DWORD *)(v6 + 8) = v10;
+  v2 = (int)a1;
+  LOWORD(a1) = dword_A364;
+  if ( dword_A364 )
+  {
+    a1 = *(int (__cdecl **)(_DWORD, _DWORD))(dword_A364 + 8);
+    if ( a1 )
+      LOWORD(a1) = a1(a1, a2);
+  }
+  *(_WORD *)(v2 + 760) = (_WORD)a1;
+  v3 = v2 + 832;
+  v4 = v2 + 6 * (signed __int16)a1;
+  v5 = v2 + 6 * (signed __int16)a1;
+  *(_DWORD *)v2 = *(_DWORD *)(v5 + 6);
+  *(_WORD *)(v2 + 4) = *(_WORD *)(v5 + 10);
+  *(_DWORD *)(v2 + 12) = *(_WORD *)(v4 + 6);
+  *(_DWORD *)(v2 + 16) = *(_WORD *)(v4 + 8);
+  *(_DWORD *)(v2 + 20) = *(_WORD *)(v4 + 10);
+  v6 = v2 + 12 * (signed __int16)a1;
+  *(_DWORD *)(v2 + 752) = *(_DWORD *)(v2 + 4 * (signed __int16)a1 + 756);
+  v7 = *(_DWORD *)(v6 + 848);
+  v8 = *(_DWORD *)(v6 + 852);
+  *(_DWORD *)v3 = *(_DWORD *)(v6 + 844);
+  *(_DWORD *)(v3 + 4) = v7;
+  *(_DWORD *)(v3 + 8) = v8;
   AKSC_InitDecomp8963(v2 + 44);
-  zzAKSC_InitHDOEProcPrmsS3(v2 + 252, 0, 0, 1, (char *)v2, *(_DWORD *)(v2 + 752));
-  AKSC_InitHFlucCheck((_WORD *)(v2 + 36), (const void *)(v2 + 6 * *(_WORD *)(v2 + 760) + 30), 2500);
+  zzAKSC_InitHDOEProcPrmsS3(v2 + 252, 0, 0, 1, v2, *(_DWORD *)(v2 + 752));
+  AKSC_InitHFlucCheck(v2 + 36, v2 + 6 * *(_WORD *)(v2 + 760) + 30, 2500);
   result = 0;
   *(_WORD *)(v2 + 762) = 0;
   *(_WORD *)(v2 + 764) = 0;
   return result;
 }
-// 64C0: using guessed type int dword_64C0;
+// A364: using guessed type int dword_A364;
 
-//----- (00002004) --------------------------------------------------------
-int __fastcall GetMagneticVector(int a1, int a2, int a3, __int16 a4)
+//----- (00002804) --------------------------------------------------------
+signed int __fastcall GetMagneticVector(int a1, int a2, int a3, __int16 a4)
 {
-  int v4; // r8@1
-  int v5; // r4@1
-  int v6; // r10@1
-  int v7; // r7@1
-  __int16 v8; // r11@1
+  int v4; // r4@1
+  int v5; // r7@1
+  int v6; // r12@1
+  int v7; // r6@1
+  int v8; // r11@1
   int v9; // r0@1
   int v10; // r1@1
   int v11; // r2@1
-  int v12; // r9@2
-  int v13; // r3@3
+  __int16 v12; // r10@1
+  int v13; // lr@2
   int v14; // r2@3
-  int v15; // r1@3
-  int v16; // r2@3
-  signed __int16 v17; // r5@6
-  signed int v18; // r5@15
-  __int16 v19; // r3@26
-  int v20; // r0@27
-  int v21; // r3@33
-  int v22; // r0@33
-  int v23; // r1@33
-  int v24; // r2@33
-  int v25; // r3@33
-  int v26; // r1@33
-  int v27; // r2@33
-  int v29; // [sp+24h] [bp-4Ch]@1
-  int v30; // [sp+28h] [bp-48h]@1
-  int v31; // [sp+2Ch] [bp-44h]@1
-  __int16 v32; // [sp+30h] [bp-40h]@1
-  __int16 v33; // [sp+32h] [bp-3Eh]@1
-  __int16 v34; // [sp+34h] [bp-3Ch]@1
-  int v35; // [sp+38h] [bp-38h]@1
-  __int16 v36; // [sp+3Ch] [bp-34h]@1
-  __int16 v37; // [sp+3Eh] [bp-32h]@1
-  __int16 v38; // [sp+40h] [bp-30h]@1
-  __int16 v39; // [sp+42h] [bp-2Eh]@1
-  __int16 v40; // [sp+44h] [bp-2Ch]@1
-  __int16 v41; // [sp+46h] [bp-2Ah]@1
+  int v15; // r3@3
+  int v16; // r1@3
+  int v17; // r12@3
+  int v18; // r1@3
+  int v19; // r2@3
+  signed int result; // r0@7
+  signed int v21; // r5@14
+  __int16 v22; // r2@25
+  int v23; // r0@26
+  int v24; // lr@32
+  int v25; // r2@32
+  int v26; // r3@32
+  int v27; // r0@32
+  int v28; // r1@32
+  int v29; // r1@32
+  int v30; // r2@32
+  int v31; // r3@32
+  __int16 v32; // [sp+42h] [bp-4Eh]@1
+  __int16 v33; // [sp+44h] [bp-4Ch]@1
+  __int16 v34; // [sp+46h] [bp-4Ah]@1
+  __int16 v35; // [sp+48h] [bp-48h]@1
+  __int16 v36; // [sp+4Ah] [bp-46h]@1
+  __int16 v37; // [sp+4Ch] [bp-44h]@1
+  __int16 v38; // [sp+4Eh] [bp-42h]@1
+  __int16 v39; // [sp+50h] [bp-40h]@1
+  __int16 v40; // [sp+54h] [bp-3Ch]@1
+  __int16 v41; // [sp+56h] [bp-3Ah]@1
+  __int16 v42; // [sp+58h] [bp-38h]@1
+  int v43; // [sp+5Ch] [bp-34h]@1
+  int v44; // [sp+60h] [bp-30h]@1
+  int v45; // [sp+64h] [bp-2Ch]@1
 
-  v4 = a2 + 832;
-  v5 = a2;
-  v6 = a1;
-  v7 = a3;
-  v8 = a4;
-  v35 = 0;
-  v36 = 0;
+  v4 = a2;
+  v5 = a2 + 832;
+  v6 = *(_WORD *)(a2 + 762);
+  v7 = a1;
+  v8 = a3;
+  v9 = *(_DWORD *)(a2 + 832);
+  v10 = *(_DWORD *)(a2 + 836);
+  v11 = *(_DWORD *)(v5 + 8);
+  v12 = a4;
+  v37 = 0;
+  v38 = 0;
+  v39 = 0;
+  v40 = 0;
+  v41 = 0;
+  v42 = 0;
   v32 = 0;
   v33 = 0;
   v34 = 0;
-  v41 = 0;
-  v40 = 0;
-  v39 = 0;
-  v38 = 0;
-  v9 = *(_DWORD *)(a2 + 832);
-  v10 = *(_DWORD *)(a2 + 836);
-  v11 = *(_DWORD *)(v4 + 8);
-  v37 = 0;
-  v29 = v9;
-  v30 = v10;
-  v31 = v11;
-  if ( (signed int)*(_WORD *)(v5 + 762) > 0 )
+  v35 = 0;
+  v43 = v9;
+  v44 = v10;
+  v45 = v11;
+  v36 = 0;
+  if ( v6 > 0 )
   {
-    v12 = *(_WORD *)(v5 + 762) - 1;
-    *(_WORD *)(v5 + 762) = v12;
-    if ( !v12 )
+    v13 = v6 - 1;
+    *(_WORD *)(v4 + 762) = v6 - 1;
+    if ( v6 == 1 )
     {
-      memcpy((void *)v5, (const void *)(v5 + 6 * *(_WORD *)(v5 + 760) + 6), 6u);
-      v13 = *(_WORD *)(v5 + 760);
-      v14 = v5 + 6 * v13;
-      *(_DWORD *)(v5 + 12) = *(_WORD *)(v14 + 6);
-      *(_DWORD *)(v5 + 16) = *(_WORD *)(v14 + 8);
-      *(_DWORD *)(v5 + 20) = *(_WORD *)(v14 + 10);
-      *(_DWORD *)(v5 + 752) = *(_DWORD *)(v5 + 4 * v13 + 756);
-      v15 = *(_DWORD *)(v5 + 12 * v13 + 848);
-      v16 = *(_DWORD *)(v5 + 12 * v13 + 852);
-      *(_DWORD *)v4 = *(_DWORD *)(v5 + 12 * v13 + 844);
-      *(_DWORD *)(v4 + 4) = v15;
-      *(_DWORD *)(v4 + 8) = v16;
-      AKSC_InitDecomp8963(v5 + 44);
-      zzAKSC_InitHDOEProcPrmsS3(v5 + 252, 0, 0, 1, (char *)v5, *(_DWORD *)(v5 + 752));
-      AKSC_InitHFlucCheck((_WORD *)(v5 + 36), (const void *)(v5 + 6 * *(_WORD *)(v5 + 760) + 30), 2500);
+      v14 = *(_WORD *)(v4 + 760);
+      v15 = v4 + 6 * v14;
+      v16 = v4 + 6 * v14;
+      *(_DWORD *)v4 = *(_DWORD *)(v16 + 6);
+      *(_WORD *)(v4 + 4) = *(_WORD *)(v16 + 10);
+      *(_DWORD *)(v4 + 12) = *(_WORD *)(v15 + 6);
+      *(_DWORD *)(v4 + 16) = *(_WORD *)(v15 + 8);
+      *(_DWORD *)(v4 + 20) = *(_WORD *)(v15 + 10);
+      v17 = v4 + 12 * v14;
+      *(_DWORD *)(v4 + 752) = *(_DWORD *)(v4 + 4 * v14 + 756);
+      v18 = *(_DWORD *)(v17 + 848);
+      v19 = *(_DWORD *)(v17 + 852);
+      *(_DWORD *)v5 = *(_DWORD *)(v17 + 844);
+      *(_DWORD *)(v5 + 4) = v18;
+      *(_DWORD *)(v5 + 8) = v19;
+      AKSC_InitDecomp8963(v4 + 44);
+      zzAKSC_InitHDOEProcPrmsS3(v4 + 252, v13, v13, 1, v4, *(_DWORD *)(v4 + 752));
+      AKSC_InitHFlucCheck(v4 + 36, v4 + 6 * *(_WORD *)(v4 + 760) + 30, 2500);
     }
   }
-  if ( !(unsigned __int16)AKSC_Decomp8963(
-                            v6,
-                            *(_WORD *)(v5 + 236),
-                            v5 + 246,
-                            v5 + 44,
-                            v5 + 832,
-                            (_WORD *)(v5 + 238),
-                            (int)&v32,
-                            &v41,
-                            &v40,
-                            &v39,
-                            &v38) )
+  if ( !AKSC_Decomp8963(
+          v7,
+          *(_WORD *)(v4 + 236),
+          v4 + 246,
+          v4 + 44,
+          v4 + 832,
+          (_WORD *)(v4 + 238),
+          (int)&v40,
+          &v32,
+          &v33,
+          &v34,
+          &v35) )
+  {
+    _android_log_print(
+      3,
+      "AKMD2",
+      "AKSC_Decomp8963 failed.\n"
+      "  ST1=0x%02X, ST2=0x%02X\n"
+      "  XYZ(HEX)=%02X,%02X,%02X,%02X,%02X,%02X\n"
+      "  asa(dec)=%d,%d,%d\n"
+      "  hbase(dec)=%ld,%ld,%ld\n",
+      *(_WORD *)v7,
+      *(_WORD *)(v7 + 14),
+      *(_WORD *)(v7 + 2),
+      *(_WORD *)(v7 + 4),
+      *(_WORD *)(v7 + 6),
+      *(_WORD *)(v7 + 8),
+      *(_WORD *)(v7 + 10),
+      *(_WORD *)(v7 + 12),
+      *(_WORD *)(v4 + 246),
+      *(_WORD *)(v4 + 248),
+      *(_WORD *)(v4 + 250),
+      *(_DWORD *)(v4 + 832),
+      *(_DWORD *)(v4 + 836),
+      *(_DWORD *)(v4 + 840));
     return 128;
-  if ( *(_WORD *)(v5 + 760) != v7 )
-  {
-    *(_WORD *)(v5 + 764) = 0;
-    v17 = 1;
-    *(_WORD *)(v5 + 760) = v7;
-    *(_WORD *)(v5 + 762) = 8;
-    return v17;
   }
-  if ( v40 == 1 )
-    return 2;
-  if ( v39 == 1 )
+  if ( *(_WORD *)(v4 + 760) != v8 )
   {
-    if ( (signed int)*(_WORD *)(v5 + 762) <= 0 )
+    *(_WORD *)(v4 + 760) = v8;
+    result = 1;
+    *(_WORD *)(v4 + 762) = 8;
+    *(_WORD *)(v4 + 764) = 0;
+    return result;
+  }
+  if ( v33 == 1 )
+  {
+    result = 2;
+  }
+  else if ( v34 == 1 )
+  {
+    if ( (signed int)*(_WORD *)(v4 + 762) <= 0 )
     {
-      AKSC_SetHDOELevel((char *)(v5 + 252), (char *)v5, 0, 1);
-      *(_DWORD *)(v5 + 752) = 0;
+      AKSC_SetHDOELevel(v4 + 252, v4, 0, 1);
+      *(_DWORD *)(v4 + 752) = 0;
     }
-    return 4;
+    result = 4;
   }
-  if ( v38 != 1 )
+  else if ( v35 == 1 )
   {
-    if ( (signed int)*(_WORD *)(v5 + 762) <= 0 )
+    AKSC_TransByHbase(&v43, (_DWORD *)(v4 + 832), v4, (int *)(v4 + 12), &v36);
+    if ( v36 == 1 )
+      v21 = 8;
+    else
+      v21 = 0;
+    AKSC_InitHFlucCheck(v4 + 36, (int)&v37, 2500);
+    if ( (signed int)*(_WORD *)(v4 + 762) <= 0 )
     {
-      if ( (signed __int16)AKSC_HFlucCheck(v5 + 36, v5 + 44) == 1 )
+      AKSC_SetHDOELevel(v4 + 252, v4, 0, 1);
+      *(_DWORD *)(v4 + 752) = 0;
+    }
+    if ( v21 )
+      result = 24;
+    else
+      result = 16;
+  }
+  else
+  {
+    if ( (signed int)*(_WORD *)(v4 + 762) <= 0 )
+    {
+      if ( AKSC_HFlucCheck(v4 + 36, v4 + 44) == 1 )
       {
-        v17 = 32;
-        AKSC_SetHDOELevel((char *)(v5 + 252), (char *)v5, 0, 1);
-        *(_DWORD *)(v5 + 752) = 0;
-        return v17;
+        AKSC_SetHDOELevel(v4 + 252, v4, 0, 1);
+        result = 32;
+        *(_DWORD *)(v4 + 752) = 0;
+        return result;
       }
-      v19 = *(_WORD *)(v5 + 764) - 1;
-      *(_WORD *)(v5 + 764) = v19;
-      if ( v19 <= 0 )
+      v22 = *(_WORD *)(v4 + 764) - 1;
+      *(_WORD *)(v4 + 764) = v22;
+      if ( v22 <= 0 )
       {
-        v20 = (signed __int16)zzAKSC_HDOEProcessS3(
-                                v5 + 766,
-                                v5 + 783,
-                                v5 + 800,
-                                v5 + 252,
-                                v5 + 44,
-                                *(_WORD *)(v5 + 238),
-                                0,
-                                1,
-                                v5,
-                                (_DWORD *)(v5 + 752));
-        if ( (signed __int16)v20 == -32768 )
+        v23 = zzAKSC_HDOEProcessS3(
+                v4 + 766,
+                v4 + 783,
+                v4 + 800,
+                v4 + 252,
+                v4 + 44,
+                *(_WORD *)(v4 + 238),
+                0,
+                1,
+                v4,
+                (_DWORD *)(v4 + 752));
+        if ( v23 == -32768 )
         {
           if ( g_opmode )
             fprintf((FILE *)((char *)&_sF + 168), "%s:%d Error.\n", "GetMagneticVector", 653);
@@ -1312,681 +1327,710 @@ int __fastcall GetMagneticVector(int a1, int a2, int a3, __int16 a4)
             _android_log_print(6, "AKMD2", "%s:%d Error.", "GetMagneticVector", 653);
           return 128;
         }
-        if ( v20 > 0 )
+        if ( v23 > 0 )
         {
-          memcpy((void *)(v5 + 6 * *(_WORD *)(v5 + 760) + 6), (const void *)v5, 6u);
-          v21 = *(_WORD *)v5;
-          v22 = *(_WORD *)(v5 + 760);
-          v23 = *(_WORD *)(v5 + 4);
-          *(_DWORD *)(v5 + 16) = *(_WORD *)(v5 + 2);
-          v24 = *(_DWORD *)(v5 + 752);
-          *(_DWORD *)(v5 + 12) = v21;
-          *(_DWORD *)(v5 + 20) = v23;
-          *(_DWORD *)(v5 + 4 * v22 + 756) = v24;
-          memcpy((void *)(v5 + 6 * *(_WORD *)(v5 + 760) + 30), (const void *)(v5 + 36), 6u);
-          v25 = v5 + 12 * *(_WORD *)(v5 + 760) + 844;
-          v26 = *(_DWORD *)(v5 + 836);
-          v27 = *(_DWORD *)(v5 + 840);
-          *(_DWORD *)v25 = *(_DWORD *)(v5 + 832);
-          *(_DWORD *)(v25 + 4) = v26;
-          *(_DWORD *)(v25 + 8) = v27;
+          v24 = *(_WORD *)(v4 + 760);
+          v25 = v4 + 6 * v24;
+          *(_DWORD *)(v25 + 6) = *(_DWORD *)v4;
+          *(_WORD *)(v25 + 10) = *(_WORD *)(v4 + 4);
+          v26 = *(_WORD *)v4;
+          v27 = *(_WORD *)(v4 + 4);
+          *(_DWORD *)(v4 + 16) = *(_WORD *)(v4 + 2);
+          v28 = *(_DWORD *)(v4 + 752);
+          *(_DWORD *)(v4 + 12) = v26;
+          *(_DWORD *)(v4 + 20) = v27;
+          *(_DWORD *)(v4 + 4 * v24 + 756) = v28;
+          *(_DWORD *)(v25 + 30) = *(_DWORD *)(v4 + 36);
+          *(_WORD *)(v25 + 34) = *(_WORD *)(v4 + 40);
+          v29 = *(_DWORD *)(v4 + 836);
+          v30 = *(_DWORD *)(v4 + 840);
+          v31 = v4 + 12 * v24 + 844;
+          *(_DWORD *)v31 = *(_DWORD *)(v4 + 832);
+          *(_DWORD *)(v31 + 4) = v29;
+          *(_DWORD *)(v31 + 8) = v30;
         }
-        *(_WORD *)(v5 + 764) = v8;
+        *(_WORD *)(v4 + 764) = v12;
       }
     }
-    if ( (unsigned __int16)AKSC_VNorm((int)&v32, v5, v5 + 24, 833, v5 + 240) )
-      v17 = 0;
+    if ( AKSC_VNorm((int)&v40, v4, v4 + 24, 833, v4 + 240) )
+    {
+      result = 0;
+    }
     else
-      v17 = 64;
-    return v17;
+    {
+      _android_log_print(
+        3,
+        "AKMD2",
+        "AKSC_VNorm failed.\n  have=%6d,%6d,%6d  ho=%6d,%6d,%6d  hs=%6d,%6d,%6d\n",
+        v40,
+        v41,
+        v42,
+        *(_WORD *)v4,
+        *(_WORD *)(v4 + 2),
+        *(_WORD *)(v4 + 4),
+        *(_WORD *)(v4 + 24),
+        *(_WORD *)(v4 + 26),
+        *(_WORD *)(v4 + 28));
+      result = 64;
+    }
   }
-  AKSC_TransByHbase((int)&v29, v5 + 832, v5, v5 + 12, &v37);
-  if ( v37 == 1 )
-    v18 = 8;
-  else
-    v18 = 0;
-  AKSC_InitHFlucCheck((_WORD *)(v5 + 36), &v35, 2500);
-  if ( (signed int)*(_WORD *)(v5 + 762) <= 0 )
-  {
-    AKSC_SetHDOELevel((char *)(v5 + 252), (char *)v5, 0, 1);
-    *(_DWORD *)(v5 + 752) = 0;
-  }
-  if ( v18 )
-    v17 = 24;
-  else
-    v17 = 16;
-  return v17;
-}
-// 1054: using guessed type int _android_log_print(_DWORD, _DWORD, const char *, ...);
-
-//----- (00002358) --------------------------------------------------------
-signed int __fastcall InitAK8963PRMS(_WORD *a1)
-{
-  _WORD *v1; // r4@1
-  signed int result; // r0@1
-
-  v1 = a1;
-  memset(a1, 0, 0x35Cu);
-  result = 833;
-  v1[12] = 833;
-  v1[13] = 833;
-  v1[14] = 833;
-  v1[118] = 8;
   return result;
 }
+// 1888: using guessed type int _android_log_print(_DWORD, _DWORD, const char *, ...);
 
-//----- (0000237C) --------------------------------------------------------
-void *__fastcall AKSC_InitDecomp8963(int a1)
+//----- (00002BF4) --------------------------------------------------------
+int __fastcall AKSC_InitDecomp8963(int result)
 {
-  int v1; // r6@1
-  int v2; // r4@1
-  void *v3; // r0@2
-  void *result; // r0@2
+  int v1; // r2@1
+  int v2; // r3@2
 
-  v1 = a1;
-  v2 = 0;
+  v1 = 0;
   do
   {
-    v3 = (void *)(v1 + v2);
-    v2 += 6;
-    result = memcpy(v3, &I16V_INIT_VALUE, 6u);
+    v2 = result + v1;
+    v1 += 6;
+    *(_WORD *)v2 = I16V_INIT_VALUE;
+    v2 += 2;
+    *(_WORD *)(v2 + 2) = unk_7FDC;
+    *(_WORD *)v2 = unk_7FDA;
   }
-  while ( v2 != 192 );
+  while ( v1 != 192 );
   return result;
 }
 
-//----- (000023A4) --------------------------------------------------------
+//----- (00002C24) --------------------------------------------------------
+int __fastcall sub_2C24(int a1, int a2)
+{
+  int v2; // r7@2
+  int v3; // r6@2
+  int v4; // r6@2
+  int v5; // r5@2
+  unsigned int v6; // r4@2
+  int v7; // ST04_4@2
+  unsigned int v8; // r2@2
+  int v9; // r4@2
+  int v10; // r2@2
+  int v11; // r4@2
+  int result; // r0@4
+  unsigned int v13; // [sp+Ch] [bp-24h]@2
+  unsigned int v14; // [sp+10h] [bp-20h]@2
+  int v15; // [sp+14h] [bp-1Ch]@2
+
+  if ( a1
+    && (v2 = ((~*(_BYTE *)(a1 + 20) << 8) | ~*(_BYTE *)(a1 + 5) & 0xFF) & 0xFFFF,
+        *(_WORD *)a2 = (~*(_BYTE *)(a1 + 20) << 8) | ~*(_BYTE *)(a1 + 5) & 0xFF,
+        v3 = (~*(_BYTE *)(a1 + 17) & 0xFF | ((*(_BYTE *)(a1 + 21) + 4) << 8)) & 0xFF,
+        *(_WORD *)(a2 + 2) = ~*(_BYTE *)(a1 + 17) & 0xFF | ((*(_BYTE *)(a1 + 21) + 4) << 8),
+        v15 = v3,
+        v4 = ((*(_BYTE *)(a1 + 19) + 102) & 0xFF | ((*(_BYTE *)(a1 + 9) - 55) << 8)) & 0xFFFF,
+        *(_WORD *)(a2 + 4) = (*(_BYTE *)(a1 + 19) + 102) & 0xFF | ((*(_BYTE *)(a1 + 9) - 55) << 8),
+        v5 = ((*(_BYTE *)(a1 + 12) - 38) & 0xFF | ((*(_BYTE *)(a1 + 1) - 82) << 8)) & 0xFFFF,
+        *(_WORD *)(a2 + 6) = (*(_BYTE *)(a1 + 12) - 38) & 0xFF | ((*(_BYTE *)(a1 + 1) - 82) << 8),
+        v6 = ((*(_BYTE *)a1 - 32) & 0xFF | ((*(_BYTE *)(a1 + 8) + 106) << 8)) << 24,
+        *(_WORD *)(a2 + 8) = (*(_BYTE *)a1 - 32) & 0xFF | ((*(_BYTE *)(a1 + 8) + 106) << 8),
+        v14 = v6 >> 24,
+        v7 = ((~*(_BYTE *)(a1 + 6) << 8) | ~*(_BYTE *)(a1 + 22) & 0xFF) & 0xFFFF,
+        *(_WORD *)(a2 + 10) = (~*(_BYTE *)(a1 + 6) << 8) | ~*(_BYTE *)(a1 + 22) & 0xFF,
+        v8 = ((*(_BYTE *)(a1 + 4) - 49) & 0xFF | (~*(_BYTE *)(a1 + 14) << 8)) << 24,
+        *(_WORD *)(a2 + 12) = (*(_BYTE *)(a1 + 4) - 49) & 0xFF | (~*(_BYTE *)(a1 + 14) << 8),
+        v13 = v8 >> 24,
+        v9 = ((*(_BYTE *)(a1 + 18) - 127) & 0xFF | (~*(_BYTE *)(a1 + 16) << 8)) & 0xFFFF,
+        *(_WORD *)(a2 + 14) = (*(_BYTE *)(a1 + 18) - 127) & 0xFF | (~*(_BYTE *)(a1 + 16) << 8),
+        v10 = (unsigned __int8)v9,
+        v11 = (((*(_BYTE *)(a1 + 24) + 55) << 8) | (*(_BYTE *)(a1 + 11) - 85) & 0xFF) & 0xFFFF,
+        *(_WORD *)(a2 + 16) = ((*(_BYTE *)(a1 + 24) + 55) << 8) | (*(_BYTE *)(a1 + 11) - 85) & 0xFF,
+        ((unsigned __int8)v11 + v10 + v13 + v14 + v15 + v2 + v4 + v5 + v7) << 24 == ~*(_BYTE *)(a1 + 23) << 24)
+    && ((unsigned __int8)v11 + v13 + v10) << 24 == (*(_BYTE *)(a1 + 2) + 70) << 24 )
+  {
+    result = (~*(_BYTE *)(a1 + 26) & 0xFF) - ((v10 + v14 + v15) & 0xFF) <= 0;
+  }
+  else
+  {
+    result = 0;
+  }
+  return result;
+}
+
+//----- (00002D80) --------------------------------------------------------
+signed int __fastcall sub_2D80(int a1, int *a2)
+{
+  char *v2; // r3@1
+  int *v3; // r4@1
+  int v4; // r2@2
+  unsigned int v5; // r0@2
+  signed int v6; // r5@3
+  int v7; // r5@4
+  bool v8; // cf@8
+  signed int result; // r0@10
+  int v10; // r5@12
+  int v11; // r3@12
+  int *v12; // r12@12
+  int v13; // r2@13
+  signed int v14; // r0@13
+  int v15; // r4@13
+  int *v16; // r6@13
+  int v17; // r1@14
+  int v18; // r7@14
+  int v19; // r3@14
+  int v20; // r7@14
+  int v21; // r1@14
+  signed int v22; // r4@15
+  int v23; // [sp+4h] [bp-54h]@13
+  int v24; // [sp+1Ch] [bp-3Ch]@1
+  char v25[12]; // [sp+20h] [bp-38h]@13
+  char v26[4]; // [sp+2Ch] [bp-2Ch]@13
+  int v27; // [sp+30h] [bp-28h]@16
+  int v28; // [sp+34h] [bp-24h]@16
+  char v29; // [sp+38h] [bp-20h]@1
+  __int16 v30; // [sp+3Eh] [bp-1Ah]@11
+
+  v24 = a1;
+  v2 = &v29;
+  v3 = a2;
+  do
+  {
+    *(_WORD *)v2 = 0;
+    v4 = *v3;
+    v5 = 3;
+    do
+    {
+      v6 = 0x4000 << v5;
+      if ( v4 > -(0x4000 << v5) )
+      {
+        if ( v4 < v6 )
+          goto LABEL_8;
+        v4 -= v6;
+        v7 = *(_WORD *)v2 + (1 << v5);
+      }
+      else
+      {
+        v4 += v6;
+        v7 = *(_WORD *)v2 - (1 << v5);
+      }
+      *(_WORD *)v2 = v7;
+LABEL_8:
+      v8 = v5-- >= 1;
+    }
+    while ( v8 );
+    *v3 = v4;
+    if ( (unsigned __int16)(*(_WORD *)v2 + 7) > 0xEu )
+      return 0;
+    v2 += 2;
+    ++v3;
+  }
+  while ( (__int16 *)v2 != &v30 );
+  v10 = v24;
+  v11 = 0;
+  v12 = a2;
+  do
+  {
+    v13 = 0;
+    *(_DWORD *)&v26[v11] = 0;
+    *(_DWORD *)&v25[v11] = 0;
+    v14 = 0;
+    v15 = 0;
+    v16 = v12;
+    v23 = v11;
+    do
+    {
+      v17 = *(_WORD *)(v10 + v13);
+      v18 = *v16;
+      ++v16;
+      v19 = v18 * v17;
+      v20 = v17 << 10;
+      v14 += v19;
+      v21 = *(_WORD *)(&v29 + v13);
+      v13 += 2;
+      v15 += v21 * v20;
+    }
+    while ( v13 != 6 );
+    *(_DWORD *)&v25[v23] = v15;
+    v22 = (v14 >> 4) + v15 + ((v14 >> 3) & 1);
+    *(_DWORD *)&v26[v23] = ((v22 >> 9) & 1) + (v22 >> 10);
+    v11 = v23 + 4;
+    v10 += 6;
+  }
+  while ( v23 != 8 );
+  *v12 = *(_DWORD *)v26;
+  result = 1;
+  v12[1] = v27;
+  v12[2] = v28;
+  return result;
+}
+// 2D80: using guessed type char var_2C[4];
+// 2D80: using guessed type char var_38[12];
+
+//----- (00002E5C) --------------------------------------------------------
+signed int __fastcall sub_2E5C(signed int a1, int a2, int a3)
+{
+  int v3; // r12@1
+  int v4; // r3@2
+  signed int v5; // r3@4
+  int v6; // r2@12
+  signed int v7; // r3@12
+  signed int v8; // r4@12
+  signed int v9; // r5@12
+  int v10; // r6@12
+  signed int v11; // r7@19
+  signed int v12; // r6@27
+  signed int result; // r0@28
+  signed int v14; // [sp+8h] [bp-38h]@11
+  int v15; // [sp+Ch] [bp-34h]@17
+  int v16; // [sp+10h] [bp-30h]@0
+  int v17; // [sp+14h] [bp-2Ch]@0
+  int v18; // [sp+18h] [bp-28h]@18
+  signed int v19; // [sp+1Ch] [bp-24h]@0
+  __int16 v20; // [sp+20h] [bp-20h]@10
+  __int16 v21; // [sp+24h] [bp-1Ch]@9
+
+  v3 = a3;
+  if ( (unsigned __int16)a1 > 0x20u )
+    goto LABEL_32;
+  v4 = 0;
+  do
+  {
+    if ( a1 == 1 << v4 )
+    {
+      v5 = 1;
+      goto LABEL_7;
+    }
+    ++v4;
+  }
+  while ( v4 != 6 );
+  v5 = 0;
+LABEL_7:
+  if ( !v5 && a1 )
+    goto LABEL_32;
+  v21 = *(_WORD *)a2;
+  if ( *(_WORD *)a2 == 0x7FFF
+    || (v20 = *(_WORD *)(a2 + 2), *(_WORD *)(a2 + 2) == 0x7FFF)
+    || (v14 = *(_WORD *)(a2 + 4), v14 == 0x7FFF) )
+  {
+LABEL_32:
+    result = 0;
+  }
+  else
+  {
+    v6 = 0;
+    v7 = 0;
+    v8 = 0;
+    v9 = 0;
+    v10 = 1;
+    while ( (signed __int16)v6 < a1 )
+    {
+      if ( (signed __int16)v6 == (signed __int16)v10 )
+        v10 = 2 * v6 & 0xFFFF;
+      if ( (_WORD)v6 )
+      {
+        v15 = *(_WORD *)a2;
+        if ( v15 != 0x7FFF && (v18 = *(_WORD *)(a2 + 2), v18 != 0x7FFF) && (v11 = *(_WORD *)(a2 + 4), v11 != 0x7FFF) )
+        {
+          v19 = *(_WORD *)(a2 + 4);
+          v17 = *(_WORD *)a2;
+          v9 += v15;
+          v16 = *(_WORD *)(a2 + 2);
+          v8 += v18;
+        }
+        else
+        {
+          v9 += v17;
+          v8 += v16;
+          v11 = v19;
+        }
+        v7 += v11;
+      }
+      else
+      {
+        v16 = v20;
+        v17 = v21;
+        v19 = v14;
+        v7 = v14;
+        v9 = v21;
+        v8 = v20;
+      }
+      ++v6;
+      a2 += 6;
+    }
+    while ( 1 )
+    {
+      v12 = v10 << 16;
+      if ( v12 >> 16 <= 1 )
+        break;
+      v9 >>= 1;
+      v8 >>= 1;
+      v7 >>= 1;
+      v10 = (v12 >> 17) & 0xFFFF;
+    }
+    *(_WORD *)v3 = v9;
+    *(_WORD *)(v3 + 2) = v8;
+    *(_WORD *)(v3 + 4) = v7;
+    result = 1;
+  }
+  return result;
+}
+
+//----- (00002F74) --------------------------------------------------------
 int __fastcall AKSC_Decomp8963S3(int a1, signed int a2, int a3, int a4, int a5, int a6, _WORD *a7, int a8, signed __int16 *a9, signed __int16 *a10, _WORD *a11, _WORD *a12, _WORD *a13)
 {
-  int v13; // r9@1
-  int v14; // r5@2
-  signed int v15; // r2@4
-  signed int v16; // r5@7
-  signed __int16 v17; // r5@11
-  signed __int16 v18; // r2@14
-  signed int v19; // r5@17
-  int v20; // r1@21
-  int v21; // r2@21
-  __int16 v22; // r8@21
-  int v24; // r0@21
-  int v25; // r8@21
-  signed int v32; // r9@22
-  signed int v33; // r9@23
-  int v34; // r12@27
-  __int16 v35; // r1@27
-  int v36; // r9@27
-  int v37; // r8@27
-  __int16 v38; // r0@27
-  __int16 v39; // r6@27
-  __int16 v40; // r2@27
-  __int16 v41; // r5@27
-  int v42; // r7@30
-  int v43; // r3@33
-  int v44; // r0@34
-  int v45; // r3@34
-  int v46; // r2@35
-  signed int v47; // r5@35
-  signed int v48; // r6@36
-  int v49; // r6@37
-  int v50; // r3@44
-  __int16 *v51; // r7@44
-  unsigned int v52; // r5@45
-  int v53; // r6@45
-  char *v54; // r12@45
-  int v55; // r0@45
-  int v56; // r8@46
-  int v57; // t1@46
-  int v58; // r11@46
-  int v59; // r12@47
-  int v60; // r2@49
-  int v61; // r2@49
-  signed int v62; // r2@50
-  int v63; // r1@54
-  int v64; // r2@54
-  int v65; // r3@56
-  signed int v66; // r2@58
-  int v67; // r2@61
-  int v68; // r3@65
-  int v69; // r12@65
-  int v70; // r7@65
-  int v71; // r6@65
-  signed int v72; // r1@65
-  signed int v73; // r4@65
-  signed int v74; // r5@65
-  int v75; // r10@70
-  int v76; // r9@71
-  unsigned int v77; // r0@78
-  int result; // r0@82
-  signed int v79; // [sp+4h] [bp-94h]@65
-  signed int v80; // [sp+8h] [bp-90h]@9
-  int v81; // [sp+10h] [bp-88h]@1
-  __int16 v82; // [sp+1Ch] [bp-7Ch]@27
-  __int16 v83; // [sp+1Eh] [bp-7Ah]@27
-  __int16 v84; // [sp+20h] [bp-78h]@27
-  __int16 v85; // [sp+22h] [bp-76h]@27
-  __int16 v86; // [sp+24h] [bp-74h]@27
-  unsigned __int16 v87; // [sp+26h] [bp-72h]@27
-  __int16 v88; // [sp+28h] [bp-70h]@27
-  __int16 v89; // [sp+2Ah] [bp-6Eh]@27
-  __int16 v90; // [sp+2Ch] [bp-6Ch]@27
-  char v91[12]; // [sp+30h] [bp-68h]@45
-  char v92[8]; // [sp+3Ch] [bp-5Ch]@45
-  int v93; // [sp+40h] [bp-58h]@48
-  char v94; // [sp+44h] [bp-54h]@45
-  __int16 v95[2]; // [sp+48h] [bp-50h]@25
-  int v96; // [sp+4Ch] [bp-4Ch]@48
-  int v97; // [sp+50h] [bp-48h]@48
-  char v98[12]; // [sp+54h] [bp-44h]@22
-  int v99; // [sp+58h] [bp-40h]@54
-  int v100; // [sp+5Ch] [bp-3Ch]@54
-  char v101[8]; // [sp+60h] [bp-38h]@35
-  __int16 v102; // [sp+68h] [bp-30h]@21
-  __int16 v103; // [sp+6Ah] [bp-2Eh]@21
-  __int16 v104; // [sp+6Ch] [bp-2Ch]@21
+  signed int v13; // r6@1
+  int v14; // r2@2
+  signed __int16 *v15; // r3@4
+  signed int v16; // r2@4
+  signed __int16 v17; // r2@9
+  signed __int16 v18; // r2@11
+  signed int v19; // r2@13
+  int v20; // r3@17
+  int v21; // r2@17
+  signed int v22; // r1@18
+  int v23; // r1@19
+  __int16 v24; // r0@22
+  int v25; // r3@23
+  int result; // r0@24
+  int v27; // r2@26
+  int v28; // r7@26
+  signed int v29; // r2@26
+  __int16 v30; // r3@30
+  int v31; // [sp+4h] [bp-5Ch]@1
+  int v32; // [sp+8h] [bp-58h]@1
+  char v33; // [sp+14h] [bp-4Ch]@22
+  int v34; // [sp+28h] [bp-38h]@21
+  __int16 v35; // [sp+2Ch] [bp-34h]@31
+  __int16 v36; // [sp+30h] [bp-30h]@31
+  int v37; // [sp+34h] [bp-2Ch]@18
+  int v38; // [sp+38h] [bp-28h]@30
+  int v39; // [sp+3Ch] [bp-24h]@30
+  __int16 v40[16]; // [sp+40h] [bp-20h]@17
+  __int16 v41; // [sp+42h] [bp-1Eh]@17
+  __int16 v42; // [sp+44h] [bp-1Ch]@17
 
-  v13 = a3;
-  v81 = a2;
+  v13 = a2;
+  v31 = a3;
+  v32 = a4;
   if ( (unsigned __int16)a2 > 0x20u )
-    goto LABEL_82;
+    goto LABEL_38;
   v14 = 0;
   do
   {
     if ( a2 == 1 << v14 )
     {
-      v15 = 1;
+      v15 = a10;
+      v16 = 1;
       goto LABEL_7;
     }
     ++v14;
   }
   while ( v14 != 6 );
-  v15 = 0;
+  v15 = a10;
+  v16 = 0;
 LABEL_7:
-  v16 = a2;
+  if ( v16 )
+    goto LABEL_39;
   if ( a2 )
-    v16 = 1;
-  v80 = v16;
-  if ( (v15 ^ 1) & v16 )
   {
-LABEL_82:
+LABEL_38:
     LOWORD(result) = 0;
-    return (signed __int16)result;
   }
-  *a7 = 1;
-  *a12 = 0;
-  *a13 = 0;
-  *a9 = 0;
-  *a10 = 0;
-  *a11 = 0;
-  if ( *(_WORD *)a1 & 2 )
+  else
+  {
+LABEL_39:
+    *a7 = 1;
+    *a12 = 0;
+    *a13 = 0;
+    *a9 = 0;
+    *v15 = 0;
+    *a11 = 0;
     v17 = 1;
-  else
-    v17 = *a9;
-  *a9 = v17;
-  if ( *(_WORD *)(a1 + 14) & 4 )
+    if ( !(*(_WORD *)a1 & 2) )
+      v17 = *a9;
+    *a9 = v17;
     v18 = 1;
-  else
-    v18 = *a10;
-  *a10 = v18;
-  if ( *(_WORD *)(a1 + 14) & 8 )
+    if ( !(*(_WORD *)(a1 + 14) & 4) )
+      v18 = *v15;
+    *v15 = v18;
     v19 = 1;
-  else
-    v19 = *a11;
-  *a11 = v19;
-  if ( *a10 == 1 || v19 == 1 )
-    goto LABEL_83;
-  v102 = *(_WORD *)(a1 + 2) + (*(_WORD *)(a1 + 4) << 8);
-  v103 = *(_WORD *)(a1 + 6) + (*(_WORD *)(a1 + 8) << 8);
-  v20 = 0;
-  v21 = v13;
-  v104 = *(_WORD *)(a1 + 10) + (*(_WORD *)(a1 + 12) << 8);
-  v22 = *(_WORD *)(a1 + 14);
-  _R7 = 10;
-  v24 = 0;
-  v25 = v22 & 0x10;
-  do
-  {
-    _R9 = *(unsigned __int16 *)((char *)&v102 + v24);
-    __asm { SMULBB.W        R9, R9, R7 }
-    v32 = (*(_WORD *)(v21 + v24) + 128) * _R9;
-    *(_DWORD *)&v98[v20 * 2] = v32;
-    if ( v25 )
-      v33 = v32 >> 10;
-    else
-      v33 = v32 >> 8;
-    *(_DWORD *)&v95[v20] = v33;
-    v20 += 2;
-    v24 += 2;
-  }
-  while ( v20 != 6 );
-  LOWORD(v42) = a4
-             && (v34 = ~*(_BYTE *)(a4 + 5) | (~*(_BYTE *)(a4 + 20) << 8),
-                 v82 = ~*(_BYTE *)(a4 + 5) | (~*(_BYTE *)(a4 + 20) << 8),
-                 v35 = ~*(_BYTE *)(a4 + 17) | ((*(_BYTE *)(a4 + 21) + 4) << 8),
-                 v83 = v35,
-                 v36 = (*(_BYTE *)(a4 + 19) + 102) | ((*(_BYTE *)(a4 + 9) - 55) << 8),
-                 v84 = (*(_BYTE *)(a4 + 19) + 102) | ((*(_BYTE *)(a4 + 9) - 55) << 8),
-                 v37 = (unsigned __int8)(*(_BYTE *)(a4 + 12) - 38) | ((*(_BYTE *)(a4 + 1) - 82) << 8),
-                 v85 = (unsigned __int8)(*(_BYTE *)(a4 + 12) - 38) | (unsigned __int16)((*(_BYTE *)(a4 + 1) - 82) << 8),
-                 v38 = (*(_BYTE *)a4 - 32) | ((*(_BYTE *)(a4 + 8) + 106) << 8),
-                 v86 = v38,
-                 v87 = ~*(_BYTE *)(a4 + 22) | (~*(_BYTE *)(a4 + 6) << 8),
-                 v39 = (*(_BYTE *)(a4 + 4) - 49) | (~*(_BYTE *)(a4 + 14) << 8),
-                 v88 = v39,
-                 v40 = (*(_BYTE *)(a4 + 18) - 127) | (~*(_BYTE *)(a4 + 16) << 8),
-                 v89 = v40,
-                 v41 = (*(_BYTE *)(a4 + 11) - 85) | ((*(_BYTE *)(a4 + 24) + 55) << 8),
-                 v90 = v41,
-                 (unsigned __int8)~*(_BYTE *)(a4 + 23) == (unsigned __int8)v40
-                                                        + (unsigned __int8)v39
-                                                        + v34
-                                                        + v36
-                                                        + (unsigned __int8)v35
-                                                        + v37
-                                                        + (unsigned __int8)v38
-                                                        + (unsigned __int8)v41
-                                                        + v87)
-             && *(_BYTE *)(a4 + 2) + 70 == (unsigned __int8)(v41 + v39 + v40)
-             && ~*(_BYTE *)(a4 + 26) == (unsigned __int8)(v40 + v38 + v35);
-  *a13 = v42;
-  v42 = (signed __int16)v42;
-  if ( !(_WORD)v42 )
-    goto LABEL_33;
-  v44 = 0;
-  v45 = 0;
-  do
-  {
-    v46 = *(_DWORD *)&v95[v44];
-    v47 = 3;
-    *(_WORD *)&v101[v45] = 0;
-    do
+    if ( !(*(_WORD *)(a1 + 14) & 8) )
+      v19 = *a11;
+    *a11 = v19;
+    if ( *v15 == 1 || v19 == 1 )
     {
-      v48 = 0x4000 << v47;
-      if ( v46 > -(0x4000 << v47) )
-      {
-        if ( v46 < v48 )
-          goto LABEL_41;
-        v46 -= v48;
-        v49 = *(_WORD *)&v101[v45] + (v42 << v47);
-      }
-      else
-      {
-        v46 += v48;
-        v49 = *(_WORD *)&v101[v45] - (v42 << v47);
-      }
-      *(_WORD *)&v101[v45] = v49;
-LABEL_41:
-      _CF = __CFADD__(v47--, -1);
-    }
-    while ( _CF );
-    *(_DWORD *)&v95[v44] = v46;
-    if ( (unsigned __int16)(*(_WORD *)&v101[v45] + 7) > 0xEu )
-      goto LABEL_82;
-    v44 += 2;
-    v45 += 2;
-  }
-  while ( v44 != 6 );
-  v50 = 0;
-  v51 = &v82;
-  do
-  {
-    v52 = 0;
-    v53 = 0;
-    v54 = &v94;
-    v55 = 0;
-    *(_DWORD *)&v92[v50] = 0;
-    *(_DWORD *)&v91[v50] = 0;
-    do
-    {
-      v56 = v51[v55];
-      v57 = *((_DWORD *)v54 + 1);
-      v54 += 4;
-      v52 += v57 * v56;
-      v58 = *(_WORD *)&v101[v55 * 2];
-      ++v55;
-      v53 += v58 * (v56 << 10);
-    }
-    while ( v55 != 3 );
-    v59 = v53 + ((signed int)v52 >> 4) + ((v52 >> 3) & 1);
-    *(_DWORD *)&v91[v50] = v53;
-    v51 += 3;
-    *(_DWORD *)&v92[v50] = (((unsigned int)v59 >> 9) & 1) + (v59 >> 10);
-    v50 += 4;
-  }
-  while ( v50 != 12 );
-  *(_DWORD *)v95 = *(_DWORD *)v92;
-  v96 = v93;
-  v97 = *(_DWORD *)&v94;
-LABEL_33:
-  v43 = 0;
-  do
-  {
-    v60 = *(_DWORD *)&v95[v43];
-    *(_DWORD *)&v98[v43 * 2] = v60;
-    v61 = v60 - *(_DWORD *)(a6 + v43 * 2);
-    *(_DWORD *)&v95[v43] = v61;
-    if ( (unsigned int)(v61 + 29999) > 0xEA5E )
-      v62 = 1;
-    else
-      v62 = *a12;
-    v43 += 2;
-    *a12 = v62;
-  }
-  while ( v43 != 6 );
-  if ( v62 == 1 )
-  {
-    AKSC_InitDecomp8963(a5);
-    v63 = v99;
-    v64 = v100;
-    *(_DWORD *)a6 = *(_DWORD *)v98;
-    *(_DWORD *)(a6 + 4) = v63;
-    *(_DWORD *)(a6 + 8) = v64;
-    v102 = 0;
-    v103 = 0;
-    v104 = 0;
-  }
-  else
-  {
-    v102 = v95[0];
-    v103 = v96;
-    v104 = v97;
-  }
-  AKSC_buffer((char *)&v102, 32, *a7, a5);
-  v65 = 0;
-  do
-  {
-    if ( v81 == 1 << v65 )
-    {
-      v66 = 1;
-      goto LABEL_61;
-    }
-    ++v65;
-  }
-  while ( v65 != 6 );
-  v66 = 0;
-LABEL_61:
-  v67 = v80 & (v66 ^ 1);
-  if ( v67 || *(_WORD *)a5 == 0x7FFF || *(_WORD *)(a5 + 2) == 0x7FFF || *(_WORD *)(a5 + 4) == 0x7FFF )
-    goto LABEL_82;
-  v68 = a5;
-  v69 = 0;
-  v70 = 0;
-  v71 = 0;
-  v72 = 0;
-  v73 = 0;
-  v74 = 0;
-  v79 = 1;
-  while ( v67 < v81 )
-  {
-    if ( v67 == v79 )
-      v79 = (unsigned __int16)(2 * v67);
-    if ( v67 )
-    {
-      v75 = *(_WORD *)v68;
-      if ( v75 != 0x7FFF && (v76 = *(_WORD *)(v68 + 2), v76 != 0x7FFF) && *(_WORD *)(v68 + 4) != 0x7FFF )
-      {
-        v71 = *(_WORD *)v68;
-        v74 += v75;
-        v70 = *(_WORD *)(v68 + 2);
-        v73 += v76;
-        v69 = *(_WORD *)(v68 + 4);
-      }
-      else
-      {
-        v74 += v71;
-        v73 += v70;
-      }
-      v72 += v69;
+      LOWORD(result) = 1;
     }
     else
     {
-      v74 = *(_WORD *)a5;
-      v73 = *(_WORD *)(a5 + 2);
-      v72 = *(_WORD *)(a5 + 4);
-      v71 = *(_WORD *)a5;
-      v70 = *(_WORD *)(a5 + 2);
-      v69 = *(_WORD *)(a5 + 4);
+      v40[0] = (*(_WORD *)(a1 + 4) << 8) + *(_WORD *)(a1 + 2);
+      v41 = (*(_WORD *)(a1 + 8) << 8) + *(_WORD *)(a1 + 6);
+      v42 = (*(_WORD *)(a1 + 12) << 8) + *(_WORD *)(a1 + 10);
+      v20 = 0;
+      v21 = 0;
+      do
+      {
+        v22 = (signed __int16)(*(_WORD *)(v31 + v21 * 2) + 128) * 10 * v40[v21];
+        *(int *)((char *)&v37 + v20 * 4) = v22;
+        if ( *(_WORD *)(a1 + 14) & 0x10 )
+          v23 = v22 >> 10;
+        else
+          v23 = v22 >> 8;
+        *(int *)((char *)&v34 + v20 * 4) = v23;
+        ++v20;
+        ++v21;
+      }
+      while ( v20 != 3 );
+      v24 = sub_2C24(v32, (int)&v33);
+      *a13 = v24;
+      if ( v24 != 1 || (result = (unsigned __int16)sub_2D80((int)&v33, &v34)) != 0 )
+      {
+        v25 = 0;
+        do
+        {
+          v27 = *(int *)((char *)&v34 + v25);
+          *(int *)((char *)&v37 + v25) = v27;
+          v28 = v27 - *(_DWORD *)(a6 + v25);
+          *(int *)((char *)&v34 + v25) = v28;
+          v29 = 1;
+          if ( (unsigned int)(v28 + 29999) <= 0xEA5E )
+            v29 = *a12;
+          v25 += 4;
+          *a12 = v29;
+        }
+        while ( v25 != 12 );
+        if ( v29 == 1 )
+        {
+          AKSC_InitDecomp8963(a5);
+          *(_DWORD *)a6 = v37;
+          *(_DWORD *)(a6 + 4) = v38;
+          v30 = 0;
+          *(_DWORD *)(a6 + 8) = v39;
+          v40[0] = 0;
+          v41 = 0;
+        }
+        else
+        {
+          v30 = v36;
+          v40[0] = v34;
+          v41 = v35;
+        }
+        v42 = v30;
+        AKSC_buffer((int)v40, 32, *a7, a5);
+        LOWORD(result) = sub_2E5C(v13, a5, a8);
+      }
     }
-    ++v67;
-    v68 += 6;
   }
-  LOWORD(v77) = v79;
-  while ( 1 )
-  {
-    v77 = (signed __int16)v77;
-    if ( (signed __int16)v77 <= 1 )
-      break;
-    v74 >>= 1;
-    v73 >>= 1;
-    v72 >>= 1;
-    v77 = (v77 >> 1) & 0xFFFF;
-  }
-  *(_WORD *)a8 = v74;
-  *(_WORD *)(a8 + 2) = v73;
-  *(_WORD *)(a8 + 4) = v72;
-LABEL_83:
-  LOWORD(result) = 1;
   return (signed __int16)result;
 }
-// 23A4: using guessed type __int16 var_50[2];
-// 23A4: using guessed type char var_44[12];
-// 23A4: using guessed type char var_38[8];
-// 23A4: using guessed type char var_5C[8];
-// 23A4: using guessed type char var_68[12];
+// 2F74: using guessed type __int16 var_20[16];
 
-//----- (0000285C) --------------------------------------------------------
-int __fastcall AKSC_Decomp8963(int a1, signed int a2, int a3, int a4, int a5, _WORD *a6, int a7, signed __int16 *a8, signed __int16 *a9, _WORD *a10, _WORD *a11)
+//----- (0000312C) --------------------------------------------------------
+signed int __fastcall AKSC_Decomp8963(int a1, signed int a2, int a3, int a4, int a5, _WORD *a6, int a7, signed __int16 *a8, signed __int16 *a9, _WORD *a10, _WORD *a11)
 {
-  signed int v11; // r5@1
-  int v12; // r4@1
-  int v13; // r7@2
-  signed __int16 v14; // r7@7
-  signed __int16 v15; // r7@10
-  signed int v16; // r7@13
-  int v17; // r1@17
-  int v19; // r7@17
-  __int16 v20; // r10@17
-  __int16 v21; // r8@17
-  signed int v28; // r12@18
-  int v29; // r12@19
-  int v30; // r12@21
-  signed int v31; // lr@22
-  int v32; // r1@26
-  int v33; // r2@26
-  int v34; // r3@28
-  signed int v35; // r7@28
-  signed int v36; // r1@28
-  signed int v37; // r0@28
-  signed int v38; // r6@28
-  unsigned int v39; // r2@28
-  unsigned int v40; // r8@30
-  int v41; // r10@30
-  int v42; // r9@34
-  int v43; // r8@34
-  int result; // r0@40
-  int v45; // [sp+10h] [bp-50h]@17
-  int v46; // [sp+14h] [bp-4Ch]@17
-  int v47; // [sp+18h] [bp-48h]@17
-  int v48; // [sp+1Ch] [bp-44h]@17
-  int v49; // [sp+20h] [bp-40h]@17
-  int v50; // [sp+24h] [bp-3Ch]@17
-  __int16 v51; // [sp+28h] [bp-38h]@17
-  __int16 v52; // [sp+2Ah] [bp-36h]@17
-  __int16 v53; // [sp+2Ch] [bp-34h]@17
-  __int16 v54; // [sp+30h] [bp-30h]@26
-  __int16 v55; // [sp+32h] [bp-2Eh]@26
-  __int16 v56; // [sp+34h] [bp-2Ch]@26
+  int v11; // r2@2
+  signed __int16 v12; // r2@6
+  signed __int16 v13; // r2@8
+  signed int v14; // r2@10
+  __int16 v15; // r0@14
+  int v16; // r3@14
+  int v17; // r1@14
+  signed int v18; // r0@15
+  int v19; // r0@16
+  int v20; // r0@18
+  unsigned int v21; // r12@18
+  signed int v22; // r0@18
+  __int16 v23; // r3@22
+  int v24; // r5@24
+  int v25; // r4@24
+  signed int v26; // r2@24
+  signed int v27; // r1@24
+  signed int v28; // r0@24
+  int v29; // r3@24
+  int v30; // r7@30
+  signed int v31; // r3@35
+  signed int result; // r0@37
+  int v33; // [sp+10h] [bp-50h]@1
+  signed int v34; // [sp+14h] [bp-4Ch]@1
+  _WORD *v35; // [sp+18h] [bp-48h]@8
+  int v36; // [sp+18h] [bp-48h]@26
+  int v37; // [sp+1Ch] [bp-44h]@1
+  int v38; // [sp+20h] [bp-40h]@14
+  int v39; // [sp+24h] [bp-3Ch]@14
+  int v40; // [sp+28h] [bp-38h]@14
+  int v41; // [sp+2Ch] [bp-34h]@14
+  int v42; // [sp+30h] [bp-30h]@14
+  int v43; // [sp+34h] [bp-2Ch]@14
+  __int16 v44[4]; // [sp+38h] [bp-28h]@14
+  __int16 v45; // [sp+3Ah] [bp-26h]@14
+  __int16 v46; // [sp+3Ch] [bp-24h]@14
+  __int16 v47; // [sp+40h] [bp-20h]@22
+  __int16 v48; // [sp+42h] [bp-1Eh]@22
+  __int16 v49; // [sp+44h] [bp-1Ch]@24
 
-  v11 = a2;
-  v12 = a4;
+  v34 = a2;
+  v37 = a3;
+  v33 = a4;
   if ( a2 > 32 )
   {
-LABEL_40:
-    LOWORD(result) = 0;
+LABEL_37:
+    result = 0;
   }
   else
   {
-    v13 = 0;
-    while ( a2 != 1 << v13 )
+    v11 = 0;
+    while ( a2 != 1 << v11 )
     {
-      if ( ++v13 == 6 )
-        goto LABEL_40;
+      if ( ++v11 == 6 )
+        goto LABEL_37;
     }
     *a6 = 1;
     *a8 = 0;
     *a9 = 0;
     *a10 = 0;
     *a11 = 0;
-    if ( *(_WORD *)a1 & 2 )
-      v14 = 1;
-    else
-      v14 = *a8;
-    *a8 = v14;
-    if ( *(_WORD *)(a1 + 14) & 4 )
-      v15 = 1;
-    else
-      v15 = *a9;
-    *a9 = v15;
-    if ( *(_WORD *)(a1 + 14) & 8 )
-      v16 = 1;
-    else
-      v16 = *a10;
-    *a10 = v16;
-    if ( *a9 != 1 && v16 != 1 )
+    v12 = 1;
+    if ( !(*(_WORD *)a1 & 2) )
+      v12 = *a8;
+    *a8 = v12;
+    v35 = (_WORD *)(a1 + 14);
+    v13 = 1;
+    if ( !(*(_WORD *)(a1 + 14) & 4) )
+      v13 = *a9;
+    *a9 = v13;
+    v14 = 1;
+    if ( !(*(_WORD *)(a1 + 14) & 8) )
+      v14 = *a10;
+    *a10 = v14;
+    if ( *a9 != 1 && v14 != 1 )
     {
+      v44[0] = (*(_WORD *)(a1 + 4) << 8) + *(_WORD *)(a1 + 2);
+      v45 = (*(_WORD *)(a1 + 8) << 8) + *(_WORD *)(a1 + 6);
+      v15 = (*(_WORD *)(a1 + 12) << 8) + *(_WORD *)(a1 + 10);
+      v16 = 0;
+      v40 = 0;
+      v39 = 0;
+      v46 = v15;
+      v43 = 0;
+      v42 = 0;
+      v41 = 0;
+      v38 = 0;
       v17 = 0;
-      _R9 = 10;
-      v51 = *(_WORD *)(a1 + 2) + (*(_WORD *)(a1 + 4) << 8);
-      v19 = 0;
-      v52 = *(_WORD *)(a1 + 6) + (*(_WORD *)(a1 + 8) << 8);
-      v20 = *(_WORD *)(a1 + 12);
-      v21 = *(_WORD *)(a1 + 10);
-      v50 = 0;
-      v53 = v21 + (v20 << 8);
-      v49 = 0;
-      v48 = 0;
-      v47 = 0;
-      v46 = 0;
-      v45 = 0;
       do
       {
-        _LR = *(unsigned __int16 *)((char *)&v51 + v19);
-        __asm { SMULBB.W        R11, LR, R9 }
-        v28 = (*(_WORD *)(a3 + v19) + 128) * _R11;
-        *(int *)((char *)&v48 + v17) = v28;
-        if ( *(_WORD *)(a1 + 14) & 0x10 )
-          v29 = v28 >> 10;
+        v18 = (signed __int16)(*(_WORD *)(v37 + v17 * 2) + 128) * 10 * v44[v17];
+        *(int *)((char *)&v41 + v16) = v18;
+        if ( *v35 & 0x10 )
+          v19 = v18 >> 10;
         else
-          v29 = v28 >> 8;
-        *(int *)((char *)&v48 + v17) = v29;
-        v30 = *(int *)((char *)&v48 + v17) - *(_DWORD *)(a5 + v17);
-        *(int *)((char *)&v45 + v17) = v30;
-        if ( (unsigned int)(v30 + 29999) <= 0xEA5E )
-          v31 = *a11;
-        else
-          v31 = 1;
-        v17 += 4;
-        v19 += 2;
-        *a11 = v31;
+          v19 = v18 >> 8;
+        *(int *)((char *)&v41 + v16) = v19;
+        v20 = *(int *)((char *)&v41 + v16) - *(_DWORD *)(a5 + v16);
+        *(int *)((char *)&v38 + v16) = v20;
+        v21 = v20 + 29999;
+        v22 = 1;
+        if ( v21 <= 0xEA5E )
+          v22 = *a11;
+        v16 += 4;
+        *a11 = v22;
+        ++v17;
       }
-      while ( v17 != 12 );
-      if ( v31 == 1 )
+      while ( v16 != 12 );
+      if ( v22 == 1 )
       {
-        AKSC_InitDecomp8963(a4);
-        v32 = v49;
-        v33 = v50;
-        *(_DWORD *)a5 = v48;
-        *(_DWORD *)(a5 + 4) = v32;
-        *(_DWORD *)(a5 + 8) = v33;
-        v54 = 0;
-        v55 = 0;
-        v56 = 0;
+        AKSC_InitDecomp8963(v33);
+        *(_DWORD *)a5 = v41;
+        v23 = 0;
+        *(_DWORD *)(a5 + 4) = v42;
+        *(_DWORD *)(a5 + 8) = v43;
+        v47 = 0;
+        v48 = 0;
       }
       else
       {
-        v54 = v45;
-        v55 = v46;
-        v56 = v47;
+        v23 = v40;
+        v47 = v38;
+        v48 = v39;
       }
-      AKSC_buffer((char *)&v54, 32, *a6, v12);
-      v34 = 0;
-      v35 = 0;
-      v36 = 0;
-      v37 = 0;
-      v38 = 0;
-      v39 = 1;
-      while ( v35 < v11 )
+      v49 = v23;
+      AKSC_buffer((int)&v47, 32, *a6, v33);
+      v24 = 0;
+      v25 = v33;
+      v26 = 0;
+      v27 = 0;
+      v28 = 0;
+      v29 = 1;
+      while ( (signed __int16)v24 < v34 )
       {
-        if ( v35 == v39 )
+        if ( (signed __int16)v24 == (signed __int16)v29 )
         {
-          v39 = (unsigned __int16)(2 * v35);
-          v40 = (unsigned __int16)(2 * v35);
-          v41 = v12 + 6 * (v40 - 1);
-          if ( *(_WORD *)v41 == 0x7FFF && *(_WORD *)(v41 + 2) == 0x7FFF && *(_WORD *)(v41 + 4) == 0x7FFF )
+          v29 = 2 * v24 & 0xFFFF;
+          v36 = v33 + 6 * ((signed __int16)(2 * v24) - 1);
+          if ( *(_WORD *)v36 == 0x7FFF && *(_WORD *)(v36 + 2) == 0x7FFF && *(_WORD *)(v36 + 4) == 0x7FFF )
           {
-            v39 = (v40 >> 1) & 0xFFFF;
-            break;
+            v29 = v24 << 17 >> 17;
+            goto LABEL_34;
           }
         }
-        v42 = *(_WORD *)(v12 + v34);
-        v43 = v12 + v34;
-        ++v35;
-        v34 += 6;
-        v38 += v42;
-        v36 += *(_WORD *)(v43 + 4);
-        v37 += *(_WORD *)(v43 + 2);
+        ++v24;
+        v28 += *(_WORD *)v25;
+        v27 += *(_WORD *)(v25 + 2);
+        v30 = *(_WORD *)(v25 + 4);
+        v25 += 6;
+        v26 += v30;
       }
       while ( 1 )
       {
-        v39 = (signed __int16)v39;
-        if ( (signed __int16)v39 <= 1 )
+        v31 = v29 << 16;
+        if ( v31 >> 16 <= 1 )
           break;
-        v38 >>= 1;
-        v37 >>= 1;
-        v36 >>= 1;
-        v39 = (v39 >> 1) & 0xFFFF;
+        v28 >>= 1;
+        v27 >>= 1;
+        v26 >>= 1;
+        v29 = v31 >> 17;
+LABEL_34:
+        v29 = (unsigned __int16)v29;
       }
-      *(_WORD *)a7 = v38;
-      *(_WORD *)(a7 + 2) = v37;
-      *(_WORD *)(a7 + 4) = v36;
+      *(_WORD *)a7 = v28;
+      *(_WORD *)(a7 + 2) = v27;
+      *(_WORD *)(a7 + 4) = v26;
     }
-    LOWORD(result) = 1;
+    result = 1;
   }
-  return (signed __int16)result;
+  return result;
 }
+// 312C: using guessed type __int16 var_28[4];
 
-//----- (00002A9C) --------------------------------------------------------
+//----- (00003334) --------------------------------------------------------
 int __fastcall AKSC_div16(int a1, int a2)
 {
-  __int16 v2; // r3@1
+  int v2; // r3@1
   int v3; // r2@1
+  signed int v4; // r4@4
 
   v2 = 0;
-  LOWORD(v3) = 0;
+  v3 = 0;
   do
   {
     a1 *= 2;
-    v2 *= 2;
+    v2 = 2 * v2 & 0xFFFF;
     if ( a1 >= a2 )
     {
       a1 -= a2;
-      ++v2;
+      v2 = (v2 + 1) & 0xFFFF;
     }
-    v3 = (unsigned __int16)(v3 + 1);
+    v4 = (v3 + 1) << 16;
+    v3 = (v3 + 1) & 0xFFFF;
   }
-  while ( v3 != 15 );
-  return v2;
+  while ( v4 >> 16 != 15 );
+  return (signed __int16)v2;
 }
 
-//----- (00002AC0) --------------------------------------------------------
+//----- (00003360) --------------------------------------------------------
 int __fastcall AKSC_div32(unsigned int a1, unsigned int a2)
 {
   unsigned int v2; // r3@1
+  int v3; // r2@1
   int result; // r0@1
-  int v4; // r2@1
+  signed int v5; // r4@4
 
   v2 = a1;
+  v3 = 0;
   result = 0;
-  LOWORD(v4) = 0;
   do
   {
     v2 *= 2;
@@ -1996,64 +2040,61 @@ int __fastcall AKSC_div32(unsigned int a1, unsigned int a2)
       v2 -= a2;
       ++result;
     }
-    v4 = (unsigned __int16)(v4 + 1);
+    v5 = (v3 + 1) << 16;
+    v3 = (v3 + 1) & 0xFFFF;
   }
-  while ( v4 != 31 );
+  while ( v5 >> 16 != 31 );
   return result;
 }
 
-//----- (00002AE0) --------------------------------------------------------
+//----- (00003384) --------------------------------------------------------
 int __fastcall AKSC_norm16(int a1)
 {
-  signed __int16 v1; // r3@2
+  int i; // r3@2
 
   if ( a1 <= 0 )
   {
+    LOWORD(i) = 15;
     if ( a1 )
     {
-      v1 = 0;
-      while ( !(((signed __int16)a1 + 0x4000 < 0) ^ __OFADD__((signed __int16)a1, 0x4000)) )
+      for ( i = 0; ; i = (i + 1) & 0xFFFF )
       {
-        LOWORD(a1) = 2 * a1;
-        ++v1;
+        a1 = (signed __int16)a1;
+        if ( (signed __int16)a1 < -16384 )
+          break;
+        a1 = 2 * a1 & 0xFFFF;
       }
-    }
-    else
-    {
-      v1 = 15;
     }
   }
   else
   {
-    v1 = 0;
-    while ( (signed __int16)a1 <= 0x3FFF )
+    for ( i = 0; ; i = (i + 1) & 0xFFFF )
     {
-      LOWORD(a1) = 2 * a1;
-      ++v1;
+      a1 = (signed __int16)a1;
+      if ( (signed __int16)a1 > 0x3FFF )
+        break;
+      a1 = 2 * a1 & 0xFFFF;
     }
   }
-  return v1;
+  return (signed __int16)i;
 }
 
-//----- (00002B20) --------------------------------------------------------
+//----- (000033D8) --------------------------------------------------------
 int __fastcall AKSC_norm32(signed int a1)
 {
-  signed __int16 v1; // r3@2
+  int v1; // r3@2
 
   if ( a1 <= 0 )
   {
+    LOWORD(v1) = 31;
     if ( a1 )
     {
       v1 = 0;
       while ( a1 >= -1073741824 )
       {
         a1 *= 2;
-        ++v1;
+        v1 = (v1 + 1) & 0xFFFF;
       }
-    }
-    else
-    {
-      v1 = 31;
     }
   }
   else
@@ -2062,1745 +2103,2003 @@ int __fastcall AKSC_norm32(signed int a1)
     while ( a1 <= 0x3FFFFFFF )
     {
       a1 *= 2;
-      ++v1;
+      v1 = (v1 + 1) & 0xFFFF;
     }
   }
-  return v1;
+  return (signed __int16)v1;
 }
 
-//----- (00002B54) --------------------------------------------------------
-signed int __fastcall AKSC_abs16(signed int result)
+//----- (00003414) --------------------------------------------------------
+int __fastcall AKSC_abs16(signed int a1)
 {
-  if ( result == -32768 )
+  int result; // r0@2
+
+  if ( a1 == -32768 )
     LOWORD(result) = 0x7FFF;
   else
-    LOWORD(result) = (result ^ (result >> 31)) - (result >> 31);
+    result = ((a1 + (a1 >> 31)) ^ (a1 >> 31)) & 0xFFFF;
   return (signed __int16)result;
 }
 
-//----- (00002B70) --------------------------------------------------------
-int __fastcall AKSC_div16f(int a1, int a2, __int16 *a3)
+//----- (00003438) --------------------------------------------------------
+int __fastcall AKSC_div16f(int a1, int a2, _WORD *a3)
 {
-  int v3; // r5@1
-  __int16 *v4; // r6@1
-  __int16 v5; // r0@1
-  __int16 v6; // r3@1
-  unsigned int v7; // r4@1
-  __int16 v8; // r1@1
+  int v3; // r6@1
+  _WORD *v4; // r4@1
+  int v5; // r5@1
+  unsigned __int16 v6; // r0@1
+  int v7; // r3@1
+  int v8; // r5@1
+  int v9; // r6@1
 
   v3 = a2;
   v4 = a3;
-  v7 = a1;
+  v5 = a1;
   *a3 = AKSC_norm16(a1);
-  v5 = AKSC_norm16(v3);
-  v6 = *v4;
-  LOWORD(v7) = v7 << *v4;
-  v8 = v3 << v5;
-  if ( (signed __int16)v7 > v8 )
+  v6 = AKSC_norm16(v3);
+  v7 = *v4;
+  v8 = (v5 << v7) & 0xFFFF;
+  v9 = v3 << v6 << 16;
+  if ( v9 >= v8 << 16 )
   {
-    v7 = ((unsigned int)(signed __int16)v7 >> 1) & 0xFFFF;
-    *v4 = ~v5 + v6;
+    LOWORD(v7) = v7 - v6;
   }
   else
   {
-    *v4 = v6 - v5;
+    v8 = (v8 << 16 >> 17) & 0xFFFF;
+    v7 += ~v6;
   }
-  return (signed __int16)AKSC_div16((signed __int16)v7, v8);
+  *v4 = v7;
+  return (signed __int16)AKSC_div16((signed __int16)v8, SHIWORD(v9));
 }
 
-//----- (00002BBC) --------------------------------------------------------
-int __fastcall sub_2BBC(int result)
+//----- (0000348C) --------------------------------------------------------
+int __fastcall sub_348C(int a1, int a2, int a3)
 {
-  __int16 v1; // r2@1
-  __int16 v2; // r1@1
-
-  v1 = *(_WORD *)(result + 2);
-  v2 = *(_WORD *)result;
-  *(_WORD *)(result + 4) = v1;
-  *(_WORD *)(result + 2) = v2;
-  *(_WORD *)result = v1 + v2;
-  return result;
-}
-
-//----- (00002BCC) --------------------------------------------------------
-int __fastcall AKSC_SetLayout(void *src, int a2)
-{
-  char *v2; // r4@1
   int v3; // r5@1
-  int v4; // r7@1
-  int v5; // r6@1
-  int v6; // r3@1
-  int result; // r0@1
-  int v8; // lr@2
-  int v9; // r8@2
-  int v10; // r12@2
-  void *v11; // [sp+0h] [bp-20h]@1
-  int v12; // [sp+4h] [bp-1Ch]@1
+  int v4; // r4@1
+  signed int v5; // r1@1
+  signed int v6; // r2@1
+  int v7; // r0@1
+  unsigned int v8; // r3@2
+  int v9; // r1@2
+  signed int v10; // r3@2
+  int v11; // r1@3
+  int v12; // r7@8
+  unsigned int v13; // r3@8
+  int v14; // r0@10
+  int v15; // r1@13
+  int v16; // r7@16
+  unsigned int v17; // r3@16
+  int v18; // r0@18
+  int v19; // r1@21
+  int v20; // r1@27
+  int v21; // r1@33
+  int v22; // r1@39
+  int v23; // r2@45
+  int v24; // r3@46
+  int v25; // r2@47
+  int v26; // r3@48
+  int v27; // r5@49
+  int v28; // r2@49
+  int v29; // r3@50
+  int v30; // r7@51
+  int v31; // r2@51
+  int result; // r0@52
+  int v33; // [sp+4h] [bp-54h]@1
+  char v34[12]; // [sp+Ch] [bp-4Ch]@1
+  char dest[12]; // [sp+18h] [bp-40h]@1
+  int v36; // [sp+24h] [bp-34h]@1
+  int v37; // [sp+28h] [bp-30h]@1
+  __int16 v38; // [sp+2Ch] [bp-2Ch]@1
+  int v39; // [sp+30h] [bp-28h]@1
+  int v40; // [sp+34h] [bp-24h]@1
+  __int16 v41; // [sp+38h] [bp-20h]@1
+  int v42; // [sp+3Ch] [bp-1Ch]@1
 
-  v11 = src;
-  v12 = a2;
-  v2 = (char *)src;
+  v33 = a3;
   v3 = a2;
-  memcpy(&v11, src, 6u);
-  v4 = (signed __int16)v11;
-  v5 = SHIWORD(v11);
+  v4 = a1;
+  v42 = _stack_chk_guard;
+  memcpy(dest, &unk_7D10, 0xBu);
+  v39 = 1206631600;
+  v41 = 92;
+  v40 = 1553417105;
+  memcpy(v34, "ASAHIKASEI", 0xBu);
+  v36 = 1598375756;
+  v37 = 1197421366;
+  v38 = 66;
+  v5 = 1;
   v6 = 0;
-  result = (signed __int16)v12;
+  v7 = 2;
+  while ( 1 )
+  {
+    v8 = (v5 + v6) << 16;
+    v6 = v5;
+    v9 = (signed __int16)(v7 + 1);
+    v10 = v8 >> 16;
+    v7 = (v7 + 1) & 0xFFFF;
+    if ( v9 == 10 )
+      break;
+    v5 = v10;
+  }
+  v11 = 0;
+  while ( dest[v11] )
+  {
+    v12 = (v10 + v6) & 0xFFFF;
+    dest[v11] = dest[v11] + 2 - (v10 + v6);
+    ++v11;
+    v6 = v10;
+    v13 = v12 << 16;
+    if ( v11 == 16 )
+      goto LABEL_11;
+    v10 = (unsigned __int16)v12;
+  }
+  v11 = (unsigned __int16)v11;
+  while ( (signed __int16)v11 <= 15 )
+  {
+    v14 = v10 + v6;
+    v6 = v10;
+    v11 = (v11 + 1) & 0xFFFF;
+    v13 = v14 << 16;
+LABEL_11:
+    v10 = v13 >> 16;
+  }
+  v15 = 0;
+  while ( *((_BYTE *)&v39 + v15) )
+  {
+    v16 = (v10 + v6) & 0xFFFF;
+    *((_BYTE *)&v39 + v15) = *((_BYTE *)&v39 + v15) - 51 - (v10 + v6);
+    ++v15;
+    v6 = v10;
+    v17 = v16 << 16;
+    if ( v15 == 16 )
+      goto LABEL_19;
+    v10 = (unsigned __int16)v16;
+  }
+  v15 = (unsigned __int16)v15;
+  while ( (signed __int16)v15 <= 15 )
+  {
+    v18 = v10 + v6;
+    v6 = v10;
+    v15 = (v15 + 1) & 0xFFFF;
+    v17 = v18 << 16;
+LABEL_19:
+    v10 = v17 >> 16;
+  }
+  v19 = 0;
   do
   {
-    v8 = *(_WORD *)v3 * v4 + *(_WORD *)(v3 + 2) * v5;
-    v9 = *(_WORD *)(v3 + 4);
-    v3 += 6;
-    v10 = v8 + v9 * result;
-    if ( v10 >= 0x7FFF )
-      v10 = 0x7FFF;
-    if ( v10 < -32768 )
-      LOWORD(v10) = -32768;
-    *(_WORD *)&v2[v6] = v10;
-    v6 += 2;
+    if ( !dest[v19] && !*(_BYTE *)(v4 + v19) )
+      goto LABEL_27;
+    if ( *(_BYTE *)(v4 + v19) != (unsigned __int8)dest[v19] )
+      goto LABEL_53;
+    ++v19;
   }
-  while ( v6 != 6 );
+  while ( v19 != 16 );
+  if ( *(_BYTE *)(v4 + 16) )
+  {
+LABEL_53:
+    LOWORD(result) = -32768;
+    goto LABEL_54;
+  }
+LABEL_27:
+  v20 = 0;
+  while ( *((_BYTE *)&v39 + v20) || *(_BYTE *)(v3 + v20) )
+  {
+    if ( *(_BYTE *)(v3 + v20) != *((_BYTE *)&v39 + v20) )
+      goto LABEL_53;
+    if ( ++v20 == 16 )
+    {
+      if ( *(_BYTE *)(v3 + 16) )
+        goto LABEL_53;
+      break;
+    }
+  }
+  v21 = 0;
+  while ( v34[v21] || *(_BYTE *)(v4 + v21) )
+  {
+    if ( *(_BYTE *)(v4 + v21) != (unsigned __int8)v34[v21] )
+      goto LABEL_53;
+    if ( ++v21 == 16 )
+    {
+      if ( *(_BYTE *)(v4 + 16) )
+        goto LABEL_53;
+      break;
+    }
+  }
+  v22 = 0;
+  while ( *((_BYTE *)&v36 + v22) || *(_BYTE *)(v3 + v22) )
+  {
+    if ( *(_BYTE *)(v3 + v22) != *((_BYTE *)&v36 + v22) )
+      goto LABEL_53;
+    if ( ++v22 == 16 )
+    {
+      if ( *(_BYTE *)(v3 + 16) )
+        goto LABEL_53;
+      break;
+    }
+  }
+  v23 = (v10 + v6) & 0xFFFF;
+  if ( *(_WORD *)v33 != (signed __int16)(12091 - v23) )
+    goto LABEL_53;
+  v24 = (v23 + v10) & 0xFFFF;
+  if ( *(_WORD *)(v33 + 2) != (signed __int16)(-26131 - v24) )
+    goto LABEL_53;
+  v25 = (v24 + v23) & 0xFFFF;
+  if ( (-23074 - v25) << 16 > *(_WORD *)(v33 + 4) << 16 )
+    goto LABEL_53;
+  v26 = (v25 + v24) & 0xFFFF;
+  if ( (signed __int16)(16512 - v26) < (signed int)*(_WORD *)(v33 + 4) )
+    goto LABEL_53;
+  v27 = *(_WORD *)(v33 + 6);
+  v28 = (v26 + v25) & 0xFFFF;
+  if ( (-6816 - v28) << 16 > v27 << 16 )
+    goto LABEL_53;
+  v29 = (v28 + v26) & 0xFFFF;
+  if ( (signed __int16)(9695 - v29) < (signed __int16)v27 )
+    goto LABEL_53;
+  v30 = *(_WORD *)(v33 + 8);
+  v31 = (v29 + v28) & 0xFFFF;
+  if ( (2625 - v31) << 16 > v30 << 16 )
+    goto LABEL_53;
+  LOWORD(result) = 1;
+  if ( (signed __int16)(12319 - v29 - v31) < (signed __int16)v30 )
+    goto LABEL_53;
+LABEL_54:
+  result = (signed __int16)result;
+  if ( v42 != _stack_chk_guard )
+    _stack_chk_fail(result);
+  return result;
+}
+// 18C4: using guessed type int __fastcall _stack_chk_fail(_DWORD);
+// 348C: using guessed type char dest[12];
+// 348C: using guessed type char var_4C[12];
+
+//----- (00003730) --------------------------------------------------------
+int __fastcall AKSC_SetLayout(int result, int a2)
+{
+  int v2; // r5@1
+  int v3; // r4@1
+  int v4; // r2@1
+  int v5; // r3@1
+  int v6; // r6@2
+
+  v2 = *(_WORD *)result;
+  v3 = *(_WORD *)(result + 2);
+  v4 = *(_WORD *)(result + 4);
+  v5 = 0;
+  do
+  {
+    v6 = *(_WORD *)(a2 + 2) * v3 + *(_WORD *)a2 * v2 + *(_WORD *)(a2 + 4) * v4;
+    if ( v6 > 0x7FFF )
+      v6 = 0x7FFF;
+    if ( v6 < -32768 )
+      LOWORD(v6) = -32768;
+    *(_WORD *)(result + v5) = v6;
+    v5 += 2;
+    a2 += 6;
+  }
+  while ( v5 != 6 );
   return result;
 }
 
-//----- (00002C2C) --------------------------------------------------------
+//----- (000037A4) --------------------------------------------------------
 int __fastcall AKSC_ThetaFilter(int a1, int a2, int a3)
 {
-  int v3; // r4@1
+  int v3; // r5@1
+  int v4; // r4@1
   __int16 v5; // r7@1
-  int v6; // r4@1
-  __int16 v7; // r6@1
-  unsigned int v9; // r5@2
-  unsigned int v18; // r0@4
+  __int16 v6; // r0@1
+  int v7; // r6@1
+  int v8; // r0@1
+  unsigned int v9; // r7@1
+  __int16 v10; // r0@1
+  __int16 v11; // r5@1
+  int v12; // r3@1
+  unsigned int v13; // r3@3
 
   v3 = a2;
-  _R5 = a3;
+  v4 = a3;
   v5 = AKSC_angRng(a1, 1);
-  v6 = (signed __int16)AKSC_angRng(v3, 1);
-  v7 = AKSC_angRng(v5 - v6, 1);
-  _R7 = (unsigned __int16)AKSC_abs16(v7);
-  if ( _R5 > 0 )
-  {
-    _R2 = (unsigned __int16)AKSC_cos((signed __int16)_R7);
-    __asm { SMULBB.W        R1, R2, R5 }
-    v9 = (unsigned int)-(_R1 >> 27) >> 16;
-  }
-  else
-  {
-    v9 = 0;
-  }
-  _LR = 0x7FFF * (v9 + 1) - (v9 << 12);
-  __asm { SMULBB.W        R12, LR, R7 }
-  v18 = (unsigned int)(_R12 + 0x8000) >> 16;
-  if ( v7 & 0x8000 )
-    v18 = (unsigned __int16)-(signed __int16)v18;
-  return (signed __int16)AKSC_angRng(v6 + v18, 0);
+  v6 = AKSC_angRng(v3, 1);
+  v7 = v6;
+  v8 = AKSC_angRng(v5 - v6, 1) << 16;
+  v9 = (unsigned int)v8 >> 16;
+  v10 = AKSC_abs16(v8 >> 16);
+  v11 = v10;
+  LOWORD(v12) = 0;
+  if ( v4 > 0 )
+    v12 = (-(v4 * (signed __int16)AKSC_cos(v10) >> 27) >> 9) & 0xFFFF;
+  v13 = (unsigned int)(v11 * (signed __int16)(0x7FFF * (v12 + 1) - ((_WORD)v12 << 12)) + 0x8000) >> 16;
+  if ( v9 & 0x8000 )
+    v13 = 0xFFFF * v13 & 0xFFFF;
+  return (signed __int16)AKSC_angRng((signed __int16)v13 + v7, 0);
 }
 
-//----- (00002CA0) --------------------------------------------------------
-int __fastcall sub_2CA0(int a1, _WORD *a2)
+//----- (00003838) --------------------------------------------------------
+signed int __fastcall sub_3838(int a1, int a2)
 {
-  _WORD *v2; // r4@1
+  int v2; // r4@1
   int v3; // r3@1
-  int v4; // r2@2
-  signed int v5; // r5@3
-  int v6; // r2@4
-  __int16 v7; // r3@4
-  int v8; // r0@4
-  int v9; // r5@4
-  char v10; // r6@4
-  int v18; // lr@5
-  signed __int16 v19; // r3@6
-  int result; // r0@11
-  _WORD *v21; // [sp+4h] [bp-14h]@1
-
-  v21 = a2;
-  v2 = (_WORD *)a1;
-  v3 = *(_WORD *)a1 * *(_WORD *)a1;
-  if ( v3 == 0x40000000
-    || (v4 = v3 + *(_WORD *)(a1 + 2) * *(_WORD *)(a1 + 2), v4 > 0x3FFFFFFF)
-    || (v5 = v4 + *(_WORD *)(a1 + 4) * *(_WORD *)(a1 + 4), v5 > 0x3FFFFFFF) )
-  {
-    LOWORD(result) = 0;
-    return (signed __int16)result;
-  }
-  *a2 = AKSC_sqrt32(v4 + *(_WORD *)(a1 + 4) * *(_WORD *)(a1 + 4));
-  v8 = AKSC_invSqrt(v5, (_WORD *)&v21 + 1, v6, v7);
-  v9 = (int)(v2 + 3);
-  v10 = 16 - BYTE2(v21);
-  HIWORD(v21) += 3;
-  _R0 = (unsigned __int16)(v8 >> v10);
-  do
-  {
-    _R6 = *v2;
-    __asm { SMULBB.W        R6, R0, R6 }
-    v18 = (_R6 + (1 << (BYTE2(v21) - 1))) >> SBYTE2(v21);
-    *v2 = v18;
-    ++v2;
-    if ( (v18 + 2048 < 0) ^ __OFADD__(v18, 2048) )
-    {
-      v19 = -2048;
-    }
-    else
-    {
-      if ( v18 <= 2048 )
-        continue;
-      v19 = 2048;
-    }
-    *(v2 - 1) = v19;
-  }
-  while ( v2 != (_WORD *)v9 );
-  LOWORD(result) = 1;
-  return (signed __int16)result;
-}
-
-//----- (00002D48) --------------------------------------------------------
-int __fastcall AKSC_DirectionS3(int a1, int a2, int a3, void *a4, const void *a5, int a6, int a7, int a8, _WORD *a9, _WORD *a10, _WORD *a11, _WORD *a12, _WORD *a13, _WORD *a14, _WORD *a15, _WORD *a16, __int16 *a17, int a18, int a19)
-{
-  int v19; // r10@1
-  int v20; // r4@1
-  int v21; // r5@1
-  signed int v22; // r11@1
-  int v23; // r2@1
-  int v24; // r6@1
-  int v25; // r2@3
-  int v26; // r3@3
-  char *v27; // r5@3
-  int v28; // r12@3
-  signed int v29; // r11@3
-  char v30; // r4@4
-  int v31; // t1@4
-  int v32; // ST00_4@5
-  int v33; // ST08_4@5
-  int v34; // ST04_4@5
-  int v35; // ST08_4@7
-  int v36; // r1@7
-  int v37; // r5@8
-  int v38; // r8@8
-  int v39; // r2@10
-  signed int v40; // r11@10
-  char *v41; // r5@10
-  int v42; // r12@10
-  int v43; // r3@10
-  char v44; // r4@11
-  int v45; // t1@11
-  int v46; // ST00_4@12
-  int v47; // ST08_4@12
-  int v48; // ST04_4@12
-  int v49; // r4@15
-  int v50; // r5@15
-  int v51; // r6@15
-  int v52; // r8@15
-  int v53; // r11@17
-  int v54; // r3@17
-  int v55; // r3@23
-  int v56; // r3@29
-  int v57; // r3@35
-  int v58; // r2@43
-  int v59; // r2@45
-  int v60; // r2@47
-  int v70; // r2@50
-  int v77; // r4@50
-  unsigned int v78; // r11@50
-  int v79; // r1@50
-  int v80; // r10@50
-  int v81; // lr@50
-  int v82; // r12@50
-  int v83; // r0@50
-  signed int v84; // r3@52
-  int v85; // r2@54
-  signed int v86; // r3@54
-  signed int v87; // r2@56
-  signed int v88; // r2@58
-  signed int v89; // r1@60
-  signed int v90; // r0@62
-  __int16 v91; // r11@64
-  int v92; // r0@64
-  signed int v93; // lr@64
-  int v94; // r12@64
-  int v95; // r3@64
-  int v96; // r4@64
-  int v97; // r0@64
-  _WORD *v98; // r10@64
-  int v99; // r4@64
-  signed int v100; // r2@64
-  int v101; // r1@64
-  int v102; // r12@64
-  signed int v103; // r0@65
-  int v104; // ST08_4@69
-  signed int v105; // ST00_4@69
-  int v106; // ST04_4@69
-  __int16 v107; // lr@70
-  int v108; // r10@71
-  int v109; // r3@71
-  int v110; // r2@72
-  int v111; // r0@78
-  int v112; // r3@78
-  int v113; // r1@78
-  int v114; // r4@78
-  int v115; // r2@78
-  int v116; // lr@78
-  int v117; // r3@80
-  int v118; // r4@80
-  int v119; // r3@82
-  int v120; // r0@84
-  int *v121; // r3@84
-  int v122; // r2@86
-  __int16 v123; // r2@92
-  int v124; // r4@96
-  unsigned int v125; // r9@98
-  int v126; // r8@98
-  int v129; // r9@99
-  int v133; // r0@99
-  int v134; // r1@101
-  int v135; // r12@101
-  int v137; // r0@101
-  signed __int16 v138; // r5@102
-  signed int v148; // r1@103
-  signed int v149; // r4@103
-  int v150; // r8@103
-  __int16 v151; // r0@103
-  int v152; // r0@103
-  __int16 v156; // r0@111
-  int v157; // r0@111
-  __int16 v158; // r0@112
-  int v159; // r0@112
-  __int16 v160; // r0@112
-  signed __int16 v161; // r2@112
-  int v162; // r3@113
-  _WORD *v164; // r0@113
-  __int16 v165; // r3@122
-  __int16 v166; // r3@124
-  int result; // r0@129
-  int v168; // r11@49
-  __int16 v169; // r0@49
-  int v170; // [sp+0h] [bp-E0h]@2
-  __int16 v171; // [sp+28h] [bp-B8h]@17
-  int v172; // [sp+2Ch] [bp-B4h]@17
-  __int16 v173; // [sp+30h] [bp-B0h]@17
-  int v174; // [sp+34h] [bp-ACh]@17
-  int v175; // [sp+38h] [bp-A8h]@17
-  __int16 v176; // [sp+3Ch] [bp-A4h]@17
-  void *src; // [sp+40h] [bp-A0h]@1
-  int v178; // [sp+5Ch] [bp-84h]@1
-  int v179; // [sp+60h] [bp-80h]@64
-  int v180; // [sp+64h] [bp-7Ch]@64
-  int v181; // [sp+68h] [bp-78h]@64
-  unsigned __int16 v182; // [sp+6Ch] [bp-74h]@49
-  unsigned __int16 v183; // [sp+6Eh] [bp-72h]@50
-  unsigned __int16 v184; // [sp+70h] [bp-70h]@50
-  unsigned __int16 v185; // [sp+74h] [bp-6Ch]@49
-  unsigned __int16 v186; // [sp+76h] [bp-6Ah]@50
-  unsigned __int16 v187; // [sp+78h] [bp-68h]@50
-  unsigned __int16 v188; // [sp+7Ah] [bp-66h]@50
-  char v189[16]; // [sp+7Ch] [bp-64h]@1
-  char v190[16]; // [sp+8Ch] [bp-54h]@1
-  char v191[12]; // [sp+9Ch] [bp-44h]@1
-  char dest[12]; // [sp+A8h] [bp-38h]@1
-  int v193; // [sp+B4h] [bp-2Ch]@1
-
-  v19 = a3;
-  v20 = a2;
-  src = a4;
-  v21 = a1;
-  v22 = 2;
-  v193 = _stack_chk_guard;
-  memcpy(dest, &unk_5619, 0xBu);
-  memcpy(v190, &unk_5624, 0xDu);
-  memcpy(v191, "ASAHIKASEI", 0xBu);
-  memcpy(v189, "OPPO_63_R601", 0xDu);
-  v23 = a19;
-  v178 = 1;
-  v24 = v20;
-  do
-  {
-    ++v22;
-    v170 = v23;
-    sub_2BBC((int)&v178);
-    v23 = v170;
-  }
-  while ( v22 != 10 );
-  v25 = v21;
-  v26 = a18;
-  v27 = dest;
-  v28 = v170;
-  v29 = 0;
-  do
-  {
-    v31 = (unsigned __int8)*v27++;
-    v30 = v31;
-    if ( !v31 )
-      break;
-    v32 = v25;
-    v33 = v26;
-    v34 = v28;
-    sub_2BBC((int)&v178);
-    ++v29;
-    *(v27 - 1) = v30 - 65 - v178;
-    v25 = v32;
-    v26 = v33;
-    v28 = v34;
-  }
-  while ( v29 != 16 );
-  v37 = v25;
-  v36 = v28;
-  v38 = v26;
-  while ( v29 <= 15 )
-  {
-    v35 = v36;
-    sub_2BBC((int)&v178);
-    v36 = v35;
-    ++v29;
-  }
-  v39 = v37;
-  v40 = 0;
-  v41 = v190;
-  v42 = v36;
-  v43 = v38;
-  do
-  {
-    v45 = (unsigned __int8)*v41++;
-    v44 = v45;
-    if ( !v45 )
-      break;
-    ++v40;
-    v46 = v39;
-    v47 = v43;
-    v48 = v42;
-    sub_2BBC((int)&v178);
-    *(v41 - 1) = v44 - 60 - v178;
-    v39 = v46;
-    v43 = v47;
-    v42 = v48;
-  }
-  while ( v40 != 16 );
-  v49 = v24;
-  v50 = v39;
-  v51 = v43;
-  v52 = v42;
-  while ( v40 <= 15 )
-  {
-    sub_2BBC((int)&v178);
-    ++v40;
-  }
-  sub_2BBC((int)&v178);
-  v53 = (unsigned __int16)v178;
-  sub_2BBC((int)&v178);
-  v176 = v178;
-  sub_2BBC((int)&v178);
-  v175 = (unsigned __int16)v178;
-  sub_2BBC((int)&v178);
-  v174 = (unsigned __int16)v178;
-  sub_2BBC((int)&v178);
-  v173 = v178;
-  sub_2BBC((int)&v178);
-  v172 = (unsigned __int16)v178;
-  sub_2BBC((int)&v178);
-  v171 = v178;
-  sub_2BBC((int)&v178);
-  v54 = 0;
-  do
-  {
-    if ( !dest[v54] && !*(_BYTE *)(v50 + v54) )
-      goto LABEL_23;
-    if ( *(_BYTE *)(v50 + v54) != (unsigned __int8)dest[v54] )
-      goto LABEL_128;
-    ++v54;
-  }
-  while ( v54 != 16 );
-  if ( *(_BYTE *)(v50 + 16) )
-  {
-LABEL_128:
-    v138 = -32768;
-    goto LABEL_129;
-  }
-LABEL_23:
-  v55 = 0;
-  do
-  {
-    if ( !v190[v55] && !*(_BYTE *)(v49 + v55) )
-      goto LABEL_29;
-    if ( *(_BYTE *)(v49 + v55) != (unsigned __int8)v190[v55] )
-      goto LABEL_128;
-    ++v55;
-  }
-  while ( v55 != 16 );
-  if ( *(_BYTE *)(v49 + 16) )
-    goto LABEL_128;
-LABEL_29:
-  v56 = 0;
-  do
-  {
-    if ( !v191[v56] && !*(_BYTE *)(v50 + v56) )
-      goto LABEL_35;
-    if ( *(_BYTE *)(v50 + v56) != (unsigned __int8)v191[v56] )
-      goto LABEL_128;
-    ++v56;
-  }
-  while ( v56 != 16 );
-  if ( *(_BYTE *)(v50 + 16) )
-    goto LABEL_128;
-LABEL_35:
-  v57 = 0;
-  do
-  {
-    if ( !v189[v57] && !*(_BYTE *)(v49 + v57) )
-      goto LABEL_41;
-    if ( *(_BYTE *)(v49 + v57) != (unsigned __int8)v189[v57] )
-      goto LABEL_128;
-    ++v57;
-  }
-  while ( v57 != 16 );
-  if ( *(_BYTE *)(v49 + 16) )
-    goto LABEL_128;
-LABEL_41:
-  if ( *(_WORD *)v19 != 12091 - v53 )
-    goto LABEL_128;
-  if ( *(_WORD *)(v19 + 2) != (signed __int16)(-26131 - v176) )
-    goto LABEL_128;
-  v58 = *(_WORD *)(v19 + 4);
-  if ( v58 < -23074 - v175 )
-    goto LABEL_128;
-  if ( 16512 - v174 < v58 )
-    goto LABEL_128;
-  v59 = *(_WORD *)(v19 + 6);
-  if ( v59 < (signed __int16)(-6816 - v173) )
-    goto LABEL_128;
-  if ( 9695 - v172 < v59 )
-    goto LABEL_128;
-  v60 = *(_WORD *)(v19 + 8);
-  if ( v60 < (signed __int16)(2625 - v171) || 12319 - (unsigned __int16)v178 < v60 )
-    goto LABEL_128;
-  memcpy(&v185, src, 6u);
-  memcpy(&v182, a5, 6u);
-  v168 = sub_2CA0((int)&v185, a11);
-  v169 = sub_2CA0((int)&v182, a13);
-  if ( v168 )
-    v138 = 3;
-  else
-    v138 = 2;
-  if ( !v169 )
-    v138 &= 0xFFFCu;
-  AKSC_SetLayout(&v185, a7);
-  AKSC_SetLayout(&v182, a8);
-  _R1 = v184;
-  _R11 = v186;
-  _LR = v183;
-  _R10 = v187;
-  __asm
-  {
-    SMULBB.W        R12, R1, R11
-    SMULBB.W        R3, LR, R10
-  }
-  LOWORD(v70) = (((unsigned int)(_R12 - _R3) >> 7) & 1) + ((_R12 - _R3) >> 8);
-  *(_WORD *)(v51 + 6) = v70;
-  _R4 = v182;
-  _R0 = v185;
-  v70 = (signed __int16)v70;
-  __asm
-  {
-    SMULBB.W        R3, R4, R10
-    SMULBB.W        R12, R1, R0
-  }
-  LOWORD(_R3) = (((unsigned int)(_R3 - _R12) >> 7) & 1) + ((_R3 - _R12) >> 8);
-  __asm
-  {
-    SMULBB.W        R12, R4, R11
-    SMULBB.W        R10, LR, R0
-  }
-  *(_WORD *)(v51 + 8) = _R3;
-  _R3 = (signed __int16)_R3;
-  *(_WORD *)(v51 + 10) = (((unsigned int)(_R10 - _R12) >> 7) & 1) + ((_R10 - _R12) >> 8);
-  v77 = (signed __int16)v183;
-  v78 = (((unsigned int)(_R10 - _R12) >> 7) & 1) + ((_R10 - _R12) >> 8);
-  v79 = (signed __int16)v184;
-  v80 = (signed __int16)v183 * v78 - (signed __int16)v184 * (signed __int16)_R3;
-  *(_WORD *)v51 = (((unsigned int)v80 >> 10) & 1) + (v80 >> 11);
-  v81 = (signed __int16)v182;
-  *(_WORD *)(v51 + 2) = (((v79 * (signed __int16)v70 - (signed __int16)v182 * v78) >> 10) & 1)
-                      + ((signed int)(v79 * (signed __int16)v70 - (signed __int16)v182 * v78) >> 11);
-  v82 = v81 * (signed __int16)_R3 - v77 * (signed __int16)v70;
-  *(_WORD *)(v51 + 14) = -8 * v77;
-  *(_WORD *)(v51 + 16) = -8 * v79;
-  *(_WORD *)(v51 + 4) = (((unsigned int)v82 >> 10) & 1) + (v82 >> 11);
-  *(_WORD *)(v51 + 12) = -8 * v81;
-  v83 = AKSC_invSqrt(v70 * v70 + _R3 * _R3 + v78 * v78, &v188, v70 * v70, _R3);
-  if ( 16 - v188 > 0 )
-    v83 = ((v83 >> (15 - v188)) & 1) + (v83 >> (16 - v188));
-  v84 = *(_WORD *)(v51 + 6) * v83;
-  if ( (signed __int16)v188 > 0 )
-    v84 = (v84 >> v188) + ((v84 >> (v188 - 1)) & 1);
-  v85 = *(_WORD *)(v51 + 8);
-  *(_WORD *)(v51 + 6) = v84;
-  v86 = v85 * v83;
-  if ( (signed __int16)v188 > 0 )
-    v86 = (v86 >> v188) + ((v86 >> (v188 - 1)) & 1);
-  v86 = (unsigned __int16)v86;
-  *(_WORD *)(v51 + 8) = v86;
-  v87 = *(_WORD *)(v51 + 10) * v83;
-  if ( (signed __int16)v188 > 0 )
-    v87 = (v87 >> v188) + ((v87 >> (v188 - 1)) & 1);
-  *(_WORD *)(v51 + 10) = v87;
-  v88 = *(_WORD *)v51 * v83;
-  if ( (signed __int16)v188 > 0 )
-    v88 = (v88 >> v188) + ((v88 >> (v188 - 1)) & 1);
-  v88 = (unsigned __int16)v88;
-  *(_WORD *)v51 = v88;
-  v89 = *(_WORD *)(v51 + 2) * v83;
-  if ( (signed __int16)v188 > 0 )
-    v89 = (v89 >> v188) + ((v89 >> (v188 - 1)) & 1);
-  *(_WORD *)(v51 + 2) = v89;
-  v90 = *(_WORD *)(v51 + 4) * v83;
-  if ( (signed __int16)v188 > 0 )
-    v90 = (v90 >> v188) + ((v90 >> (v188 - 1)) & 1);
-  v91 = v90;
-  v92 = *(_WORD *)(v51 + 16);
-  v93 = v86;
-  *(_WORD *)(v51 + 4) = v91;
-  v94 = v86 + v92 + 0x4000;
-  v95 = v92 + 0x4000 - v86;
-  v178 = v94 + v88;
-  v96 = 0x4000 - v92 - v93 + v88;
-  v97 = v93 + 0x4000 - v92 - v88;
-  v179 = v96;
-  v98 = (_WORD *)v52;
-  v181 = v95 - v88;
-  v99 = 0;
-  v100 = 0xFFFF;
-  v101 = 0x4000;
-  v102 = v52;
-  v180 = v97;
-  do
-  {
-    v103 = *(int *)((char *)&v178 + v99);
-    if ( v103 > 0 )
-    {
-      if ( v103 <= v100 )
-      {
-        v104 = v101;
-        v105 = v100;
-        v106 = v102;
-        *(int *)((char *)&v178 + v99) = (signed __int16)AKSC_sqrt32(*(int *)((char *)&v178 + v99) << 12);
-        v102 = v106;
-        v100 = v105;
-        v101 = v104;
-      }
-      else
-      {
-        *(int *)((char *)&v178 + v99) = v101;
-      }
-    }
-    else
-    {
-      *(int *)((char *)&v178 + v99) = 0;
-    }
-    v107 = *(_WORD *)((char *)&v178 + v99);
-    v99 += 4;
-    *v98 = v107;
-    ++v98;
-  }
-  while ( v99 != 16 );
-  v108 = v102;
-  v109 = *(_WORD *)v52 & ~((signed int)*(_WORD *)v52 >> 31);
-  if ( v109 >= *(_WORD *)(v52 + 2) )
-  {
-    LOWORD(v110) = 0;
-  }
-  else
-  {
-    v109 = *(_WORD *)(v52 + 2);
-    LOWORD(v110) = 1;
-  }
-  if ( v109 < *(_WORD *)(v52 + 4) )
-  {
-    v109 = *(_WORD *)(v52 + 4);
-    LOWORD(v110) = 2;
-  }
-  if ( v109 < *(_WORD *)(v52 + 6) )
-  {
-    v178 = *(_WORD *)(v51 + 2) - *(_WORD *)(v51 + 6);
-    v179 = *(_WORD *)(v51 + 4) + *(_WORD *)(v51 + 12);
-    v119 = 1;
-    v180 = *(_WORD *)(v51 + 14) + *(_WORD *)(v51 + 10);
-    goto LABEL_83;
-  }
-  v110 = (signed __int16)v110;
-  if ( (signed __int16)v110 == 1 )
-  {
-    v117 = *(_WORD *)(v51 + 10);
-    v118 = *(_WORD *)(v51 + 14);
-    v179 = 1;
-    v178 = v117 - v118;
-    v180 = *(_WORD *)(v51 + 6) + *(_WORD *)(v51 + 2);
-    v115 = *(_WORD *)(v51 + 4);
-    v112 = *(_WORD *)(v51 + 12);
-LABEL_82:
-    v119 = v115 + v112;
-LABEL_83:
-    v181 = v119;
-    goto LABEL_84;
-  }
-  _ZF = v110 == 2;
-  v111 = *(_WORD *)(v51 + 6);
-  v112 = *(_WORD *)(v51 + 10);
-  v113 = *(_WORD *)(v51 + 2);
-  v114 = *(_WORD *)(v51 + 4);
-  v115 = *(_WORD *)(v51 + 14);
-  v116 = *(_WORD *)(v51 + 12);
-  if ( _ZF )
-  {
-    v178 = v116 - v114;
-    v179 = v111 + v113;
-    v180 = 1;
-    goto LABEL_82;
-  }
-  v179 = v112 - v115;
-  v178 = 1;
-  v180 = v116 - v114;
-  v181 = v113 - v111;
-LABEL_84:
-  v121 = &v178;
-  v120 = v178;
-  do
-  {
-    v122 = v121[1];
-    if ( v120 >= 0 )
-    {
-      if ( v122 >= 0 )
-        goto LABEL_91;
-LABEL_90:
-      *(_WORD *)(v108 + 2) = -*(_WORD *)(v108 + 2);
-      goto LABEL_91;
-    }
-    if ( v122 > 0 )
-      goto LABEL_90;
-LABEL_91:
-    ++v121;
-    v108 += 2;
-  }
-  while ( v121 != &v181 );
-  v123 = *(_WORD *)a6;
-  if ( *(_WORD *)a6 || *(_WORD *)(a6 + 2) || *(_WORD *)(a6 + 4) )
-  {
-    v134 = *(_WORD *)(a6 + 2);
-    v135 = *(_WORD *)(a6 + 4);
-    _R0 = v134 * *(_WORD *)(v51 + 2) + v123 * *(_WORD *)v51 + 64 + v135 * *(_WORD *)(v51 + 4);
-    __asm { SBFX.W          R0, R0, #7, #0x10 }
-    v137 = AKSC_atan2(
-             _R0,
-             (signed __int16)-((v134 * *(_WORD *)(v51 + 8)
-                              + v123 * (signed int)*(_WORD *)(v51 + 6)
-                              + 64
-                              + v135 * *(_WORD *)(v51 + 10)) >> 7));
-    *a9 = v137;
-    if ( v137 == -1 )
-      goto LABEL_102;
-  }
-  else
-  {
-    if ( *(_WORD *)(v51 + 4) || (LOWORD(v124) = *(_WORD *)(v51 + 10)) != 0 )
-      LOWORD(v124) = AKSC_atan2(*(_WORD *)(v51 + 4), *(_WORD *)(v51 + 10));
-    v124 = (signed __int16)v124;
-    v125 = AKSC_sin((signed __int16)v124);
-    v126 = AKSC_cos((signed __int16)v124);
-    _R2 = *(_WORD *)(v51 + 10) * v125 + *(_WORD *)(v51 + 4) * v126 + 0x4000;
-    __asm { SBFX.W          R1, R2, #0xF, #0x10 }
-    if ( AKSC_atan2(*(_WORD *)(v51 + 16), _R1) == -1 )
-      goto LABEL_102;
-    v129 = -v125;
-    _R0 = *(_WORD *)(v51 + 8) * v126 + 0x4000 + *(_WORD *)(v51 + 2) * v129;
-    _LR = *(_WORD *)(v51 + 6) * v126 + 0x4000 + *(_WORD *)v51 * v129;
-    __asm
-    {
-      SBFX.W          R0, R0, #0xF, #0x10
-      SBFX.W          R1, LR, #0xF, #0x10
-    }
-    v133 = (signed __int16)AKSC_atan2(_R0, _R1);
-    if ( (signed __int16)v133 != -1 )
-      *a9 = AKSC_angRng(-v133 - v124, 0);
-    else
-LABEL_102:
-      v138 &= 0xFFFEu;
-  }
-  _R2 = v183;
-  _R0 = v185;
-  _R8 = v182;
-  _R3 = v186;
-  _R4 = v187;
-  _LR = v184;
-  __asm
-  {
-    SMULBB.W        R12, R2, R3
-    SMULBB.W        R1, R8, R0
-    SMULBB.W        R8, LR, R4
-  }
-  v148 = _R1 + _R12 + 64 + _R8;
-  v149 = v148 >> 7;
-  v150 = v148 >> 7;
-  v151 = AKSC_sqrt32(0x40000000 - v150 * v150);
-  v152 = AKSC_atan2(v151, v150);
-  *a10 = v152;
-  if ( v152 > 5760 )
-    *a10 = v152 - 23040;
-  if ( v149 < 0x8000 )
-  {
-    if ( v149 )
-    {
-      if ( (unsigned __int8)((v149 + 0x8000 < 0) ^ __OFADD__(v149, 0x8000)) | (v149 == -32768) )
-        *a10 = -5760;
-    }
-    else
-    {
-      *a10 = 0;
-    }
-  }
-  else
-  {
-    *a10 = 5760;
-  }
-  _R0 = AKSC_cos(*a10);
-  _R3 = *a11;
-  __asm { SMULBB.W        R2, R3, R0 }
-  *a12 = ((_R2 >> 14) & 1) + ((signed int)_R2 >> 15);
-  v156 = AKSC_sqrt32(*(_WORD *)(v51 + 14) * *(_WORD *)(v51 + 14) + *(_WORD *)(v51 + 16) * *(_WORD *)(v51 + 16));
-  v157 = AKSC_atan2(v156, (signed __int16)-*(_WORD *)(v51 + 12));
-  *a15 = v157;
-  if ( v157 == -1 )
-  {
-    v138 &= 0xFFFDu;
-  }
-  else
-  {
-    *a15 = AKSC_angRng(v157, 1);
-    v158 = AKSC_sqrt32(*(_WORD *)(v51 + 12) * *(_WORD *)(v51 + 12) + *(_WORD *)(v51 + 16) * *(_WORD *)(v51 + 16));
-    v159 = AKSC_atan2(v158, *(_WORD *)(v51 + 14));
-    *a17 = v159;
-    v160 = AKSC_angRng(v159, 1);
-    v161 = (signed __int16)a17;
-    *a17 = v160;
-    if ( (signed int)*(_WORD *)(v51 + 16) >= 0 )
-    {
-      *a14 = *a15;
-      v166 = *a17;
-    }
-    else
-    {
-      v162 = *a15;
-      v164 = (_WORD *)(v162 << 16);
-      _NF = v162 << 16 < 0;
-      if ( v162 & 0x8000 )
-        v161 = -11520;
-      else
-        v162 = 11520 - v162;
-      if ( _NF )
-      {
-        v161 -= v162;
-        v162 = (int)a14;
-      }
-      else
-      {
-        v164 = a14;
-      }
-      if ( _NF )
-        *(_WORD *)v162 = v161;
-      else
-        *v164 = v162;
-      v165 = *a17;
-      if ( *a17 & 0x8000 )
-      {
-        *a16 = -11520 - v165;
-        goto LABEL_129;
-      }
-      v166 = 11520 - v165;
-    }
-    *a16 = v166;
-  }
-LABEL_129:
-  result = v138;
-  if ( v193 != _stack_chk_guard )
-    _stack_chk_fail(v138);
-  return result;
-}
-// 109C: using guessed type int __fastcall _stack_chk_fail(_DWORD);
-// 2D48: using guessed type char dest[12];
-// 2D48: using guessed type char var_54[16];
-// 2D48: using guessed type char var_44[12];
-// 2D48: using guessed type char var_64[16];
-
-//----- (00003734) --------------------------------------------------------
-int __fastcall AKSC_VNorm(int a1, int a2, int a3, int a4, int a5)
-{
-  int v5; // r10@1
-  int v6; // r4@1
-  int v7; // r5@1
+  int v4; // r6@1
+  int v5; // r2@1
+  int v6; // r1@1
+  int *v7; // r5@1
   int v8; // r7@1
-  int v9; // r6@2
-  int v10; // r1@3
-  signed int v11; // r0@4
-  int result; // r0@8
-  int v13; // [sp+4h] [bp-2Ch]@1
-  int v14; // [sp+8h] [bp-28h]@1
+  signed int v9; // r0@2
+  signed int v10; // r0@5
+  int v11; // r0@8
+  int v12; // r3@9
+  signed int v13; // r2@9
+  int v14; // r0@15
+  int v15; // r6@15
+  int v16; // r12@15
+  int v17; // r5@15
+  int v18; // r4@15
+  int v19; // r0@17
+  int v20; // r1@17
+  int *v21; // r3@17
+  int v22; // r2@17
+  int v23; // r1@19
+  int *v24; // r3@19
+  int v25; // r2@22
+  _WORD *v27; // [sp+4h] [bp-34h]@1
+  int v28; // [sp+4h] [bp-34h]@15
+  int v29; // [sp+10h] [bp-28h]@1
+  int v30; // [sp+14h] [bp-24h]@1
+  int v31; // [sp+18h] [bp-20h]@1
+  int v32; // [sp+1Ch] [bp-1Ch]@1
+  int v33; // [sp+20h] [bp-18h]@8
 
-  v13 = a2;
-  v14 = a3;
-  v5 = a1;
-  v6 = a2;
-  v7 = a3;
-  v8 = a4;
-  if ( a4 > 0 )
+  v2 = a1;
+  v3 = *(_WORD *)a1;
+  v4 = a2;
+  v5 = *(_WORD *)(a1 + 8);
+  v6 = *(_WORD *)(a1 + 16);
+  v29 = v3 + v5 + 0x4000 + v6;
+  v7 = &v29;
+  v30 = v3 - v5 - v6 + 0x4000;
+  v31 = v5 - v3 - v6 + 0x4000;
+  v32 = v6 + 0x4000 - v5 - v3;
+  v8 = v4;
+  v27 = (_WORD *)v4;
+  do
   {
-    v9 = 0;
-    while ( 1 )
+    v9 = *v7;
+    if ( *v7 > 0 )
     {
-      v10 = *(_WORD *)(v7 + v9);
-      if ( v10 <= 0 )
-        break;
-      v11 = (*(_WORD *)(v5 + v9) - *(_WORD *)(v6 + v9)) * (signed __int16)AKSC_div16f(v8, v10, (__int16 *)&v13 + 1);
-      if ( !((SHIWORD(v13) + 14 < 0) ^ __OFADD__(SHIWORD(v13), 14)) )
-        v11 = ((v11 >> (BYTE2(v13) + 14)) & 1) + (v11 >> (BYTE2(v13) + 15));
-      if ( (unsigned int)(v11 + 0x8000) > 0xFFFF )
-        break;
-      *(_WORD *)(a5 + v9) = v11;
-      v9 += 2;
-      if ( v9 == 6 )
-      {
-        LOWORD(result) = 1;
-        return (signed __int16)result;
-      }
+      if ( v9 <= 0xFFFF )
+        v10 = (signed __int16)AKSC_sqrt32(v9 << 12);
+      else
+        v10 = 0x4000;
+      *v7 = v10;
     }
+    else
+    {
+      *v7 = 0;
+    }
+    v11 = *v7;
+    ++v7;
+    *v27 = v11;
+    ++v27;
   }
-  LOWORD(result) = 0;
-  return (signed __int16)result;
-}
-
-//----- (000037AC) --------------------------------------------------------
-int __fastcall AKSC_cholSl(int a1, int a2, int a3, int a4, int a5, int a6)
-{
-  int v6; // r11@1
-  int v7; // r6@1
-  int v8; // r7@1
-  int v9; // r0@1
-  int v10; // r5@1
-  int v11; // r4@2
-  int v12; // r12@2
-  int v20; // r9@5
-  int v21; // r12@5
-  int v22; // r4@5
-  int v23; // r5@7
-  int result; // r0@7
-  int v25; // r4@7
-  int v26; // r6@7
-  int v27; // r8@7
-  int v28; // r7@7
-  int v29; // t1@8
-  int v30; // r12@8
-  signed int v31; // r3@8
-  __int16 v32; // r9@8
-  _WORD *v33; // r10@8
-  int v34; // r2@8
-  int v36; // t1@9
-  int v39; // [sp+4h] [bp-3Ch]@8
-  int v40; // [sp+10h] [bp-30h]@7
-  int v41; // [sp+14h] [bp-2Ch]@7
-
-  v6 = a1;
-  v7 = a1 - 2;
-  v8 = a6 - 2;
-  v9 = 0;
-  v10 = 0;
-  while ( v10 < a2 )
+  while ( v7 != &v33 );
+  v12 = (((*(_WORD *)v4 << 16 >> 31) - *(_WORD *)v4) >> 31) & *(_WORD *)v4;
+  v13 = 0;
+  if ( v12 < *(_WORD *)(v4 + 2) )
   {
-    v11 = 0;
-    v12 = 0;
-    while ( v11 != -v9 )
+    v12 = *(_WORD *)(v4 + 2);
+    v13 = 1;
+  }
+  if ( v12 < *(_WORD *)(v4 + 4) )
+  {
+    v12 = *(_WORD *)(v4 + 4);
+    v13 = 2;
+  }
+  if ( v12 < *(_WORD *)(v4 + 6) )
+  {
+    v21 = &v29;
+    v29 = *(_WORD *)(v2 + 2) - *(_WORD *)(v2 + 6);
+    v30 = *(_WORD *)(v2 + 4) + *(_WORD *)(v2 + 12);
+    v31 = *(_WORD *)(v2 + 14) + *(_WORD *)(v2 + 10);
+    v22 = 1;
+  }
+  else
+  {
+    if ( v13 != 1 )
     {
-      _R10 = *(_WORD *)(v8 + v11);
-      _R9 = *(_WORD *)(v7 + v11);
-      v11 -= 2;
-      __asm { SMULBB.W        R9, R10, R9 }
-      v12 += _R9;
+      v28 = *(_WORD *)(v2 + 10);
+      v14 = *(_WORD *)(v2 + 14);
+      v15 = *(_WORD *)(v2 + 4);
+      v16 = *(_WORD *)(v2 + 12);
+      v17 = *(_WORD *)(v2 + 2);
+      v18 = *(_WORD *)(v2 + 6);
+      if ( v13 == 2 )
+      {
+        v29 = v16 - v15;
+        v30 = v18 + v17;
+        v31 = 1;
+        v32 = v14 + v28;
+      }
+      else
+      {
+        v29 = 1;
+        v30 = v28 - v14;
+        v31 = v16 - v15;
+        v32 = v17 - v18;
+      }
+      goto LABEL_19;
     }
-    v20 = *(_WORD *)(a4 + v9);
-    v7 += 8;
-    v10 = (unsigned __int16)(v10 + 1);
-    v21 = (*(_WORD *)(a5 + v9) << 15) - 4 * v12;
-    v22 = *(_WORD *)(a3 + v9);
-    v9 += 2;
-    *(_WORD *)(v8 + 2) = 2
-                       * (v22 * ((unsigned __int64)v21 >> 16)
-                        + ((signed int)(v20 * ((unsigned __int64)v21 >> 16)) >> 15)
-                        + ((signed int)(v22 * ((unsigned int)(v21 << 16) >> 17)) >> 15));
+    v19 = *(_WORD *)(v2 + 10);
+    v20 = *(_WORD *)(v2 + 14);
+    v21 = &v29;
+    v30 = 1;
+    v29 = v19 - v20;
+    v31 = *(_WORD *)(v2 + 6) + *(_WORD *)(v2 + 2);
+    v22 = *(_WORD *)(v2 + 4) + *(_WORD *)(v2 + 12);
+  }
+  v21[3] = v22;
+LABEL_19:
+  v23 = v29;
+  v24 = &v30;
+  do
+  {
+    v25 = *v24;
+    if ( v23 >= 0 )
+    {
+      if ( v25 >= 0 )
+        goto LABEL_27;
+LABEL_26:
+      *(_WORD *)(v8 + 2) = -*(_WORD *)(v8 + 2);
+      goto LABEL_27;
+    }
+    if ( v25 > 0 )
+      goto LABEL_26;
+LABEL_27:
+    ++v24;
     v8 += 2;
   }
-  v23 = (unsigned __int16)a2;
-  result = 0;
-  v25 = (unsigned __int16)(a2 - 1);
-  v26 = 0;
-  v27 = (unsigned __int16)(a2 - 1);
-  v28 = a6 + 2 * v27;
-  v40 = a3 + 2 * v27;
-  v41 = a4 + 2 * v27;
-  while ( !(v25 & 0x8000) )
+  while ( v24 != &v33 );
+  return 1;
+}
+
+//----- (000039B8) --------------------------------------------------------
+signed int __fastcall sub_39B8(int a1, _WORD *a2)
+{
+  int v2; // r4@1
+  int v3; // r2@1
+  int v4; // r6@2
+  int v5; // r6@3
+  int v6; // r0@4
+  int v7; // r7@4
+  int v8; // r3@4
+  signed int v9; // r0@5
+  int v10; // r2@5
+  signed int v11; // r0@5
+  signed int result; // r0@10
+  char v13; // [sp+16h] [bp-1Ah]@4
+
+  v2 = a1;
+  v3 = *(_WORD *)a1 * *(_WORD *)a1;
+  if ( v3 == 0x40000000
+    || (v4 = *(_WORD *)(a1 + 2) * *(_WORD *)(a1 + 2) + v3, v4 > 0x3FFFFFFF)
+    || (v5 = v4 + *(_WORD *)(a1 + 4) * *(_WORD *)(a1 + 4), v5 > 0x3FFFFFFF) )
   {
-    v29 = *(_WORD *)v28;
-    v28 -= 2;
-    v30 = v25;
-    v31 = v29 << 15;
-    v39 = result;
-    v32 = v25;
-    v33 = (_WORD *)(a6 + 2 * v23);
-    v34 = v6 + 6 * v23 + 2 * (v27 - v26);
-    while ( 1 )
+    result = 0;
+  }
+  else
+  {
+    *a2 = AKSC_sqrt32(v5);
+    v6 = AKSC_invSqrt(v5, &v13);
+    v7 = (signed __int16)(v6 >> (16 - v13));
+    *(_WORD *)&v13 += 3;
+    v8 = 0;
+    do
     {
-      ++v30;
-      v34 += 6;
-      if ( a2 <= v30 )
-        break;
-      v36 = *v33;
-      ++v33;
-      _R4 = v36;
-      _R0 = *(_WORD *)(v34 - 6);
-      __asm { SMULBB.W        R0, R0, R4 }
-      v31 -= 4 * _R0;
+      v9 = 1 << (v13 - 1);
+      v10 = (v9 + *(_WORD *)(v2 + v8) * v7) >> v13 << 16;
+      v11 = (signed __int16)((v9 + *(_WORD *)(v2 + v8) * v7) >> v13);
+      *(_WORD *)(v2 + v8) = HIWORD(v10);
+      if ( SHIWORD(v10) >= -2048 )
+      {
+        if ( v11 > 2048 )
+          *(_WORD *)(v2 + v8) = 2048;
+      }
+      else
+      {
+        *(_WORD *)(v2 + v8) = -2048;
+      }
+      v8 += 2;
     }
-    ++v26;
-    v23 = (unsigned __int16)(v23 - 1);
-    result = v39 - 2;
-    *(_WORD *)(v28 + 2) = 2
-                        * (*(_WORD *)(v40 + v39) * HIWORD(v31)
-                         + (*(_WORD *)(v41 + v39) * (v31 >> 16) >> 15)
-                         + (*(_WORD *)(v40 + v39) * ((unsigned __int16)v31 >> 1) >> 15));
-    v25 = (unsigned __int16)(v32 - 1);
+    while ( v8 != 6 );
+    result = 1;
   }
   return result;
 }
 
-//----- (000038EC) --------------------------------------------------------
-int __fastcall AKSC_cholDc(int a1, int a2, int a3, int a4)
+//----- (00003A74) --------------------------------------------------------
+signed int __fastcall sub_3A74(int a1, int a2, int a3)
 {
-  int v4; // r4@1
-  int v5; // r5@1
-  int v6; // r9@1
+  int v3; // r4@1
+  signed int v4; // r6@1
+  int v5; // r2@1
+  signed int v6; // r7@1
   int v7; // r6@1
-  _WORD *v8; // r10@2
-  int v9; // t1@2
-  int v10; // r2@2
-  int v11; // r3@2
-  signed int i; // r0@2
-  int v20; // r0@7
-  int v21; // r8@9
-  int v22; // r7@9
-  int result; // r0@12
-  int v24; // [sp+4h] [bp-54h]@2
-  int v25; // [sp+10h] [bp-48h]@1
-  int v26; // [sp+14h] [bp-44h]@1
-  int v27; // [sp+18h] [bp-40h]@1
-  char v28; // [sp+2Eh] [bp-2Ah]@7
+  signed int v8; // r0@1
+  int v9; // r3@1
+  signed int v10; // r0@1
+  signed int v11; // r0@1
+  int v12; // r0@1
+  int v13; // r6@1
+  int v14; // r3@1
+  int v15; // r3@3
+  signed int v16; // r2@3
+  signed int v17; // r2@5
+  signed int v18; // r2@7
+  signed int v19; // r2@9
+  signed int v20; // r2@11
+  int v21; // r6@13
+  signed int v22; // r2@13
+  signed int result; // r0@15
+  char v24; // [sp+Eh] [bp-1Ah]@1
 
-  v4 = 0;
-  v5 = a1 - 2;
-  v25 = a2;
-  v6 = a1;
-  v26 = a3;
-  v27 = a4;
-  v7 = 0;
-LABEL_11:
-  if ( v7 < v25 )
-  {
-    v8 = (_WORD *)(v6 + 2 * v7);
-    v21 = v7;
-    v22 = 0;
-    while ( 1 )
-    {
-      v9 = *v8;
-      ++v8;
-      LOWORD(v10) = v7;
-      v11 = 0;
-      v24 = v4;
-      for ( i = v9 << 15; ; i -= 4 * _R4 )
-      {
-        v10 = (unsigned __int16)(v10 - 1);
-        if ( v10 & 0x8000 )
-          break;
-        _R4 = *(_WORD *)(v22 + v5 + v11);
-        _R1 = *(_WORD *)(v5 + v11);
-        v11 -= 2;
-        __asm { SMULBB.W        R4, R4, R1 }
-      }
-      v4 = v24;
-      if ( v7 == v21 )
-      {
-        if ( i <= 0 )
-        {
-          LOWORD(result) = 0;
-          return (signed __int16)result;
-        }
-        v20 = AKSC_invSqrt(i, &v28, v10, v21);
-        *(_WORD *)(v26 + v24) = HIWORD(v20);
-        *(_WORD *)(v27 + v24) = (unsigned __int16)v20 >> 1;
-      }
-      else
-      {
-        *(_WORD *)(v5 + 2 + v22) = 2
-                                 * (*(_WORD *)(v26 + v24) * HIWORD(i)
-                                  + (*(_WORD *)(v27 + v24) * (i >> 16) >> 15)
-                                  + (*(_WORD *)(v26 + v24) * ((unsigned __int16)i >> 1) >> 15));
-      }
-      ++v21;
-      v22 += 6;
-      if ( v21 == v25 )
-      {
-        ++v7;
-        v4 = v24 + 2;
-        v5 += 8;
-        v6 += 6;
-        goto LABEL_11;
-      }
-    }
-  }
-  LOWORD(result) = 1;
-  return (signed __int16)result;
+  v3 = a3;
+  v4 = *(_WORD *)(a1 + 2) * *(_WORD *)(a2 + 4) - *(_WORD *)(a1 + 4) * *(_WORD *)(a2 + 2);
+  *(_WORD *)(a3 + 6) = ((v4 >> 7) & 1) + (v4 >> 8);
+  v5 = (signed __int16)(((v4 >> 7) & 1) + (v4 >> 8));
+  v6 = *(_WORD *)(a1 + 4) * *(_WORD *)a2 - *(_WORD *)a1 * *(_WORD *)(a2 + 4);
+  v7 = (((v6 >> 7) & 1) + (v6 >> 8)) & 0xFFFF;
+  *(_WORD *)(v3 + 8) = ((v6 >> 7) & 1) + (v6 >> 8);
+  v8 = *(_WORD *)a1 * *(_WORD *)(a2 + 2) - *(_WORD *)a2 * *(_WORD *)(a1 + 2);
+  *(_WORD *)(v3 + 10) = ((v8 >> 7) & 1) + (v8 >> 8);
+  v9 = (signed __int16)(((v8 >> 7) & 1) + (v8 >> 8));
+  v10 = *(_WORD *)(a2 + 2) * v9 - *(_WORD *)(a2 + 4) * (signed __int16)(((v6 >> 7) & 1) + (v6 >> 8));
+  *(_WORD *)v3 = ((v10 >> 10) & 1) + (v10 >> 11);
+  *(_WORD *)(v3 + 2) = (((*(_WORD *)(a2 + 4) * v5 - *(_WORD *)a2 * v9) >> 10) & 1)
+                     + ((*(_WORD *)(a2 + 4) * v5 - *(_WORD *)a2 * v9) >> 11);
+  v11 = *(_WORD *)a2 * (signed __int16)(((v6 >> 7) & 1) + (v6 >> 8)) - *(_WORD *)(a2 + 2) * v5;
+  *(_WORD *)(v3 + 4) = ((v11 >> 10) & 1) + (v11 >> 11);
+  *(_WORD *)(v3 + 12) = -8 * *(_WORD *)a2;
+  *(_WORD *)(v3 + 14) = -8 * *(_WORD *)(a2 + 2);
+  *(_WORD *)(v3 + 16) = -8 * *(_WORD *)(a2 + 4);
+  v12 = AKSC_invSqrt((signed __int16)v7 * (signed __int16)v7 + v5 * v5 + v9 * v9, &v24);
+  v13 = (signed __int16)(16 - *(_WORD *)&v24);
+  v14 = v12 << 16;
+  if ( v13 > 0 )
+    v14 = (((v12 >> (v13 - 1)) & 1) + (v12 >> v13)) << 16;
+  v15 = SHIWORD(v14);
+  v16 = *(_WORD *)(v3 + 6) * v15;
+  if ( *(signed __int16 *)&v24 > 0 )
+    v16 = ((v16 >> (v24 - 1)) & 1) + (v16 >> v24);
+  *(_WORD *)(v3 + 6) = v16;
+  v17 = *(_WORD *)(v3 + 8) * v15;
+  if ( *(signed __int16 *)&v24 > 0 )
+    v17 = ((v17 >> (v24 - 1)) & 1) + (v17 >> v24);
+  *(_WORD *)(v3 + 8) = v17;
+  v18 = *(_WORD *)(v3 + 10) * v15;
+  if ( *(signed __int16 *)&v24 > 0 )
+    LOWORD(v18) = ((v18 >> (v24 - 1)) & 1) + (v18 >> v24);
+  *(_WORD *)(v3 + 10) = v18;
+  v19 = *(_WORD *)v3 * v15;
+  if ( *(signed __int16 *)&v24 > 0 )
+    v19 = ((v19 >> (v24 - 1)) & 1) + (v19 >> v24);
+  *(_WORD *)v3 = v19;
+  v20 = *(_WORD *)(v3 + 2) * v15;
+  if ( *(signed __int16 *)&v24 > 0 )
+    v20 = ((v20 >> (v24 - 1)) & 1) + (v20 >> v24);
+  v21 = *(_WORD *)(v3 + 4);
+  *(_WORD *)(v3 + 2) = v20;
+  v22 = v21 * v15;
+  if ( *(signed __int16 *)&v24 > 0 )
+    v22 = ((v22 >> (v24 - 1)) & 1) + (v22 >> v24);
+  result = 1;
+  *(_WORD *)(v3 + 4) = v22;
+  return result;
 }
 
-//----- (000039DC) --------------------------------------------------------
-int __fastcall AKSC_fitOnPlane(int a1, int a2, int a3, int a4, _WORD *a5)
+//----- (00003CDC) --------------------------------------------------------
+int __fastcall sub_3CDC(int a1, int a2, _WORD *a3)
+{
+  _WORD *v3; // r4@1
+  __int16 v4; // r1@1
+  int result; // r0@1
+
+  v3 = a3;
+  v4 = AKSC_atan2(
+         (*(_WORD *)a2 * (signed int)*(_WORD *)a1
+        + *(_WORD *)(a2 + 2) * (signed int)*(_WORD *)(a1 + 2)
+        + 64
+        + *(_WORD *)(a2 + 4) * (signed int)*(_WORD *)(a1 + 4)) << 9 >> 16,
+         -(signed __int16)((*(_WORD *)a2 * (signed int)*(_WORD *)(a1 + 6)
+                          + *(_WORD *)(a2 + 2) * (signed int)*(_WORD *)(a1 + 8)
+                          + 64
+                          + *(_WORD *)(a2 + 4) * (signed int)*(_WORD *)(a1 + 10)) >> 7));
+  result = v4 + 1 - (v4 + ((unsigned int)v4 >= 0xFFFFFFFF));
+  *v3 = v4;
+  return result;
+}
+
+//----- (00003D4C) --------------------------------------------------------
+int __fastcall sub_3D4C(int a1, int a2, signed __int16 *a3)
+{
+  signed __int16 *v3; // r5@1
+  int v4; // r4@1
+  __int16 v5; // r0@1
+  int result; // r0@1
+  signed __int16 v7; // r3@4
+
+  v3 = a3;
+  v4 = (*(_WORD *)a1 * (signed int)*(_WORD *)a2
+      + *(_WORD *)(a1 + 2) * (signed int)*(_WORD *)(a2 + 2)
+      + 64
+      + *(_WORD *)(a1 + 4) * (signed int)*(_WORD *)(a2 + 4)) >> 7;
+  v5 = AKSC_sqrt32(0x40000000 - (signed __int16)v4 * (signed __int16)v4);
+  result = (unsigned __int16)AKSC_atan2(v5, (signed __int16)v4);
+  *v3 = result;
+  if ( (signed __int16)result > 5760 )
+  {
+    result -= 23040;
+    *v3 = result;
+  }
+  if ( v4 > 0x7FFF )
+  {
+    v7 = 5760;
+LABEL_9:
+    *v3 = v7;
+    return result;
+  }
+  if ( !v4 )
+  {
+    *v3 = 0;
+    return result;
+  }
+  if ( v4 < -32767 )
+  {
+    v7 = -5760;
+    goto LABEL_9;
+  }
+  return result;
+}
+
+//----- (00003DE0) --------------------------------------------------------
+signed int __fastcall sub_3DE0(int a1, _WORD *a2, __int16 *a3, _WORD *a4, __int16 *a5)
+{
+  _WORD *v5; // r6@1
+  int v6; // r4@1
+  __int16 *v7; // r5@1
+  __int16 v8; // r0@1
+  __int16 v9; // r0@1
+  int v10; // r3@1
+  __int16 v11; // r0@2
+  __int16 v12; // r0@2
+  __int16 v13; // r3@2
+  signed __int16 v14; // r2@4
+  __int16 v15; // r3@6
+  __int16 v16; // r3@7
+  _WORD *v18; // [sp+4h] [bp-1Ch]@1
+
+  v18 = a4;
+  v5 = a2;
+  v6 = a1;
+  v7 = a3;
+  v8 = AKSC_sqrt32(*(_WORD *)(a1 + 16) * *(_WORD *)(a1 + 16) + *(_WORD *)(a1 + 14) * *(_WORD *)(a1 + 14));
+  v9 = AKSC_atan2(v8, -*(_WORD *)(v6 + 12));
+  *v7 = v9;
+  v10 = 0;
+  if ( v9 != -1 )
+  {
+    *v7 = AKSC_angRng(v9, 1);
+    v11 = AKSC_sqrt32(*(_WORD *)(v6 + 16) * *(_WORD *)(v6 + 16) + *(_WORD *)(v6 + 12) * *(_WORD *)(v6 + 12));
+    v12 = AKSC_atan2(v11, *(_WORD *)(v6 + 14));
+    *a5 = v12;
+    *a5 = AKSC_angRng(v12, 1);
+    v13 = *v7;
+    if ( (signed int)*(_WORD *)(v6 + 16) >= 0 )
+    {
+      *v5 = v13;
+      v16 = *a5;
+    }
+    else
+    {
+      if ( *v7 & 0x8000 )
+        v14 = -11520;
+      else
+        v14 = 11520;
+      *v5 = v14 - v13;
+      v15 = *a5;
+      if ( !(*a5 & 0x8000) )
+      {
+        *v18 = 11520 - v15;
+        return 1;
+      }
+      v16 = -11520 - v15;
+    }
+    *v18 = v16;
+    return 1;
+  }
+  return v10;
+}
+
+//----- (00003EAC) --------------------------------------------------------
+int __fastcall sub_3EAC(int a1, _WORD *a2, _WORD *a3, _WORD *a4)
+{
+  int v4; // r4@1
+  int v5; // r0@1
+  _WORD *v6; // r7@1
+  _WORD *v7; // r5@1
+  __int16 v8; // r6@5
+  __int16 v9; // r0@5
+  int v10; // r5@5
+  __int16 v11; // r0@5
+  int v12; // r3@5
+  int result; // r0@5
+  __int16 v14; // r0@6
+  _WORD *v15; // [sp+4h] [bp-1Ch]@1
+
+  v15 = a2;
+  v4 = a1;
+  v5 = *(_WORD *)(a1 + 4);
+  v6 = a3;
+  v7 = a4;
+  if ( v5 || *(_WORD *)(v4 + 10) )
+    *a4 = AKSC_atan2((signed __int16)v5, *(_WORD *)(v4 + 10));
+  else
+    *a4 = 0;
+  v8 = AKSC_sin(*v7);
+  v9 = AKSC_cos(*v7);
+  v10 = v9;
+  v11 = AKSC_atan2(*(_WORD *)(v4 + 16), 2 * (*(_WORD *)(v4 + 4) * v9 + *(_WORD *)(v4 + 10) * v8 + 0x4000) >> 16);
+  v12 = v11;
+  *v6 = v11;
+  result = 0;
+  if ( v12 != -1 )
+  {
+    v14 = AKSC_atan2(
+            2 * (*(_WORD *)(v4 + 8) * v10 + 0x4000 + *(_WORD *)(v4 + 2) * -v8) >> 16,
+            2 * (*(_WORD *)(v4 + 6) * v10 + 0x4000 + *(_WORD *)v4 * -v8) >> 16);
+    *v15 = v14;
+    result = v14 + 1 - (v14 + ((unsigned int)v14 >= 0xFFFFFFFF));
+  }
+  return result;
+}
+
+//----- (00003F7C) --------------------------------------------------------
+signed int __fastcall sub_3F7C(int a1, _WORD *a2)
+{
+  _WORD *v2; // r6@1
+  int v3; // r3@1
+  signed int result; // r0@1
+  __int16 v5; // [sp+2h] [bp-16h]@1
+  char v6; // [sp+4h] [bp-14h]@1
+  __int16 v7; // [sp+6h] [bp-12h]@1
+
+  v2 = a2;
+  v3 = sub_3EAC(a1, &v5, &v6, &v7) << 16;
+  result = 0;
+  if ( v3 )
+  {
+    *v2 = AKSC_angRng(-v5 - v7, 0);
+    result = 1;
+  }
+  return result;
+}
+
+//----- (00003FB8) --------------------------------------------------------
+int __fastcall AKSC_DirectionS3(int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, _WORD *a9, signed __int16 *a10, _WORD *a11, _WORD *a12, _WORD *a13, _WORD *a14, __int16 *a15, _WORD *a16, __int16 *a17, int a18, int a19)
+{
+  int v19; // r4@1
+  int v20; // r5@1
+  signed int v21; // r5@2
+  int v22; // r0@7
+  __int16 v23; // r0@11
+  __int16 v25; // [sp+8h] [bp-28h]@2
+  __int16 v26; // [sp+Ah] [bp-26h]@2
+  __int16 v27; // [sp+Ch] [bp-24h]@2
+  __int16 v28; // [sp+10h] [bp-20h]@2
+  __int16 v29; // [sp+12h] [bp-1Eh]@2
+  __int16 v30; // [sp+14h] [bp-1Ch]@2
+
+  v19 = a4;
+  LOWORD(v20) = sub_348C(a1, a2, a3);
+  if ( (signed __int16)v20 != -32768 )
+  {
+    v28 = *(_WORD *)v19;
+    v29 = *(_WORD *)(v19 + 2);
+    v30 = *(_WORD *)(v19 + 4);
+    v25 = *(_WORD *)a5;
+    v26 = *(_WORD *)(a5 + 2);
+    v27 = *(_WORD *)(a5 + 4);
+    v21 = sub_39B8((int)&v28, a11) << 16;
+    v20 = ((__PAIR__(v21, v21) - __PAIR__((unsigned int)(v21 - 1), 1)) >> 32) + 2;
+    if ( !(sub_39B8((int)&v25, a13) << 16) )
+      LOWORD(v20) = v20 & 0xFFFC;
+    AKSC_SetLayout((int)&v28, a7);
+    AKSC_SetLayout((int)&v25, a8);
+    sub_3A74((int)&v28, (int)&v25, a18);
+    sub_3838(a18, a19);
+    if ( *(_WORD *)a6 || *(_WORD *)(a6 + 2) || *(_WORD *)(a6 + 4) )
+      v22 = sub_3CDC(a18, a6, a9);
+    else
+      v22 = sub_3F7C(a18, a9);
+    if ( !(v22 << 16) )
+      LOWORD(v20) = v20 & 0xFFFE;
+    sub_3D4C((int)&v28, (int)&v25, a10);
+    v23 = AKSC_cos(*a10);
+    *a12 = ((unsigned int)(*a11 * v23 << 17) >> 31) + (*a11 * v23 >> 15);
+    if ( !(sub_3DE0(a18, a14, a15, a16, a17) << 16) )
+      LOWORD(v20) = v20 & 0xFFFD;
+  }
+  return (signed __int16)v20;
+}
+
+//----- (000040D8) --------------------------------------------------------
+signed int __fastcall AKSC_VNorm(int a1, int a2, int a3, int a4, int a5)
+{
+  int v5; // r7@1
+  int v6; // r5@1
+  int v7; // r4@2
+  int v8; // r1@3
+  __int16 v9; // r0@4
+  int v10; // r2@4
+  signed int v11; // r3@4
+  int v13; // [sp+0h] [bp-28h]@1
+  int v14; // [sp+4h] [bp-24h]@1
+  signed __int16 v15[13]; // [sp+Eh] [bp-1Ah]@4
+
+  v13 = a1;
+  v14 = a2;
+  v5 = a3;
+  v6 = a4;
+  if ( a4 > 0 )
+  {
+    v7 = 0;
+    while ( 1 )
+    {
+      v8 = *(_WORD *)(v5 + v7);
+      if ( v8 <= 0 )
+        break;
+      v9 = AKSC_div16f(v6, v8, v15);
+      v10 = v15[0];
+      v11 = v9 * (*(_WORD *)(v13 + v7) - *(_WORD *)(v14 + v7));
+      if ( !((v10 + 14 < 0) ^ __OFADD__(v10, 14)) )
+        v11 = ((v11 >> (LOBYTE(v15[0]) + 14)) & 1)
+            + (v9 * (*(_WORD *)(v13 + v7) - (signed int)*(_WORD *)(v14 + v7)) >> (LOBYTE(v15[0]) + 15));
+      if ( (unsigned int)(v11 + 0x8000) > 0xFFFF )
+        break;
+      *(_WORD *)(a5 + v7) = v11;
+      v7 += 2;
+      if ( v7 == 6 )
+        return 1;
+    }
+  }
+  return 0;
+}
+
+//----- (00004154) --------------------------------------------------------
+int __fastcall AKSC_cholSl(int a1, signed int a2, int a3, int a4, int a5, int a6)
+{
+  int v6; // r4@1
+  int v7; // r1@1
+  int v8; // r3@1
+  int v9; // r0@1
+  int v10; // r5@2
+  int v11; // r2@2
+  int v12; // r12@2
+  int v13; // r7@3
+  int v14; // r3@3
+  signed int v15; // r5@5
+  int v16; // r3@7
+  int v17; // r4@7
+  int v18; // r2@7
+  int result; // r0@7
+  signed int v20; // r1@8
+  _WORD *v21; // r6@8
+  _WORD *v22; // r5@8
+  int v23; // r12@8
+  int i; // r7@8
+  int v25; // r0@9
+  int v26; // r3@9
+  int v27; // [sp+4h] [bp-44h]@8
+  int v28; // [sp+10h] [bp-38h]@2
+  int v29; // [sp+10h] [bp-38h]@8
+  int v30; // [sp+14h] [bp-34h]@7
+  signed int v31; // [sp+18h] [bp-30h]@1
+  int v32; // [sp+1Ch] [bp-2Ch]@1
+  int v33; // [sp+20h] [bp-28h]@1
+  int v34; // [sp+24h] [bp-24h]@1
+
+  v31 = a2;
+  v32 = a1;
+  v34 = a4;
+  v33 = a3;
+  v6 = a1 - 2;
+  v7 = a6 - 2;
+  v8 = 0;
+  v9 = 0;
+  while ( (signed __int16)v9 < v31 )
+  {
+    v28 = -v8;
+    v10 = 0;
+    v11 = 0;
+    v12 = v8;
+    while ( v11 != v28 )
+    {
+      v13 = *(_WORD *)(v7 + v11);
+      v14 = *(_WORD *)(v6 + v11);
+      v11 -= 2;
+      v10 += v14 * v13;
+    }
+    v15 = (*(_WORD *)(a5 + v12) << 15) - 4 * v10;
+    v9 = (v9 + 1) & 0xFFFF;
+    v6 += 8;
+    v8 = v12 + 2;
+    *(_WORD *)(v7 + 2) = 2
+                       * (*(_WORD *)(v33 + v12) * HIWORD(v15)
+                        + (*(_WORD *)(v34 + v12) * (v15 >> 16) >> 15)
+                        + ((signed int)(*(_WORD *)(v33 + v12) * ((unsigned int)(v15 << 16) >> 17)) >> 15));
+    v7 += 2;
+  }
+  v16 = 0;
+  v17 = 0;
+  v18 = (unsigned __int16)v31;
+  v30 = ((v31 << 16) - 0x10000) >> 16;
+  result = 2 * v30;
+  while ( !((v18 - 1) & 0x8000) )
+  {
+    v29 = a6 + result;
+    v20 = *(_WORD *)(a6 + result + v16) << 15;
+    v21 = (_WORD *)(2 * (v30 - v17) + v32 + 6 * (signed __int16)v18);
+    v27 = result;
+    v22 = (_WORD *)(a6 + 2 * (signed __int16)v18);
+    v23 = v16;
+    for ( i = v18; v31 > (signed __int16)i; i = (i + 1) & 0xFFFF )
+    {
+      v25 = *v22;
+      ++v22;
+      v26 = *v21;
+      v21 += 3;
+      v20 -= 4 * v26 * v25;
+    }
+    result = v27;
+    ++v17;
+    *(_WORD *)(v29 + v23) = 2
+                          * (*(_WORD *)(v33 + v27 + v23) * HIWORD(v20)
+                           + (*(_WORD *)(v34 + v27 + v23) * (v20 >> 16) >> 15)
+                           + ((signed int)(*(_WORD *)(v33 + v27 + v23) * ((unsigned int)(v20 << 16) >> 17)) >> 15));
+    v18 = (v18 - 1) & 0xFFFF;
+    v16 = v23 - 2;
+  }
+  return result;
+}
+
+//----- (000042A8) --------------------------------------------------------
+signed int __fastcall AKSC_cholDc(int a1, signed int a2, int a3, int a4)
+{
+  int v4; // r6@1
+  int v5; // r7@1
+  signed int v6; // r5@1
+  int v7; // r0@2
+  int v8; // r3@2
+  int v9; // r2@2
+  __int16 v10; // r12@2
+  int v11; // ST18_4@3
+  int v12; // r4@3
+  signed __int64 v13; // kr00_8@7
+  int v14; // r4@9
+  int v16; // [sp+8h] [bp-58h]@2
+  int v17; // [sp+10h] [bp-50h]@1
+  int v18; // [sp+14h] [bp-4Ch]@1
+  int v19; // [sp+1Ch] [bp-44h]@1
+  signed int v20; // [sp+20h] [bp-40h]@1
+  int v21; // [sp+24h] [bp-3Ch]@1
+  int v22; // [sp+28h] [bp-38h]@1
+  int v23; // [sp+34h] [bp-2Ch]@2
+  __int16 v24; // [sp+46h] [bp-1Ah]@7
+
+  v21 = a3;
+  v20 = a2;
+  v22 = a4;
+  v4 = 0;
+  v19 = a1;
+  v18 = (a2 - 1) & 0xFFFF;
+  v5 = a1;
+  v6 = -1;
+  v17 = 0;
+LABEL_11:
+  if ( (signed __int16)v17 >= v20 )
+    return 1;
+  v14 = 0;
+  while ( 1 )
+  {
+    v7 = *(_WORD *)(v5 + 2 * v14) << 15;
+    v23 = 3 * (v14 + v17) + v6;
+    v16 = v14;
+    v8 = 0;
+    v9 = (unsigned __int16)v6;
+    v10 = v14 + v17;
+    while ( !(v9 & 0x8000) )
+    {
+      v11 = *(_WORD *)(v19 + 2 * v23 + v8);
+      v12 = *(_WORD *)(v5 - 2 + v8);
+      v8 -= 2;
+      v7 -= 4 * v12 * v11;
+      v9 = (v9 - 1) & 0xFFFF;
+    }
+    if ( (signed __int16)v17 != v10 )
+    {
+      *(_WORD *)(v5 + 6 * v16) = 2
+                               * (*(_WORD *)(v21 + v4) * HIWORD(v7)
+                                + (*(_WORD *)(v22 + v4) * (v7 >> 16) >> 15)
+                                + ((signed int)(*(_WORD *)(v21 + v4) * ((unsigned int)(v7 << 16) >> 17)) >> 15));
+      goto LABEL_9;
+    }
+    if ( v7 <= 0 )
+      return 0;
+    v13 = (signed __int64)AKSC_invSqrt(v7, &v24) << 16;
+    *(_WORD *)(v21 + v4) = WORD2(v13);
+    *(_WORD *)(v22 + v4) = (unsigned int)v13 >> 17;
+LABEL_9:
+    v14 = v16 + 1;
+    if ( v16 + 1 == v18 + 1 )
+    {
+      v4 += 2;
+      ++v17;
+      v5 += 8;
+      ++v6;
+      v18 = (v18 - 1) & 0xFFFF;
+      goto LABEL_11;
+    }
+  }
+}
+
+//----- (000043C4) --------------------------------------------------------
+signed int __fastcall AKSC_fitOnPlane(int a1, int a2, int a3, int a4, _WORD *a5)
 {
   int v5; // r4@1
-  int v6; // r5@1
-  int v7; // r10@1
-  int v8; // r8@1
-  int v9; // r1@1
-  __int16 v10; // r11@1
-  int v11; // r9@1
-  int v12; // r12@1
-  __int16 v16; // r0@10
-  int v17; // r2@11
-  signed int v18; // r3@11
-  __int16 v19; // lr@12
-  __int16 v20; // r12@12
-  __int16 v21; // r1@12
-  __int16 v22; // r3@14
-  signed int v23; // r7@15
-  signed int v24; // r3@16
-  __int16 v25; // r0@13
-  __int16 v26; // r0@13
-  int v27; // r11@19
-  int v28; // r8@19
-  unsigned int v31; // r1@19
-  unsigned int v32; // r8@19
-  unsigned int v33; // r12@19
-  int v34; // lr@19
-  int v35; // r7@19
-  signed __int16 v36; // r0@19
-  int v37; // r3@19
-  signed int v38; // r6@19
-  int v39; // r2@19
-  int v40; // r1@19
-  int v41; // r10@20
-  int v42; // r9@20
-  int v43; // r7@20
-  int result; // r0@26
-  int v47; // [sp+Ch] [bp-64h]@1
-  __int16 v48; // [sp+14h] [bp-5Ch]@10
-  __int16 v49; // [sp+16h] [bp-5Ah]@10
-  __int16 v50; // [sp+1Ah] [bp-56h]@10
-  __int16 v51; // [sp+1Ch] [bp-54h]@10
-  __int16 v52; // [sp+28h] [bp-48h]@11
-  __int16 v53; // [sp+2Ah] [bp-46h]@11
-  char v54; // [sp+30h] [bp-40h]@10
-  char v55; // [sp+38h] [bp-38h]@10
-  __int16 v56; // [sp+40h] [bp-30h]@10
-  __int16 v57; // [sp+42h] [bp-2Eh]@10
-  char v58; // [sp+46h] [bp-2Ah]@19
+  int v6; // r12@1
+  __int16 v7; // r0@1
+  int v8; // r5@1
+  int v9; // r0@1
+  int v10; // r5@1
+  int v11; // r6@1
+  signed int v12; // r1@1
+  __int16 v13; // r7@7
+  signed int v14; // r3@8
+  __int16 v15; // r12@9
+  signed int v16; // r3@12
+  __int16 v17; // r0@13
+  int v18; // r0@15
+  int v19; // r12@15
+  int v20; // r3@15
+  unsigned int v21; // r6@15
+  unsigned int v22; // r5@15
+  int v23; // r3@15
+  unsigned int v24; // r1@15
+  int v25; // r3@15
+  int v26; // r5@15
+  int v27; // r2@15
+  int v28; // r1@15
+  int i; // r0@15
+  int v30; // r4@16
+  int v31; // r4@22
+  signed int v32; // r1@22
+  signed int result; // r0@22
+  __int16 v34; // [sp+14h] [bp-6Ch]@9
+  int v35; // [sp+14h] [bp-6Ch]@15
+  int v36; // [sp+18h] [bp-68h]@15
+  int v37; // [sp+1Ch] [bp-64h]@1
+  int v38; // [sp+1Ch] [bp-64h]@16
+  __int16 v39; // [sp+20h] [bp-60h]@1
+  __int16 v40; // [sp+24h] [bp-5Ch]@9
+  __int16 v41; // [sp+28h] [bp-58h]@1
+  int v42; // [sp+2Ch] [bp-54h]@1
+  __int16 v43; // [sp+34h] [bp-4Ch]@7
+  __int16 v44; // [sp+36h] [bp-4Ah]@7
+  __int16 v45; // [sp+3Ah] [bp-46h]@7
+  __int16 v46; // [sp+3Ch] [bp-44h]@7
+  signed __int16 v47[8]; // [sp+48h] [bp-38h]@8
+  signed __int16 v48; // [sp+4Ah] [bp-36h]@8
+  signed __int16 v49[8]; // [sp+50h] [bp-30h]@7
+  char v50; // [sp+58h] [bp-28h]@7
+  __int16 v51; // [sp+60h] [bp-20h]@7
+  __int16 v52; // [sp+62h] [bp-1Eh]@7
+  __int16 v53; // [sp+66h] [bp-1Ah]@15
 
+  v42 = a2;
+  v37 = a1;
   v5 = a4;
-  v6 = a1;
-  v47 = a2;
-  v7 = *(_WORD *)(a3 + 8);
-  v8 = *(_WORD *)(a3 + 16);
-  v9 = v7 * v8 - *(_WORD *)(a3 + 10) * *(_WORD *)(a3 + 10);
-  v10 = *(_WORD *)a3;
-  v11 = *(_WORD *)a3;
-  v12 = v8 * v11 - *(_WORD *)(a3 + 12) * *(_WORD *)(a3 + 12);
-  _VF = __OFSUB__(v12, v9);
-  _ZF = v12 == v9;
-  _NF = v12 - v9 < 0;
-  if ( v12 <= v9 )
-    v12 = 0;
-  else
-    v9 = v8 * v11 - *(_WORD *)(a3 + 12) * *(_WORD *)(a3 + 12);
-  if ( !((unsigned __int8)(_NF ^ _VF) | _ZF) )
-    v12 = 1;
-  if ( v7 * v11 - *(_WORD *)(a3 + 2) * (signed int)*(_WORD *)(a3 + 2) > v9 )
+  v6 = *(_WORD *)(a3 + 8);
+  v7 = *(_WORD *)(a3 + 16);
+  v41 = v7;
+  v8 = v7;
+  v9 = v6 * v7 - *(_WORD *)(a3 + 10) * *(_WORD *)(a3 + 10);
+  v39 = *(_WORD *)a3;
+  v10 = v8 * *(_WORD *)a3 - *(_WORD *)(a3 + 12) * *(_WORD *)(a3 + 12);
+  v11 = v6 * *(_WORD *)a3;
+  v12 = 0;
+  if ( v10 > v9 )
   {
-    v9 = v7 * v11 - *(_WORD *)(a3 + 2) * *(_WORD *)(a3 + 2);
+    v9 = v10;
+    v12 = 1;
+  }
+  if ( v11 - *(_WORD *)(a3 + 2) * (signed int)*(_WORD *)(a3 + 2) > v9 )
+  {
+    v9 = v11 - *(_WORD *)(a3 + 2) * *(_WORD *)(a3 + 2);
     v12 = 2;
   }
   if ( v9 <= 0 )
-    goto LABEL_27;
+    return 0;
   if ( !v12 )
   {
-    v48 = *(_WORD *)(a3 + 8);
-    v50 = *(_WORD *)(a3 + 10);
-    v16 = *(_WORD *)(a3 + 2);
-    v49 = v50;
-    v56 = -v16;
-    v51 = *(_WORD *)(a3 + 16);
-    v57 = -*(_WORD *)(a3 + 12);
-    if ( (unsigned __int16)AKSC_cholDc((int)&v48, 2, (int)&v55, (int)&v54) )
+    v43 = *(_WORD *)(a3 + 8);
+    v45 = *(_WORD *)(a3 + 10);
+    v13 = *(_WORD *)(a3 + 2);
+    v44 = v45;
+    v51 = -v13;
+    v46 = *(_WORD *)(a3 + 16);
+    v52 = -*(_WORD *)(a3 + 12);
+    if ( AKSC_cholDc((int)&v43, 2, (int)&v50, (int)v49) << 16 )
     {
-      AKSC_cholSl((int)&v48, 2, (int)&v55, (int)&v54, (int)&v56, (int)&v52);
+      AKSC_cholSl((int)&v43, 2, (int)&v50, (int)v49, (int)&v51, (int)v47);
       *(_WORD *)v5 = 2048;
-      v17 = v52 >> 2;
-      *(_WORD *)(v5 + 2) = v17;
-      v18 = v53;
-LABEL_16:
-      v24 = v18 >> 2;
-      goto LABEL_19;
+      *(_WORD *)(v5 + 2) = v47[0] >> 2;
+      v14 = v48;
+LABEL_12:
+      v16 = v14 >> 2;
+      goto LABEL_15;
     }
-    goto LABEL_27;
+    return 0;
   }
-  _ZF = v12 == 1;
-  v19 = *(_WORD *)(a3 + 10);
-  v20 = *(_WORD *)(a3 + 2);
-  v21 = *(_WORD *)(a3 + 12);
-  if ( _ZF )
+  v40 = *(_WORD *)(a3 + 10);
+  v15 = *(_WORD *)(a3 + 2);
+  v34 = *(_WORD *)(a3 + 12);
+  if ( v12 == 1 )
   {
-    v48 = *(_WORD *)(a3 + 16);
-    v49 = v21;
-    v56 = -v19;
-    v50 = v21;
-    v22 = *(_WORD *)a3;
-    v57 = -v20;
-    v51 = v22;
-    if ( (unsigned __int16)AKSC_cholDc((int)&v48, 2, (int)&v55, (int)&v54) )
+    v43 = v41;
+    v44 = v34;
+    v51 = -v40;
+    v45 = v34;
+    v46 = *(_WORD *)a3;
+    v52 = -v15;
+    if ( AKSC_cholDc((int)&v43, 2, (int)&v50, (int)v49) << 16 )
     {
-      AKSC_cholSl((int)&v48, 2, (int)&v55, (int)&v54, (int)&v56, (int)&v52);
-      v23 = v53;
+      AKSC_cholSl((int)&v43, 2, (int)&v50, (int)v49, (int)&v51, (int)v47);
+      *(_WORD *)v5 = v48 >> 2;
       *(_WORD *)(v5 + 2) = 2048;
-      *(_WORD *)v5 = v23 >> 2;
-      v18 = v52;
-      goto LABEL_16;
+      v14 = v47[0];
+      goto LABEL_12;
     }
-LABEL_27:
-    LOWORD(result) = 0;
-    return (signed __int16)result;
+    return 0;
   }
-  v49 = *(_WORD *)(a3 + 2);
-  v48 = v10;
-  v56 = -v21;
-  v50 = *(_WORD *)(a3 + 6);
-  v25 = *(_WORD *)(a3 + 8);
-  v57 = -v19;
-  v51 = v25;
-  v26 = AKSC_cholDc((int)&v48, 2, (int)&v55, (int)&v54);
-  if ( !v26 )
-    goto LABEL_27;
-  AKSC_cholSl((int)&v48, 2, (int)&v55, (int)&v54, (int)&v56, (int)&v52);
-  v17 = v52 >> 2;
-  *(_WORD *)v5 = v17;
-  LOWORD(v24) = 2048;
-  *(_WORD *)(v5 + 2) = v53 >> 2;
-LABEL_19:
-  v27 = *(_WORD *)v5;
-  v28 = *(_WORD *)(v5 + 2);
+  v44 = *(_WORD *)(a3 + 2);
+  v43 = v39;
+  v51 = -v34;
+  v45 = *(_WORD *)(a3 + 6);
+  v17 = *(_WORD *)(a3 + 8);
+  v52 = -v40;
+  v46 = v17;
+  if ( !(AKSC_cholDc((int)&v43, 2, (int)&v50, (int)v49) << 16) )
+    return 0;
+  AKSC_cholSl((int)&v43, 2, (int)&v50, (int)v49, (int)&v51, (int)v47);
+  *(_WORD *)v5 = v47[0] >> 2;
+  LOWORD(v16) = 2048;
+  *(_WORD *)(v5 + 2) = v48 >> 2;
+LABEL_15:
+  *(_WORD *)(v5 + 4) = v16;
+  v18 = AKSC_invSqrt(
+          *(_WORD *)(v5 + 2) * *(_WORD *)(v5 + 2)
+        + *(_WORD *)v5 * *(_WORD *)v5
+        + *(_WORD *)(v5 + 4) * *(_WORD *)(v5 + 4),
+          &v53) << 8 >> 16;
+  v19 = v5;
+  v20 = *(_WORD *)(v5 + 2);
+  v21 = (unsigned int)(32 * *(_WORD *)v5 * v18) >> 16;
+  *(_WORD *)v5 = v21;
+  v22 = (unsigned int)(32 * v20 * v18) >> 16;
+  v23 = *(_WORD *)(v5 + 4) * v18;
+  *(_WORD *)(v5 + 2) = v22;
+  v24 = (unsigned int)(32 * v23) >> 16;
   *(_WORD *)(v5 + 4) = v24;
-  _R0 = AKSC_invSqrt(v27 * v27 + v28 * v28 + *(_WORD *)(v5 + 4) * *(_WORD *)(v5 + 4), &v58, v17, v24);
-  __asm { SBFX.W          R0, R0, #8, #0x10 }
-  v31 = *(_WORD *)(v5 + 4) * _R0;
-  v32 = ((unsigned int)(*(_WORD *)v5 * _R0) >> 11) & 0xFFFF;
-  v33 = ((unsigned int)(*(_WORD *)(v5 + 2) * _R0) >> 11) & 0xFFFF;
-  *(_WORD *)v5 = (unsigned int)(*(_WORD *)v5 * _R0) >> 11;
-  *(_WORD *)(v5 + 2) = v33;
-  v34 = (v31 >> 11) & 0xFFFF;
-  *(_WORD *)(v5 + 4) = v31 >> 11;
-  v35 = *(_WORD *)(v6 + 4);
-  v36 = 1;
-  v37 = 0;
-  v38 = *(_WORD *)v6 * v32 + *(_WORD *)(v6 + 2) * v33 + v35 * v34;
-  v39 = *(_WORD *)v6 * v32 + *(_WORD *)(v6 + 2) * v33 + v35 * v34;
-  v40 = *(_WORD *)v6 * v32 + *(_WORD *)(v6 + 2) * v33 + v35 * v34;
-  while ( 1 )
+  v36 = (signed __int16)v24;
+  v35 = (signed __int16)v22;
+  v25 = v37;
+  v26 = *(_WORD *)(v37 + 2) * (signed __int16)v22
+      + *(_WORD *)v37 * (signed __int16)v21
+      + *(_WORD *)(v37 + 4) * (signed __int16)v24;
+  v27 = v26;
+  v28 = v26;
+  for ( i = 1; ; i = (i + 1) & 0xFFFF )
   {
-    v37 += 6;
-    if ( v36 >= v47 )
+    v25 += 6;
+    if ( (signed __int16)i >= v42 )
       break;
-    v41 = *(_WORD *)(v6 + v37 + 2);
-    v42 = *(_WORD *)(v6 + v37 + 4);
-    v43 = *(_WORD *)(v6 + v37) * v32 + v41 * v33 + v42 * v34;
-    ++v36;
-    if ( v40 < v43 )
-      v40 = *(_WORD *)(v6 + v37) * v32 + v41 * v33 + v42 * v34;
-    if ( v39 >= v43 )
-      v39 = *(_WORD *)(v6 + v37) * v32 + v41 * v33 + v42 * v34;
-    v38 += v43;
+    v38 = *(_WORD *)(v25 + 2) * v35 + *(_WORD *)v25 * (signed __int16)v21;
+    v30 = v38 + *(_WORD *)(v25 + 4) * v36;
+    if ( v28 < v30 )
+      v28 = v38 + *(_WORD *)(v25 + 4) * v36;
+    if ( v27 > v30 )
+      v27 = v38 + *(_WORD *)(v25 + 4) * v36;
+    v26 += v30;
   }
-  *a5 = (v40 - v39) >> 11;
-  result = AKSC_div16(1, v47);
-  _R2 = v38 >> 11;
-  __asm { SMULBB.W        R6, R2, R0 }
-  LOWORD(result) = 1;
-  *(_WORD *)(v5 + 6) = -(_R6 >> 15);
-  return (signed __int16)result;
+  *a5 = (v28 - v27) >> 11;
+  v31 = v19;
+  v32 = (signed __int16)AKSC_div16(1, v42) * (32 * v26 >> 16);
+  result = 1;
+  *(_WORD *)(v31 + 6) = -(v32 >> 15);
+  return result;
 }
 
-//----- (00003C78) --------------------------------------------------------
+//----- (00004684) --------------------------------------------------------
 signed int __fastcall AKSC_getCoeff(int a1, int a2, int a3, int a4)
 {
-  int v4; // r4@1
-  int v5; // r5@1
-  int v6; // r6@1
-  __int16 v7; // r0@2
-  int v8; // r3@2
-  int v9; // lr@2
-  unsigned int v10; // r2@2
-  unsigned int v11; // r1@2
-  unsigned int v12; // r7@2
-  int v13; // r9@3
-  int v14; // r10@3
-  int v15; // r12@5
-  int v16; // r7@5
-  int v17; // r1@5
-  int v18; // r3@5
-  char *v19; // r0@5
-  int v20; // r2@5
-  int v21; // r3@8
-  int v22; // r2@8
-  int v23; // r10@9
-  char *v24; // r11@9
-  __int16 v25; // r8@9
-  int v26; // r3@11
-  int v27; // r9@11
-  int v28; // r8@11
-  int v29; // r0@11
-  int v30; // r10@11
-  int v31; // r12@11
-  int v32; // r1@11
-  int v33; // r2@11
-  int v34; // r7@11
-  int v35; // r10@12
-  int v36; // lr@12
-  int v37; // ST14_4@12
-  char *v38; // r6@12
-  int v39; // r11@12
-  int v40; // r10@12
-  int v41; // ST2C_4@12
-  int v42; // r12@12
-  int v43; // r6@12
-  int v44; // r6@12
-  int v45; // r5@14
-  int *v46; // r11@14
-  signed int v47; // r4@14
-  signed int v48; // r3@14
-  int v49; // r1@14
-  int *v50; // r7@15
-  signed int v51; // t1@15
-  signed int v52; // ST10_4@15
-  __int16 v53; // r0@15
-  signed int v54; // r12@15
-  int *v55; // r5@20
-  signed int v56; // t1@21
-  signed __int16 v57; // r0@21
-  __int16 v58; // r1@21
-  int v59; // r2@24
-  __int16 v60; // r3@24
-  int v61; // r3@24
-  __int16 v62; // r5@24
-  int v63; // r12@24
-  signed int result; // r0@27
-  int v65; // [sp+0h] [bp-190h]@11
-  int v66; // [sp+Ch] [bp-184h]@15
-  int v67; // [sp+14h] [bp-17Ch]@11
-  int v68; // [sp+18h] [bp-178h]@11
-  signed int v69; // [sp+1Ch] [bp-174h]@11
-  signed int v70; // [sp+20h] [bp-170h]@11
-  signed int v71; // [sp+24h] [bp-16Ch]@11
-  int v72; // [sp+28h] [bp-168h]@1
-  char v73[190]; // [sp+38h] [bp-158h]@9
-  char v74; // [sp+F6h] [bp-9Ah]@5
-  char v75[64]; // [sp+F8h] [bp-98h]@12
-  int v76; // [sp+138h] [bp-58h]@11
-  int v77; // [sp+13Ch] [bp-54h]@11
-  int v78; // [sp+140h] [bp-50h]@11
-  int v79; // [sp+144h] [bp-4Ch]@11
-  int v80; // [sp+148h] [bp-48h]@11
-  int v81; // [sp+14Ch] [bp-44h]@11
-  int v82; // [sp+150h] [bp-40h]@11
-  int v83; // [sp+154h] [bp-3Ch]@11
-  int v84; // [sp+158h] [bp-38h]@11
-  int v85; // [sp+15Ch] [bp-34h]@11
-  int v86; // [sp+160h] [bp-30h]@11
-  int v87; // [sp+164h] [bp-2Ch]@11
+  __int16 v4; // r0@2
+  unsigned int v5; // r1@2
+  int v6; // r2@2
+  int v7; // r4@2
+  int v8; // r5@2
+  int v9; // r6@2
+  int v10; // r3@3
+  int v11; // r3@5
+  int v12; // r2@5
+  int v13; // r3@8
+  int v14; // r2@8
+  int v15; // r5@9
+  __int16 v16; // r6@9
+  char *v17; // r4@9
+  int v18; // r5@11
+  int v19; // r7@11
+  int v20; // r0@11
+  int v21; // r2@11
+  int v22; // r6@11
+  int v23; // ST04_4@12
+  int v24; // ST3C_4@12
+  int v25; // ST0C_4@12
+  char *v26; // ST28_4@12
+  int v27; // r1@12
+  int v28; // ST34_4@12
+  int v29; // ST3C_4@12
+  int v30; // ST28_4@12
+  int v31; // r7@12
+  int v32; // r1@12
+  int v33; // r7@12
+  int v34; // r1@14
+  int *v35; // r6@14
+  int v36; // r7@14
+  signed int v37; // r5@14
+  int v38; // r0@15
+  unsigned __int16 v39; // r3@15
+  int v40; // r4@17
+  signed int *v41; // r4@20
+  int v42; // r0@21
+  unsigned int v43; // r3@21
+  unsigned int v44; // r0@21
+  int v45; // r2@24
+  int v46; // r1@24
+  int v47; // r0@24
+  int v48; // r2@24
+  int v49; // r3@24
+  signed int result; // r0@26
+  int v51; // [sp+14h] [bp-17Ch]@1
+  signed int v52; // [sp+14h] [bp-17Ch]@14
+  signed int v53; // [sp+18h] [bp-178h]@1
+  signed int v54; // [sp+18h] [bp-178h]@14
+  int v55; // [sp+1Ch] [bp-174h]@1
+  unsigned int v56; // [sp+20h] [bp-170h]@5
+  int v57; // [sp+20h] [bp-170h]@11
+  unsigned int v58; // [sp+24h] [bp-16Ch]@5
+  int v59; // [sp+24h] [bp-16Ch]@11
+  int v60; // [sp+2Ch] [bp-164h]@11
+  int v61; // [sp+30h] [bp-160h]@11
+  int v62; // [sp+34h] [bp-15Ch]@11
+  int v63; // [sp+38h] [bp-158h]@1
+  char v64[192]; // [sp+48h] [bp-148h]@9
+  char v65[64]; // [sp+108h] [bp-88h]@6
+  int v66; // [sp+148h] [bp-48h]@11
+  int v67; // [sp+14Ch] [bp-44h]@11
+  int v68; // [sp+150h] [bp-40h]@11
+  int v69; // [sp+154h] [bp-3Ch]@11
+  int v70; // [sp+158h] [bp-38h]@11
+  int v71; // [sp+15Ch] [bp-34h]@11
+  int v72; // [sp+160h] [bp-30h]@11
+  int v73; // [sp+164h] [bp-2Ch]@11
+  int v74; // [sp+168h] [bp-28h]@11
+  int v75; // [sp+16Ch] [bp-24h]@11
+  signed int v76; // [sp+170h] [bp-20h]@11
+  signed int v77; // [sp+174h] [bp-1Ch]@11
+  char v78; // [sp+178h] [bp-18h]@23
 
-  v4 = a1;
-  v5 = a2;
-  v6 = a3;
-  v72 = a4;
+  v51 = a1;
+  v53 = a2;
+  v55 = a3;
+  v63 = a4;
   if ( a2 > 32 )
-    goto LABEL_31;
-  v7 = AKSC_div16(1, a2);
+    goto LABEL_30;
+  v4 = AKSC_div16(1, a2);
+  v5 = 0;
+  v6 = v51;
+  v7 = 0;
   v8 = 0;
   v9 = 0;
-  v10 = 0;
-  v11 = 0;
+  while ( (signed __int16)v9 < v53 )
+  {
+    v9 = (v9 + 1) & 0xFFFF;
+    v8 += *(_WORD *)v6 * v4;
+    v7 += *(_WORD *)(v6 + 2) * v4;
+    v10 = *(_WORD *)(v6 + 4);
+    v6 += 6;
+    v5 += v10 * v4;
+  }
+  v11 = v51;
+  v58 = (unsigned int)(2 * v8) >> 16;
+  v56 = (unsigned int)(2 * v7) >> 16;
   v12 = 0;
-  while ( v9 < v5 )
+  while ( (signed __int16)v12 < v53 )
   {
-    v13 = v4 + v8;
-    v14 = *(_WORD *)(v4 + v8);
-    ++v9;
-    v8 += 6;
-    v12 += v14 * v7;
-    v11 += *(_WORD *)(v13 + 2) * v7;
-    v10 += *(_WORD *)(v13 + 4) * v7;
+    *(_WORD *)&v65[2 * v12++] = (*(_WORD *)(v11 + 2) * (signed int)*(_WORD *)(v11 + 2)
+                               + *(_WORD *)v11 * (signed int)*(_WORD *)v11
+                               + *(_WORD *)(v11 + 4) * (signed int)*(_WORD *)(v11 + 4)) >> 11;
+    v11 += 6;
   }
-  v15 = (v10 >> 15) & 0xFFFF;
-  v16 = (v12 >> 15) & 0xFFFF;
-  v17 = (v11 >> 15) & 0xFFFF;
-  v18 = v4;
-  v19 = &v74;
-  v20 = 0;
-  while ( 1 )
+  v13 = 0;
+  v14 = 0;
+  while ( (signed __int16)v14 < v53 )
   {
-    v18 += 6;
-    if ( v20 >= v5 )
-      break;
-    v20 = (unsigned __int16)(v20 + 1);
-    *((_WORD *)v19 + 1) = (*(_WORD *)(v18 - 6) * (signed int)*(_WORD *)(v18 - 6)
-                         + *(_WORD *)(v18 - 4) * (signed int)*(_WORD *)(v18 - 4)
-                         + *(_WORD *)(v18 - 2) * (signed int)*(_WORD *)(v18 - 2)) >> 11;
-    v19 += 2;
+    v14 = (v14 + 1) & 0xFFFF;
+    *(_WORD *)&v64[v13] = *(_WORD *)(v51 + v13) - v58;
+    v15 = v51 + v13;
+    v16 = *(_WORD *)(v51 + v13 + 2);
+    v17 = &v64[v13];
+    v13 += 6;
+    *((_WORD *)v17 + 1) = v16 - v56;
+    *((_WORD *)v17 + 2) = *(_WORD *)(v15 + 4) - (v5 >> 15);
   }
-  v21 = 0;
-  v22 = 0;
-  while ( v22 < v5 )
-  {
-    v23 = v4 + v21;
-    *(_WORD *)&v73[v21] = *(_WORD *)(v4 + v21) - v16;
-    v24 = &v73[v21];
-    v25 = *(_WORD *)(v4 + v21 + 2);
-    v22 = (unsigned __int16)(v22 + 1);
-    v21 += 6;
-    *((_WORD *)v24 + 1) = v25 - v17;
-    *((_WORD *)v24 + 2) = *(_WORD *)(v23 + 4) - v15;
-  }
-  v26 = 0;
-  v87 = 0;
-  v86 = 0;
-  v27 = 0;
-  v85 = 0;
-  v28 = 0;
-  v84 = 0;
-  v29 = 0;
-  v80 = 0;
-  v30 = 0;
-  v76 = 0;
-  v31 = 0;
-  v79 = 0;
-  v32 = 0;
-  v77 = 0;
-  v33 = 0;
-  v82 = 0;
-  v34 = 0;
-  v78 = 0;
-  v83 = 0;
-  v81 = 0;
-  v68 = 0;
+  v18 = 0;
+  v74 = 0;
   v70 = 0;
   v69 = 0;
-  v71 = 0;
   v67 = 0;
-  v65 = v6;
-  while ( v34 < v5 )
+  v72 = 0;
+  v68 = 0;
+  v73 = 0;
+  v71 = 0;
+  v77 = 0;
+  v76 = 0;
+  v75 = 0;
+  v66 = 0;
+  v61 = 0;
+  v60 = 0;
+  v59 = 0;
+  v19 = 0;
+  v57 = 0;
+  v20 = 0;
+  v62 = 0;
+  v21 = 0;
+  v22 = 0;
+  while ( (signed __int16)v20 < v53 )
   {
-    v35 = *(_WORD *)(v4 + v33);
-    v36 = *(_WORD *)&v73[v33];
-    v37 = *(_WORD *)(v4 + v33 + 2);
-    v38 = &v73[v33];
-    v39 = *(_WORD *)(v4 + v33 + 4);
-    v33 += 6;
-    v26 += v35 * v36;
-    v40 = *((_WORD *)v38 + 1);
-    v32 += v40 * v39;
-    v41 = *((_WORD *)v38 + 2);
-    v28 += v39 * v41;
-    v27 += v37 * v40;
-    v68 = v31 + v36 * v39;
-    v29 += v36 * v37;
-    v42 = *(_WORD *)&v75[2 * v34++];
-    v67 = v32;
-    v71 += v36 * v42;
-    v43 = v70 + v40 * v42;
-    v30 = v29;
-    v70 = v43;
-    v44 = v69 + v41 * v42;
-    v31 = v68;
-    v69 = v44;
+    v23 = *(_WORD *)&v64[v21];
+    v61 += *(_WORD *)(v51 + v21) * v23;
+    v24 = v51 + v21;
+    v25 = *(_WORD *)(v51 + v21 + 2);
+    v22 += v23 * v25;
+    v26 = &v64[v21];
+    v27 = *(_WORD *)&v64[v21 + 2];
+    v21 += 6;
+    v28 = v27;
+    v60 += v25 * v27;
+    v29 = *(_WORD *)(v24 + 4);
+    v30 = *((_WORD *)v26 + 2);
+    v59 += v29 * v30;
+    v18 = v19 + v23 * v29;
+    v57 += v27 * v29;
+    v71 = v57;
+    v31 = 2 * v20++;
+    v32 = *(_WORD *)&v65[v31];
+    v33 = v28;
+    v75 += v23 * v32;
+    v62 = v22;
+    v76 += v33 * v32;
+    v77 += v30 * v32;
+    v19 = v18;
   }
-  v45 = 0;
-  v76 = v26;
-  v83 = v32;
-  v79 = v29;
-  v80 = v27;
-  v46 = &v78;
-  v84 = v28;
-  v77 = v30;
-  v78 = v68;
-  v82 = v31;
-  v47 = 32;
-  v81 = v67;
-  v48 = 3;
-  v85 = v71 >> 1;
-  v49 = v65;
-  v86 = v70 >> 1;
-  v87 = v69 >> 1;
+  v34 = v22;
+  v35 = &v66;
+  v70 = v60;
+  v66 = v61;
+  v69 = v34;
+  v72 = v19;
+  v68 = v18;
+  v73 = v57;
+  v74 = v59;
+  v67 = v62;
+  v36 = v75 >> 1;
+  v75 >>= 1;
+  v54 = v76 >> 1;
+  v76 >>= 1;
+  v52 = v77 >> 1;
+  v77 >>= 1;
+  v37 = 32;
   do
   {
-    v50 = &v76 + v48 * v45 - 1;
+    v40 = 0;
     do
     {
-      v51 = v50[1];
-      ++v50;
-      v66 = v49;
-      v52 = v48;
-      v53 = AKSC_norm32(v51);
-      v54 = v47;
-      v49 = v66;
-      v48 = v52;
-      if ( v47 >= v53 )
-        v54 = v53;
-      v47 = v54;
+      v38 = AKSC_norm32(v35[v40]);
+      v39 = v38;
+      if ( v37 << 16 < v38 << 16 )
+        v39 = v37;
+      ++v40;
+      v37 = v39;
     }
-    while ( v50 != v46 );
-    ++v45;
-    v46 = v50 + 3;
+    while ( v40 != 3 );
+    v35 += 3;
   }
-  while ( v45 != 3 );
-  v55 = &v84;
+  while ( v35 != &v75 );
+  v41 = &v75;
   do
   {
-    v56 = v55[1];
-    ++v55;
-    v57 = AKSC_norm32(v56);
-    v58 = v47;
-    if ( v57 < (signed __int16)v47 )
-      v58 = v57;
-    LOWORD(v47) = v58;
+    v42 = AKSC_norm32(*v41);
+    LOWORD(v43) = v37;
+    v44 = v42 << 16;
+    if ( (signed int)v44 < v37 << 16 )
+      v43 = v44 >> 16;
+    ++v41;
+    v37 = (unsigned __int16)v43;
   }
-  while ( v55 != &v87 );
-  v59 = v66 + 6;
-  v60 = v77 << v58 >> 18;
-  *(_WORD *)(v66 + 6) = v60;
-  *(_WORD *)(v66 + 2) = v60;
-  v61 = v66 + 12;
-  v62 = v78 << v58 >> 18;
-  *(_WORD *)(v66 + 12) = v62;
-  *(_WORD *)(v66 + 4) = v62;
-  v63 = v67 << v58 >> 18;
-  *(_WORD *)(v61 + 2) = v63;
-  *(_WORD *)(v59 + 4) = v63;
-  *(_WORD *)v66 = v76 << v58 >> 18;
-  *(_WORD *)(v59 + 2) = v80 << v58 >> 18;
-  *(_WORD *)(v61 + 4) = v84 << v58 >> 18;
-  *(_WORD *)v72 = v71 >> 1 << v58 >> 18;
-  *(_WORD *)(v72 + 2) = v70 >> 1 << v58 >> 18;
-  *(_WORD *)(v72 + 4) = v69 >> 1 << v58 >> 18;
-  if ( (signed int)*(_WORD *)v66 <= 5 || (signed int)*(_WORD *)(v66 + 8) <= 5 || (signed int)*(_WORD *)(v66 + 16) <= 5 )
-LABEL_31:
+  while ( (char *)v41 != &v78 );
+  v45 = (v67 << v43 >> 18) & 0xFFFF;
+  *(_WORD *)(v55 + 6) = v67 << v43 >> 18;
+  v46 = v55 + 6;
+  *(_WORD *)(v55 + 2) = v45;
+  v47 = (v68 << v43 >> 18) & 0xFFFF;
+  *(_WORD *)(v55 + 12) = v68 << v43 >> 18;
+  v48 = v55 + 12;
+  *(_WORD *)(v55 + 4) = v47;
+  v49 = (v71 << v43 >> 18) & 0xFFFF;
+  *(_WORD *)(v48 + 2) = v71 << v37 >> 18;
+  *(_WORD *)(v46 + 4) = v49;
+  *(_WORD *)v55 = v66 << v37 >> 18;
+  *(_WORD *)(v46 + 2) = v70 << v37 >> 18;
+  *(_WORD *)(v48 + 4) = v74 << v37 >> 18;
+  *(_WORD *)v63 = v36 << v37 >> 18;
+  *(_WORD *)(v63 + 2) = v54 << v37 >> 18;
+  *(_WORD *)(v63 + 4) = v52 << v37 >> 18;
+  if ( (signed int)*(_WORD *)v55 <= 5
+    || (signed int)*(_WORD *)(v55 + 8) <= 5
+    || (result = 4, (signed int)*(_WORD *)(v55 + 16) <= 5) )
+  {
+LABEL_30:
     result = 0;
-  else
-    result = 4;
-  return result;
-}
-// 3C78: using guessed type char var_158[190];
-// 3C78: using guessed type char var_98[64];
-
-//----- (00003F60) --------------------------------------------------------
-int __fastcall sub_3F60(int result, signed int a2, int a3, int a4)
-{
-  __int16 i; // r6@1
-  int v5; // r5@2
-  int v6; // r4@6
-
-  for ( i = 0; i < a2; ++i )
-  {
-    v6 = 0;
-    do
-    {
-      v5 = *(_WORD *)(result + v6) + *(_WORD *)(a3 + v6) * a4;
-      if ( (v5 + 0x8000 < 0) ^ __OFADD__(v5, 0x8000) )
-      {
-        LOWORD(v5) = -32768;
-      }
-      else if ( v5 >= 0x7FFF )
-      {
-        LOWORD(v5) = 0x7FFF;
-      }
-      *(_WORD *)(result + v6) = v5;
-      v6 += 2;
-    }
-    while ( v6 != 6 );
-    result += 6;
   }
   return result;
 }
+// 4684: using guessed type char var_88[64];
+// 4684: using guessed type char var_148[192];
 
-//----- (00003FA4) --------------------------------------------------------
-char *__fastcall AKSC_SetHDOELevel(char *result, char *a2, __int16 a3, int a4)
+//----- (00004984) --------------------------------------------------------
+int __fastcall sub_4984(int a1, int a2, int a3)
 {
-  char *v4; // r4@1
-  char *v5; // r6@1
-  signed int v6; // r7@1
-  int v7; // r8@2
-  char *v8; // r0@3
-  int v9; // r8@4
-  char *v10; // r0@5
-  char *v11; // r8@6
-  int v12; // r9@6
-  void *v13; // r0@7
-  signed __int16 v14; // r3@9
+  int v3; // r5@1
+  int v4; // r4@1
+  signed int v5; // r1@1
+  signed int v6; // r2@1
+  int v7; // r0@1
+  unsigned int v8; // r3@2
+  int v9; // r1@2
+  signed int v10; // r3@2
+  int v11; // r1@3
+  int v12; // r7@8
+  unsigned int v13; // r3@8
+  int v14; // r0@10
+  int v15; // r1@13
+  int v16; // r7@16
+  unsigned int v17; // r3@16
+  int v18; // r0@18
+  int v19; // r1@21
+  int v20; // r1@27
+  int v21; // r1@33
+  int v22; // r1@39
+  int v23; // r2@45
+  int v24; // r3@46
+  int v25; // r2@47
+  int v26; // r3@48
+  int v27; // r5@49
+  int v28; // r2@49
+  int v29; // r3@50
+  int v30; // r7@51
+  int v31; // r2@51
+  int result; // r0@52
+  int v33; // [sp+4h] [bp-54h]@1
+  char v34[12]; // [sp+Ch] [bp-4Ch]@1
+  char dest[12]; // [sp+18h] [bp-40h]@1
+  int v36; // [sp+24h] [bp-34h]@1
+  int v37; // [sp+28h] [bp-30h]@1
+  __int16 v38; // [sp+2Ch] [bp-2Ch]@1
+  int v39; // [sp+30h] [bp-28h]@1
+  int v40; // [sp+34h] [bp-24h]@1
+  __int16 v41; // [sp+38h] [bp-20h]@1
+  int v42; // [sp+3Ch] [bp-1Ch]@1
 
-  v4 = result;
-  v5 = a2;
-  LOWORD(v6) = a3;
+  v33 = a3;
+  v3 = a2;
+  v4 = a1;
+  v42 = _stack_chk_guard;
+  memcpy(dest, &unk_7D10, 0xBu);
+  v39 = 1206631600;
+  v41 = 92;
+  v40 = 1553417105;
+  memcpy(v34, "ASAHIKASEI", 0xBu);
+  v36 = 1598375756;
+  v37 = 1197421366;
+  v38 = 66;
+  v5 = 1;
+  v6 = 0;
+  v7 = 2;
+  while ( 1 )
+  {
+    v8 = (v5 + v6) << 16;
+    v6 = v5;
+    v9 = (signed __int16)(v7 + 1);
+    v10 = v8 >> 16;
+    v7 = (v7 + 1) & 0xFFFF;
+    if ( v9 == 10 )
+      break;
+    v5 = v10;
+  }
+  v11 = 0;
+  while ( dest[v11] )
+  {
+    v12 = (v10 + v6) & 0xFFFF;
+    dest[v11] = dest[v11] + 2 - (v10 + v6);
+    ++v11;
+    v6 = v10;
+    v13 = v12 << 16;
+    if ( v11 == 16 )
+      goto LABEL_11;
+    v10 = (unsigned __int16)v12;
+  }
+  v11 = (unsigned __int16)v11;
+  while ( (signed __int16)v11 <= 15 )
+  {
+    v14 = v10 + v6;
+    v6 = v10;
+    v11 = (v11 + 1) & 0xFFFF;
+    v13 = v14 << 16;
+LABEL_11:
+    v10 = v13 >> 16;
+  }
+  v15 = 0;
+  while ( *((_BYTE *)&v39 + v15) )
+  {
+    v16 = (v10 + v6) & 0xFFFF;
+    *((_BYTE *)&v39 + v15) = *((_BYTE *)&v39 + v15) - 51 - (v10 + v6);
+    ++v15;
+    v6 = v10;
+    v17 = v16 << 16;
+    if ( v15 == 16 )
+      goto LABEL_19;
+    v10 = (unsigned __int16)v16;
+  }
+  v15 = (unsigned __int16)v15;
+  while ( (signed __int16)v15 <= 15 )
+  {
+    v18 = v10 + v6;
+    v6 = v10;
+    v15 = (v15 + 1) & 0xFFFF;
+    v17 = v18 << 16;
+LABEL_19:
+    v10 = v17 >> 16;
+  }
+  v19 = 0;
+  do
+  {
+    if ( !dest[v19] && !*(_BYTE *)(v4 + v19) )
+      goto LABEL_27;
+    if ( *(_BYTE *)(v4 + v19) != (unsigned __int8)dest[v19] )
+      goto LABEL_53;
+    ++v19;
+  }
+  while ( v19 != 16 );
+  if ( *(_BYTE *)(v4 + 16) )
+  {
+LABEL_53:
+    LOWORD(result) = -32768;
+    goto LABEL_54;
+  }
+LABEL_27:
+  v20 = 0;
+  while ( *((_BYTE *)&v39 + v20) || *(_BYTE *)(v3 + v20) )
+  {
+    if ( *(_BYTE *)(v3 + v20) != *((_BYTE *)&v39 + v20) )
+      goto LABEL_53;
+    if ( ++v20 == 16 )
+    {
+      if ( *(_BYTE *)(v3 + 16) )
+        goto LABEL_53;
+      break;
+    }
+  }
+  v21 = 0;
+  while ( v34[v21] || *(_BYTE *)(v4 + v21) )
+  {
+    if ( *(_BYTE *)(v4 + v21) != (unsigned __int8)v34[v21] )
+      goto LABEL_53;
+    if ( ++v21 == 16 )
+    {
+      if ( *(_BYTE *)(v4 + 16) )
+        goto LABEL_53;
+      break;
+    }
+  }
+  v22 = 0;
+  while ( *((_BYTE *)&v36 + v22) || *(_BYTE *)(v3 + v22) )
+  {
+    if ( *(_BYTE *)(v3 + v22) != *((_BYTE *)&v36 + v22) )
+      goto LABEL_53;
+    if ( ++v22 == 16 )
+    {
+      if ( *(_BYTE *)(v3 + 16) )
+        goto LABEL_53;
+      break;
+    }
+  }
+  v23 = (v10 + v6) & 0xFFFF;
+  if ( *(_WORD *)v33 != (signed __int16)(12091 - v23) )
+    goto LABEL_53;
+  v24 = (v23 + v10) & 0xFFFF;
+  if ( *(_WORD *)(v33 + 2) != (signed __int16)(-26131 - v24) )
+    goto LABEL_53;
+  v25 = (v24 + v23) & 0xFFFF;
+  if ( (-23074 - v25) << 16 > *(_WORD *)(v33 + 4) << 16 )
+    goto LABEL_53;
+  v26 = (v25 + v24) & 0xFFFF;
+  if ( (signed __int16)(16512 - v26) < (signed int)*(_WORD *)(v33 + 4) )
+    goto LABEL_53;
+  v27 = *(_WORD *)(v33 + 6);
+  v28 = (v26 + v25) & 0xFFFF;
+  if ( (-6816 - v28) << 16 > v27 << 16 )
+    goto LABEL_53;
+  v29 = (v28 + v26) & 0xFFFF;
+  if ( (signed __int16)(9695 - v29) < (signed __int16)v27 )
+    goto LABEL_53;
+  v30 = *(_WORD *)(v33 + 8);
+  v31 = (v29 + v28) & 0xFFFF;
+  if ( (2625 - v31) << 16 > v30 << 16 )
+    goto LABEL_53;
+  LOWORD(result) = 1;
+  if ( (signed __int16)(12319 - v29 - v31) < (signed __int16)v30 )
+    goto LABEL_53;
+LABEL_54:
+  result = (signed __int16)result;
+  if ( v42 != _stack_chk_guard )
+    _stack_chk_fail(result);
+  return result;
+}
+// 18C4: using guessed type int __fastcall _stack_chk_fail(_DWORD);
+// 4984: using guessed type char dest[12];
+// 4984: using guessed type char var_4C[12];
+
+//----- (00004C28) --------------------------------------------------------
+int __fastcall AKSC_SetHDOELevel(int a1, int a2, __int16 a3, int a4)
+{
+  int v4; // r4@1
+  int v5; // r3@2
+  int v6; // r2@3
+  int v7; // r3@4
+  int v8; // r2@5
+  int v9; // r3@6
+  int v10; // r6@6
+  int v11; // r7@7
+  signed __int16 v12; // r2@9
+  int result; // r0@9
+  __int16 v14; // [sp+14h] [bp-1Ch]@1
+
+  v4 = a1;
+  v14 = a3;
   if ( a4 )
   {
+    v5 = 0;
+    do
+    {
+      v6 = a1 + v5;
+      v5 += 6;
+      *(_WORD *)(v6 + 4) = I16V_INIT_VALUE;
+      *(_WORD *)(v6 + 8) = unk_7FDC;
+      *(_WORD *)(v6 + 6) = unk_7FDA;
+    }
+    while ( v5 != 192 );
     v7 = 0;
     do
     {
-      v8 = &v4[v7 + 4];
+      *(_WORD *)(a1 + v7 + 196) = I16V_INIT_VALUE;
+      v8 = a1 + v7 + 198;
       v7 += 6;
-      memcpy(v8, &I16V_INIT_VALUE, 6u);
+      *(_WORD *)v8 = unk_7FDA;
+      *(_WORD *)(v8 + 2) = unk_7FDC;
     }
-    while ( v7 != 192 );
-    v9 = 0;
+    while ( v7 != 96 );
+    v9 = a1 + 292;
+    v10 = 0;
     do
     {
-      v10 = &v4[v9 + 196];
+      *(_WORD *)(v9 + 2) = unk_7FDA;
+      *(_WORD *)v9 = I16V_INIT_VALUE;
+      *(_WORD *)(v9 + 4) = unk_7FDC;
+      *(_WORD *)(v9 + 108) = I16V_INIT_VALUE;
+      *(_WORD *)(v9 + 110) = unk_7FDA;
+      *(_WORD *)(v9 + 112) = unk_7FDC;
+      v11 = (signed __int16)(v10 + 1);
       v9 += 6;
-      memcpy(v10, &I16V_INIT_VALUE, 6u);
+      v10 = (v10 + 1) & 0xFFFF;
     }
-    while ( v9 != 96 );
-    v11 = v4;
-    v12 = 0;
-    do
-    {
-      ++v12;
-      memcpy(v11 + 292, &I16V_INIT_VALUE, 6u);
-      v13 = v11 + 400;
-      v11 += 6;
-      result = (char *)memcpy(v13, &I16V_INIT_VALUE, 6u);
-    }
-    while ( v12 != 16 );
+    while ( v11 != 16 );
   }
-  v6 = (signed __int16)v6;
-  if ( (signed __int16)v6 > 0 )
+  if ( v14 > 0 )
   {
-    *((_WORD *)v4 + 194) = 1;
-    result = AKSC_buffer(v5, 16, 1, (int)(v4 + 292));
-    if ( v6 <= 3 )
+    *(_WORD *)(a1 + 388) = 1;
+    result = AKSC_buffer(a2, 16, 1, a1 + 292);
+    if ( v14 <= 3 )
     {
-      *((_WORD *)v4 + 195) = v6 - 1;
+      *(_WORD *)(v4 + 390) = v14 - 1;
       return result;
     }
-    v14 = 2;
+    v12 = 2;
   }
   else
   {
-    v14 = 0;
-    *((_WORD *)v4 + 194) = 0;
+    v12 = 0;
+    result = 195;
+    *(_WORD *)(v4 + 388) = 0;
   }
-  *((_WORD *)v4 + 195) = v14;
+  *(_WORD *)(v4 + 390) = v12;
   return result;
 }
 
-//----- (00004074) --------------------------------------------------------
-char *__fastcall zzAKSC_InitHDOEProcPrmsS3(int a1, int a2, int a3, __int16 a4, char *a5, __int16 a6)
+//----- (00004D18) --------------------------------------------------------
+signed int __fastcall zzAKSC_InitHDOEProcPrmsS3(int a1, int a2, int a3, __int16 a4, int a5, __int16 a6)
 {
   int v6; // r4@1
   __int16 v7; // r5@1
-  char *result; // r0@1
+  signed int result; // r0@1
 
   v6 = a1;
-  v7 = a4;
   *(_DWORD *)a1 = a2;
+  v7 = a4;
   *(_DWORD *)(a1 + 396) = a3;
-  result = AKSC_SetHDOELevel((char *)a1, a5, a6, 1);
-  *(_WORD *)(v6 + 394) = v7;
+  AKSC_SetHDOELevel(a1, a5, a6, 1);
   *(_WORD *)(v6 + 392) = 0;
+  result = 249;
+  *(_WORD *)(v6 + 394) = v7;
   *(_WORD *)(v6 + 496) = 0;
   *(_WORD *)(v6 + 498) = 0;
   return result;
 }
 
-//----- (000040A0) --------------------------------------------------------
-signed int __fastcall sub_40A0(char *a1, _WORD *a2, _WORD *a3, int a4, int a5, _WORD *a6, _WORD *a7, __int16 a8)
+//----- (00004D50) --------------------------------------------------------
+int __fastcall sub_4D50(int a1, int a2, int a3, int a4, _WORD *a5, _WORD *a6)
 {
-  char *v8; // r7@1
-  _WORD *v9; // r4@1
-  int v10; // r5@1
-  signed int v11; // r3@5
-  int v12; // r2@10
-  char *v13; // r8@13
-  int v14; // r11@13
-  signed int v15; // r0@13
-  char *v16; // r3@13
-  __int16 v17; // lr@14
-  signed int v18; // r0@16
-  signed int v19; // r7@17
-  unsigned int v20; // r1@18
-  unsigned int v21; // r10@18
-  unsigned int v22; // r3@18
-  int v23; // r8@18
-  int v24; // r10@18
-  int v25; // r8@18
-  int v26; // r7@18
-  int v27; // r4@18
-  int v28; // r9@18
-  signed __int16 v29; // r5@18
-  int v30; // r10@18
-  int v31; // r3@19
-  int v32; // r2@19
-  unsigned int v33; // r0@19
-  int v34; // r0@19
-  __int16 v35; // r0@24
-  int v36; // r0@24
-  signed int v44; // r3@31
-  signed int v45; // r6@34
-  signed int v46; // r6@40
-  int v48; // [sp+Ch] [bp-ACh]@0
-  int v49; // [sp+10h] [bp-A8h]@1
-  _WORD *v50; // [sp+14h] [bp-A4h]@18
-  char v51; // [sp+18h] [bp-A0h]@13
-  char v52; // [sp+2Ch] [bp-8Ch]@13
-  __int16 v53; // [sp+3Eh] [bp-7Ah]@14
-  char v54; // [sp+40h] [bp-78h]@31
-  char v55; // [sp+48h] [bp-70h]@13
-  __int16 v56; // [sp+50h] [bp-68h]@18
-  __int16 v57; // [sp+52h] [bp-66h]@18
-  __int16 v58; // [sp+54h] [bp-64h]@18
-  __int16 v59; // [sp+58h] [bp-60h]@16
-  __int16 v60; // [sp+5Ah] [bp-5Eh]@32
-  __int16 v61; // [sp+5Ch] [bp-5Ch]@33
-  unsigned __int16 v62; // [sp+60h] [bp-58h]@16
-  unsigned __int16 v63; // [sp+62h] [bp-56h]@35
-  __int16 v64; // [sp+64h] [bp-54h]@36
-  char v65; // [sp+68h] [bp-50h]@13
-  char v66; // [sp+70h] [bp-48h]@13
-  char v67; // [sp+78h] [bp-40h]@13
-  char v68; // [sp+80h] [bp-38h]@13
-  int v69; // [sp+88h] [bp-30h]@2
-  __int16 v70; // [sp+8Ch] [bp-2Ch]@2
-  __int16 v71; // [sp+8Eh] [bp-2Ah]@38
+  int v6; // r7@1
+  int v7; // r4@1
+  int v8; // r6@2
+  signed int v9; // r5@2
+  int v10; // r6@3
+  int v11; // r1@3
+  int v12; // r3@3
+  unsigned __int16 v13; // r0@3
+  int v14; // r2@4
+  int v15; // r1@4
+  int v16; // r3@4
+  unsigned int v17; // r0@4
+  int v18; // r0@4
+  unsigned __int16 v19; // r3@4
+  unsigned __int16 v20; // r3@6
+  int v21; // r0@10
+  int v22; // r0@10
+  int v23; // r3@10
+  int result; // r0@10
+  int v25; // [sp+4h] [bp-24h]@2
+  int i; // [sp+8h] [bp-20h]@3
+  int v27; // [sp+Ch] [bp-1Ch]@1
 
-  v8 = a1;
-  v9 = a2;
-  v49 = a4;
-  v10 = (int)a3;
+  v6 = a1;
+  v27 = a2;
+  v7 = a3;
+  if ( a4 == 4 )
+  {
+    v10 = *(_WORD *)a1 - *(_WORD *)a3;
+    v11 = *(_WORD *)(a1 + 2) - *(_WORD *)(a3 + 2);
+    v12 = *(_WORD *)(a1 + 4) - *(_WORD *)(a3 + 4);
+    v9 = v11 * v11 + v10 * v10 + v12 * v12;
+    v13 = AKSC_sqrt32(v9);
+    v8 = v13;
+    v25 = v13;
+    for ( i = 1; ; i = (i + 1) & 0xFFFF )
+    {
+      v6 += 6;
+      if ( (signed __int16)i >= v27 )
+        break;
+      v14 = *(_WORD *)v6 - *(_WORD *)v7;
+      v15 = *(_WORD *)(v6 + 2) - *(_WORD *)(v7 + 2);
+      v16 = *(_WORD *)(v6 + 4) - *(_WORD *)(v7 + 4);
+      v17 = v15 * v15 + v14 * v14 + v16 * v16;
+      v9 += v17;
+      v18 = (unsigned __int16)AKSC_sqrt32(v17);
+      v19 = v18;
+      if ( v25 << 16 > v18 << 16 )
+        v19 = v25;
+      v25 = v19;
+      v20 = v18;
+      if ( v8 << 16 < v18 << 16 )
+        v20 = v8;
+      v8 = v20;
+    }
+  }
+  else
+  {
+    LOWORD(v8) = 0;
+    LOWORD(v25) = 0;
+    v9 = 0;
+  }
+  v21 = AKSC_div16(1, v27);
+  v22 = AKSC_sqrt32((((v9 >> 6) & 1) + (v9 >> 7)) * (((v21 << 16 >> 19) & 1) + (v21 << 16 >> 20)));
+  v23 = v22 << 16 >> 17;
+  result = v22 << 16 >> 18;
+  *a5 = (v23 & 1) + result;
+  *a6 = v25 - v8;
+  return result;
+}
+
+//----- (00004E64) --------------------------------------------------------
+signed int __fastcall sub_4E64(int a1, int a2, int a3, int a4, _WORD *a5, _WORD *a6)
+{
+  int v6; // r4@1
+  int v7; // r5@1
+  signed int v8; // r0@1
+  signed int v9; // r6@1
+  char *v10; // r3@1
+  __int16 v11; // r1@2
+  int v13; // [sp+8h] [bp-60h]@1
+  int v14; // [sp+Ch] [bp-5Ch]@1
+  char v15; // [sp+1Ch] [bp-4Ch]@1
+  __int16 v16; // [sp+2Eh] [bp-3Ah]@2
+  int v17; // [sp+30h] [bp-38h]@4
+  int v18; // [sp+38h] [bp-30h]@4
+  char v19; // [sp+40h] [bp-28h]@6
+  signed __int16 v20; // [sp+42h] [bp-26h]@6
+  signed __int16 v21; // [sp+44h] [bp-24h]@6
+  char v22; // [sp+48h] [bp-20h]@1
+
+  v6 = a3;
+  v7 = a4;
+  v13 = a1;
+  v14 = a2;
+  v8 = AKSC_getCoeff(a1, a2, a4, (int)&v22);
+  v9 = v8;
+  v10 = &v15;
+  do
+  {
+    *(_WORD *)v10 = *(_WORD *)v7;
+    *((_WORD *)v10 + 1) = *(_WORD *)(v7 + 2);
+    v11 = *(_WORD *)(v7 + 4);
+    v7 += 6;
+    *((_WORD *)v10 + 2) = v11;
+    v10 += 6;
+  }
+  while ( (__int16 *)v10 != &v16 );
+  if ( v8 != 4 )
+  {
+    *(_WORD *)v6 = 0;
+    *(_WORD *)(v6 + 4) = 0;
+    *(_WORD *)(v6 + 2) = 0;
+    *a5 = 0;
+    return 0;
+  }
+  if ( !(AKSC_cholDc((int)&v15, 3, (int)&v18, (int)&v17) & 0xFFFF) )
+  {
+    *(_WORD *)(v6 + 4) = 0;
+    *(_WORD *)(v6 + 2) = 0;
+    *(_WORD *)v6 = 0;
+    *a5 = 0;
+    return 0;
+  }
+  AKSC_cholSl((int)&v15, 3, (int)&v18, (int)&v17, (int)&v22, (int)&v19);
+  *(_WORD *)v6 = *(_WORD *)&v19 >> 2;
+  *(_WORD *)(v6 + 2) = v20 >> 2;
+  *(_WORD *)(v6 + 4) = v21 >> 2;
+  sub_4D50(v13, v14, v6, 4, a5, a6);
+  return v9;
+}
+
+//----- (00004F18) --------------------------------------------------------
+signed int __fastcall sub_4F18(int a1, int a2, int a3, int a4, int a5, __int16 a6, __int16 a7)
+{
+  int v7; // r4@1
+  signed int v8; // r3@5
+  int v9; // r5@8
+  signed int result; // r0@13
+  int v11; // [sp+Ch] [bp-54h]@1
+  int v12; // [sp+14h] [bp-4Ch]@1
+  char v13; // [sp+18h] [bp-48h]@12
+  char v14; // [sp+20h] [bp-40h]@5
+  int v15; // [sp+28h] [bp-38h]@5
+  char v16; // [sp+30h] [bp-30h]@5
+  char v17; // [sp+38h] [bp-28h]@5
+  __int16 v18; // [sp+3Ah] [bp-26h]@6
+  __int16 v19; // [sp+3Ch] [bp-24h]@7
+  unsigned __int16 v20[16]; // [sp+40h] [bp-20h]@8
+  signed __int16 v21; // [sp+42h] [bp-1Eh]@9
+  signed __int16 v22; // [sp+44h] [bp-1Ch]@10
+  signed int v23; // [sp+46h] [bp-1Ah]@12
+
+  v11 = a1;
+  v7 = a3;
+  v12 = a4;
+  if ( a5 != 4
+    || *(_WORD *)(a3 + 16) >= a6
+    || *(_WORD *)(a3 + 14) <= a6
+    || a7 << 11 >= *(_WORD *)(a3 + 18) * a6
+    || (AKSC_vectorCalc(a2, *(_WORD *)(a3 + 2), (signed __int16 *)&v16, (signed __int16 *)&v15, (int)&v14, (int)&v17),
+        v8 = *(_WORD *)(v7 + 10),
+        *(signed __int16 *)&v17 >= v8)
+    || v18 >= v8
+    || v19 >= v8
+    || (AKSC_vectorCalc(v11, *(_WORD *)v7, (signed __int16 *)&v16, (signed __int16 *)&v15, (int)&v14, (int)v20),
+        v9 = *(_WORD *)(v7 + 6),
+        v9 << 16 >= v20[0] << 16)
+    || v21 <= (signed __int16)v9
+    || v22 <= (signed __int16)v9
+    || v21 + (signed __int16)v20[0] + v22 < *(_WORD *)(v7 + 8)
+    || !(AKSC_fitOnPlane(v11, *(_WORD *)v7, v12, (int)&v13, &v23) << 16)
+    || (result = 1, (signed __int16)v23 <= (signed int)*(_WORD *)(v7 + 12)) )
+  {
+    result = 0;
+  }
+  return result;
+}
+
+//----- (00005008) --------------------------------------------------------
+signed int __fastcall sub_5008(_WORD *a1, _WORD *a2, _WORD *a3, int a4, int a5, __int16 *a6, _WORD *a7, __int16 a8)
+{
+  int v8; // r4@1
+  int v9; // r5@1
+  int v10; // r7@1
+  signed int v11; // r3@5
+  int v12; // r3@10
+  int v13; // r2@13
+  int v14; // r1@13
+  int v15; // r12@13
+  int v16; // r4@14
+  int v17; // r3@18
+  int v18; // r4@22
+  int v19; // r6@22
+  int v20; // r3@22
+  int v21; // r7@23
+  signed int result; // r0@28
+  int v23; // r2@30
+  signed int v24; // r4@30
+  int v25; // r1@31
+  int v26; // r3@35
+  int v27; // [sp+10h] [bp-68h]@13
+  signed int v28; // [sp+14h] [bp-64h]@13
+  int v29; // [sp+18h] [bp-60h]@1
+  char v30; // [sp+24h] [bp-54h]@22
+  char v31; // [sp+38h] [bp-40h]@13
+  char v32[8]; // [sp+40h] [bp-38h]@13
+  char v33; // [sp+48h] [bp-30h]@13
+  char v34; // [sp+50h] [bp-28h]@13
+  int v35; // [sp+58h] [bp-20h]@2
+  __int16 v36; // [sp+5Ch] [bp-1Ch]@2
+  __int16 v37; // [sp+5Eh] [bp-1Ah]@22
+
+  v29 = a4;
+  v8 = (int)a3;
+  v9 = (int)a2;
+  v10 = (int)a1;
   if ( (signed int)*a2 <= 0 )
     return 0;
-  v69 = 0;
-  v70 = 0;
+  v36 = 0;
+  v35 = 0;
   *a7 = 0;
   if ( a8 )
   {
@@ -3809,908 +4108,656 @@ signed int __fastcall sub_40A0(char *a1, _WORD *a2, _WORD *a3, int a4, int a5, _
   }
   else
   {
-    LOWORD(v69) = AKSC_abs16(*a3 - *(_WORD *)a1);
-    HIWORD(v69) = AKSC_abs16((signed __int16)(*(_WORD *)(v10 + 2) - *((_WORD *)v8 + 1)));
-    v70 = AKSC_abs16((signed __int16)(*(_WORD *)(v10 + 4) - *((_WORD *)v8 + 2)));
+    LOWORD(v35) = AKSC_abs16((signed __int16)(*a3 - *a1));
+    HIWORD(v35) = AKSC_abs16((signed __int16)(*(_WORD *)(v8 + 2) - *(_WORD *)(v10 + 2)));
+    v36 = AKSC_abs16((signed __int16)(*(_WORD *)(v8 + 4) - *(_WORD *)(v10 + 4)));
   }
-  v11 = v9[2];
-  if ( (signed __int16)v69 < v11 || SHIWORD(v69) < v11 || v70 < v11 )
+  v11 = *(_WORD *)(v9 + 4);
+  if ( (signed __int16)v35 < v11 || SHIWORD(v35) < v11 || v36 < v11 )
     return 0;
   if ( !a8 )
   {
-    AKSC_buffer(v8, *v9, 1, v10);
+    AKSC_buffer(v10, *(_WORD *)v9, 1, v8);
     *a7 = 1;
   }
 LABEL_10:
-  v12 = v10 + 6 * (*v9 - 1);
+  v12 = v8 + 6 * (*(_WORD *)v9 - 1);
   if ( *(_WORD *)v12 == 0x7FFF && *(_WORD *)(v12 + 2) == 0x7FFF && *(_WORD *)(v12 + 4) == 0x7FFF )
     return 0;
-  AKSC_vectorCalc(v10, *v9, (int)&v68, (int)&v67, (int)&v66, (int)&v65);
-  v13 = &v52;
-  sub_3F60(v10, *v9, (int)&v66, -1);
-  v14 = *v9;
-  v15 = AKSC_getCoeff(v10, v14, (int)&v52, (int)&v55);
-  v16 = &v51;
+  AKSC_vectorCalc(v8, *(_WORD *)v9, (signed __int16 *)&v34, (signed __int16 *)&v33, (int)v32, (int)&v31);
+  v13 = v8;
+  v27 = v8;
+  v14 = 0;
+  v28 = *(_WORD *)v9;
+  v15 = v8;
+  while ( (signed __int16)v14 < v28 )
+  {
+    v17 = 0;
+    do
+    {
+      v16 = *(_WORD *)(v13 + v17) - *(_WORD *)&v32[v17];
+      if ( v16 >= -32768 )
+      {
+        if ( v16 > 0x7FFF )
+          LOWORD(v16) = 0x7FFF;
+      }
+      else
+      {
+        LOWORD(v16) = -32768;
+      }
+      *(_WORD *)(v13 + v17) = v16;
+      v17 += 2;
+    }
+    while ( v17 != 6 );
+    v14 = (v14 + 1) & 0xFFFF;
+    v13 += 6;
+  }
+  v18 = v15;
+  v19 = sub_4E64(v15, *(_WORD *)v9, a5, (int)&v30, a6, &v37);
+  v20 = 0;
   do
   {
-    *(_WORD *)v16 = *(_WORD *)v13;
-    *((_WORD *)v16 + 1) = *((_WORD *)v13 + 1);
-    v17 = *((_WORD *)v13 + 2);
-    v13 += 6;
-    *((_WORD *)v16 + 2) = v17;
-    v16 += 6;
-  }
-  while ( (__int16 *)v13 != &v53 );
-  if ( v15 == 4 )
-  {
-    v18 = (unsigned __int16)AKSC_cholDc((int)&v51, 3, (int)&v59, (int)&v62);
-    if ( (_WORD)v18 )
+    v21 = *(_WORD *)&v32[v20] + *(_WORD *)(a5 + v20);
+    if ( v21 >= -32768 )
     {
-      AKSC_cholSl((int)&v51, 3, (int)&v59, (int)&v62, (int)&v55, (int)&v56);
-      v20 = ((unsigned int)v56 >> 2) & 0xFFFF;
-      *(_WORD *)a5 = (unsigned int)v56 >> 2;
-      v21 = ((unsigned int)v57 >> 2) & 0xFFFF;
-      *(_WORD *)(a5 + 2) = (unsigned int)v57 >> 2;
-      v22 = ((unsigned int)v58 >> 2) & 0xFFFF;
-      *(_WORD *)(a5 + 4) = (unsigned int)v58 >> 2;
-      v23 = *(_WORD *)(v10 + 2) - v21;
-      v24 = *(_WORD *)(v10 + 4) - (signed __int16)v22;
-      v25 = (*(_WORD *)v10 - v20) * (*(_WORD *)v10 - v20) + v23 * v23 + v24 * v24;
-      v26 = v10;
-      v50 = v9;
-      v27 = 0;
-      v28 = AKSC_sqrt32(v25);
-      v29 = 1;
-      v30 = v28;
-      while ( 1 )
-      {
-        v27 += 6;
-        if ( v29 >= v14 )
-          break;
-        v31 = *(_WORD *)(v26 + v27) - *(_WORD *)a5;
-        v32 = *(_WORD *)(v26 + v27 + 2) - *(_WORD *)(a5 + 2);
-        ++v29;
-        v33 = v31 * v31
-            + v32 * v32
-            + (*(_WORD *)(v26 + v27 + 4) - *(_WORD *)(a5 + 4)) * (*(_WORD *)(v26 + v27 + 4) - *(_WORD *)(a5 + 4));
-        v25 += v33;
-        v34 = AKSC_sqrt32(v33);
-        if ( v34 >= v28 )
-          v28 = v34;
-        if ( v34 < v30 )
-          v30 = v34;
-      }
-      v9 = v50;
-      v10 = v26;
-      v19 = 4;
-      v35 = AKSC_div16(1, v14);
-      v36 = AKSC_sqrt32(((((unsigned int)v25 >> 6) & 1) + (v25 >> 7)) * ((((unsigned int)v35 >> 3) & 1) + (v35 >> 4)));
-      *a6 = (((unsigned int)v36 >> 1) & 1) + (v36 >> 2);
-      v48 = v28 - v30;
+      if ( v21 > 0x7FFF )
+        LOWORD(v21) = 0x7FFF;
     }
     else
     {
-      *(_WORD *)(a5 + 4) = 0;
-      v19 = v18;
-      *(_WORD *)(a5 + 2) = 0;
-      *(_WORD *)a5 = 0;
-      *a6 = 0;
+      LOWORD(v21) = -32768;
     }
+    *(_WORD *)(a5 + v20) = v21;
+    v20 += 2;
   }
-  else
+  while ( v20 != 6 );
+  AKSC_buffer(a5, *(_WORD *)(v9 + 2), 1, v29);
+  result = 0;
+  if ( v19 )
+    result = sub_4F18(v18, v29, v9, (int)&v30, v19, *a6, v37);
+  v23 = 0;
+  v24 = *(_WORD *)v9;
+  while ( (signed __int16)v23 < v24 )
   {
-    *(_WORD *)(a5 + 4) = 0;
-    *(_WORD *)(a5 + 2) = 0;
-    *(_WORD *)a5 = 0;
-    *a6 = 0;
-    v19 = 0;
-  }
-  sub_3F60(a5, 1, (int)&v66, 1);
-  AKSC_buffer((char *)a5, v9[1], 1, v49);
-  if ( !v19 )
-    goto LABEL_47;
-  _R3 = *a6;
-  if ( v19 != 4 )
-    goto LABEL_47;
-  if ( v9[8] >= (signed __int16)_R3 )
-    goto LABEL_47;
-  if ( v9[7] <= (signed __int16)_R3 )
-    goto LABEL_47;
-  _R12 = v9[9];
-  __asm { SMULBB.W        R3, R12, R3 }
-  if ( _R3 <= v48 << 11 )
-    goto LABEL_47;
-  AKSC_vectorCalc(v49, v9[1], (int)&v56, (int)&v55, (int)&v54, (int)&v59);
-  v44 = v9[5];
-  if ( v59 < v44
-    && v60 < v44
-    && v61 < v44
-    && (AKSC_vectorCalc(v10, *v9, (int)&v56, (int)&v55, (int)&v54, (int)&v62), v45 = v9[3], (signed __int16)v62 > v45)
-    && (signed __int16)v63 > v45
-    && v64 > v45
-    && v62 + v63 + v64 >= v9[4]
-    && (unsigned __int16)AKSC_fitOnPlane(v10, *v9, (int)&v52, (int)&v51, &v71)
-    && v71 > (signed int)v9[6] )
-  {
-    v46 = 1;
-  }
-  else
-  {
-LABEL_47:
-    v46 = 0;
-  }
-  sub_3F60(v10, *v9, (int)&v66, 1);
-  return v46;
-}
-
-//----- (00004460) --------------------------------------------------------
-int __fastcall zzAKSC_HDOEProcessS3(int a1, int a2, int a3, int a4, int a5, __int16 a6, __int16 a7, __int16 a8, int a9, _DWORD *a10)
-{
-  int v10; // r7@1
-  int v11; // r5@1
-  int v12; // r4@1
-  int v13; // r6@1
-  signed int v14; // r8@1
-  int v15; // r1@3
-  char *v16; // r9@3
-  signed int v17; // r8@3
-  char v18; // r10@4
-  int v19; // t1@4
-  int v20; // ST1C_4@5
-  int v21; // r11@8
-  int v22; // r1@10
-  char *v23; // r9@10
-  signed int v24; // r8@10
-  char v25; // r10@11
-  int v26; // t1@11
-  int v27; // ST1C_4@12
-  int v28; // r11@15
-  int v29; // r9@17
-  int v30; // r8@17
-  int v31; // r10@17
-  int v32; // r3@17
-  int v33; // r3@23
-  int v34; // r3@29
-  int v35; // r3@35
-  int v36; // r2@43
-  int v37; // r2@45
-  int v38; // r3@47
-  int v45; // r6@53
-  int v46; // r3@53
-  signed __int16 v48; // r10@53
-  char *v54; // r7@55
-  int v56; // r2@61
-  __int16 v57; // r9@61
-  __int16 v58; // r12@61
-  int v59; // r1@62
-  char *v60; // lr@62
-  int v61; // r0@62
-  int v62; // r1@62
-  int v63; // r2@62
-  int v64; // r3@62
-  int v65; // r1@62
-  int v66; // r2@62
-  __int16 v67; // ST1C_2@63
-  signed int v68; // r2@66
-  __int16 v69; // r3@69
-  signed int v70; // r2@70
-  char *v76; // r7@74
-  int v78; // r1@81
-  signed int v79; // r3@82
-  int v80; // r3@85
-  int v81; // r0@85
-  int v82; // r2@85
-  int v83; // r1@85
-  signed int v84; // r12@85
-  char *v85; // r9@85
-  unsigned __int16 v86; // r0@89
-  signed int v87; // r12@89
-  int v88; // r0@89
-  __int16 v89; // r1@95
-  signed __int16 v90; // r5@97
-  int v91; // r3@97
-  int result; // r0@102
-  int v94; // [sp+14h] [bp-1DCh]@85
-  int v95; // [sp+28h] [bp-1C8h]@17
-  int v96; // [sp+28h] [bp-1C8h]@85
-  int v97; // [sp+2Ch] [bp-1C4h]@17
-  _WORD *v98; // [sp+2Ch] [bp-1C4h]@53
-  int v99; // [sp+30h] [bp-1C0h]@17
-  int v100; // [sp+34h] [bp-1BCh]@17
-  int v101; // [sp+38h] [bp-1B8h]@53
-  int v102; // [sp+40h] [bp-1B0h]@53
-  _WORD *v103; // [sp+44h] [bp-1ACh]@53
-  int v104; // [sp+48h] [bp-1A8h]@53
-  _WORD *v105; // [sp+4Ch] [bp-1A4h]@53
-  int v106; // [sp+50h] [bp-1A0h]@53
-  int v107; // [sp+5Ch] [bp-194h]@53
-  char dest[168]; // [sp+64h] [bp-18Ch]@1
-  char v109; // [sp+10Ch] [bp-E4h]@1
-  int v110; // [sp+160h] [bp-90h]@62
-  int v111; // [sp+164h] [bp-8Ch]@62
-  int v112; // [sp+168h] [bp-88h]@62
-  int v113; // [sp+16Ch] [bp-84h]@62
-  int v114; // [sp+170h] [bp-80h]@62
-  int v115; // [sp+174h] [bp-7Ch]@62
-  int v116; // [sp+178h] [bp-78h]@62
-  unsigned __int16 v117; // [sp+17Ch] [bp-74h]@1
-  __int16 v118; // [sp+17Eh] [bp-72h]@1
-  __int16 v119; // [sp+184h] [bp-6Ch]@53
-  __int16 v120; // [sp+186h] [bp-6Ah]@53
-  __int16 v121; // [sp+188h] [bp-68h]@53
-  __int16 v122; // [sp+18Ah] [bp-66h]@64
-  char v123[16]; // [sp+18Ch] [bp-64h]@1
-  char v124[16]; // [sp+19Ch] [bp-54h]@1
-  char v125[12]; // [sp+1ACh] [bp-44h]@1
-  char v126[12]; // [sp+1B8h] [bp-38h]@1
-  int v127; // [sp+1C4h] [bp-2Ch]@1
-  char v128[40]; // [sp+1C8h] [bp-28h]@62
-
-  v10 = a3;
-  v11 = a2;
-  v12 = a4;
-  v13 = a1;
-  v14 = 2;
-  v127 = _stack_chk_guard;
-  memcpy(dest, &unk_5688, 0xA8u);
-  memcpy(&v109, &unk_5730, 0x54u);
-  memcpy(v126, &unk_5619, 0xBu);
-  memcpy(v124, &unk_5624, 0xDu);
-  memcpy(v125, "ASAHIKASEI", 0xBu);
-  memcpy(v123, "OPPO_63_R601", 0xDu);
-  v118 = 0;
-  v117 = 1;
-  do
-  {
-    ++v14;
-    sub_2BBC((int)&v117);
-  }
-  while ( v14 != 10 );
-  v15 = a9;
-  v16 = v126;
-  v17 = 0;
-  do
-  {
-    v19 = (unsigned __int8)*v16++;
-    v18 = v19;
-    if ( !v19 )
-      break;
-    v20 = v15;
-    sub_2BBC((int)&v117);
-    ++v17;
-    *(v16 - 1) = v18 - 65 - v117;
-    v15 = v20;
-  }
-  while ( v17 != 16 );
-  v21 = v15;
-  while ( v17 <= 15 )
-  {
-    sub_2BBC((int)&v117);
-    ++v17;
-  }
-  v22 = v21;
-  v23 = v124;
-  v24 = 0;
-  do
-  {
-    v26 = (unsigned __int8)*v23++;
-    v25 = v26;
-    if ( !v26 )
-      break;
-    ++v24;
-    v27 = v22;
-    sub_2BBC((int)&v117);
-    *(v23 - 1) = v25 - 60 - v117;
-    v22 = v27;
-  }
-  while ( v24 != 16 );
-  v28 = v22;
-  while ( v24 <= 15 )
-  {
-    sub_2BBC((int)&v117);
-    ++v24;
-  }
-  sub_2BBC((int)&v117);
-  v29 = v117;
-  sub_2BBC((int)&v117);
-  v30 = v117;
-  sub_2BBC((int)&v117);
-  v31 = v117;
-  sub_2BBC((int)&v117);
-  v100 = v117;
-  sub_2BBC((int)&v117);
-  v99 = v117;
-  sub_2BBC((int)&v117);
-  v97 = v117;
-  sub_2BBC((int)&v117);
-  v95 = v117;
-  sub_2BBC((int)&v117);
-  v32 = 0;
-  do
-  {
-    if ( !v126[v32] && !*(_BYTE *)(v13 + v32) )
-      goto LABEL_23;
-    if ( *(_BYTE *)(v13 + v32) != (unsigned __int8)v126[v32] )
-      goto LABEL_100;
-    ++v32;
-  }
-  while ( v32 != 16 );
-  if ( *(_BYTE *)(v13 + 16) )
-  {
-LABEL_100:
-    v90 = -32768;
-    goto LABEL_102;
-  }
-LABEL_23:
-  v33 = 0;
-  while ( v124[v33] || *(_BYTE *)(v11 + v33) )
-  {
-    if ( *(_BYTE *)(v11 + v33) != (unsigned __int8)v124[v33] )
-      goto LABEL_100;
-    if ( ++v33 == 16 )
-    {
-      if ( *(_BYTE *)(v11 + 16) )
-        goto LABEL_100;
-      break;
-    }
-  }
-  v34 = 0;
-  while ( v125[v34] || *(_BYTE *)(v13 + v34) )
-  {
-    if ( *(_BYTE *)(v13 + v34) != (unsigned __int8)v125[v34] )
-      goto LABEL_100;
-    if ( ++v34 == 16 )
-    {
-      if ( *(_BYTE *)(v13 + 16) )
-        goto LABEL_100;
-      break;
-    }
-  }
-  v35 = 0;
-  while ( v123[v35] || *(_BYTE *)(v11 + v35) )
-  {
-    if ( *(_BYTE *)(v11 + v35) != (unsigned __int8)v123[v35] )
-      goto LABEL_100;
-    if ( ++v35 == 16 )
-    {
-      if ( *(_BYTE *)(v11 + 16) )
-        goto LABEL_100;
-      break;
-    }
-  }
-  if ( *(_WORD *)v10 != 12091 - v29 )
-    goto LABEL_100;
-  if ( *(_WORD *)(v10 + 2) != -26131 - v30 )
-    goto LABEL_100;
-  v36 = *(_WORD *)(v10 + 4);
-  if ( v36 < -23074 - v31 )
-    goto LABEL_100;
-  if ( 16512 - v100 < v36 )
-    goto LABEL_100;
-  v37 = *(_WORD *)(v10 + 6);
-  if ( v37 < -6816 - v99 )
-    goto LABEL_100;
-  if ( 9695 - v97 < v37 )
-    goto LABEL_100;
-  v38 = *(_WORD *)(v10 + 8);
-  if ( v38 < 2625 - v95 || (signed __int16)(12319 - v117) < v38 )
-    goto LABEL_100;
-  _R3 = (unsigned __int16)(a6 - 1);
-  if ( _R3 > 0x1F
-    || (unsigned int)*(_WORD *)(v12 + 394) > 1
-    || (unsigned int)*(_WORD *)(v12 + 388) > 0x10
-    || (unsigned int)*(_WORD *)(v12 + 390) > 2 )
-  {
-    v90 = 0;
-  }
-  else
-  {
-    v104 = v12 + 196;
-    _R0 = 6;
-    __asm { SMULBB.W        R10, R3, R0 }
-    v103 = (_WORD *)(v12 + 392);
-    v101 = -6 * _R3 - 6;
-    v106 = v12 + 400;
-    v45 = 0;
-    v46 = a5 + _R10;
-    _R8 = 28;
-    v48 = 0;
-    v105 = (_WORD *)(v12 + 496);
-    v121 = 0;
-    v120 = 0;
-    v119 = 0;
-    v98 = (_WORD *)(v12 + 4);
-    v102 = v12 + 292;
-    v107 = v46;
+    v26 = 0;
     do
     {
-      _R3 = *(_WORD *)(v12 + 394);
-      _R1 = *(_WORD *)(v12 + 390);
-      if ( *(_DWORD *)v12 )
+      v25 = *(_WORD *)&v32[v26] + *(_WORD *)(v27 + v26);
+      if ( v25 >= -32768 )
       {
-        __asm { SMULBB.W        R9, R1, R8 }
-        v54 = (char *)(*(_DWORD *)(*(_DWORD *)v12 + 4 * _R3) + _R9);
+        if ( v25 > 0x7FFF )
+          LOWORD(v25) = 0x7FFF;
       }
       else
       {
-        _R12 = 84;
-        __asm
+        LOWORD(v25) = -32768;
+      }
+      *(_WORD *)(v27 + v26) = v25;
+      v26 += 2;
+    }
+    while ( v26 != 6 );
+    v23 = (v23 + 1) & 0xFFFF;
+    v27 += 6;
+  }
+  return result;
+}
+// 5008: using guessed type char var_38[8];
+
+//----- (00005218) --------------------------------------------------------
+int __fastcall zzAKSC_HDOEProcessS3(int a1, int a2, int a3, int a4, int a5, __int16 a6, __int16 a7, __int16 a8, int a9, _DWORD *a10)
+{
+  int v10; // r4@1
+  int v11; // r5@1
+  int v12; // r6@1
+  int v13; // r7@1
+  int v14; // r5@2
+  unsigned int v15; // r3@3
+  int v16; // r1@8
+  __int16 v17; // r0@8
+  int v18; // r6@9
+  char *v19; // r3@9
+  int v20; // r6@11
+  char *v21; // r3@12
+  int v22; // r0@12
+  int v23; // r1@12
+  int v24; // r7@12
+  int v25; // r1@12
+  int v26; // r7@12
+  int v27; // r1@15
+  signed int v28; // r0@16
+  int v29; // r1@19
+  signed int v30; // r0@20
+  char *v31; // r6@24
+  __int16 v32; // r2@28
+  signed int v33; // r0@28
+  signed __int16 v34; // r2@28
+  int v35; // r1@30
+  int v36; // r3@31
+  int v37; // r1@34
+  int v38; // r0@34
+  int v39; // r3@34
+  int v40; // r2@34
+  int v41; // r7@34
+  int v42; // r12@34
+  int v43; // r4@35
+  int v44; // r0@38
+  int v45; // r7@38
+  int v47; // [sp+14h] [bp-17Ch]@34
+  __int16 v48; // [sp+24h] [bp-16Ch]@11
+  signed int v49; // [sp+24h] [bp-16Ch]@34
+  int v50; // [sp+28h] [bp-168h]@7
+  __int16 v51; // [sp+2Ch] [bp-164h]@11
+  __int16 v52; // [sp+2Ch] [bp-164h]@34
+  int v53; // [sp+30h] [bp-160h]@7
+  _WORD *v54; // [sp+34h] [bp-15Ch]@7
+  int v55; // [sp+38h] [bp-158h]@7
+  int v56; // [sp+3Ch] [bp-154h]@7
+  __int16 *v57; // [sp+40h] [bp-150h]@7
+  int v58; // [sp+44h] [bp-14Ch]@7
+  __int16 *v59; // [sp+48h] [bp-148h]@7
+  int v60; // [sp+4Ch] [bp-144h]@7
+  int v61; // [sp+50h] [bp-140h]@7
+  int v62; // [sp+54h] [bp-13Ch]@7
+  char dest[168]; // [sp+58h] [bp-138h]@1
+  char v64[84]; // [sp+100h] [bp-90h]@1
+  int v65; // [sp+154h] [bp-3Ch]@12
+  int v66; // [sp+158h] [bp-38h]@12
+  int v67; // [sp+15Ch] [bp-34h]@12
+  int v68; // [sp+160h] [bp-30h]@12
+  int v69; // [sp+164h] [bp-2Ch]@12
+  int v70; // [sp+168h] [bp-28h]@12
+  int v71; // [sp+16Ch] [bp-24h]@12
+  __int16 v72; // [sp+170h] [bp-20h]@7
+  __int16 v73; // [sp+172h] [bp-1Eh]@7
+  __int16 v74; // [sp+174h] [bp-1Ch]@7
+  __int16 v75; // [sp+176h] [bp-1Ah]@14
+
+  v10 = a4;
+  v11 = a1;
+  v12 = a2;
+  v13 = a3;
+  memcpy(dest, &unk_7D68, 0xA8u);
+  memcpy(v64, &unk_7E10, 0x54u);
+  if ( (signed __int16)sub_4984(v11, v12, v13) == -32768 )
+  {
+    LOWORD(v14) = -32768;
+  }
+  else
+  {
+    v15 = (a6 - 1) & 0xFFFF;
+    if ( v15 > 0x1F
+      || (unsigned int)*(_WORD *)(v10 + 394) > 1
+      || (unsigned int)*(_WORD *)(v10 + 388) > 0x10
+      || (unsigned int)*(_WORD *)(v10 + 390) > 2 )
+    {
+      LOWORD(v14) = 0;
+    }
+    else
+    {
+      v74 = 0;
+      v73 = 0;
+      v72 = 0;
+      v60 = v10 + 400;
+      v54 = (_WORD *)(v10 + 4);
+      v57 = (__int16 *)(v10 + 392);
+      v59 = (__int16 *)(v10 + 496);
+      v58 = v10 + 196;
+      v55 = -6 * v15 - 6;
+      v61 = -((a7 - __PAIR__((unsigned int)(a7 - 1), 1)) >> 32);
+      v56 = v10 + 292;
+      v53 = -((a8 - __PAIR__((unsigned int)(a8 - 1), 1)) >> 32);
+      v50 = 0;
+      v62 = a5 + 6 * (signed __int16)(a6 - 1);
+      v14 = 0;
+      do
+      {
+        v16 = *(_WORD *)(v10 + 394);
+        v17 = *(_WORD *)(v10 + 390);
+        if ( *(_DWORD *)v10 )
         {
-          SMULBB.W        R7, R1, R8
-          SMULBB.W        R2, R3, R12
+          v18 = 28 * v17;
+          v19 = *(char **)((v16 << 16 >> 14) + *(_DWORD *)v10);
         }
-        v54 = &dest[_R7] + _R2;
-      }
-      if ( !a7 )
-        LOWORD(_R3) = 0;
-      if ( !a8 )
-        LOWORD(_R1) = 0;
-      v56 = *(_DWORD *)(v12 + 396);
-      _R3 = (signed __int16)_R3;
-      v57 = *(_WORD *)v54;
-      _R1 = (signed __int16)_R1;
-      v58 = *((_WORD *)v54 + 2);
-      if ( v56 )
-      {
-        v67 = *((_WORD *)v54 + 2);
-        memcpy(&v110, (const void *)(*(_DWORD *)(v56 + 4 * _R3) + 28 * _R1), 0x1Cu);
-        v58 = v67;
-      }
-      else
-      {
-        v59 = 84 * _R3 + 28 * _R1;
-        v60 = &v128[v59 - 188];
-        v61 = *(_DWORD *)v60;
-        v62 = *(_DWORD *)&v128[v59 - 184];
-        v63 = *((_DWORD *)v60 + 2);
-        v64 = *((_DWORD *)v60 + 3);
-        v60 += 16;
-        v110 = v61;
-        v111 = v62;
-        v112 = v63;
-        v113 = v64;
-        v65 = *((_DWORD *)v60 + 1);
-        v66 = *((_DWORD *)v60 + 2);
-        v114 = *(_DWORD *)v60;
-        v115 = v65;
-        v116 = v66;
-      }
-      LOWORD(v110) = v57;
-      LOWORD(v111) = v58;
-      if ( sub_40A0((char *)(v107 + v45), &v110, v98, v106, (int)&v119, v105, &v122, 0) == 1 )
-      {
-        if ( (signed int)*(_WORD *)(v12 + 394) <= 0 )
-        {
-          v68 = *((_WORD *)v54 + 12);
-          if ( v68 >= 0 && *(_WORD *)(v12 + 496) >= v68 )
-            ++*(_WORD *)(v12 + 394);
-        }
-        v69 = *(_WORD *)(v12 + 394);
-        if ( v69 > 0 )
-        {
-          v70 = *((_WORD *)v54 + 13);
-          if ( v70 >= 0 && *(_WORD *)(v12 + 496) <= v70 )
-            *(_WORD *)(v12 + 394) = v69 - 1;
-        }
-      }
-      _R2 = *(_WORD *)(v12 + 394);
-      _R7 = *(_WORD *)(v12 + 390);
-      if ( *(_DWORD *)v12 )
-      {
-        __asm { SMULBB.W        R7, R7, R8 }
-        v76 = (char *)(*(_DWORD *)(*(_DWORD *)v12 + 4 * _R2) + _R7);
-      }
-      else
-      {
-        _R1 = 84;
-        __asm
-        {
-          SMULBB.W        R0, R7, R8
-          SMULBB.W        R12, R2, R1
-        }
-        v76 = &dest[_R0] + _R12;
-      }
-      if ( v122 == 1 && sub_40A0((char *)(v107 + v45), v76, v98, v104, (int)&v119, v103, &v122, 1) == 1 )
-      {
-        ++v48;
-        if ( (signed int)*(_WORD *)(v12 + 388) <= 15 )
-          ++*(_WORD *)(v12 + 388);
         else
-          *(_WORD *)(v12 + 388) = 16;
-        AKSC_buffer((char *)&v119, 16, 1, v102);
-        v78 = *(_WORD *)(v12 + 388);
-        if ( v78 > 1 && (v79 = *((_WORD *)v76 + 11), v79 > 1) )
         {
-          if ( v78 >= v79 )
+          v18 = 28 * v17 + 84 * (signed __int16)v16;
+          v19 = dest;
+        }
+        v20 = (int)&v19[v18];
+        v48 = *(_WORD *)v20;
+        v51 = *(_WORD *)(v20 + 4);
+        if ( *(_DWORD *)(v10 + 396) )
+        {
+          memcpy(
+            &v65,
+            (const void *)(*(_DWORD *)(((v16 & v61) << 16 >> 14) + *(_DWORD *)(v10 + 396))
+                         + 28 * (signed __int16)(v17 & v53)),
+            0x1Cu);
+        }
+        else
+        {
+          v21 = &v64[84 * (signed __int16)(v16 & v61)] + 28 * (signed __int16)(v17 & v53);
+          v22 = *(_DWORD *)v21;
+          v23 = *((_DWORD *)v21 + 1);
+          v24 = *((_DWORD *)v21 + 2);
+          v21 += 12;
+          v65 = v22;
+          v66 = v23;
+          v67 = v24;
+          v25 = *((_DWORD *)v21 + 1);
+          v26 = *((_DWORD *)v21 + 2);
+          v68 = *(_DWORD *)v21;
+          v69 = v25;
+          v70 = v26;
+          v71 = *((_DWORD *)v21 + 3);
+        }
+        LOWORD(v65) = v48;
+        LOWORD(v66) = v51;
+        if ( sub_5008((_WORD *)(v62 + v50), &v65, v54, v60, (int)&v72, v59, &v75, 0) == 1 )
+        {
+          v27 = *(_WORD *)(v10 + 394);
+          if ( v27 << 16 <= 0 )
           {
-            v86 = AKSC_div16(1, *((_WORD *)v76 + 11));
-            v80 = 0;
-            v83 = 0;
-            v87 = 0;
-            v96 = v86;
-            v88 = v12;
-            v82 = 0;
-            v94 = v12;
-            v85 = v76;
-            while ( 1 )
+            v28 = *(_WORD *)(v20 + 24);
+            if ( v28 >= 0 && *(_WORD *)(v10 + 496) >= v28 )
+              *(_WORD *)(v10 + 394) = v27 + 1;
+          }
+          v29 = *(_WORD *)(v10 + 394);
+          if ( v29 << 16 > 0 )
+          {
+            v30 = *(_WORD *)(v20 + 26);
+            if ( v30 >= 0 && *(_WORD *)(v10 + 496) <= v30 )
+              *(_WORD *)(v10 + 394) = v29 - 1;
+          }
+        }
+        if ( *(_DWORD *)v10 )
+          v31 = (char *)(*(_DWORD *)((*(_WORD *)(v10 + 394) << 16 >> 14) + *(_DWORD *)v10) + 28 * *(_WORD *)(v10 + 390));
+        else
+          v31 = &dest[84 * *(_WORD *)(v10 + 394)] + 28 * *(_WORD *)(v10 + 390);
+        if ( v75 == 1 && sub_5008((_WORD *)(v62 + v50), v31, v54, v58, (int)&v72, v57, &v75, 1) == 1 )
+        {
+          v32 = *(_WORD *)(v10 + 388);
+          v33 = v32;
+          v14 = (v14 + 1) & 0xFFFF;
+          v34 = v32 + 1;
+          if ( v33 > 15 )
+            v34 = 16;
+          *(_WORD *)(v10 + 388) = v34;
+          AKSC_buffer((int)&v72, 16, 1, v56);
+          v35 = *(_WORD *)(v10 + 388);
+          if ( v35 > 1 && (v36 = *((_WORD *)v31 + 11), v36 > 1) )
+          {
+            if ( v35 >= v36 )
             {
-              v88 += 6;
-              if ( v87 >= *((_WORD *)v76 + 11) )
-                break;
-              ++v87;
-              v83 += *(_WORD *)(v88 + 286);
-              v82 += *(_WORD *)(v88 + 288);
-              v80 += *(_WORD *)(v88 + 290);
+              v52 = AKSC_div16(1, v36);
+              v37 = 0;
+              v44 = v10 + 292;
+              v39 = 0;
+              v40 = 0;
+              v45 = 0;
+              v47 = v14;
+              v42 = v10;
+              while ( (signed __int16)v45 < (signed int)*((_WORD *)v31 + 11) )
+              {
+                v37 += *(_WORD *)v44;
+                v40 += *(_WORD *)(v44 + 2);
+                v45 = (v45 + 1) & 0xFFFF;
+                v39 += *(_WORD *)(v44 + 4);
+                v44 += 6;
+              }
             }
+            else
+            {
+              v52 = AKSC_div16(1, v35);
+              v37 = 0;
+              v38 = v10 + 292;
+              v49 = *(_WORD *)(v10 + 388);
+              v39 = 0;
+              v40 = 0;
+              v47 = v14;
+              v41 = 0;
+              v42 = v10;
+              while ( (signed __int16)v41 < v49 )
+              {
+                v37 += *(_WORD *)v38;
+                v40 += *(_WORD *)(v38 + 2);
+                v43 = *(_WORD *)(v38 + 4);
+                v38 += 6;
+                v39 += v43;
+                v41 = (v41 + 1) & 0xFFFF;
+              }
+            }
+            v14 = v47;
+            v10 = v42;
+            *(_WORD *)a9 = v37 * v52 >> 15;
+            *(_WORD *)(a9 + 2) = v40 * v52 >> 15;
+            *(_WORD *)(a9 + 4) = v39 * v52 >> 15;
           }
           else
           {
-            v96 = (unsigned __int16)AKSC_div16(1, v78);
-            v80 = 0;
-            v81 = v12;
-            v82 = 0;
-            v83 = 0;
-            v84 = 0;
-            v85 = v76;
-            v94 = v12;
-            while ( 1 )
-            {
-              v81 += 6;
-              if ( v84 >= *(_WORD *)(v12 + 388) )
-                break;
-              v83 += *(_WORD *)(v81 + 286);
-              v82 += *(_WORD *)(v81 + 288);
-              v80 += *(_WORD *)(v81 + 290);
-              ++v84;
-            }
+            *(_WORD *)a9 = v72;
+            *(_WORD *)(a9 + 2) = v73;
+            *(_WORD *)(a9 + 4) = v74;
           }
-          v76 = v85;
-          v12 = v94;
-          *(_WORD *)v28 = v83 * v96 >> 15;
-          *(_WORD *)(v28 + 2) = v82 * v96 >> 15;
-          *(_WORD *)(v28 + 4) = v80 * v96 >> 15;
+          if ( *(_WORD *)(v10 + 388) >= (signed int)*((_WORD *)v31 + 10) && (signed int)*(_WORD *)(v10 + 390) <= 1 )
+          {
+            *(_WORD *)(v10 + 388) = 0;
+            ++*(_WORD *)(v10 + 390);
+          }
         }
-        else
-        {
-          memcpy((void *)v28, &v119, 6u);
-        }
-        if ( *(_WORD *)(v12 + 388) >= (signed int)*((_WORD *)v76 + 10) && (signed int)*(_WORD *)(v12 + 390) <= 1 )
-        {
-          v89 = *(_WORD *)(v12 + 390);
-          *(_WORD *)(v12 + 388) = 0;
-          *(_WORD *)(v12 + 390) = v89 + 1;
-        }
+        v50 -= 6;
       }
-      v45 -= 6;
+      while ( v50 != v55 );
+      if ( *(_WORD *)(v10 + 388) )
+        *a10 = *(_WORD *)(v10 + 390) + 1;
+      else
+        *a10 = *(_WORD *)(v10 + 390);
     }
-    while ( v45 != v101 );
-    v90 = v48;
-    v91 = *(_WORD *)(v12 + 390);
-    if ( *(_WORD *)(v12 + 388) )
-      *a10 = v91 + 1;
-    else
-      *a10 = v91;
   }
-LABEL_102:
-  result = v90;
-  if ( v127 != _stack_chk_guard )
-    _stack_chk_fail(v90);
-  return result;
+  return (signed __int16)v14;
 }
-// 109C: using guessed type int __fastcall _stack_chk_fail(_DWORD);
-// 4460: using guessed type char dest[168];
-// 4460: using guessed type char var_28[40];
-// 4460: using guessed type char var_38[12];
-// 4460: using guessed type char var_54[16];
-// 4460: using guessed type char var_44[12];
-// 4460: using guessed type char var_64[16];
+// 5218: using guessed type char dest[168];
+// 5218: using guessed type char var_90[84];
 
-//----- (00004B2C) --------------------------------------------------------
-int __fastcall AKSC_InitHFlucCheck(_WORD *a1, const void *a2, int a3)
+//----- (00005640) --------------------------------------------------------
+signed int __fastcall AKSC_InitHFlucCheck(int a1, int a2, int a3)
 {
-  int v3; // r5@1
-  _WORD *v4; // r4@1
-  int result; // r0@2
+  signed int result; // r0@2
 
-  v3 = a3;
-  v4 = a1;
-  memcpy(a1, a2, 6u);
-  if ( v3 >= 0 )
+  *(_WORD *)a1 = *(_WORD *)a2;
+  *(_WORD *)(a1 + 2) = *(_WORD *)(a2 + 2);
+  *(_WORD *)(a1 + 4) = *(_WORD *)(a2 + 4);
+  if ( a3 >= 0 )
   {
-    LOWORD(result) = 1;
-    v4[3] = v3;
+    *(_WORD *)(a1 + 6) = a3;
+    result = 1;
   }
   else
   {
-    LOWORD(result) = 0;
-    v4[3] = 0;
+    *(_WORD *)(a1 + 6) = 0;
+    result = 0;
   }
-  return (signed __int16)result;
+  return result;
 }
 
-//----- (00004B50) --------------------------------------------------------
-int __fastcall AKSC_HFlucCheck(int a1, int a2)
+//----- (00005660) --------------------------------------------------------
+signed int __fastcall AKSC_HFlucCheck(int a1, int a2)
 {
   int v2; // r3@1
-  signed int v3; // r4@1
-  signed int v4; // r4@2
+  signed int v3; // r5@1
+  signed int v4; // r2@2
   signed int v5; // r4@3
-  int result; // r0@4
+  signed int v6; // r2@3
 
   v2 = *(_WORD *)(a1 + 6);
   v3 = *(_WORD *)a2 - *(_WORD *)a1;
-  if ( (v3 ^ (v3 >> 31)) - (v3 >> 31) >= v2
-    || (v4 = *(_WORD *)(a2 + 2) - *(_WORD *)(a1 + 2), (v4 ^ (v4 >> 31)) - (v4 >> 31) >= v2)
-    || (v5 = *(_WORD *)(a2 + 4) - *(_WORD *)(a1 + 4), (v5 ^ (v5 >> 31)) - (v5 >> 31) >= v2) )
+  if ( ((v3 + (v3 >> 31)) ^ (v3 >> 31)) >= v2
+    || (v4 = *(_WORD *)(a2 + 2) - *(_WORD *)(a1 + 2), ((v4 + (v4 >> 31)) ^ (v4 >> 31)) >= v2)
+    || (v5 = *(_WORD *)(a2 + 4) - *(_WORD *)(a1 + 4), v6 = 0, ((v5 + (v5 >> 31)) ^ (v5 >> 31)) >= v2) )
   {
-    memcpy((void *)a1, (const void *)a2, 6u);
-    LOWORD(result) = 1;
+    v6 = 1;
+    *(_WORD *)a1 = *(_WORD *)a2;
+    *(_WORD *)(a1 + 2) = *(_WORD *)(a2 + 2);
+    *(_WORD *)(a1 + 4) = *(_WORD *)(a2 + 4);
   }
-  else
-  {
-    LOWORD(result) = 0;
-  }
-  return (signed __int16)result;
+  return v6;
 }
 
-//----- (00004BB0) --------------------------------------------------------
-int __fastcall AKSC_TransByHbase(int result, int a2, int a3, int a4, _WORD *a5)
+//----- (000056B8) --------------------------------------------------------
+_DWORD *__fastcall AKSC_TransByHbase(_DWORD *result, _DWORD *a2, int a3, int *a4, _WORD *a5)
 {
   int v5; // r4@1
-  int v6; // r5@1
-  int v7; // r6@2
-  signed __int16 v8; // r6@3
+  signed __int16 v6; // r5@3
+  int v7; // [sp+4h] [bp-1Ch]@2
 
-  *a5 = 0;
   v5 = 0;
-  v6 = 0;
+  *a5 = 0;
   do
   {
-    v7 = *(_DWORD *)(result + v6) + *(_DWORD *)(a4 + v6) - *(_DWORD *)(a2 + v6);
-    *(_DWORD *)(a4 + v6) = v7;
-    if ( (v7 + 0x8000 < 0) ^ __OFADD__(v7, 0x8000) )
+    v7 = *result + *a4 - *a2;
+    *a4 = v7;
+    if ( v7 < -32768 )
     {
-      v8 = -32768;
+      v6 = -32768;
+LABEL_6:
+      *(_WORD *)(a3 + v5) = v6;
+      *a5 = 1;
+      goto LABEL_8;
     }
-    else
+    if ( v7 > 0x7FFF )
     {
-      if ( v7 <= 0x7FFF )
-      {
-        *(_WORD *)(a3 + v5) = v7;
-        goto LABEL_8;
-      }
-      v8 = 0x7FFF;
+      v6 = 0x7FFF;
+      goto LABEL_6;
     }
-    *(_WORD *)(a3 + v5) = v8;
-    *a5 = 1;
+    *(_WORD *)(a3 + v5) = v7;
 LABEL_8:
     v5 += 2;
-    v6 += 4;
+    ++a4;
+    ++result;
+    ++a2;
   }
   while ( v5 != 6 );
   return result;
 }
 
-//----- (00004C00) --------------------------------------------------------
-int __fastcall AKSC_HOffsetCal(int a1, int a2)
+//----- (00005710) --------------------------------------------------------
+signed int __fastcall sub_5710(int a1, int a2, _WORD *a3, int a4, _WORD *a5)
 {
-  int v2; // r3@1
-  int v3; // r2@1
-  int v4; // r4@2
-  int v5; // r8@2
-  int v6; // r6@2
-  int v7; // r12@2
+  int v5; // ST10_4@2
+  int v6; // r7@2
+  int *v7; // r5@2
   int v8; // r4@2
-  char *v9; // r6@2
-  __int16 *v10; // r12@2
-  char *v11; // r4@2
-  int v12; // r8@3
-  int v13; // t1@3
-  signed int v14; // r8@5
-  int result; // r0@6
+  int *v9; // r4@2
+  int *v10; // r6@2
+  int v11; // ST1C_4@7
+  int v12; // ST0C_4@7
+  int v13; // r12@7
+  _WORD *v14; // r2@7
+  int v15; // r12@7
   int v16; // r6@8
-  int v17; // r10@8
-  int v18; // r12@8
-  int v19; // r8@8
-  int v20; // r6@8
-  __int16 *v21; // r12@8
-  char *v22; // r6@8
-  int v23; // r8@9
-  char *v24; // r6@10
-  int v25; // r12@11
-  int v26; // t1@11
-  signed int v27; // r6@15
-  unsigned __int16 v28; // r4@21
-  int v29; // [sp+Ch] [bp-4Ch]@2
-  int v30; // [sp+10h] [bp-48h]@2
-  int v31; // [sp+14h] [bp-44h]@2
-  char v32; // [sp+18h] [bp-40h]@7
-  __int16 v33; // [sp+20h] [bp-38h]@8
-  __int16 v34; // [sp+22h] [bp-36h]@10
-  __int16 v35; // [sp+24h] [bp-34h]@10
-  unsigned __int16 v36; // [sp+28h] [bp-30h]@2
-  unsigned __int16 v37; // [sp+2Ah] [bp-2Eh]@21
-  __int16 v38; // [sp+2Ch] [bp-2Ch]@16
-  char v39; // [sp+30h] [bp-28h]@18
+  int v17; // r1@9
+  _WORD *v18; // r3@9
+  int v19; // r1@12
+  int v21; // [sp+14h] [bp-34h]@2
+  int v22; // [sp+18h] [bp-30h]@2
+  int v23; // [sp+24h] [bp-24h]@2
+  int v24; // [sp+28h] [bp-20h]@2
+  int v25; // [sp+2Ch] [bp-1Ch]@2
+  int v26; // [sp+30h] [bp-18h]@6
 
-  v2 = a1;
-  v3 = 0;
-  do
+  if ( (unsigned __int16)a2 <= 2u )
   {
-    v4 = *(_WORD *)(v2 + 6);
-    v5 = *(_WORD *)(a1 + v3);
-    v29 = v5 - v4;
-    v6 = *(_WORD *)(v2 + 12);
-    v7 = v4 - v6;
-    v8 = v6 - v5;
-    v30 = v7;
-    v9 = (char *)&v29;
-    v31 = v8;
-    v10 = (__int16 *)&v36;
-    v11 = (char *)&v29;
-    do
+    v22 = a1 + 6;
+    v5 = *(_WORD *)(2 * a2 + a1);
+    v6 = *(_WORD *)(2 * a2 + a1 + 6);
+    v7 = &v23;
+    v23 = v5 - v6;
+    v21 = a1 + 12;
+    v8 = *(_WORD *)(2 * a2 + a1 + 12);
+    v24 = v6 - v8;
+    v25 = v8 - v5;
+    v9 = &v23;
+    v10 = &v23;
+    while ( 1 )
     {
-      v13 = *(_DWORD *)v9;
-      v9 += 4;
-      v12 = v13;
-      if ( v13 < 0 )
-        *((_DWORD *)v9 - 1) = -v12;
-      v14 = *((_DWORD *)v9 - 1);
-      if ( v14 > 0x7FFF )
-      {
-        LOWORD(result) = 0;
-        return (signed __int16)result;
-      }
-      *v10 = v14;
+      if ( *v10 < 0 )
+        *v10 = -*v10;
+      if ( *v10 > 0x7FFF )
+        break;
+      *a3 = *v10;
       ++v10;
+      ++a3;
+      if ( v10 == &v26 )
+      {
+        v11 = *(_WORD *)(2 * a2 + a1);
+        v12 = *(_WORD *)(2 * a2 + v22);
+        v23 = v11 + v12;
+        v13 = *(_WORD *)(2 * a2 + v21);
+        v24 = v12 + v13;
+        v25 = v11 + v13;
+        v14 = (_WORD *)a4;
+        v15 = a4;
+        do
+        {
+          v16 = (*v7 & 1) + (*v7 >> 1);
+          *v7 = v16;
+          ++v7;
+          *v14 = v16;
+          ++v14;
+        }
+        while ( v7 != &v26 );
+        v17 = 2 * a2;
+        v23 = *(_WORD *)(v17 + v21) - *(_WORD *)a4;
+        v24 = *(_WORD *)(v17 + a1) - *(_WORD *)(a4 + 2);
+        v18 = a5;
+        v25 = *(_WORD *)(v17 + v22) - *(_WORD *)(v15 + 4);
+        do
+        {
+          if ( *v9 < 0 )
+            *v9 = -*v9;
+          v19 = *v9;
+          ++v9;
+          *v18 = v19;
+          ++v18;
+        }
+        while ( v9 != &v26 );
+        return 1;
+      }
     }
-    while ( v9 != &v32 );
-    v16 = *(_WORD *)(v2 + 6);
-    v17 = *(_WORD *)(a1 + v3);
-    v29 = v16 + v17;
-    v18 = *(_WORD *)(v2 + 12);
-    v19 = v18 + v16;
-    v20 = v18 + v17;
-    v21 = &v33;
-    v31 = v20;
-    v22 = (char *)&v29;
-    v30 = v19;
-    do
-    {
-      v23 = (*(_DWORD *)v22 & 1) + (*(_DWORD *)v22 >> 1);
-      *(_DWORD *)v22 = v23;
-      v22 += 4;
-      *v21 = v23;
-      ++v21;
-    }
-    while ( v22 != &v32 );
-    v29 = *(_WORD *)(v2 + 12) - v33;
-    v30 = *(_WORD *)(a1 + v3) - v34;
-    v31 = *(_WORD *)(v2 + 6) - v35;
-    v24 = &v32;
-    do
-    {
-      v26 = *(_DWORD *)v11;
-      v11 += 4;
-      v25 = v26;
-      if ( v26 < 0 )
-        *((_DWORD *)v11 - 1) = -v25;
-      *(_WORD *)v24 = *((_WORD *)v11 - 2);
-      v24 += 2;
-    }
-    while ( v11 != &v32 );
-    v28 = v36;
-    if ( v37 <= (signed int)v36 )
-    {
-      v27 = 0;
-    }
-    else
-    {
-      v28 = v37;
-      v27 = 1;
-    }
-    v2 += 2;
-    if ( v38 > (signed __int16)v28 )
-      v27 = 2;
-    *(_WORD *)(a2 + v3) = *((_WORD *)&v39 + v27 - 8);
-    v3 += 2;
   }
-  while ( v3 != 6 );
-  LOWORD(result) = 1;
-  return (signed __int16)result;
+  return 0;
 }
 
-//----- (00004D48) --------------------------------------------------------
-int __fastcall AKSC_sqrt16(int a1)
+//----- (00005818) --------------------------------------------------------
+signed int __fastcall AKSC_HOffsetCal(int a1, _WORD *a2)
 {
-  int result; // r0@2
-  int v2; // r2@3
-  __int16 v3; // r0@3
-  unsigned __int16 v4; // r3@3
-  unsigned int v5; // r1@3
-  unsigned int v6; // r4@4
+  _WORD *v2; // r5@1
+  int v3; // r6@1
+  signed int result; // r0@2
+  unsigned __int16 v5; // r2@3
+  signed int v6; // r3@3
+  __int16 v7; // r2@7
+  int v8; // r3@7
+  int v9; // [sp+8h] [bp-10h]@1
+  int v10; // [sp+10h] [bp-8h]@2
+  int v11; // [sp+18h] [bp+0h]@2
+  unsigned __int16 v12[6]; // [sp+20h] [bp+8h]@2
+  unsigned __int16 v13; // [sp+22h] [bp+Ah]@3
+  signed __int16 v14; // [sp+24h] [bp+Ch]@5
 
+  v9 = a1;
+  v2 = a2;
+  v3 = 0;
+  while ( 1 )
+  {
+    result = sub_5710(v9, (signed __int16)v3, v12, (int)&v11, &v10) << 16;
+    if ( !result )
+      break;
+    v5 = v12[0];
+    v6 = 0;
+    if ( v12[0] << 16 < v13 << 16 )
+    {
+      v5 = v13;
+      v6 = 1;
+    }
+    if ( v14 > (signed __int16)v5 )
+      v6 = 2;
+    v7 = *((_WORD *)&v11 + v6);
+    v8 = (signed __int16)(v3 + 1);
+    *v2 = v7;
+    v3 = (v3 + 1) & 0xFFFF;
+    ++v2;
+    if ( v8 == 3 )
+      return 1;
+  }
+  return result;
+}
+
+//----- (00005880) --------------------------------------------------------
+unsigned int __fastcall AKSC_sqrt16(int a1)
+{
+  unsigned int v1; // r2@1
+  unsigned int v2; // r0@2
+  int v3; // r1@2
+  unsigned int v4; // r3@2
+  unsigned int v5; // r4@3
+  unsigned int v6; // r3@3
+  unsigned int v7; // r4@3
+
+  v1 = 0;
   if ( a1 >= 0 )
   {
-    LOWORD(v5) = 2 * a1;
-    LOWORD(v2) = 0;
+    v2 = 2 * a1 & 0xFFFF;
     v3 = 0;
     v4 = 0;
-    v5 = (unsigned __int16)v5;
     do
     {
-      v3 *= 2;
-      v4 = 4 * v4 + (v5 >> 14);
-      v6 = (unsigned __int16)(v3 + 1);
-      v5 = (unsigned __int16)(4 * v5);
-      if ( v6 <= v4 )
+      v5 = v1 << 17;
+      v6 = ((4 * v4 & 0xFFFF) + (v2 >> 14)) << 16;
+      v2 = 4 * v2 & 0xFFFF;
+      v1 = 2 * v1 & 0xFFFF;
+      v4 = v6 >> 16;
+      v7 = (v5 + 0x10000) >> 16;
+      if ( v7 <= v4 )
       {
-        v4 -= v6;
-        v3 += 2;
+        v4 = (v4 - v7) & 0xFFFF;
+        v1 = (v7 + 1) & 0xFFFF;
       }
-      v2 = (unsigned __int16)(v2 + 1);
+      v3 = (v3 + 1) & 0xFFFF;
     }
-    while ( v2 != 8 );
-    LOWORD(result) = (unsigned __int16)(result + 2) >> 2;
+    while ( v3 != 8 );
+    v1 = (v1 + 2) << 16 >> 18;
   }
-  else
-  {
-    LOWORD(result) = 0;
-  }
-  return (signed __int16)result;
+  return v1;
 }
 
-//----- (00004D94) --------------------------------------------------------
+//----- (000058D0) --------------------------------------------------------
 int __fastcall AKSC_sqrt32(unsigned int a1)
 {
-  int v1; // r3@2
-  int v2; // r1@3
-  unsigned int v3; // r3@3
-  unsigned int v4; // r2@3
+  unsigned int v1; // r3@1
+  int v2; // r1@2
+  unsigned int v3; // r2@2
 
+  v1 = 0;
   if ( (a1 & 0x80000000) == 0 )
   {
-    LOWORD(v2) = 0;
+    v2 = 0;
     v3 = 0;
-    v4 = 0;
     do
     {
-      v3 *= 2;
-      v4 = (a1 >> 30) + 4 * v4;
+      v1 *= 2;
+      v3 = (a1 >> 30) + 4 * v3;
       a1 *= 4;
-      if ( v3 + 1 <= v4 )
+      if ( v1 + 1 <= v3 )
       {
-        v4 -= v3 + 1;
-        v3 += 2;
+        v3 -= v1 + 1;
+        v1 += 2;
       }
-      v2 = (unsigned __int16)(v2 + 1);
+      v2 = (v2 + 1) & 0xFFFF;
     }
     while ( v2 != 16 );
-    v1 = (v3 >> 1) & 0xFFFF;
-  }
-  else
-  {
-    LOWORD(v1) = 0;
+    v1 = v1 << 15 >> 16;
   }
   return (signed __int16)v1;
 }
 
-//----- (00004DCC) --------------------------------------------------------
+//----- (00005904) --------------------------------------------------------
 int __fastcall AKSC_angRng(int result, int a2)
 {
-  signed int v2; // r3@2
-  signed int v3; // r3@7
+  unsigned int v2; // r3@2
+  bool v3; // cf@5
+  unsigned int v4; // r3@7
 
   if ( result < 0 )
   {
-    v3 = 16;
+    v4 = 16;
     do
     {
-      if ( result < -(23040 << v3) )
-        result += 23040 << v3;
-      --v3;
+      if ( result < -(23040 << v4) )
+        result += 23040 << v4;
+      v3 = v4-- >= 1;
     }
-    while ( v3 != -1 );
+    while ( v3 );
     result += 23040;
   }
   else
@@ -4720,139 +4767,141 @@ int __fastcall AKSC_angRng(int result, int a2)
     {
       if ( result >= 23040 << v2 )
         result -= 23040 << v2;
-      --v2;
+      v3 = v2-- >= 1;
     }
-    while ( v2 != -1 );
+    while ( v3 );
   }
-  if ( a2 == 1 && result >= 11520 )
+  if ( a2 == 1 && result > 11519 )
     LOWORD(result) = result - 23040;
   return (signed __int16)result;
 }
 
-//----- (00004E1C) --------------------------------------------------------
+//----- (00005958) --------------------------------------------------------
 unsigned int __fastcall AKSC_sin(int a1)
 {
-  signed int v1; // r0@1
-  signed __int16 v2; // r1@2
-  unsigned int v3; // r3@6
-  unsigned int v4; // r0@7
-  int v5; // r3@8
-  unsigned int result; // r0@9
+  unsigned __int16 v1; // r0@1
+  int v2; // r2@1
+  signed __int16 v3; // r4@1
+  unsigned int v4; // r3@5
+  int v5; // r0@6
+  unsigned int v6; // r0@8
+  unsigned int result; // r0@11
 
-  v1 = (unsigned __int16)AKSC_angRng(a1, 0);
+  v1 = AKSC_angRng(a1, 0);
+  v2 = v1;
+  v3 = 1;
   if ( (signed __int16)v1 > 11520 )
   {
-    v2 = -1;
-    v1 = (unsigned __int16)(v1 - 11520);
+    v2 = (v1 - 11520) & 0xFFFF;
+    v3 = -1;
   }
-  else
+  if ( (signed __int16)v2 > 5760 )
+    v2 = (11520 - v2) & 0xFFFF;
+  v2 = (signed __int16)v2;
+  v4 = (unsigned int)(((signed __int16)v2 + 31) << 10) >> 16;
+  if ( v4 )
   {
-    v2 = 1;
-  }
-  if ( v1 > 5760 )
-    LOWORD(v1) = 11520 - v1;
-  v1 = (signed __int16)v1;
-  v3 = ((unsigned int)((signed __int16)v1 + 31) >> 6) & 0xFFFF;
-  if ( v3 )
-  {
-    v5 = (signed __int16)((unsigned int)((signed __int16)v1 + 31) >> 6);
-    if ( (signed __int16)v5 <= 89 )
+    if ( (signed __int16)((unsigned int)((signed __int16)v2 + 31) >> 6) <= 89 )
     {
-      result = ((unsigned int)(word_57E8[v5 - 1] * ((v5 << 6) - v1 + 32) + word_57E8[v5] * (v1 + 32 * (-2 * v5 + 1))) >> 6) & 0xFFFF;
-      goto LABEL_12;
+      v6 = (word_7E64[(signed __int16)((unsigned int)((signed __int16)v2 + 31) >> 6)]
+          * (-64 * (signed __int16)((unsigned int)((signed __int16)v2 + 31) >> 6) + 32 + v2)
+          + word_7E64[(signed __int16)((unsigned int)((signed __int16)v2 + 31) >> 6) - 1]
+          * (32 * (2 * (signed __int16)((unsigned int)((signed __int16)v2 + 31) >> 6) + 1) - v2)) << 10;
+      goto LABEL_11;
     }
-    v4 = 0x7FFF * (v1 + 32 * (-2 * v5 + 1)) + 32766 * ((v5 << 6) - v1);
+    v5 = 0x7FFF * (-64 * (signed __int16)((unsigned int)((signed __int16)v2 + 31) >> 6) + 32 + v2)
+       + 32766 * (((signed __int16)((unsigned int)((signed __int16)v2 + 31) >> 6) << 6) - v2);
   }
   else
   {
-    v4 = 286 * v1;
+    v5 = 286 * v2;
   }
-  result = (v4 >> 5) & 0xFFFF;
-LABEL_12:
-  if ( v2 == -1 )
-    LOWORD(result) = -(signed __int16)result;
+  v6 = v5 << 11;
+LABEL_11:
+  result = v6 >> 16;
+  if ( v3 == -1 )
+    result = 0xFFFF * result & 0xFFFF;
   return (signed __int16)result;
 }
 
-//----- (00004ED0) --------------------------------------------------------
+//----- (00005A1C) --------------------------------------------------------
 int __fastcall AKSC_cos(signed int a1)
 {
-  __int16 v1; // r0@2
+  signed __int16 v1; // r3@2
 
-  if ( a1 < 17280 )
-    v1 = a1 + 5760;
+  if ( a1 <= 17279 )
+    v1 = 5760;
   else
-    v1 = a1 - 17280;
-  return (signed __int16)AKSC_sin(v1);
+    v1 = -17280;
+  return (signed __int16)AKSC_sin((signed __int16)(a1 + v1));
 }
 
-//----- (00004EEC) --------------------------------------------------------
-unsigned int __fastcall sub_4EEC(int a1)
+//----- (00005A48) --------------------------------------------------------
+int __fastcall sub_5A48(int a1)
 {
-  unsigned int result; // r0@2
-  _WORD *v2; // r3@5
-  signed int v3; // r4@5
-  int v4; // r1@6
-  int v5; // t1@6
-  int v6; // r2@7
+  unsigned int v1; // r0@2
+  int v2; // r0@4
+  int v3; // r3@4
+  int result; // r0@6
+  int v5; // r4@7
+  __int16 *v6; // r3@7
+  __int16 v7; // r2@9
+  int v8; // r2@11
 
-  if ( a1 > 284 )
+  if ( a1 <= 284 )
   {
-    if ( a1 <= 32199 )
+    v1 = (AKSC_div16(a1, 285) << 16 >> 10) + 0x8000;
+LABEL_6:
+    return (signed __int16)(v1 >> 16);
+  }
+  if ( a1 > (signed int)&unk_7DC7 )
+  {
+    v2 = ((signed __int16)AKSC_div16((signed __int16)(a1 - 32200), 567) + 512) >> 10;
+    v3 = 2848;
+LABEL_5:
+    v1 = (v2 + v3) << 16;
+    goto LABEL_6;
+  }
+  v5 = 1;
+  v6 = &word_7F18;
+  do
+  {
+    if ( *v6 <= a1 )
     {
-      v2 = &word_57E8[89];
-      v3 = 1;
-      do
+      v7 = v6[1];
+      if ( a1 < v7 )
       {
-        v5 = v2[1];
-        ++v2;
-        v4 = v5;
-        if ( (signed __int16)v5 <= a1 )
-        {
-          v6 = v2[1];
-          if ( a1 < (signed __int16)v6 )
-            return (signed __int16)((v3 << 6)
-                                  - 32
-                                  + (((signed __int16)AKSC_div16((signed __int16)(a1 - v4), v6 - v4) + 256) >> 9));
-        }
-        v3 = (unsigned __int16)(v3 + 1);
+        v3 = ((signed __int16)AKSC_div16((signed __int16)(a1 - *v6), (signed __int16)(v7 - *v6)) + 256) >> 9;
+        v2 = (v5 << 6) - 32;
+        goto LABEL_5;
       }
-      while ( v3 != 45 );
-      LOWORD(result) = 0;
     }
-    else
-    {
-      result = ((AKSC_div16((signed __int16)(a1 - 32200), 567) + 512) >> 10) + 2848;
-    }
+    v8 = (signed __int16)(v5 + 1);
+    ++v6;
+    v5 = (v5 + 1) & 0xFFFF;
   }
-  else
-  {
-    result = ((unsigned int)((signed __int16)AKSC_div16(a1, 285) + 512) >> 10) & 0xFFFF;
-  }
+  while ( v8 != 45 );
+  LOWORD(result) = 0;
   return (signed __int16)result;
 }
+// 7F18: using guessed type __int16 word_7F18;
 
-//----- (00004F84) --------------------------------------------------------
+//----- (00005AF8) --------------------------------------------------------
 int __fastcall AKSC_atan2(int a1, int a2)
 {
   signed int v2; // r5@2
   signed int v3; // r4@5
-  int v4; // r3@8
-  signed __int16 v5; // r3@11
-  __int16 v6; // r0@12
-  unsigned int v7; // r6@14
-  __int16 v8; // r0@17
-  __int16 v9; // r0@20
-  __int16 v10; // r0@23
-  int v11; // r2@25
-  __int16 v12; // r0@28
-  int v13; // r1@30
-  __int16 v14; // r0@33
-  __int16 v15; // r0@36
-  __int16 v16; // r0@39
-  int v18; // [sp+4h] [bp-14h]@1
+  unsigned int v4; // r3@9
+  __int16 v5; // r0@10
+  __int16 v6; // r0@13
+  __int16 v7; // r0@16
+  __int16 v8; // r0@19
+  __int16 v9; // r0@22
+  __int16 v10; // r0@25
+  __int16 v11; // r0@28
+  __int16 v12; // r0@31
+  char v14; // [sp+6h] [bp-12h]@10
 
-  v18 = a2;
   if ( a1 == -32768 )
     v2 = 32769;
   else
@@ -4861,248 +4910,2232 @@ int __fastcall AKSC_atan2(int a1, int a2)
     v3 = 32769;
   else
     v3 = (unsigned __int16)a2;
-  if ( (signed __int16)v2 >= (signed __int16)v3 )
-    v4 = (signed __int16)v3 > 0;
-  else
-    v4 = 0;
-  if ( v4 )
+  if ( (signed __int16)v2 >= (signed __int16)v3 && (signed __int16)v3 > 0 )
   {
-    v6 = AKSC_div16f((signed __int16)v3, (signed __int16)v2, (__int16 *)&v18 + 1);
-    v5 = sub_4EEC(v6 >> SBYTE2(v18));
+    v5 = AKSC_div16f((signed __int16)v3, (signed __int16)v2, &v14);
+    v4 = sub_5A48(v5 >> v14) & 0xFFFF;
   }
   else
   {
-    v5 = -1;
+    LOWORD(v4) = -1;
   }
-  if ( (signed __int16)v2 < (signed __int16)v3 )
-    v7 = ((unsigned int)~v2 >> 15) & 1;
-  else
-    v7 = 0;
-  if ( v7 )
+  if ( (signed __int16)v2 < (signed __int16)v3 && (signed __int16)v2 >= 0 )
   {
-    v8 = AKSC_div16f((signed __int16)v2, (signed __int16)v3, (__int16 *)&v18 + 1);
-    v5 = 5760 - sub_4EEC(v8 >> SBYTE2(v18));
-LABEL_22:
+    v6 = AKSC_div16f((signed __int16)v2, (signed __int16)v3, &v14);
+    v4 = (5760 - (unsigned __int16)sub_5A48(v6 >> v14)) & 0xFFFF;
+LABEL_18:
     if ( -(signed __int16)v2 > (signed __int16)v3 )
     {
-      v10 = AKSC_div16f((signed __int16)v3, (signed __int16)-(signed __int16)v2, (__int16 *)&v18 + 1);
-      v5 = 11520 - sub_4EEC(v10 >> SBYTE2(v18));
+      v8 = AKSC_div16f((signed __int16)v3, -(signed __int16)v2, &v14);
+      v4 = (11520 - (unsigned __int16)sub_5A48(v8 >> v14)) & 0xFFFF;
     }
-    goto LABEL_24;
+    goto LABEL_20;
   }
   if ( (signed __int16)v2 < 0 && -(signed __int16)v2 <= (signed __int16)v3 )
   {
-    v9 = AKSC_div16f((signed __int16)-(signed __int16)v2, (signed __int16)v3, (__int16 *)&v18 + 1);
-    v5 = sub_4EEC(v9 >> SBYTE2(v18)) + 5760;
+    v7 = AKSC_div16f(-(signed __int16)v2, (signed __int16)v3, &v14);
+    v4 = (unsigned int)((sub_5A48(v7 >> v14) << 16) + 377487360) >> 16;
   }
   if ( !(v3 & 0x8000) )
-    goto LABEL_22;
-LABEL_24:
-  if ( (signed __int16)v2 <= v3 )
-    v11 = ((unsigned int)v3 >> 15) & 1;
-  else
-    v11 = 0;
-  if ( v11 )
+    goto LABEL_18;
+LABEL_20:
+  if ( v3 << 16 >= v2 << 16 && (signed __int16)v3 < 0 )
   {
-    v12 = AKSC_div16f((signed __int16)-(signed __int16)v3, (signed __int16)-(signed __int16)v2, (__int16 *)&v18 + 1);
-    v5 = sub_4EEC(v12 >> SBYTE2(v18)) + 11520;
+    v9 = AKSC_div16f(-(signed __int16)v3, -(signed __int16)v2, &v14);
+    v4 = (unsigned int)((sub_5A48(v9 >> v14) << 16) + 754974720) >> 16;
   }
-  if ( (signed __int16)v2 > (signed __int16)v3 )
-    v13 = (signed __int16)v2 <= 0;
-  else
-    v13 = 0;
-  if ( v13 )
+  if ( v3 << 16 < v2 << 16 && (signed __int16)v2 <= 0 )
   {
-    v14 = AKSC_div16f((signed __int16)-(signed __int16)v2, (signed __int16)-(signed __int16)v3, (__int16 *)&v18 + 1);
-    v5 = 17280 - sub_4EEC(v14 >> SBYTE2(v18));
-LABEL_38:
-    if ( -(signed __int16)v2 < v3 )
+    v10 = AKSC_div16f(-(signed __int16)v2, -(signed __int16)v3, &v14);
+    v4 = (17280 - (unsigned __int16)sub_5A48(v10 >> v14)) & 0xFFFF;
+LABEL_30:
+    if ( -(signed __int16)v2 < (signed __int16)v3 )
     {
-      v16 = AKSC_div16f((signed __int16)-(signed __int16)v3, (signed __int16)v2, (__int16 *)&v18 + 1);
-      v5 = 23040 - sub_4EEC(v16 >> SBYTE2(v18));
+      v12 = AKSC_div16f(-(signed __int16)v3, (signed __int16)v2, &v14);
+      v4 = (23040 - (sub_5A48(v12 >> v14) & 0xFFFF)) & 0xFFFF;
     }
-    goto LABEL_40;
+    return (signed __int16)(v4 & -(signed __int16)(v4
+                                                 - 23040
+                                                 - (v4
+                                                  - 23041
+                                                  + ((unsigned int)((signed __int16)v4 - 23040) < 1))));
   }
   if ( (signed __int16)v2 > 0 && -(signed __int16)v2 >= (signed __int16)v3 )
   {
-    v15 = AKSC_div16f((signed __int16)v2, (signed __int16)-(signed __int16)v3, (__int16 *)&v18 + 1);
-    v5 = sub_4EEC(v15 >> SBYTE2(v18)) + 17280;
+    v11 = AKSC_div16f((signed __int16)v2, -(signed __int16)v3, &v14);
+    v4 = (unsigned int)((sub_5A48(v11 >> v14) << 16) + 1132462080) >> 16;
   }
-  if ( (signed __int16)v3 <= 0 )
-    goto LABEL_38;
-LABEL_40:
-  if ( v5 == 23040 )
-    v5 = 0;
-  return v5;
+  if ( v3 << 16 <= 0 )
+    goto LABEL_30;
+  return (signed __int16)(v4 & -(signed __int16)(v4
+                                               - 23040
+                                               - (v4
+                                                - 23041
+                                                + ((unsigned int)((signed __int16)v4 - 23040) < 1))));
 }
 
-//----- (00005148) --------------------------------------------------------
-int __fastcall AKSC_invSqrt(signed int a1, _WORD *a2, int a3, __int16 a4)
+//----- (00005D1C) --------------------------------------------------------
+int __fastcall AKSC_invSqrt(signed int a1, _WORD *a2)
 {
-  signed int v4; // r4@3
-  _WORD *v5; // r5@3
-  int result; // r0@4
-  unsigned __int16 v7; // r0@5
-  signed int v8; // r4@5
-  int v15; // r5@7
-  char v17; // r2@7
-  int v18; // r1@7
-  int v19; // r0@7
+  signed int v2; // r4@1
+  _WORD *v3; // r5@1
+  int result; // r0@2
+  unsigned __int16 v5; // r0@3
+  signed int v6; // r4@3
+  int v7; // r1@5
 
-  if ( a1 <= 0 )
-    a4 = 0;
-  v4 = a1;
-  v5 = a2;
+  v2 = a1;
+  v3 = a2;
   if ( a1 > 0 )
   {
-    v7 = AKSC_norm32(a1);
-    v8 = v4 << v7;
-    _R12 = 30 - v7;
-    __asm { SBFX.W          R0, R12, #1, #0xF }
-    if ( !_NF )
-      v8 >>= 1;
-    *v5 = _R0 + 1;
-    v15 = (v8 >> 25) - 16;
-    _R4 = ((unsigned int)v8 >> 10) & 0x7FFF;
-    v17 = _R0 + 1;
-    v18 = word_5784[v15];
-    v19 = (signed __int16)v18;
-    _R1 = v18 - word_5784[v15 + 1];
-    __asm { SMULBB.W        R4, R1, R4 }
-    result = 2 * ((v19 << 15) - _R4) >> v17;
+    v5 = AKSC_norm32(a1);
+    v6 = v2 << v5;
+    if ( !((30 - v5) & 1) )
+      v6 >>= 1;
+    *v3 = ((30 - v5) << 16 >> 17) + 1;
+    v7 = *(_WORD *)&aEgiqmQiuvy[2 * ((v6 >> 25) - 16) + 16];
+    result = (signed int)(2
+                        * ((v7 << 16 >> 1)
+                         - ((unsigned int)(v6 << 7) >> 17)
+                         * (signed __int16)(v7 - *(_WORD *)&aEgiqmQiuvy[2 * ((v6 >> 25) - 15) + 16]))) >> (((30 - v5) << 16 >> 17) + 1);
   }
   else
   {
-    *a2 = a4;
+    *a2 = 0;
     result = 0x40000000;
   }
   return result;
 }
 
-//----- (000051B8) --------------------------------------------------------
-char *__fastcall AKSC_buffer(char *result, int a2, int a3, int a4)
+//----- (00005D90) --------------------------------------------------------
+int __fastcall AKSC_buffer(int result, signed int a2, signed int a3, int a4)
 {
-  signed int v4; // r6@1
-  char *v5; // r10@3
-  int v6; // r4@3
-  int v7; // r7@3
-  int v8; // r5@4
-  int v16; // r9@4
-  int v17; // r8@4
-  void *v18; // r0@5
-  const void *v19; // r1@5
-  int v22; // r5@7
-  int v23; // r7@7
-  int v24; // r10@7
-  void *v25; // r0@8
-  const void *v26; // r1@8
+  int v4; // r6@3
+  int v5; // r5@3
+  int v6; // r7@3
+  int v7; // r4@4
+  int v8; // r1@4
+  int v9; // r5@6
+  int v10; // r4@6
+  int v11; // r6@6
+  int v12; // r1@7
+  __int16 v13; // r7@7
+  _WORD *v14; // r0@7
+  int v15; // [sp+4h] [bp-1Ch]@1
 
-  v4 = a3 <= 0;
-  if ( a2 < a3 )
-    v4 = 1;
-  v5 = result;
-  v6 = a3;
-  v7 = a4;
-  if ( !v4 )
+  v15 = result;
+  if ( a2 >= a3 && a3 > 0 )
   {
-    LOWORD(v8) = a2;
-    _R2 = 6;
-    _R1 = (unsigned __int16)a2 - 1;
-    __asm { SMULBB.W        R0, R1, R2 }
-    v16 = a4 + _R0;
-    v17 = _R0 + -6 * v6 + a4;
+    v4 = (a2 - 1) & 0xFFFF;
+    v5 = 0;
+    v6 = 6 * (signed __int16)(a2 - 1);
     while ( 1 )
     {
-      v8 = (unsigned __int16)(v8 - 1);
-      if ( v8 < v6 )
+      result = v4 << 16;
+      if ( (signed __int16)v4 < a3 )
         break;
-      v18 = (void *)(v16 + v4);
-      v19 = (const void *)(v17 + v4);
-      v4 -= 6;
-      memcpy(v18, v19, 6u);
+      v7 = a4 + v6 + -6 * a3 + v5;
+      v8 = a4 + v6 + v5;
+      *(_WORD *)v8 = *(_WORD *)v7;
+      v7 += 2;
+      v8 += 2;
+      *(_WORD *)v8 = *(_WORD *)v7;
+      v4 = (v4 - 1) & 0xFFFF;
+      *(_WORD *)(v8 + 2) = *(_WORD *)(v7 + 2);
+      v5 -= 6;
     }
-    _R3 = 6;
-    _R1 = (unsigned __int16)v6 - 1;
-    v22 = 0;
-    __asm { SMULBB.W        R0, R1, R3 }
-    v23 = (int)&result[v7];
-    v24 = (int)&result[(_DWORD)v5];
-    while ( 1 )
+    v9 = (a3 - 1) & 0xFFFF;
+    v10 = 0;
+    v11 = 6 * (signed __int16)(a3 - 1);
+    while ( !(v9 & 0x8000) )
     {
-      LOWORD(v6) = v6 - 1;
-      if ( v6 & 0x8000 )
-        break;
-      v25 = (void *)(v23 + v22);
-      v26 = (const void *)(v24 + v22);
-      v22 -= 6;
-      result = (char *)memcpy(v25, v26, 6u);
+      v12 = v15 + v11 + v10;
+      v13 = *(_WORD *)v12;
+      v14 = (_WORD *)(a4 + v11 + v10);
+      v12 += 2;
+      *v14 = v13;
+      result = (int)(v14 + 1);
+      *(_WORD *)result = *(_WORD *)v12;
+      v9 = (v9 - 1) & 0xFFFF;
+      v10 -= 6;
+      *(_WORD *)(result + 2) = *(_WORD *)(v12 + 2);
     }
   }
   return result;
 }
 
-//----- (0000523C) --------------------------------------------------------
-int __fastcall AKSC_vectorCalc(int result, signed int a2, int a3, int a4, int a5, int a6)
+//----- (00005E24) --------------------------------------------------------
+int __fastcall AKSC_vectorCalc(int result, signed int a2, signed __int16 *a3, signed __int16 *a4, int a5, int a6)
 {
-  int v6; // r4@1
-  int v7; // r6@1
-  signed int v8; // r7@2
-  int v9; // r5@2
-  signed int v10; // r8@8
-  int v11; // r8@9
-  int v12; // r5@12
+  int v6; // r5@1
+  int v7; // r1@1
+  int v8; // r12@2
+  signed __int16 *v9; // r4@2
+  int v10; // r6@2
+  int v11; // r4@9
+  int v12; // r4@12
+  signed int v13; // [sp+14h] [bp-24h]@8
+  signed int v14; // [sp+18h] [bp-20h]@1
 
+  v14 = a2;
   v6 = 0;
   v7 = 0;
   do
   {
-    v8 = 1;
-    *(_WORD *)(a4 + v6) = *(_WORD *)(result + v6);
-    *(_WORD *)(a3 + v6) = *(_WORD *)(result + v6);
-    v9 = result + 2 * v7;
+    v8 = v7;
+    *a4 = *(_WORD *)(result + v7);
+    *a3 = *(_WORD *)(result + v7);
+    v9 = (signed __int16 *)(result + 6 + 2 * v6);
+    v10 = 1;
     while ( 1 )
     {
-      v10 = *(_WORD *)(a4 + v6);
-      if ( v8 >= a2 )
+      v13 = *a4;
+      if ( (signed __int16)v10 >= v14 )
         break;
-      if ( v10 > *(_WORD *)(v9 + 6) )
-        *(_WORD *)(a4 + v6) = *(_WORD *)(v9 + 6);
-      if ( *(_WORD *)(a3 + v6) < (signed int)*(_WORD *)(v9 + 6) )
-        *(_WORD *)(a3 + v6) = *(_WORD *)(v9 + 6);
-      v9 += 6;
-      v8 = (unsigned __int16)(v8 + 1);
+      if ( v13 > *v9 )
+        *a4 = *v9;
+      if ( *a3 < *v9 )
+        *a3 = *v9;
+      v10 = (v10 + 1) & 0xFFFF;
+      v9 += 3;
     }
-    v11 = ((signed int)*(_WORD *)(a3 + v6) >> 1) + (v10 >> 1);
-    *(_WORD *)(a5 + v6) = v11;
-    if ( *(_WORD *)(a3 + v6) & 1 || *(_WORD *)(a4 + v6) & 1 )
-      *(_WORD *)(a5 + v6) = v11 + 1;
-    v12 = (unsigned __int16)(*(_WORD *)(a3 + v6) - *(_WORD *)(a4 + v6));
-    *(_WORD *)(a6 + v6) = v12;
-    if ( v12 << 16 < 0 )
-      *(_WORD *)(a6 + v6) = 0x7FFF;
-    v6 += 2;
-    ++v7;
+    v11 = ((v13 >> 1) + (*a3 >> 1)) & 0xFFFF;
+    *(_WORD *)(a5 + v7) = (*a4 >> 1) + (*a3 >> 1);
+    if ( *a3 & 1 || *a4 & 1 )
+      *(_WORD *)(a5 + v7) = v11 + 1;
+    v12 = ((unsigned __int16)*a3 - (unsigned __int16)*a4) << 16;
+    *(_WORD *)(a6 + v7) = *a3 - *a4;
+    if ( v12 < 0 )
+      *(_WORD *)(a6 + v7) = 0x7FFF;
+    v7 += 2;
+    ++v6;
+    ++a4;
+    ++a3;
   }
-  while ( v6 != 6 );
+  while ( v8 != 4 );
   return result;
 }
 
-//----- (000052E0) --------------------------------------------------------
+//----- (00005EF0) --------------------------------------------------------
 signed int AKSC_GetVersion_Major()
 {
   return 1;
 }
 
-//----- (000052E4) --------------------------------------------------------
+//----- (00005EF4) --------------------------------------------------------
 int AKSC_GetVersion_Variation()
 {
   return 0;
 }
 
-//----- (000052E8) --------------------------------------------------------
+//----- (00005EF8) --------------------------------------------------------
 signed int AKSC_GetVersion_DateCode()
 {
   return 809;
 }
 
-// ALL OK, 66 function(s) have been successfully decompiled
+//----- (00005F08) --------------------------------------------------------
+int __fastcall sub_5F08(int result, unsigned int a2)
+{
+  char v2; // nf@0
+  int v3; // r12@1
+  unsigned int v4; // r3@4
+  char v5; // r0@8
+  unsigned int v6; // r1@8
+  unsigned int v7; // r2@8
+  bool v8; // zf@17
+
+  v3 = result ^ a2;
+  if ( v2 )
+    a2 = -a2;
+  if ( a2 == 1 )
+  {
+    if ( (v3 ^ result) < 0 )
+      result = -result;
+  }
+  else
+  {
+    v4 = result;
+    if ( result < 0 )
+      v4 = -result;
+    if ( v4 <= a2 )
+    {
+      if ( v4 < a2 )
+        result = 0;
+      if ( v4 == a2 )
+        result = (v3 >> 31) | 1;
+    }
+    else if ( a2 & (a2 - 1) )
+    {
+      v5 = __clz(a2) - __clz(v4);
+      v6 = a2 << v5;
+      v7 = 1 << v5;
+      result = 0;
+      while ( 1 )
+      {
+        if ( v4 >= v6 )
+        {
+          v4 -= v6;
+          result |= v7;
+        }
+        if ( v4 >= v6 >> 1 )
+        {
+          v4 -= v6 >> 1;
+          result |= v7 >> 1;
+        }
+        if ( v4 >= v6 >> 2 )
+        {
+          v4 -= v6 >> 2;
+          result |= v7 >> 2;
+        }
+        if ( v4 >= v6 >> 3 )
+        {
+          v4 -= v6 >> 3;
+          result |= v7 >> 3;
+        }
+        v8 = v4 == 0;
+        if ( v4 )
+        {
+          v7 >>= 4;
+          v8 = v7 == 0;
+        }
+        if ( v8 )
+          break;
+        v6 >>= 4;
+      }
+      if ( v3 < 0 )
+        result = -result;
+    }
+    else
+    {
+      result = v4 >> (31 - __clz(a2));
+      if ( v3 < 0 )
+        result = -result;
+    }
+  }
+  return result;
+}
+
+//----- (00005FFC) --------------------------------------------------------
+int _aeabi_ldiv0()
+{
+  return raise(8);
+}
+
+//----- (0000600C) --------------------------------------------------------
+int __fastcall sub_600C(char *a1)
+{
+  int v1; // r3@1
+  unsigned int v2; // r3@2
+
+  v1 = *(_DWORD *)a1;
+  if ( *(_DWORD *)a1 & 0x40000000 )
+    v2 = v1 | 0x80000000;
+  else
+    v2 = v1 & 0x7FFFFFFF;
+  return (int)&a1[v2];
+}
+
+//----- (00006024) --------------------------------------------------------
+int __fastcall sub_6024(int a1, int a2, unsigned int a3)
+{
+  int v3; // r10@1
+  unsigned int v4; // r6@1
+  int v5; // r8@2
+  int v6; // r7@2
+  int v7; // r9@2
+  int v8; // r4@3
+  int v9; // r5@3
+  unsigned int v10; // r0@3
+  unsigned int v11; // r11@3
+  int v12; // r0@4
+
+  v3 = a1;
+  v4 = a3;
+  if ( a2 )
+  {
+    v5 = a2 - 1;
+    v6 = 0;
+    v7 = a2 - 1;
+    while ( 1 )
+    {
+      v8 = (v6 + v7) / 2;
+      v9 = v3 + 8 * v8;
+      v10 = sub_600C((char *)(v3 + 8 * v8));
+      v11 = v10;
+      if ( v8 == v5 )
+      {
+        if ( v4 >= v10 )
+          return v9;
+LABEL_5:
+        if ( v8 == v6 )
+          return 0;
+        v7 = v8 - 1;
+      }
+      else
+      {
+        v12 = sub_600C((char *)(v3 + 8 * (v8 + 1)));
+        if ( v4 < v11 )
+          goto LABEL_5;
+        if ( v4 <= v12 - 1 )
+          return v9;
+        v6 = v8 + 1;
+      }
+    }
+  }
+  return 0;
+}
+
+//----- (000060C8) --------------------------------------------------------
+int __fastcall sub_60C8(int a1)
+{
+  signed int v1; // r2@4
+
+  if ( a1 == 1 )
+  {
+    v1 = -6;
+    return GLOBAL_OFFSET_TABLE_[v1];
+  }
+  if ( a1 == 2 )
+  {
+    v1 = -5;
+    return GLOBAL_OFFSET_TABLE_[v1];
+  }
+  if ( !a1 )
+  {
+    v1 = -7;
+    return GLOBAL_OFFSET_TABLE_[v1];
+  }
+  return 0;
+}
+// 9FA4: using guessed type int GLOBAL_OFFSET_TABLE_[];
+
+//----- (0000611C) --------------------------------------------------------
+_DWORD *__fastcall sub_611C(_DWORD *result)
+{
+  int v1; // r3@1
+  _DWORD *v2; // r4@1
+  int v3; // r0@2
+
+  v1 = *result;
+  v2 = result;
+  if ( !(*result & 1) )
+  {
+    v3 = (int)(result + 18);
+    if ( v1 & 2 )
+      result = (_DWORD *)_gnu_Unwind_Restore_VFP_D(v3);
+    else
+      result = (_DWORD *)_gnu_Unwind_Restore_VFP(v3);
+  }
+  if ( !(*v2 & 4) )
+    result = (_DWORD *)_gnu_Unwind_Restore_VFP_D_16_to_31((int)(v2 + 52));
+  if ( !(*v2 & 8) )
+    result = (_DWORD *)_gnu_Unwind_Restore_WMMXD(v2 + 108);
+  if ( !(*v2 & 0x10) )
+    result = (_DWORD *)_gnu_Unwind_Restore_WMMXC(v2 + 140);
+  return result;
+}
+
+//----- (00006188) --------------------------------------------------------
+signed int __fastcall sub_6188(int a1, int a2, int a3)
+{
+  int v3; // r4@1
+  unsigned int v4; // r5@1
+  int v5; // r0@2
+  char *v6; // r0@6
+  char *v7; // r5@6
+  signed int result; // r0@8
+  int v9; // r0@9
+  int v10; // r3@9
+  char *v11; // r0@11
+  signed int v12; // r3@12
+  int v13; // r0@13
+  char *v14; // r0@14
+  int v15; // r0@15
+  int v16; // [sp+4h] [bp-14h]@1
+  int v17; // [sp+8h] [bp-10h]@1
+
+  v16 = a2;
+  v17 = a3;
+  v3 = a1;
+  v4 = a2 - 2;
+  if ( &__gnu_Unwind_Find_exidx )
+  {
+    v5 = _gnu_Unwind_Find_exidx(a2 - 2, &v16);
+    if ( !v5 )
+    {
+      *(_DWORD *)(v3 + 16) = 0;
+      return 9;
+    }
+  }
+  else
+  {
+    v5 = 30028;
+    v16 = 0x308 >> 3;
+  }
+  v6 = (char *)sub_6024(v5, v16, v4);
+  v7 = v6;
+  if ( !v6 )
+  {
+    *(_DWORD *)(v3 + 16) = v6;
+    return 9;
+  }
+  v9 = sub_600C(v6);
+  v10 = *((_DWORD *)v7 + 1);
+  *(_DWORD *)(v3 + 72) = v9;
+  if ( v10 == 1 )
+  {
+    result = 5;
+    *(_DWORD *)(v3 + 16) = 0;
+  }
+  else
+  {
+    v11 = v7 + 4;
+    if ( v10 >= 0 )
+    {
+      v13 = sub_600C(v11);
+      v12 = 0;
+      *(_DWORD *)(v3 + 76) = v13;
+    }
+    else
+    {
+      *(_DWORD *)(v3 + 76) = v11;
+      v12 = 1;
+    }
+    v14 = *(char **)(v3 + 76);
+    *(_DWORD *)(v3 + 80) = v12;
+    if ( *(_DWORD *)v14 >= 0 )
+    {
+      *(_DWORD *)(v3 + 16) = sub_600C(v14);
+      result = 0;
+    }
+    else
+    {
+      v15 = sub_60C8((*(_DWORD *)v14 >> 24) & 0xF);
+      *(_DWORD *)(v3 + 16) = v15;
+      if ( v15 )
+        result = 0;
+      else
+        result = 9;
+    }
+  }
+  return result;
+}
+// 1930: using guessed type int __fastcall _gnu_Unwind_Find_exidx(_DWORD, _DWORD);
+
+//----- (00006298) --------------------------------------------------------
+int __fastcall sub_6298(char *a1)
+{
+  int v1; // r3@1
+
+  v1 = *(_DWORD *)a1;
+  if ( *(_DWORD *)a1 )
+    v1 = *(_DWORD *)&a1[v1];
+  return v1;
+}
+
+//----- (000062AC) --------------------------------------------------------
+signed int sub_62AC()
+{
+  return 9;
+}
+
+//----- (000062B8) --------------------------------------------------------
+signed int __fastcall sub_62B8(int a1, int a2, int a3)
+{
+  int v3; // lr@1
+  int (__fastcall *v4)(signed int, signed int, int, int); // r8@1
+  int v5; // r4@1
+  int v6; // r10@1
+  int v7; // r7@1
+  int v8; // r0@1
+  int v9; // r1@1
+  int v10; // r2@1
+  int v11; // r3@1
+  int v12; // r9@1
+  int v13; // r0@1
+  int v14; // r1@1
+  int v15; // r2@1
+  int v16; // r3@1
+  int v17; // r0@1
+  int v18; // r1@1
+  int v19; // r2@1
+  int v20; // r3@1
+  int v21; // r2@1
+  int v22; // r1@1
+  int v23; // r3@1
+  signed int v24; // r0@2
+  signed int v25; // r7@3
+  signed int v26; // r5@5
+  int v27; // r3@6
+  int v28; // r0@7
+  int v30; // [sp+8h] [bp-4A0h]@1
+  int v31; // [sp+Ch] [bp-49Ch]@1
+  int v32; // [sp+10h] [bp-498h]@1
+  int v33; // [sp+14h] [bp-494h]@1
+  int v34; // [sp+18h] [bp-490h]@1
+  int v35; // [sp+1Ch] [bp-48Ch]@1
+  int v36; // [sp+20h] [bp-488h]@1
+  int v37; // [sp+24h] [bp-484h]@1
+  int v38; // [sp+28h] [bp-480h]@1
+  int v39; // [sp+2Ch] [bp-47Ch]@1
+  int v40; // [sp+30h] [bp-478h]@1
+  int v41; // [sp+34h] [bp-474h]@1
+  int v42; // [sp+38h] [bp-470h]@1
+  int v43; // [sp+3Ch] [bp-46Ch]@1
+  int v44; // [sp+40h] [bp-468h]@1
+  int v45; // [sp+44h] [bp-464h]@1
+  int v46; // [sp+48h] [bp-460h]@1
+  int v47; // [sp+4Ch] [bp-45Ch]@8
+  char dest; // [sp+248h] [bp-260h]@7
+  int v49; // [sp+280h] [bp-228h]@7
+
+  v3 = a2 + 4;
+  v4 = *(int (__fastcall **)(signed int, signed int, int, int))(a1 + 12);
+  v5 = a1;
+  v6 = *(_DWORD *)(a1 + 24);
+  v7 = a3;
+  v8 = *(_DWORD *)(a2 + 4);
+  v9 = *(_DWORD *)(a2 + 8);
+  v10 = *(_DWORD *)(v3 + 8);
+  v11 = *(_DWORD *)(v3 + 12);
+  v3 += 16;
+  v12 = 0;
+  v31 = v8;
+  v32 = v9;
+  v33 = v10;
+  v34 = v11;
+  v13 = *(_DWORD *)v3;
+  v14 = *(_DWORD *)(v3 + 4);
+  v15 = *(_DWORD *)(v3 + 8);
+  v16 = *(_DWORD *)(v3 + 12);
+  v3 += 16;
+  v35 = v13;
+  v36 = v14;
+  v37 = v15;
+  v38 = v16;
+  v17 = *(_DWORD *)v3;
+  v18 = *(_DWORD *)(v3 + 4);
+  v19 = *(_DWORD *)(v3 + 8);
+  v20 = *(_DWORD *)(v3 + 12);
+  v3 += 16;
+  v39 = v17;
+  v40 = v18;
+  v41 = v19;
+  v42 = v20;
+  v22 = *(_DWORD *)(v3 + 4);
+  v21 = *(_DWORD *)(v3 + 8);
+  v23 = *(_DWORD *)(v3 + 12);
+  v43 = *(_DWORD *)v3;
+  v44 = v22;
+  v45 = v21;
+  v46 = v23;
+  v30 = 0;
+  while ( 1 )
+  {
+    v24 = sub_6188(v5, v46, v21);
+    v25 = v7 ? 10 : 9;
+    v26 = v24;
+    if ( v24 )
+    {
+      v25 |= 0x10u;
+      v27 = v44;
+    }
+    else
+    {
+      *(_DWORD *)(v5 + 20) = v46;
+      memcpy(&dest, &v30, 0x240u);
+      v28 = (*(int (__fastcall **)(signed int, int, char *))(v5 + 16))(v25, v5, &dest);
+      v27 = v49;
+      v12 = v28;
+    }
+    v47 = v27;
+    if ( v4(1, v25, v5, v5) )
+      break;
+    if ( v26 )
+      return v26;
+    v7 = 0;
+    memcpy(&v30, &dest, 0x240u);
+    if ( v12 != 8 )
+    {
+      if ( v12 == 7 )
+      {
+        nullsub_1(0, v46);
+        restore_core_regs((int)&v31);
+      }
+      return 9;
+    }
+  }
+  return 9;
+}
+// 62B4: using guessed type int __fastcall nullsub_1(_DWORD, _DWORD);
+
+//----- (000063E0) --------------------------------------------------------
+int __fastcall sub_63E0(int a1, int a2, int a3)
+{
+  int v3; // r5@1
+  int v4; // r4@1
+  int v5; // r0@4
+  int v6; // r0@6
+
+  v3 = a1;
+  v4 = a2;
+  do
+  {
+    if ( sub_6188(v3, *(_DWORD *)(v4 + 64), a3) )
+      goto LABEL_3;
+    *(_DWORD *)(v3 + 20) = *(_DWORD *)(v4 + 64);
+    v5 = (*(int (__fastcall **)(signed int, int, int))(v3 + 16))(1, v3, v4);
+  }
+  while ( v5 == 8 );
+  if ( v5 != 7 )
+LABEL_3:
+    abort();
+  nullsub_1(0, *(_DWORD *)(v4 + 64));
+  restore_core_regs(v4 + 4);
+  return Unwind_GetCFA(v6);
+}
+// 62B4: using guessed type int __fastcall nullsub_1(_DWORD, _DWORD);
+
+//----- (00006444) --------------------------------------------------------
+int __fastcall Unwind_GetCFA(int a1)
+{
+  return *(_DWORD *)(a1 + 68);
+}
+
+//----- (0000644C) --------------------------------------------------------
+signed int __fastcall _gnu_Unwind_RaiseException(int a1, int a2)
+{
+  int v2; // lr@1
+  int v3; // r5@1
+  int v4; // r4@1
+  int v5; // r0@1
+  int v6; // r1@1
+  int v7; // r2@1
+  int v8; // r3@1
+  int v9; // r0@1
+  int v10; // r1@1
+  int v11; // r2@1
+  int v12; // r3@1
+  int v13; // r0@1
+  int v14; // r1@1
+  int v15; // r2@1
+  int v16; // r3@1
+  int v17; // r2@1
+  int v18; // r1@1
+  int v19; // r3@1
+  int v20; // r7@3
+  int v21; // r2@4
+  signed int v23; // [sp+0h] [bp-258h]@1
+  int v24; // [sp+4h] [bp-254h]@1
+  int v25; // [sp+8h] [bp-250h]@1
+  int v26; // [sp+Ch] [bp-24Ch]@1
+  int v27; // [sp+10h] [bp-248h]@1
+  int v28; // [sp+14h] [bp-244h]@1
+  int v29; // [sp+18h] [bp-240h]@1
+  int v30; // [sp+1Ch] [bp-23Ch]@1
+  int v31; // [sp+20h] [bp-238h]@1
+  int v32; // [sp+24h] [bp-234h]@1
+  int v33; // [sp+28h] [bp-230h]@1
+  int v34; // [sp+2Ch] [bp-22Ch]@1
+  int v35; // [sp+30h] [bp-228h]@1
+  int v36; // [sp+34h] [bp-224h]@1
+  int v37; // [sp+38h] [bp-220h]@1
+  int v38; // [sp+3Ch] [bp-21Ch]@1
+  int v39; // [sp+40h] [bp-218h]@1
+
+  v2 = a2 + 4;
+  *(_DWORD *)(a2 + 64) = *(_DWORD *)(a2 + 60);
+  v3 = a1;
+  v4 = a2;
+  v5 = *(_DWORD *)(a2 + 4);
+  v6 = *(_DWORD *)(a2 + 8);
+  v7 = *(_DWORD *)(v2 + 8);
+  v8 = *(_DWORD *)(v2 + 12);
+  v2 += 16;
+  v24 = v5;
+  v25 = v6;
+  v26 = v7;
+  v27 = v8;
+  v9 = *(_DWORD *)v2;
+  v10 = *(_DWORD *)(v2 + 4);
+  v11 = *(_DWORD *)(v2 + 8);
+  v12 = *(_DWORD *)(v2 + 12);
+  v2 += 16;
+  v28 = v9;
+  v29 = v10;
+  v30 = v11;
+  v31 = v12;
+  v13 = *(_DWORD *)v2;
+  v14 = *(_DWORD *)(v2 + 4);
+  v15 = *(_DWORD *)(v2 + 8);
+  v16 = *(_DWORD *)(v2 + 12);
+  v2 += 16;
+  v32 = v13;
+  v33 = v14;
+  v34 = v15;
+  v35 = v16;
+  v18 = *(_DWORD *)(v2 + 4);
+  v17 = *(_DWORD *)(v2 + 8);
+  v19 = *(_DWORD *)(v2 + 12);
+  v36 = *(_DWORD *)v2;
+  v37 = v18;
+  v38 = v17;
+  v39 = v19;
+  v23 = -1;
+  while ( !sub_6188(v3, v39, v17) )
+  {
+    v20 = (*(int (__cdecl **)(_DWORD, int, signed int *, _DWORD, signed int, int, int, int, int, int, int, int, int, int, int, int))(v3 + 16))(
+            0,
+            v3,
+            &v23,
+            *(_DWORD *)(v3 + 16),
+            v23,
+            v24,
+            v25,
+            v26,
+            v27,
+            v28,
+            v29,
+            v30,
+            v31,
+            v32,
+            v33,
+            v34);
+    if ( v20 != 8 )
+    {
+      sub_611C(&v23);
+      if ( v20 == 6 )
+        sub_63E0(v3, v4, v21);
+      return 9;
+    }
+  }
+  return 9;
+}
+
+//----- (000064F0) --------------------------------------------------------
+signed int __fastcall _gnu_Unwind_ForcedUnwind(int a1, int a2, int a3, int a4)
+{
+  int v4; // r2@1
+
+  *(_DWORD *)(a1 + 24) = a3;
+  v4 = *(_DWORD *)(a4 + 60);
+  *(_DWORD *)(a1 + 12) = a2;
+  *(_DWORD *)(a4 + 64) = v4;
+  return sub_62B8(a1, a4, 0);
+}
+
+//----- (0000650C) --------------------------------------------------------
+void __fastcall _gnu_Unwind_Resume(int a1, int a2)
+{
+  int v2; // r5@1
+  int v3; // r6@1
+  int v4; // r4@1
+  int v5; // r0@3
+  int v6; // r2@3
+
+  v2 = a1;
+  v3 = *(_DWORD *)(a1 + 12);
+  v4 = a2;
+  *(_DWORD *)(a2 + 64) = *(_DWORD *)(a1 + 20);
+  if ( v3 )
+  {
+    sub_62B8(a1, a2, 1);
+    goto LABEL_8;
+  }
+  v5 = (*(int (__fastcall **)(signed int, int, int))(a1 + 16))(2, a1, a2);
+  if ( v5 == 7 )
+  {
+    nullsub_1(0, *(_DWORD *)(v4 + 64));
+    restore_core_regs(v4 + 4);
+  }
+  else if ( v5 != 8 )
+  {
+    goto LABEL_8;
+  }
+  sub_63E0(v2, v4, v6);
+LABEL_8:
+  abort();
+}
+// 62B4: using guessed type int __fastcall nullsub_1(_DWORD, _DWORD);
+
+//----- (00006584) --------------------------------------------------------
+signed int __fastcall _gnu_Unwind_Resume_or_Rethrow(int a1, int a2)
+{
+  signed int result; // r0@2
+
+  if ( *(_DWORD *)(a1 + 12) )
+  {
+    *(_DWORD *)(a2 + 64) = *(_DWORD *)(a2 + 60);
+    result = sub_62B8(a1, a2, 0);
+  }
+  else
+  {
+    result = _gnu_Unwind_RaiseException(a1, a2);
+  }
+  return result;
+}
+
+//----- (000065A8) --------------------------------------------------------
+int __fastcall Unwind_DeleteException(int result)
+{
+  int (__fastcall *v1)(signed int, int); // r3@1
+
+  v1 = *(int (__fastcall **)(signed int, int))(result + 8);
+  if ( v1 )
+    result = v1(1, result);
+  return result;
+}
+
+//----- (000065C8) --------------------------------------------------------
+signed int __fastcall Unwind_VRS_Get(int a1, unsigned int a2, unsigned int a3, int a4, unsigned int a5)
+{
+  signed int result; // r0@3
+  bool v6; // zf@6
+  signed int v7; // r3@9
+
+  if ( a2 )
+  {
+    if ( a2 <= 4 )
+      result = 1;
+    else
+      result = 2;
+  }
+  else
+  {
+    v6 = a3 == 15;
+    if ( a3 <= 0xF )
+      v6 = a4 == 0;
+    if ( v6 )
+    {
+      a3 = a1 + 4 * a3;
+      v7 = 0;
+    }
+    else
+    {
+      v7 = 1;
+    }
+    if ( v6 )
+    {
+      a2 = *(_DWORD *)(a3 + 4);
+      result = v7;
+      a3 = a5;
+    }
+    else
+    {
+      result = 2;
+    }
+    if ( v6 )
+      *(_DWORD *)a3 = a2;
+  }
+  return result;
+}
+
+//----- (0000660C) --------------------------------------------------------
+int __fastcall sub_660C(int a1, unsigned int a2, int a3, int a4)
+{
+  int v5; // [sp+Ch] [bp-Ch]@1
+
+  v5 = a4;
+  Unwind_VRS_Get(a1, 0, a2, 0, (unsigned int)&v5);
+  return v5;
+}
+
+//----- (00006634) --------------------------------------------------------
+signed int __fastcall Unwind_VRS_Set(int a1, _DWORD *a2, unsigned int a3, int a4, _DWORD *a5)
+{
+  signed int result; // r0@3
+  bool v6; // zf@6
+  signed int v7; // r3@9
+
+  if ( a2 )
+  {
+    if ( (unsigned int)a2 <= 4 )
+      result = 1;
+    else
+      result = 2;
+  }
+  else
+  {
+    v6 = a3 == 15;
+    if ( a3 <= 0xF )
+      v6 = a4 == 0;
+    if ( v6 )
+    {
+      a3 = a1 + 4 * a3;
+      a2 = a5;
+      v7 = 0;
+    }
+    else
+    {
+      v7 = 1;
+    }
+    if ( v6 )
+      result = v7;
+    else
+      result = 2;
+    if ( v6 )
+      *(_DWORD *)(a3 + 4) = *a2;
+  }
+  return result;
+}
+
+//----- (00006678) --------------------------------------------------------
+signed int __fastcall sub_6678(int a1, unsigned int a2, int a3)
+{
+  int v4; // [sp+Ch] [bp-Ch]@1
+
+  v4 = a3;
+  return Unwind_VRS_Set(a1, 0, a2, 0, &v4);
+}
+
+//----- (000066A4) --------------------------------------------------------
+signed int __fastcall sub_66A4(int a1, int a2, int a3, signed int a4)
+{
+  int v4; // r6@1
+  int *v5; // r5@1
+  signed int v6; // r10@1
+  int v7; // r4@1
+  int v8; // r7@1
+  unsigned int v9; // r2@1
+  int v10; // r5@1
+  int v11; // t1@1
+  int v12; // r9@7
+  int v13; // r3@11
+  int v14; // r5@11
+  int v15; // r8@12
+  unsigned int v16; // r0@13
+  int v17; // r0@14
+  int v18; // r0@21
+  int v19; // r0@24
+  void *v20; // r5@24
+  int v21; // r0@25
+  unsigned int v22; // r1@25
+  void *v23; // r2@25
+  int v24; // r1@29
+  unsigned int v25; // r8@29
+  int v26; // r0@31
+  int v27; // r8@31
+  int v28; // r0@34
+  int v29; // r3@34
+  int v30; // r2@34
+  int v31; // r3@38
+  int v32; // r8@40
+  int v33; // r0@42
+  int v35; // r8@46
+  int v36; // r3@48
+  int v37; // ST04_4@52
+  int v38; // r0@52
+  int v39; // r0@52
+  int v40; // r3@52
+  int v41; // r12@52
+  int v42; // r0@56
+  int v43; // ST00_4@59
+  int v44; // r0@62
+  int v45; // r8@64
+  signed int v46; // r0@69
+  int v47; // r2@69
+  int v48; // r3@69
+  int v49; // r0@72
+  char v50; // [sp+0h] [bp-48h]@13
+  unsigned int v51; // [sp+4h] [bp-44h]@13
+  unsigned int v52; // [sp+Ch] [bp-3Ch]@9
+  int v53; // [sp+10h] [bp-38h]@30
+  unsigned int v54; // [sp+14h] [bp-34h]@1
+  int v55; // [sp+18h] [bp-30h]@1
+  char v56; // [sp+1Ch] [bp-2Ch]@2
+  unsigned __int8 v57; // [sp+1Dh] [bp-2Bh]@2
+
+  v4 = a3;
+  v5 = *(int **)(a2 + 76);
+  v6 = a4;
+  v7 = a2;
+  v8 = a1 & 3;
+  v11 = *v5;
+  v10 = (int)(v5 + 1);
+  v9 = v11;
+  v54 = v11;
+  v55 = v10;
+  if ( a4 )
+  {
+    if ( a4 <= 2 )
+    {
+      v57 = v9 >> 16;
+      v54 = v9 << 16;
+      a4 = v57;
+      v9 = 2;
+      v56 = 2;
+      v10 += 4 * v57;
+    }
+  }
+  else
+  {
+    v9 <<= 8;
+    a4 = 3;
+    v54 = v9;
+    v57 = v6;
+    v56 = 3;
+  }
+  if ( v8 == 2 )
+    v10 = *(_DWORD *)(a2 + 56);
+  v12 = *(_DWORD *)(a2 + 80) & 1;
+  if ( v12 )
+  {
+    v12 = 0;
+LABEL_68:
+    if ( v6 <= 2 )
+      v46 = _gnu_unwind_execute(v4, (int)&v54, v9, a4);
+    else
+      v46 = sub_62AC();
+    if ( v46 )
+      return 9;
+    if ( !v12 )
+      return 8;
+    v49 = sub_660C(v4, 0xFu, v47, v48);
+    sub_6678(v4, 0xEu, v49);
+    v21 = v4;
+    v22 = 15;
+    v23 = &_cxa_call_unexpected;
+LABEL_44:
+    sub_6678(v21, v22, (int)v23);
+    return 7;
+  }
+  v52 = ((a1 ^ 8u) >> 3) & 1;
+  while ( 1 )
+  {
+    while ( 1 )
+    {
+      v15 = *(_DWORD *)v10;
+      if ( !*(_DWORD *)v10 )
+        goto LABEL_68;
+      if ( v6 == 2 )
+      {
+        v13 = *(_DWORD *)(v10 + 4);
+        v14 = v10 + 8;
+      }
+      else
+      {
+        v13 = *(_WORD *)(v10 + 2);
+        v15 = *(_WORD *)v10;
+        v14 = v10 + 4;
+      }
+      v51 = (v13 & 0xFFFFFFFE) + *(_DWORD *)(v7 + 72);
+      v50 = v13;
+      v16 = sub_660C(v4, 0xFu, v51, v13);
+      v9 = v51;
+      if ( v51 <= v16 )
+      {
+        v9 = v51 + (v15 & 0xFFFFFFFE);
+        v17 = v16 < v9;
+      }
+      else
+      {
+        v17 = 0;
+      }
+      a4 = v15 & 1 | 2 * (v50 & 1);
+      if ( a4 == 1 )
+        break;
+      if ( (unsigned int)a4 < 1 )
+      {
+        if ( v8 )
+          v18 = v17 & 1;
+        else
+          v18 = 0;
+        if ( v18 )
+        {
+          v19 = sub_600C((char *)v14);
+          *(_DWORD *)(v7 + 56) = v14 + 4;
+          v20 = (void *)v19;
+          if ( !_cxa_begin_cleanup(v7) )
+            return 9;
+          v21 = v4;
+          v22 = 15;
+          v23 = v20;
+          goto LABEL_44;
+        }
+        v10 = v14 + 4;
+      }
+      else
+      {
+        if ( a4 != 2 )
+          return 9;
+        v35 = *(_DWORD *)v14 & 0x7FFFFFFF;
+        if ( v8 )
+        {
+          v43 = *(_DWORD *)(v7 + 32);
+          if ( v43 != sub_660C(v4, 0xDu, v9, *(_DWORD *)(v7 + 32)) || v14 != *(_DWORD *)(v7 + 40) )
+            goto LABEL_64;
+          *(_DWORD *)(v7 + 40) = v35;
+          *(_DWORD *)(v7 + 48) = 4;
+          *(_DWORD *)(v7 + 44) = 0;
+          *(_DWORD *)(v7 + 52) = v14 + 4;
+          if ( *(_DWORD *)v14 >= 0 )
+          {
+            v12 = 1;
+            goto LABEL_64;
+          }
+          v44 = sub_600C((char *)(v14 + 4 * (v35 + 1)));
+          sub_6678(v4, 0xFu, v44);
+          v21 = v4;
+          v22 = 0;
+LABEL_43:
+          v23 = (void *)v7;
+          goto LABEL_44;
+        }
+        if ( v17 )
+        {
+          v36 = v52;
+          if ( !v35 )
+            v36 = v52 | 1;
+          if ( v36 )
+          {
+            v41 = 0;
+            v40 = v7 + 88;
+            while ( v41 != v35 )
+            {
+              v37 = v41 + 1;
+              v53 = v7 + 88;
+              v38 = sub_6298((char *)(v14 + 4 * (v41 + 1)));
+              v39 = _cxa_type_match(v7, v38, 0, &v53);
+              v41 = v37;
+              if ( v39 )
+                goto LABEL_64;
+            }
+            v42 = sub_660C(v4, 0xDu, v9, v40);
+            v31 = v53;
+            *(_DWORD *)(v7 + 32) = v42;
+LABEL_57:
+            *(_DWORD *)(v7 + 36) = v31;
+            goto LABEL_58;
+          }
+        }
+LABEL_64:
+        a4 = *(_DWORD *)v14;
+        v45 = v35 + 1;
+        if ( *(_DWORD *)v14 < 0 )
+          v14 += 4;
+        v10 = v14 + 4 * v45;
+      }
+    }
+    if ( !v8 )
+      break;
+    v32 = *(_DWORD *)(v7 + 32);
+    if ( v32 == sub_660C(v4, 0xDu, v9, 1) )
+    {
+      a4 = *(_DWORD *)(v7 + 40);
+      if ( v14 == a4 )
+      {
+        v33 = sub_600C((char *)v14);
+        sub_6678(v4, 0xFu, v33);
+        v21 = v4;
+        v22 = 0;
+        goto LABEL_43;
+      }
+    }
+LABEL_45:
+    v10 = v14 + 8;
+  }
+  if ( !v17 )
+    goto LABEL_45;
+  v24 = *(_DWORD *)(v14 + 4);
+  v25 = *(_DWORD *)v14;
+  if ( v24 == -2 )
+    return 9;
+  v9 = v7 + 88;
+  v53 = v7 + 88;
+  if ( v24 != -1 )
+  {
+    v26 = sub_6298((char *)(v14 + 4));
+    v27 = _cxa_type_match(v7, v26, v25 >> 31, &v53);
+    if ( v27 )
+      goto LABEL_34;
+    goto LABEL_45;
+  }
+  v27 = 1;
+LABEL_34:
+  v28 = sub_660C(v4, 0xDu, v9, a4);
+  v30 = v53;
+  if ( v27 == 2 )
+    v29 = v7;
+  else
+    *(_DWORD *)(v7 + 36) = v53;
+  *(_DWORD *)(v7 + 32) = v28;
+  if ( v27 == 2 )
+  {
+    *(_DWORD *)(v29 + 44) = v30;
+    v31 = v29 + 44;
+    goto LABEL_57;
+  }
+LABEL_58:
+  *(_DWORD *)(v7 + 40) = v14;
+  return 6;
+}
+// 1948: using guessed type int __fastcall _cxa_begin_cleanup(_DWORD);
+// 1954: using guessed type int __fastcall _cxa_type_match(_DWORD, _DWORD, _DWORD, _DWORD);
+
+//----- (00006AC0) --------------------------------------------------------
+signed int __fastcall _aeabi_unwind_cpp_pr2(int a1, int a2, int a3)
+{
+  return sub_66A4(a1, a2, a3, 2);
+}
+
+//----- (00006AC8) --------------------------------------------------------
+signed int __fastcall _aeabi_unwind_cpp_pr1(int a1, int a2, int a3)
+{
+  return sub_66A4(a1, a2, a3, 1);
+}
+
+//----- (00006AD0) --------------------------------------------------------
+signed int __fastcall _aeabi_unwind_cpp_pr0(int a1, int a2, int a3)
+{
+  return sub_66A4(a1, a2, a3, 0);
+}
+
+//----- (00006AD8) --------------------------------------------------------
+signed int __fastcall _gnu_Unwind_Backtrace(int (__fastcall *a1)(int *, int), int a2, int a3)
+{
+  int v3; // lr@1
+  int (__fastcall *v4)(int *, int); // r5@1
+  int v5; // r6@1
+  int v6; // r0@1
+  int v7; // r1@1
+  int v8; // r2@1
+  int v9; // r3@1
+  int v10; // r0@1
+  int v11; // r1@1
+  int v12; // r2@1
+  int v13; // r3@1
+  int v14; // r0@1
+  int v15; // r1@1
+  int v16; // r2@1
+  int v17; // r3@1
+  int v18; // r2@1
+  int v19; // r1@1
+  int v20; // r3@1
+  signed int v21; // r4@3
+  int v22; // r0@5
+  bool v23; // zf@5
+  int v25; // [sp+0h] [bp-2A8h]@2
+  int (__fastcall *v26)(signed int, int *, int *); // [sp+10h] [bp-298h]@5
+  int v27; // [sp+58h] [bp-250h]@1
+  int v28; // [sp+5Ch] [bp-24Ch]@1
+  int v29; // [sp+60h] [bp-248h]@1
+  int v30; // [sp+64h] [bp-244h]@1
+  int v31; // [sp+68h] [bp-240h]@1
+  int v32; // [sp+6Ch] [bp-23Ch]@1
+  int v33; // [sp+70h] [bp-238h]@1
+  int v34; // [sp+74h] [bp-234h]@1
+  int v35; // [sp+78h] [bp-230h]@1
+  int v36; // [sp+7Ch] [bp-22Ch]@1
+  int v37; // [sp+80h] [bp-228h]@1
+  int v38; // [sp+84h] [bp-224h]@1
+  int v39; // [sp+88h] [bp-220h]@1
+  int v40; // [sp+8Ch] [bp-21Ch]@1
+  int v41; // [sp+90h] [bp-218h]@1
+  int v42; // [sp+94h] [bp-214h]@1
+  int v43; // [sp+98h] [bp-210h]@1
+
+  v3 = a3 + 4;
+  *(_DWORD *)(a3 + 64) = *(_DWORD *)(a3 + 60);
+  v4 = a1;
+  v5 = a2;
+  v6 = *(_DWORD *)(a3 + 4);
+  v7 = *(_DWORD *)(a3 + 8);
+  v8 = *(_DWORD *)(a3 + 12);
+  v9 = *(_DWORD *)(v3 + 12);
+  v3 += 16;
+  v28 = v6;
+  v29 = v7;
+  v30 = v8;
+  v31 = v9;
+  v10 = *(_DWORD *)v3;
+  v11 = *(_DWORD *)(v3 + 4);
+  v12 = *(_DWORD *)(v3 + 8);
+  v13 = *(_DWORD *)(v3 + 12);
+  v3 += 16;
+  v32 = v10;
+  v33 = v11;
+  v34 = v12;
+  v35 = v13;
+  v14 = *(_DWORD *)v3;
+  v15 = *(_DWORD *)(v3 + 4);
+  v16 = *(_DWORD *)(v3 + 8);
+  v17 = *(_DWORD *)(v3 + 12);
+  v3 += 16;
+  v36 = v14;
+  v37 = v15;
+  v38 = v16;
+  v39 = v17;
+  v19 = *(_DWORD *)(v3 + 4);
+  v18 = *(_DWORD *)(v3 + 8);
+  v20 = *(_DWORD *)(v3 + 12);
+  v40 = *(_DWORD *)v3;
+  v41 = v19;
+  v42 = v18;
+  v43 = v20;
+  v27 = -1;
+  while ( !sub_6188((int)&v25, v43, v18) )
+  {
+    sub_6678((int)&v27, 0xCu, (int)&v25);
+    if ( v4(&v27, v5) )
+      break;
+    v22 = v26(8, &v25, &v27);
+    v23 = v22 == 9;
+    if ( v22 != 9 )
+      v23 = v22 == 5;
+    v21 = v22;
+    if ( v23 )
+      goto LABEL_9;
+  }
+  v21 = 9;
+LABEL_9:
+  sub_611C(&v27);
+  return v21;
+}
+
+//----- (00006B98) --------------------------------------------------------
+int __fastcall Unwind_VRS_Pop(int a1, int a2, unsigned int a3, int a4)
+{
+  int v4; // r4@1
+  unsigned int v5; // r5@1
+  int result; // r0@2
+  int v7; // r1@4
+  int *v8; // r2@4
+  bool v9; // zf@5
+  int v10; // r12@5
+  int v11; // t1@8
+  unsigned int v12; // r6@14
+  int v13; // r5@14
+  unsigned int v14; // r2@14
+  unsigned int v15; // r1@15
+  int v16; // r10@18
+  int v17; // r8@18
+  signed int v18; // r7@23
+  bool v19; // zf@25
+  int v20; // r2@30
+  int v21; // r0@31
+  int v22; // r2@45
+  int v23; // r3@45
+  int v24; // r5@46
+  unsigned int v25; // r1@46
+  char *i; // r0@46
+  bool v27; // cf@48
+  signed int v28; // r0@52
+  int v29; // r8@54
+  int v30; // r2@54
+  char *v31; // r0@54
+  unsigned int v32; // r6@67
+  int v33; // r5@67
+  int v34; // r5@70
+  char *v35; // r6@70
+  int v36; // r1@70
+  unsigned int v37; // r3@70
+  char *j; // r2@70
+  bool v39; // zf@74
+  int *v40; // r2@80
+  int v41; // r3@80
+  int v42; // t1@82
+  int v43; // [sp+0h] [bp-1B8h]@82
+  char v44; // [sp+10h] [bp-1A8h]@43
+  char v45[128]; // [sp+90h] [bp-128h]@70
+  char v46[136]; // [sp+110h] [bp-A8h]@41
+  char v47; // [sp+198h] [bp-20h]@54
+
+  v4 = a1;
+  v5 = a3;
+  switch ( a2 )
+  {
+    case 0:
+      if ( a4 )
+        return 2;
+      v7 = (unsigned __int16)a3;
+      v8 = *(int **)(a1 + 56);
+      do
+      {
+        v10 = v7 & (1 << a4);
+        v9 = (v7 & (1 << a4)) == 0;
+        if ( v7 & (1 << a4) )
+          v10 = a1 + 4 * a4;
+        ++a4;
+        if ( !v9 )
+        {
+          v11 = *v8;
+          ++v8;
+          *(_DWORD *)(v10 + 4) = v11;
+        }
+      }
+      while ( a4 != 16 );
+      result = v5 & 0x2000;
+      if ( v5 & 0x2000 )
+        return 0;
+      *(_DWORD *)(v4 + 56) = v8;
+      return result;
+    case 1:
+      if ( (a4 & 0xFFFFFFFB) != 1 )
+        return 2;
+      v12 = a3 >> 16;
+      v13 = (unsigned __int16)a3;
+      v14 = (unsigned __int16)a3 + (a3 >> 16);
+      v15 = a4 == 1 ? 16 : 32;
+      if ( v14 > v15 )
+        return 2;
+      v16 = a4 - 1 + ((unsigned int)(a4 - 1) <= 0) - (a4 - 1);
+      v17 = v12 > 0xF;
+      if ( v17 & v16 )
+        return 2;
+      if ( v12 > 0xF )
+      {
+        v17 = v13;
+      }
+      else if ( v14 > 0x10 )
+      {
+        v17 = v14 - 16;
+      }
+      v18 = v17;
+      if ( v17 )
+        v18 = 1;
+      v19 = a4 == 5;
+      if ( a4 != 5 )
+        v19 = v17 == 0;
+      if ( !v19 )
+        return 2;
+      if ( v12 <= 0xF )
+      {
+        v20 = *(_DWORD *)a1;
+        if ( *(_DWORD *)a1 & 1 )
+        {
+          *(_DWORD *)a1 = v20 & 0xFFFFFFFE;
+          v21 = a1 + 72;
+          if ( a4 == 5 )
+          {
+            *(_DWORD *)v4 = v20 & 0xFFFFFFFE | 2;
+            _gnu_Unwind_Save_VFP_D(v21);
+          }
+          else
+          {
+            *(_DWORD *)v4 = v20 & 0xFFFFFFFC;
+            _gnu_Unwind_Save_VFP();
+          }
+        }
+      }
+      if ( v18 && *(_DWORD *)v4 & 4 )
+      {
+        *(_DWORD *)v4 &= 0xFFFFFFFB;
+        _gnu_Unwind_Save_VFP_D_16_to_31(v4 + 208);
+      }
+      if ( v16 )
+      {
+        _gnu_Unwind_Save_VFP();
+        if ( !v18 )
+          goto LABEL_45;
+      }
+      else
+      {
+        if ( v12 <= 0xF )
+          _gnu_Unwind_Save_VFP_D((int)v46);
+        if ( !v18 )
+          goto LABEL_45;
+        _gnu_Unwind_Save_VFP_D_16_to_31((int)&v44);
+      }
+      v13 = 16 - v12;
+LABEL_45:
+      v22 = *(_DWORD *)(v4 + 56);
+      v23 = *(_DWORD *)(v4 + 56);
+      if ( v13 > 0 )
+      {
+        v24 = 2 * v13;
+        v25 = v24;
+        for ( i = &v46[8 * v12]; ; i += 4 )
+        {
+          v27 = v25-- >= 1;
+          if ( !v27 )
+            break;
+          *(_DWORD *)i = *(_DWORD *)(i - &v46[8 * v12] + v22);
+        }
+        v23 = v22 + 4 * v24;
+      }
+      if ( v18 )
+      {
+        if ( v12 < 0x10 )
+          v28 = 16;
+        else
+          v28 = v12;
+        v29 = 2 * v17;
+        v30 = 0;
+        v31 = &v47 + 8 * v28 - 520;
+        while ( v30 != v29 )
+        {
+          *(_DWORD *)&v31[4 * v30] = *(_DWORD *)(v23 + 4 * v30);
+          ++v30;
+        }
+        v23 += 4 * v30;
+      }
+      if ( v16 )
+        v23 += 4;
+      *(_DWORD *)(v4 + 56) = v23;
+      if ( v16 )
+      {
+        _gnu_Unwind_Restore_VFP((int)v46);
+      }
+      else
+      {
+        if ( v12 <= 0xF )
+          _gnu_Unwind_Restore_VFP_D((int)v46);
+        if ( v18 )
+          _gnu_Unwind_Restore_VFP_D_16_to_31((int)&v44);
+      }
+      return 0;
+    case 2:
+      return 1;
+    case 3:
+      if ( a4 != 3 )
+        return 2;
+      v32 = a3 >> 16;
+      v33 = (unsigned __int16)a3;
+      if ( (unsigned __int16)a3 + (a3 >> 16) > 0x10 )
+        return 2;
+      if ( *(_DWORD *)a1 & 8 )
+      {
+        *(_DWORD *)a1 &= 0xFFFFFFF7;
+        _gnu_Unwind_Save_WMMXD();
+      }
+      v34 = 2 * v33;
+      _gnu_Unwind_Save_WMMXD();
+      v35 = &v45[8 * v32];
+      v36 = *(_DWORD *)(v4 + 56);
+      v37 = v34;
+      for ( j = v35; ; j += 4 )
+      {
+        v27 = v37-- >= 1;
+        if ( !v27 )
+          break;
+        *(_DWORD *)j = *(_DWORD *)(j - v35 + v36);
+      }
+      *(_DWORD *)(v4 + 56) = v36 + 4 * v34;
+      _gnu_Unwind_Restore_WMMXD((_DWORD *)v45);
+      return 0;
+    case 4:
+      v39 = a3 == 16;
+      if ( a3 <= 0x10 )
+        v39 = a4 == 0;
+      if ( !v39 )
+        return 2;
+      if ( *(_DWORD *)a1 & 0x10 )
+      {
+        *(_DWORD *)a1 &= 0xFFFFFFEF;
+        _gnu_Unwind_Save_WMMXC();
+      }
+      _gnu_Unwind_Save_WMMXC();
+      v40 = *(int **)(v4 + 56);
+      v41 = 0;
+      do
+      {
+        if ( v5 & (1 << v41) )
+        {
+          v42 = *v40;
+          ++v40;
+          *(&v43 + v41) = v42;
+        }
+        ++v41;
+      }
+      while ( v41 != 4 );
+      *(_DWORD *)(v4 + 56) = v40;
+      _gnu_Unwind_Restore_WMMXC(&v43);
+      return 0;
+    default:
+      return 2;
+  }
+}
+// 6B98: using guessed type char var_A8[136];
+// 6B98: using guessed type char var_128[128];
+
+//----- (00006EEC) --------------------------------------------------------
+void __fastcall restore_core_regs(int a1)
+{
+  int v1; // ST00_4@1
+  int v2; // r0@1
+  int v3; // [sp+8h] [bp-4h]@0
+
+  v1 = *(_DWORD *)(a1 + 52);
+  v2 = *(_DWORD *)a1;
+  JUMPOUT(__CS__, v3);
+}
+
+//----- (00006F00) --------------------------------------------------------
+int __fastcall _gnu_Unwind_Restore_VFP(int result)
+{
+  __asm { FLDMIAX         R0, {D0-D15} }
+  return result;
+}
+
+//----- (00006F08) --------------------------------------------------------
+int _gnu_Unwind_Save_VFP()
+{
+  int result; // r0@1
+
+  __asm { FSTMIAX         R0, {D0-D15} }
+  return result;
+}
+
+//----- (00006F10) --------------------------------------------------------
+int __fastcall _gnu_Unwind_Restore_VFP_D(int _R0)
+{
+  int result; // r0@1
+
+  __asm { VLDMIA          R0, {D0-D15} }
+  return result;
+}
+
+//----- (00006F18) --------------------------------------------------------
+int __fastcall _gnu_Unwind_Save_VFP_D(int _R0)
+{
+  int result; // r0@1
+
+  __asm { VSTMIA          R0, {D0-D15} }
+  return result;
+}
+
+//----- (00006F20) --------------------------------------------------------
+int __fastcall _gnu_Unwind_Restore_VFP_D_16_to_31(int _R0)
+{
+  int result; // r0@1
+
+  __asm { VLDMIA          R0, {D16-D31} }
+  return result;
+}
+
+//----- (00006F28) --------------------------------------------------------
+int __fastcall _gnu_Unwind_Save_VFP_D_16_to_31(int _R0)
+{
+  int result; // r0@1
+
+  __asm { VSTMIA          R0, {D16-D31} }
+  return result;
+}
+
+//----- (00006F30) --------------------------------------------------------
+int __fastcall _gnu_Unwind_Restore_WMMXD(_DWORD *a1)
+{
+  int *v5; // r0@1
+  int result; // r0@1
+
+  _T1 = *a1;
+  v5 = a1 + 2;
+  __asm { LDCL            p1, c0, [R0],#8 }
+  _T1 = *v5;
+  v5 += 2;
+  __asm { LDCL            p1, c1, [R0],#8 }
+  _T1 = *v5;
+  v5 += 2;
+  __asm { LDCL            p1, c2, [R0],#8 }
+  _T1 = *v5;
+  v5 += 2;
+  __asm { LDCL            p1, c3, [R0],#8 }
+  _T1 = *v5;
+  v5 += 2;
+  __asm { LDCL            p1, c4, [R0],#8 }
+  _T1 = *v5;
+  v5 += 2;
+  __asm { LDCL            p1, c5, [R0],#8 }
+  _T1 = *v5;
+  v5 += 2;
+  __asm { LDCL            p1, c6, [R0],#8 }
+  _T1 = *v5;
+  v5 += 2;
+  __asm { LDCL            p1, c7, [R0],#8 }
+  _T1 = *v5;
+  v5 += 2;
+  __asm { LDCL            p1, c8, [R0],#8 }
+  _T1 = *v5;
+  v5 += 2;
+  __asm { LDCL            p1, c9, [R0],#8 }
+  _T1 = *v5;
+  v5 += 2;
+  __asm { LDCL            p1, c10, [R0],#8 }
+  _T1 = *v5;
+  v5 += 2;
+  __asm { LDCL            p1, c11, [R0],#8 }
+  _T1 = *v5;
+  v5 += 2;
+  __asm { LDCL            p1, c12, [R0],#8 }
+  _T1 = *v5;
+  v5 += 2;
+  __asm { LDCL            p1, c13, [R0],#8 }
+  _T1 = *v5;
+  v5 += 2;
+  __asm { LDCL            p1, c14, [R0],#8 }
+  _T1 = *v5;
+  result = (int)(v5 + 2);
+  __asm { LDCL            p1, c15, [R0],#8 }
+  return result;
+}
+
+//----- (00006F74) --------------------------------------------------------
+void _gnu_Unwind_Save_WMMXD()
+{
+  __asm
+  {
+    STCL            p1, c0, [R0],#8
+    STCL            p1, c1, [R0],#8
+    STCL            p1, c2, [R0],#8
+    STCL            p1, c3, [R0],#8
+    STCL            p1, c4, [R0],#8
+    STCL            p1, c5, [R0],#8
+    STCL            p1, c6, [R0],#8
+    STCL            p1, c7, [R0],#8
+    STCL            p1, c8, [R0],#8
+    STCL            p1, c9, [R0],#8
+    STCL            p1, c10, [R0],#8
+    STCL            p1, c11, [R0],#8
+    STCL            p1, c12, [R0],#8
+    STCL            p1, c13, [R0],#8
+    STCL            p1, c14, [R0],#8
+    STCL            p1, c15, [R0],#8
+  }
+}
+
+//----- (00006FB8) --------------------------------------------------------
+int __fastcall _gnu_Unwind_Restore_WMMXC(_DWORD *a1)
+{
+  int *v5; // r0@1
+  int result; // r0@1
+
+  _T1 = *a1;
+  v5 = a1 + 1;
+  __asm { LDC2            p1, c8, [R0],#4 }
+  _T1 = *v5;
+  ++v5;
+  __asm { LDC2            p1, c9, [R0],#4 }
+  _T1 = *v5;
+  ++v5;
+  __asm { LDC2            p1, c10, [R0],#4 }
+  _T1 = *v5;
+  result = (int)(v5 + 1);
+  __asm { LDC2            p1, c11, [R0],#4 }
+  return result;
+}
+
+//----- (00006FCC) --------------------------------------------------------
+void _gnu_Unwind_Save_WMMXC()
+{
+  __asm
+  {
+    STC2            p1, c8, [R0],#4
+    STC2            p1, c9, [R0],#4
+    STC2            p1, c10, [R0],#4
+    STC2            p1, c11, [R0],#4
+  }
+}
+
+//----- (00006FE0) --------------------------------------------------------
+signed int __fastcall __Unwind_RaiseException(int a1, int a2, int a3, int a4)
+{
+  int v5; // [sp+0h] [bp-44h]@1
+  int v6; // [sp+4h] [bp-40h]@1
+  int v7; // [sp+8h] [bp-3Ch]@1
+  int v8; // [sp+Ch] [bp-38h]@1
+  int v9; // [sp+10h] [bp-34h]@1
+
+  v6 = a1;
+  v7 = a2;
+  v8 = a3;
+  v9 = a4;
+  v5 = 0;
+  return _gnu_Unwind_RaiseException(a1, (int)&v5);
+}
+
+//----- (00007004) --------------------------------------------------------
+void __fastcall __Unwind_Resume(int a1, int a2, int a3, int a4)
+{
+  int v4; // [sp+0h] [bp-44h]@1
+  int v5; // [sp+4h] [bp-40h]@1
+  int v6; // [sp+8h] [bp-3Ch]@1
+  int v7; // [sp+Ch] [bp-38h]@1
+  int v8; // [sp+10h] [bp-34h]@1
+
+  v5 = a1;
+  v6 = a2;
+  v7 = a3;
+  v8 = a4;
+  v4 = 0;
+  _gnu_Unwind_Resume(a1, (int)&v4);
+}
+
+//----- (00007028) --------------------------------------------------------
+signed int __fastcall __Unwind_Resume_or_Rethrow(int a1, int a2, int a3, int a4)
+{
+  int v5; // [sp+0h] [bp-44h]@1
+  int v6; // [sp+4h] [bp-40h]@1
+  int v7; // [sp+8h] [bp-3Ch]@1
+  int v8; // [sp+Ch] [bp-38h]@1
+  int v9; // [sp+10h] [bp-34h]@1
+
+  v6 = a1;
+  v7 = a2;
+  v8 = a3;
+  v9 = a4;
+  v5 = 0;
+  return _gnu_Unwind_Resume_or_Rethrow(a1, (int)&v5);
+}
+
+//----- (0000704C) --------------------------------------------------------
+signed int __fastcall __Unwind_ForcedUnwind(int a1, int a2, int a3, int a4)
+{
+  int v5; // [sp+0h] [bp-44h]@1
+  int v6; // [sp+4h] [bp-40h]@1
+  int v7; // [sp+8h] [bp-3Ch]@1
+  int v8; // [sp+Ch] [bp-38h]@1
+  int v9; // [sp+10h] [bp-34h]@1
+
+  v6 = a1;
+  v7 = a2;
+  v8 = a3;
+  v9 = a4;
+  v5 = 0;
+  return _gnu_Unwind_ForcedUnwind(a1, a2, a3, (int)&v5);
+}
+
+//----- (00007070) --------------------------------------------------------
+signed int __fastcall __Unwind_Backtrace(int (__fastcall *a1)(int *, int), int a2, int a3, int a4)
+{
+  int v5; // [sp+0h] [bp-44h]@1
+  int (__fastcall *v6)(int *, int); // [sp+4h] [bp-40h]@1
+  int v7; // [sp+8h] [bp-3Ch]@1
+  int v8; // [sp+Ch] [bp-38h]@1
+  int v9; // [sp+10h] [bp-34h]@1
+
+  v6 = a1;
+  v7 = a2;
+  v8 = a3;
+  v9 = a4;
+  v5 = 0;
+  return _gnu_Unwind_Backtrace(a1, a2, (int)&v5);
+}
+
+//----- (00007094) --------------------------------------------------------
+signed int __fastcall sub_7094(int a1)
+{
+  _DWORD *v1; // r3@1
+  _DWORD *v2; // r2@3
+  char v3; // r2@3
+  signed int result; // r0@5
+  int v5; // kr00_4@5
+
+  v1 = (_DWORD *)a1;
+  if ( *(_BYTE *)(a1 + 8) )
+  {
+    v3 = *(_BYTE *)(a1 + 8) - 1;
+    goto LABEL_5;
+  }
+  if ( *(_BYTE *)(a1 + 9) )
+  {
+    --*(_BYTE *)(a1 + 9);
+    v2 = *(_DWORD **)(a1 + 4);
+    *(_DWORD *)a1 = *v2;
+    *(_DWORD *)(a1 + 4) = v2 + 1;
+    v3 = 3;
+LABEL_5:
+    *(_BYTE *)(a1 + 8) = v3;
+    v5 = *(_DWORD *)a1 << 8;
+    result = (unsigned __int64)*(_DWORD *)a1 >> 24;
+    *v1 = v5;
+    return result;
+  }
+  return 176;
+}
+
+//----- (000070F0) --------------------------------------------------------
+int __fastcall sub_70F0(int a1, int a2, int a3, int a4)
+{
+  int v5; // [sp+Ch] [bp-Ch]@1
+
+  v5 = a4;
+  Unwind_VRS_Get(a1, 0, 0xCu, 0, (unsigned int)&v5);
+  return v5;
+}
+
+//----- (0000711C) --------------------------------------------------------
+signed int __fastcall _gnu_unwind_execute(int a1, int a2, int a3, int a4)
+{
+  int v4; // r5@1
+  int v5; // r6@1
+  signed int v6; // r7@1
+  signed int v7; // r0@2
+  unsigned __int8 v8; // r9@6
+  char v9; // r4@6
+  int v10; // r9@6
+  int v11; // r9@7
+  int v12; // r3@10
+  int v13; // r0@11
+  __int16 v15; // r9@13
+  char v16; // r4@23
+  char v17; // r2@23
+  int v18; // r0@23
+  int v19; // r2@23
+  signed int v20; // r1@25
+  signed int v21; // r0@28
+  signed int v22; // r3@31
+  char v23; // r4@33
+  char i; // r0@33
+  bool v25; // zf@34
+  _DWORD *v26; // r1@34
+  int v27; // r0@34
+  char v28; // r0@38
+  int v29; // r2@38
+  int v30; // r3@38
+  int v31; // r4@40
+  int v32; // r2@42
+  char v33; // r0@48
+  signed int v34; // r0@51
+  int v35; // r2@55
+  char v36; // r0@57
+  int v37; // r2@57
+  int v38; // r3@57
+  char v39; // r0@59
+  int v40; // r2@62
+  int v41; // [sp+Ch] [bp-24h]@1
+
+  v41 = a4;
+  v4 = a1;
+  v5 = a2;
+  v6 = 0;
+  while ( 1 )
+  {
+    v7 = sub_7094(v5);
+    if ( v7 == 176 )
+      break;
+    if ( !(v7 & 0x80) )
+    {
+      v8 = 4 * v7;
+      v9 = v7 & 0x40;
+      Unwind_VRS_Get(v4, v7 & 0x80, 0xDu, v7 & 0x80, (unsigned int)&v41);
+      v10 = v8 + 4;
+      if ( v9 )
+        v11 = v41 - v10;
+      else
+        v11 = v41 + v10;
+      v41 = v11;
+      goto LABEL_20;
+    }
+    v12 = v7 & 0xF0;
+    if ( v12 == 128 )
+    {
+      v13 = sub_7094(v5) | (v7 << 8);
+      if ( v13 == 0x8000 )
+        return 9;
+      v15 = 16 * v13;
+      if ( Unwind_VRS_Pop(v4, 0, 16 * v13 & 0xFFFF, 0) )
+        return 9;
+      if ( v15 & 0x8000 )
+        v6 = 1;
+    }
+    else if ( v12 == 144 )
+    {
+      if ( (v7 & 0xD) == 13 )
+        return 9;
+      Unwind_VRS_Get(v4, 0, v7 & 0xF, 0, (unsigned int)&v41);
+LABEL_20:
+      Unwind_VRS_Set(v4, 0, 0xDu, 0, &v41);
+    }
+    else
+    {
+      if ( v12 == 160 )
+      {
+        v16 = v7 & 8;
+        v17 = ~(_BYTE)v7 & 7;
+        v18 = v4;
+        v19 = (4080 >> v17) & 0xFF0;
+        if ( v16 )
+          v19 |= 0x4000u;
+        v20 = 0;
+        goto LABEL_31;
+      }
+      if ( v12 == 176 )
+      {
+        if ( v7 == 177 )
+        {
+          v21 = sub_7094(v5);
+          v19 = v21;
+          if ( !v21 )
+            return 9;
+          v20 = v21 & 0xF0;
+          if ( v21 & 0xF0 )
+            return 9;
+          v18 = v4;
+          goto LABEL_31;
+        }
+        if ( v7 != 178 )
+        {
+          if ( v7 == 179 )
+          {
+            v28 = sub_7094(v5);
+            v20 = 1;
+            v29 = v28 & 0xF0;
+            v30 = (v28 & 0xF) + 1;
+            v18 = v4;
+            goto LABEL_49;
+          }
+          if ( (v7 & 0xFC) == 180 )
+            v31 = v7 & 3;
+          else
+            v31 = v7 & 7;
+          v32 = v31 + 1;
+          if ( (v7 & 0xFC) == 180 )
+          {
+            v18 = v4;
+            v20 = 2;
+            v19 = v32 | 0x40000;
+          }
+          else
+          {
+            v18 = v4;
+            v20 = 1;
+            v19 = v32 | 0x80000;
+          }
+LABEL_31:
+          v22 = v20;
+          goto LABEL_64;
+        }
+        v23 = 2;
+        Unwind_VRS_Get(v4, 0, 0xDu, 0, (unsigned int)&v41);
+        for ( i = sub_7094(v5); ; i = sub_7094(v5) )
+        {
+          v26 = (_DWORD *)(i & 0x80);
+          v25 = v26 == 0;
+          v27 = i & 0x7F;
+          if ( v25 )
+            break;
+          v41 += v27 << v23;
+          v23 += 7;
+        }
+        v41 += 516 + (v27 << v23);
+        Unwind_VRS_Set(v4, v26, 0xDu, (int)v26, &v41);
+      }
+      else
+      {
+        if ( v12 != 192 )
+        {
+          if ( (v7 & 0xF8) != 208 )
+            return 9;
+          v20 = 1;
+          v40 = (v7 & 7) + 1;
+          v18 = v4;
+          v19 = v40 | 0x80000;
+          goto LABEL_63;
+        }
+        if ( v7 == 198 )
+        {
+          v33 = sub_7094(v5);
+          v20 = 3;
+          v29 = v33 & 0xF0;
+          v30 = (v33 & 0xF) + 1;
+          v18 = v4;
+LABEL_49:
+          v19 = v30 | (v29 << 12);
+          goto LABEL_31;
+        }
+        if ( v7 != 199 )
+        {
+          if ( (v7 & 0xF8) != 192 )
+          {
+            if ( v7 == 200 )
+            {
+              v36 = sub_7094(v5);
+              v37 = (unsigned __int8)(v36 & 0xF0) + 16;
+              v38 = (v36 & 0xF) + 1;
+            }
+            else
+            {
+              if ( v7 != 201 )
+                return 9;
+              v39 = sub_7094(v5);
+              v37 = v39 & 0xF0;
+              v38 = (v39 & 0xF) + 1;
+            }
+            v18 = v4;
+            v20 = 1;
+            v19 = v38 | (v37 << 12);
+LABEL_63:
+            v22 = 5;
+            goto LABEL_64;
+          }
+          v20 = 3;
+          v35 = (v7 & 0xF) + 1;
+          v18 = v4;
+          v19 = v35 | 0xA0000;
+          goto LABEL_31;
+        }
+        v34 = sub_7094(v5);
+        v19 = v34;
+        if ( !v34 )
+          return 9;
+        v22 = v34 & 0xF0;
+        if ( v34 & 0xF0 )
+          return 9;
+        v18 = v4;
+        v20 = 4;
+LABEL_64:
+        if ( Unwind_VRS_Pop(v18, v20, v19, v22) )
+          return 9;
+      }
+    }
+  }
+  if ( !v6 )
+  {
+    Unwind_VRS_Get(v4, 0, 0xEu, 0, (unsigned int)&v41);
+    Unwind_VRS_Set(v4, 0, 0xFu, 0, &v41);
+  }
+  return 0;
+}
+
+//----- (000074C0) --------------------------------------------------------
+signed int __fastcall _gnu_unwind_frame(int a1, int a2, int a3, int a4)
+{
+  int v4; // r3@1
+  int v5; // r3@1
+  int v7; // [sp+4h] [bp-14h]@1
+  int v8; // [sp+8h] [bp-10h]@1
+  int v9; // [sp+Ch] [bp-Ch]@1
+
+  v7 = a2;
+  v8 = a3;
+  v9 = a4;
+  v4 = *(_DWORD *)(a1 + 76);
+  v7 = *(_DWORD *)(v4 + 4) << 8;
+  v8 = v4 + 8;
+  LOBYTE(v9) = 3;
+  v5 = *(_BYTE *)(v4 + 7);
+  BYTE1(v9) = v5;
+  return _gnu_unwind_execute(a2, (int)&v7, 3, v5);
+}
+
+//----- (00007500) --------------------------------------------------------
+int Unwind_GetRegionStart()
+{
+  return *(_DWORD *)(sub_7118() + 72);
+}
+// 7118: using guessed type int sub_7118(void);
+
+//----- (00007510) --------------------------------------------------------
+int Unwind_GetLanguageSpecificData()
+{
+  int v0; // r0@1
+
+  v0 = sub_7118();
+  return *(_DWORD *)(v0 + 76) + 4 * *(_BYTE *)(*(_DWORD *)(v0 + 76) + 7) + 8;
+}
+// 7118: using guessed type int sub_7118(void);
+
+//----- (0000752C) --------------------------------------------------------
+void Unwind_GetDataRelBase()
+{
+  abort();
+}
+
+//----- (00007534) --------------------------------------------------------
+void Unwind_GetTextRelBase()
+{
+  abort();
+}
+
+// ALL OK, 131 function(s) have been successfully decompiled
